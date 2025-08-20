@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+
+
+
+/* ---------- INDEX  ---------- */
+/* ---------- HEADER ---------- */
+
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+
+}
+
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.header__logo {
+    width: 180px;
+
+}
+
+.header__ul {
+    list-style: none;
+    display: flex;
+    margin: 0px 0px 0px 20px;
+
+}
+
+.header__li {
+    margin: 0px 10px;
+}
+
+
+.header__link {
+    text-decoration: none;
+    color: white;
+    font-family: "2";
+    font-weight: bold;
+    font-size: small;
+}
+
+
+.header__link:hover {
+    color: #ef8937;
+    transition: all .3s;
+}
+
+.inversion{
+    display: flex;
+     align-items: center;
+   
+}
+
+.inversion img{
+    height: 10px;
+
+    padding: 0px 5px;
+}
+
+/* CARRUCEL  */
+
+.carousel-item {
+    position: relative;
+
+}
+
+
+.img-caroucel {
+    height: 100vh;
+    /* animation-name: scale;
+    animation-duration: 15s; */
+
+}
+
+.contenedor-data-carrucel {
+    background-color: rgba(0, 0, 0, 0.548);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 150px 50px;
+    overflow: hidden;
+    
+
+}
+
+.titulo-2 {
+    color: white;
+    font-size: 10vw;
+    height: 10vw;
+    font-family: "1";
+    font-weight: bold;
+    padding: 0;
+    margin-left: 150px;
+
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+}
+
+.detalles-texto {
+    display: flex;
+    color: white;
+    justify-content: start;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 50px;
+    font-family: "1";
+    font-weight: bolder;
+
+}
+
+.detalles-texto p {
+    margin: 0px 10px;
+}
+
+/* BOTONES CARRUCEL */
+
+
+#boton-slider-1 {
+    justify-content: end;
+    z-index: 0;
+}
+
+#boton-slider-2 {
+    z-index: 0;
+    justify-content: start;
+}
+
+.boton-slider {
+
+    margin-right: 10px;
+    padding: 10px 0px;
+    border-bottom: solid 1px #ef8937;
+    font-family: "1";
+    font-weight: 500;
+    
+}
+
+
+.girar {
+    transform: rotateZ(270deg);
+    letter-spacing: 5px;
+    font-weight: bold;
+
+}
+
+
+/* TIPOGRAFIAS */
+
+
+
+@font-face {
+    font-family: "1";
+    src: url("../recursos/tipografias/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "2";
+    src: url("../recursos/tipografias/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+
+/* ANIMACIONES */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
