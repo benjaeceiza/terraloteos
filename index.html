@@ -58,92 +58,258 @@
             </div>
         </nav>
     </header>
-    <main>
-        <!-- CARRUCEL -->
-        <div id="carouselExampleAutoplaying" class="carousel slide aditional" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="contenedor-item-carrucel">
-                        <img src="./recursos/slider-index/2.jpeg" class="img-caroucel d-block w-100" alt="...">
-                        <a href="#" class="contenedor-data-carrucel">
-                            <div class="textos">
-                                <p class="titulo-slider">Las<br>Chacras</p>
-                                <div class="detalles-texto">
-                                    <p>TIPO DE PROYECTO / COMERCIAL</p>
-                                    <p>UBICACION / MERLO, SAN LUIS</p>
+    <main class="main-index">
+        <div class="fondo-negro-main">
+            <!-- CARRUCEL -->
+            <div id="carouselExampleAutoplaying" class="carousel slide aditional" data-bs-ride="carousel"
+                data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="contenedor-item-carrucel">
+                            <img src="./recursos/slider-index/2.jpeg" class="img-caroucel d-block w-100" alt="...">
+                            <a href="#" class="contenedor-data-carrucel">
+                                <div class="textos">
+                                    <p class="titulo-slider">Las<br>Chacras</p>
+                                    <div class="detalles-texto">
+                                        <p>TIPO DE PROYECTO / COMERCIAL</p>
+                                        <p>UBICACION / MERLO, SAN LUIS</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="contenedor-item-carrucel">
+                            <img src="./recursos/slider-index/2.jpeg" class="img-caroucel d-block w-100" alt="...">
+                            <div class="contenedor-data-carrucel">
+                                <div class="textos">
+                                    <p class="titulo-slider">Las<br>Chacras</p>
+                                    <div class="detalles-texto">
+                                        <p>TIPO DE PROYECTO / COMERCIAL</p>
+                                        <p>UBICACION / MERLO, SAN LUIS</p>
+                                    </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="contenedor-item-carrucel">
-                        <img src="./recursos/slider-index/2.jpeg" class="img-caroucel d-block w-100" alt="...">
-                        <div class="contenedor-data-carrucel">
-                            <div class="textos">
-                                <p class="titulo-slider">Las<br>Chacras</p>
-                                <div class="detalles-texto">
-                                    <p>TIPO DE PROYECTO / COMERCIAL</p>
-                                    <p>UBICACION / MERLO, SAN LUIS</p>
+                    <div class="carousel-item">
+                        <div class="contenedor-item-carrucel">
+                            <img src="./recursos/slider-index/2.jpeg" class="img-caroucel d-block w-100" alt="...">
+                            <div class="contenedor-data-carrucel">
+                                <div class="textos">
+                                    <p class="titulo-slider">Las<br>Chacras</p>
+                                    <div class="detalles-texto">
+                                        <p>TIPO DE PROYECTO / COMERCIAL</p>
+                                        <p>UBICACION / MERLO, SAN LUIS</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="contenedor-item-carrucel">
-                        <img src="./recursos/slider-index/2.jpeg" class="img-caroucel d-block w-100" alt="...">
-                        <div class="contenedor-data-carrucel">
-                            <div class="textos">
-                                <p class="titulo-slider">Las<br>Chacras</p>
-                                <div class="detalles-texto">
-                                    <p>TIPO DE PROYECTO / COMERCIAL</p>
-                                    <p>UBICACION / MERLO, SAN LUIS</p>
-                                </div>
+                <div class="contacto-slider">
+                    <div class="contenedor-botones-slider">
+                        <a class="button-slider" href="#"> Ver más proyectos</a>
+                        <a class="button-slider" href="#">Contactar</a>
+                    </div>
+
+                    <ul class="redes-slider">
+                        <li><a href=""><img src="./recursos/iconos/facebook.png" alt=""></a></li>
+                        <li><a href=""><img src="./recursos/iconos/instagram.png" alt=""></a></li>
+                        <li><a href=""><img src="./recursos/iconos/medios-de-comunicacion-social.png" alt=""></a></li>
+                        <li><a href=""><img src="./recursos/iconos/whatsapp.png" alt=""></a></li>
+                    </ul>
+
+                </div>
+                <button id="boton-slider-2" class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <p class="boton-slider girar">ANTERIOR</p>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button id="boton-slider-1" class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <p class="boton-slider girar">SIGUIENTE</p>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <section class="section-frase">
+                <div class="contenedor-frase">
+                    <p>Urbanizamos</p>
+                    <p>|</p>
+                    <p>Construimos</p>
+                    <p>|</p>
+                    <p>Invertimos</p>
+                </div>
+            </section>
+            <div class="contenedor-title">
+                <h2 class="sub">ELIGE QUE PARTE DE TERRALOTEOS QUIERES SER</h2>
+            </div>
+            <section class="section-categorias">
+                <div class="contenedor-categorias">
+                    <a href="#" id="categoria-1" class="contenedor-categoria">
+                        <div class="fondo-negro">
+                            <p id="frase-categoria-1" class="titulo-categoria">Viví en nuestros desarrollos</p>
+                            <div id="contenedor-data-categoria-1" class="contenedor-data-categoria">
+                                <img class="logo-categoria" src="./recursos/logos/logo-corto.png" alt="">
+                                <p class="nombre-categoria">Nombre de la categoria</p>
+                                <p class="descripcion-categoria">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Sit
+                                    aliquam nobis officiis quam laborum
+                                    eaque assumenda iure explicabo! Omnis, praesentium.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" id="categoria-2" class="contenedor-categoria">
+                        <div class="fondo-negro">
+                            <p id="frase-categoria-2" class="titulo-categoria">Invertí en productos Terraloteos</p>
+                            <div id="contenedor-data-categoria-2" class="contenedor-data-categoria">
+                                <img class="logo-categoria" src="./recursos/logos/logo-corto.png" alt="">
+                                <p class="nombre-categoria">Nombre de la categoria</p>
+                                <p class="descripcion-categoria">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Sit
+                                    aliquam nobis officiis quam laborum
+                                    eaque assumenda iure explicabo! Omnis, praesentium.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" id="categoria-3" class="contenedor-categoria">
+                        <div class="fondo-negro">
+                            <p id="frase-categoria-3" class="titulo-categoria">Invertí en un desarrollo urbanístico</p>
+                            <div id="contenedor-data-categoria-3" class="contenedor-data-categoria">
+                                <img class="logo-categoria" src="./recursos/logos/logo-corto.png" alt="">
+                                <p class="nombre-categoria">Nombre de la categoria</p>
+                                <p class="descripcion-categoria">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Sit
+                                    aliquam nobis officiis quam laborum
+                                    eaque assumenda iure explicabo! Omnis, praesentium.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <div class="contenedor-title">
+                <h2 class="sub">NUESTROS NÚMEROS</h2>
+            </div>
+            <section class="section-numeros">
+                <div class="contenedor-nosotros">
+                    <h2 class="sub">NOSOTROS</h2>
+                    <p>Terraloteos es una empresa líder en urbanización y vivienda llave en mano, con más de 15 años
+                        de trayectoria desde su fundación en 2010. Se especializa en el desarrollo de barrios abiertos y
+                        cerrados, y en la construcción tradicional de viviendas, con financiación propia en pesos o
+                        dólares.
+                        Propuesta de valor: Accesibilidad, acompañamiento integral, compromiso ambiental y alta
+                        calidad de vida.
+                    </p>
+                </div>
+                <div class="contendor-numero">
+                    <div id="container-numeros" class="container-numeros">
+                        <div id="card-1" class="card-numeros">
+                            <div class="contenedor-textoss">
+                                <p id="numero-1" class="numeros">15</p>
+                                <p class="texto-numeros">Años de experiencia</p>
+                            </div>
+                            <img class="icono-numeros" src="./recursos/iconos/tiempo-restante.png" alt="">
+                        </div>
+                        <div id="card-2" class="card-numeros">
+                            <div class="contenedor-textoss">
+                                <p id="numero-2" class="numeros">18</p>
+                                <p class="texto-numeros">Proyectos entregados</p>
+                            </div>
+                            <img class="icono-numeros" src="./recursos/iconos/casco.png" alt="">
+                        </div>
+                        <div id="card-3" class="card-numeros">
+                            <div class="contenedor-textoss">
+                                <p id="numero-3" class="numeros">4000</p>
+                                <p class="texto-numeros">Clientes satisfechos</p>
+                            </div>
+                            <img class="icono-numeros" src="./recursos/iconos/usuario.png" alt="">
+                        </div>
+                        <div id="card-4" class="card-numeros">
+                            <div class="contenedor-textoss">
+                                <p id="numero-4" class="numeros">537</p>
+                                <p class="texto-numeros">Terrenos preparados</p>
+                                <img class="icono-numeros" src="./recursos/iconos/mapa.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <div class="contenedor-title">
+                <h2 class="sub">DONDE NOS ENCONTRAMOS</h2>
             </div>
-            <div class="contacto-slider">
-                <div class="contenedor-botones-slider">
-                    <a class="button-slider" href="#"> Ver más proyectos</a>
-                    <a class="button-slider" href="#">Contactar</a>
+            <section class="contenedor-mapa">
+                <div class="contenedor-ubciaciones">
+                    <p class="titulo-ubicaciones">Nuestras oficinas</p>
+                    <ul class="lista-ubicaciones">
+                        <li id="mapa-vm-1" class="ubicaciones"><p>Villa Mercedes </p><p class="num-ubicacion">( 1 )</p></li>
+                        <li id="mapa-vm-2" class="ubicaciones"><p>Villa Mercedes </p><p class="num-ubicacion">( 2 )</p></li>
+                        <li id="mapa-sl" class="ubicaciones"><p>San Luis </p></li>
+                        <li id="mapa-merlo-1" class="ubicaciones"><p>Merlo </p><p class="num-ubicacion">( 1 )</p></li>
+                        <li id="mapa-merlo-2" class="ubicaciones"><p>Merlo</p><p class="num-ubicacion">( 2 )</p></li>
+                        <li id="mapa-rio-cuarto" class="ubicaciones"><p>Rio Cuarto</p></li>
+                        <li id="mapa-ba" class="ubicaciones"><p>Buenos Aires</p></li>
+                    </ul>
+                </div>
+                <iframe id="mapa" class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.494102030164!2d-65.4608835!3d-33.670268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16a63a6ac37f9%3A0x1d81cd2d27c11a7b!2sTerraloteos!5e0!3m2!1ses-419!2sar!4v1753974103220!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <div class="contenedor-wts">
+                <img class="contacto-wts" src="./recursos/iconos/wts.png" alt="">
+            </div>
+            <div class="contenedor-title">
+                <h2 class="sub">PONETE EN CONTACTO CON NOSOTROS</h2>
+            </div>
+            <section class="section-contacto">
+            <div class="contenedor-contacto">
+                <div class="contenedor-horarios">
+                    <p class="title-horario">Horario de atención:</p>
+                    <p class="texto-horario">Lunes – Viernes: 9hs – 18hs</p>
+                    <p class="texto-horario">Atención por WhatsApp: 24/7</p>
+
+                </div>
+                <div class="contenedor-logo-nombre">
+                    <img src="./recursos/logos/logo-corto.png" alt="">
+                    <p>TERRALOTEOS</p>
                 </div>
 
-                <ul class="redes-slider">
-                    <li><img src="./recursos/iconos/icons8-facebook-nuevo-50.png" alt=""></li>
-                    <li><img src="./recursos/iconos/icons8-instagram-50.png" alt=""></li>
-                    <li><img src="./recursos/iconos/icons8-twitterx-50.png" alt=""></li>
-                    <li><img src="./recursos/iconos/icons8-youtube-50.png" alt=""></li>
-                </ul>
-
+                <div class="contenedor-formulario">
+                    <input class="input" type="text" placeholder="Nombre">
+                    <input class="input" type="text" placeholder="Apellido">
+                    <input class="input" type="text" placeholder="Correo Electronico">
+                    <input class="input" type="text" placeholder="Numero">
+                    <textarea class="mensaje" placeholder="Mensaje" name="" id=""></textarea>
+                    <button class="button-formulario">Enviar</button>
+                </div>
             </div>
-            <button id="boton-slider-2" class="carousel-control-prev" type="button"
-                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <p class="boton-slider girar">ANTERIOR</p>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button id="boton-slider-1" class="carousel-control-next" type="button"
-                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <p class="boton-slider girar">SIGUIENTE</p>
-                <span class="visually-hidden">Next</span>
-            </button>
+        </section>
         </div>
-        <p>as</p>
-        <p>as</p>
-        <p>as</p>
-        <p>as</p>
-        <p>as</p>
-        <p>as</p>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer-redes">
+            <ul class="footer-lista">
+                <li class="footer-item"><a href=""><img class="img-footer" src="./recursos/iconos/instagram.png" alt=""></a>
+                </li>
+                <li class="footer-item"><a href=""><img class="img-footer" src="./recursos/iconos/medios-de-comunicacion-social.png"
+                            alt=""></a></li>
+                <li class="footer-item"><a href=""><img class="img-footer" src="./recursos/iconos/facebook.png" alt=""></a>
+                </li>
+                <li class="footer-item"><a href=""><img class="img-footer" src="./recursos/iconos/whatsapp.png" alt=""></a>
+                </li>
+            </ul>
+            <p class="derechos">© 2025 Todos los derechos reservados</p>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script src="./js/headerAnimation.js"></script>
+    <script src="./js/animacionCategorias.js"></script>
+    <script src="./js/mapas.js"></script>
 </body>
 
 </html>
