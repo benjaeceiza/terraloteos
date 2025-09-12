@@ -831,6 +831,7 @@
     height: 100vh;
     width: 100vw;
     opacity: 70%;
+    object-fit: cover;
 
 }
 
@@ -853,7 +854,9 @@
 
 .texto-vivir-ds-principal {
     font-family: "1";
-    font-size: large;
+    font-size: 2cqmin;
+    text-align: center;
+    padding: 0px 20px;
 }
 
 .texto-vivir-ds {}
@@ -868,22 +871,27 @@
 .contenedor-textos-vivir-ds {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 20px;
 }
 
 .texto-vivir-ds-secundario {
     max-width: 500px;
     margin: 20px;
+     font-size: 2cqmin;
 }
 
 .sub-textos-ds {
     width: fit-content;
     font-family: "1";
     border-bottom: solid 2px #ef8937;
+    
 }
 
 .info-ds {
     font-family: "1";
-    font-size: small;
+   
+     font-size: 2cqmin;
 }
 
 .sub-ds {
