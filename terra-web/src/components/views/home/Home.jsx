@@ -27,13 +27,7 @@ const Home = () => {
                 <div className="fondo-negro-main">
                     <SliderProyectos />
                     <section className="section-frase">
-                        <div className="contenedor-frase">
-                            <p>Urbanizamos</p>
-                            <p>|</p>
-                            <p>Construimos</p>
-                            <p>|</p>
-                            <p>Invertimos</p>
-                        </div>
+              
                     </section>
                     <div className="contenedor-title">
                         <h2 className="sub">ELIGE QUE PARTE DE TERRALOTEOS QUIERES SER</h2>

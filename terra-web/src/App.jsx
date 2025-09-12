@@ -9,7 +9,7 @@ import Contacto from './components/views/contacto/Contacto';
 import Barrio from './components/views/barrio/Barrio';
 import BotonWts from './components/BotonWts';
 
-import Fundacion from './components/views/fundacion/fundacion';
+import Fundacion from './components/views/fundacion/Fundacion';
 import ScrollManager from './components/ScrollManager';
 import Casa from './components/views/casa/Casa';
 

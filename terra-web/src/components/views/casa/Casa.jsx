@@ -28,6 +28,7 @@ const Casa = () => {
                     :
                     <main>
                         <Encabezado casa={casa} />
+                        
                         <SectionContacto />
                     </main>
             }
