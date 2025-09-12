@@ -1450,10 +1450,12 @@
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    
+    justify-content: space-evenly;
     align-items: center;
     padding: 50px 0px 100px 0px;
     flex-wrap: wrap;
+ 
 }
 
 .contenedor-formulario {
@@ -1462,6 +1464,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 
 }
 
