@@ -4,6 +4,7 @@ import Encabezado from "./Encabezado";
 import SectionContacto from "../../SectionContacto";
 import LoadingScreen from "../../LoadingScreen";
 import { useEffect, useState } from "react";
+import EncabezadoMob from "./EncabezadoMob";
 
 
 const Casa = () => {
@@ -28,7 +29,7 @@ const Casa = () => {
                     :
                     <main>
                         <Encabezado casa={casa} />
-                        
+                        <EncabezadoMob casa={casa}/>
                         <SectionContacto />
                     </main>
             }

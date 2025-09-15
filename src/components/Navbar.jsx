@@ -36,9 +36,7 @@ const Navbar = () => {
                                         isActive ? 'header__link-active' : 'header__link'
                                     }>Fundación</NavLink>
                                 </li>
-                                <li className="header__li">
-                                    <NavLink className="header__link" href="./pages/oficinas.html">Oficinas</NavLink>
-                                </li>
+
                                 <li className="header__li">
                                     <NavLink to={"/desarrollos"} className={({ isActive }) =>
                                         isActive ? 'header__link-active' : 'header__link'

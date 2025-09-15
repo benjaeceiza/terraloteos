@@ -3,6 +3,8 @@ import barrios from "../../../data/barrios.json"
 import Encabezado from "./Encabezado";
 import SectionContacto from "../../SectionContacto";
 import GaleriaImagenes from "./GaleriaImagenes";
+import SliderModelos from "../desarrollos/SliderModelos"
+import EncabezadoMob from "./EncabezadoMob";
 
 const Barrio = () => {
     const {nombre} =  useParams();
@@ -13,9 +15,14 @@ const Barrio = () => {
 
     return(
         <>
-         <main>
+         <main className="main">
             <Encabezado barrio={barrio}/>
+            <EncabezadoMob barrio={barrio}/>
             <GaleriaImagenes barrio={barrio}/>
+             <div className="contenedor-title">
+                <h2 className="sub">NUESTROS MODELOS</h2>
+              </div>
+            <SliderModelos/>
             <SectionContacto/>
          </main>
         </>

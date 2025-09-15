@@ -444,7 +444,7 @@
     font-size: xx-large;
     font-family: "1";
     font-weight: bold;
-   
+
 }
 
 .frase {
@@ -878,20 +878,20 @@
 .texto-vivir-ds-secundario {
     max-width: 500px;
     margin: 20px;
-     font-size: 2cqmin;
+    font-size: 2cqmin;
 }
 
 .sub-textos-ds {
     width: fit-content;
     font-family: "1";
     border-bottom: solid 2px #ef8937;
-    
+
 }
 
 .info-ds {
     font-family: "1";
-   
-     font-size: 2cqmin;
+
+    font-size: 2cqmin;
 }
 
 .sub-ds {
@@ -1157,6 +1157,37 @@
 }
 
 
+/* envabezado barrio mob */
+
+.section-encabezado-barrio-mob {
+    display: none;
+}
+
+.fondo-encabezado-barrio-mob {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.contenedor-logo-barrio {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-encabezado-barrio-mob {
+    max-width: 300px;
+}
+
+
 /* GALERIA DE IMAGENES */
 .galeria-imagenes {
 
@@ -1323,7 +1354,78 @@
     margin: 0;
     margin-left: 10px;
     font-family: "1";
-        color: white;
+    color: white;
+}
+
+
+/* ENCABEZADO MODELOS MOB */
+
+.sectionm-encabezado-casa-mob {
+    display: none;
+}
+
+.img-encabezado-casa-mob {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedor-logo-modelos {
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-data-casa-mob{
+    background-color: #133222;
+    padding: 40px 0px;
+}
+
+.titulo-encabezado-casa-mob{
+       text-align: center;
+    color: white;
+    width: fit-content;
+    margin: auto;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ef8937;
+    border-top: 2px solid #ef8937;
+    font-family: "1";
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: large;
+}
+
+.contenedor-caracteristicas-data-mob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-descripcion-casa-mob{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contenedor-descripcion-casa-mob p{
+    color: white;
+    font-family: "1";
+    font-weight: 400;
+}
+
+.lista-caracteristicas-modelo-mob{
+     list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+    width: 100%;
+    padding-left: 40px;
 }
 
 
@@ -1458,12 +1560,12 @@
     max-width: 1200px;
     margin: auto;
     display: flex;
-    
+
     justify-content: space-evenly;
     align-items: center;
     padding: 50px 0px 100px 0px;
     flex-wrap: wrap;
- 
+
 }
 
 .contenedor-formulario {
@@ -1992,6 +2094,26 @@
         width: 40%;
         text-align: start;
 
+    }
+
+    /* ENCABEZADO BARRIO */
+
+    .section-encabezado-barrio {
+        display: none;
+    }
+
+    .section-encabezado-barrio-mob {
+        display: block;
+    }
+
+    /* ENCABEZADO CASA */
+
+    .sectionm-encabezado-casa-mob {
+        display: block;
+    }
+
+    .sectionm-encabezado-casa {
+        display: none;
     }
 
 }
