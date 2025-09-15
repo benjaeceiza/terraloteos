@@ -1373,6 +1373,7 @@
 .contenedor-logo-modelos {
     background-color: rgba(0, 0, 0, 0.541);
     width: 100%;
+    height: 100vh;
     position: absolute;
     display: flex;
     top: 0;
