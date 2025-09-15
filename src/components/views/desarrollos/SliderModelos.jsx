@@ -41,14 +41,14 @@ const Slidermodelos = () => {
                         }
 
                     </div>
-                    <button id="boton-slider-1" className="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    <button id="boton-slider-1-modelos" className="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="prev">
-                        <p className="boton-slider girar">ANTERIOR</p>
+                        <p className="boton-slider-modelo girar-modelo">ANTERIOR</p>
                         <span className="visually-hidden">Previous</span>
                     </button>
-                    <button id="boton-slider-2" className="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    <button id="boton-slider-2-modelos" className="carousel-control-next" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="next">
-                        <p className="boton-slider girar">SIGUENTE</p>
+                        <p className="boton-slider-modelo girar-modelo">SIGUENTE</p>
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>

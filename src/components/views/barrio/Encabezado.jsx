@@ -1,7 +1,12 @@
 import luz from "../../../assets/iconos/luz.png";
 import agua from "../../../assets/iconos/agua.png";
-import gas from "../../../assets/iconos/gas.png";
-import cloacas from "../../../assets/iconos/tuberia.png";
+import seguridad from "../../../assets/iconos/seguridad.png";
+import plataAgua from "../../../assets/iconos/planta-agua.png";
+import alumbrado from "../../../assets/iconos/alumbrado.png";
+import comercio from "../../../assets/iconos/comercial.png";
+import calles from "../../../assets/iconos/ruta.png";
+import ingreso from "../../../assets/iconos/portal.png";
+
 
 
 const Encabezado = ({barrio}) => {
@@ -22,22 +27,39 @@ const Encabezado = ({barrio}) => {
                         </div>
                         <div className="caracteristicas">
                             <ul className="lista-caracteristicas">
-                                <li className="item-caracteristicas">
+                                {barrio.servicios.luz? <li  className="item-caracteristicas">
                                     <img src={luz} alt=""/>
                                     <p>Luz</p>
-                                </li>
-                                <li className="item-caracteristicas">
+                                </li>:""}
+                                {barrio.servicios.agua? <li  className="item-caracteristicas">
                                     <img src={agua} alt=""/>
                                     <p>Agua</p>
-                                </li>
-                                <li className="item-caracteristicas">
-                                    <img src={gas} alt=""/>
-                                    <p>Gas</p>
-                                </li>
-                                <li className="item-caracteristicas">
-                                    <img src={cloacas} alt=""/>
-                                    <p>Cloacas</p>
-                                </li>
+                                </li>:""}
+                                {barrio.servicios.alumbrado? <li  className="item-caracteristicas">
+                                    <img src={alumbrado} alt=""/>
+                                    <p>Alumbrado</p>
+                                </li>:""}
+                                {barrio.servicios.ingreso? <li  className="item-caracteristicas">
+                                    <img src={ingreso} alt=""/>
+                                    <p>Portal de ingreso</p>
+                                </li>:""}
+                                {barrio.servicios.calles? <li  className="item-caracteristicas">
+                                    <img src={calles} alt=""/>
+                                    <p>Calles Consolidadas</p>
+                                </li>:""}
+                                {barrio.servicios.seguridad? <li  className="item-caracteristicas">
+                                    <img src={seguridad} alt=""/>
+                                    <p>Seguridad</p>
+                                </li>:""}
+                                {barrio.servicios.comercial? <li  className="item-caracteristicas">
+                                    <img src={comercio} alt=""/>
+                                    <p>Area Comercial</p>
+                                </li>:""}
+                                {barrio.servicios.plantaAgua? <li  className="item-caracteristicas">
+                                    <img src={plataAgua} alt=""/>
+                                    <p>Planta de Agua</p>
+                                </li>:""}
+                          
                             </ul>
                         </div>
                     </div>
