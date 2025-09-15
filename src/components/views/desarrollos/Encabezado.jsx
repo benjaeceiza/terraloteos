@@ -1,5 +1,5 @@
 
-import fondo from "../../../assets/encabezados/vivir.jpeg"
+import fondo from "../../../assets/encabezados/desarrollos.jpeg"
 const Encabezado = () => {
 
     return(

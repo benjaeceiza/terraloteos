@@ -152,6 +152,7 @@
     z-index: 1;
     width: 100%;
 
+
 }
 
 
@@ -161,10 +162,23 @@
 }
 
 .navbar {
-    height: 80px;
-
+ 
+margin: 0;
+padding: 0;
 }
 
+
+
+.container-fluid {
+    padding: 10px 0px;
+    transition: all .3s;
+    background-color: transparent;
+}
+.container-fluid-fondo {
+    background-color: #133222;
+    transition: all .3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.486);
+}
 
 
 .header__logo {
@@ -183,6 +197,11 @@
 .header__li {
     margin: 0px 10px;
 
+}
+
+.button-header{
+    background-color: transparent;
+    border: 0;
 }
 
 
@@ -837,7 +856,7 @@
 
 .contenedor-data-vivir-ds {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.342);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 70vh;
     bottom: 0;
     width: 100%;
@@ -854,7 +873,7 @@
 
 .texto-vivir-ds-principal {
     font-family: "1";
-    font-size: 2cqmin;
+   font-size: medium;
     text-align: center;
     padding: 0px 20px;
 }
@@ -885,13 +904,17 @@
     width: fit-content;
     font-family: "1";
     border-bottom: solid 2px #ef8937;
+    font-size: medium;
+   
 
 }
 
 .info-ds {
     font-family: "1";
-
-    font-size: 2cqmin;
+    font-size: small;
+    background-color:#35604a;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .sub-ds {
@@ -1527,7 +1550,7 @@
     width: 49%;
     border-radius: 30px;
     margin: 10px 0px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border: 0;
     font-family: "1";
     font-size: small;
@@ -1870,18 +1893,12 @@
     }
 
     .section-cards-contact {
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
-    .card-contact-container {
-        width: 48%;
-    }
+   
 
-    .config {
-        width: 98%;
-
-        margin: 20px 0px;
-    }
+   
 }
 
 @media (max-width:1200px) {
@@ -1957,6 +1974,10 @@
 }
 
 @media (max-width:600px) {
+
+    .sub{
+        font-size: medium;
+    }
 
     .textos {
 
@@ -2116,6 +2137,10 @@
     .sectionm-encabezado-casa {
         display: none;
     }
+
+    .texto-vivir-ds-principal {
+   font-size: small;
+}
 
 }
 
