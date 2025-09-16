@@ -4,6 +4,7 @@ import SectionContacto from "../../SectionContacto";
 import Encabezado from "./Encabezado";
 import RenderBarrios from "./RenderBarrios";
 import Slidermodelos from "./SliderModelos";
+import EncabezadoMob from "./EncabezadoMob";
 
 const Desarrollos = () => {
 
@@ -26,6 +27,7 @@ const Desarrollos = () => {
           <main className="main-index">
             <div className="fondo-negro-main">
               <Encabezado />
+              <EncabezadoMob/>
               <div className="contenedor-title">
                 <h2 className="sub">DONDE COMENZAR TU HOGAR</h2>
               </div>

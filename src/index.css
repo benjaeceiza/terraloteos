@@ -848,6 +848,10 @@
     background-color: black;
 }
 
+.section-encabezado-vivir-ds-mob {
+    display: none;
+}
+
 .img-encabezado-vivir-ds {
     height: 100vh;
     width: 100vw;
@@ -871,6 +875,14 @@
 
 .titulo-vivir-ds {
     margin: 50px 0px 20px 0px;
+
+}
+
+.titulo-vivir-ds-mob {
+    margin: 50px 0px 20px 0px;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 .texto-vivir-ds-principal {
@@ -925,6 +937,70 @@
     font-weight: 600;
 }
 
+/* VIVIR EN UN DESARROLLO MOB*/
+
+.img-encabezado-vivir-ds-mob {
+    height: 95vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedor-vivir-desarrollo-titulo-mob {
+    background-color: rgba(0, 0, 0, 0.589);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.texto-vivir-ds-principal-mob {
+    color: white;
+    padding: 0px 20px;
+    text-align: center;
+    font-family: "1";
+    font-weight: 600;
+    font-size: small;
+    margin-top: 50px;
+    animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.contenedor-data-vivir-ds-mob {
+    background-color: #133222;
+    color: white;
+
+}
+
+.contenedor-textos-vivir-ds {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80vh;
+}
+
+.texto-vivir-ds-secundario-mob {
+    margin-top: 20px;
+      opacity: 0;
+  transform: translateY(40px);
+}
+
+.animacion-fade-in {
+      opacity: 1;
+  transform: translateY(0);
+    animation-name: fadeInUp;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
 /* SECTION BARRIOS */
 
 .section-barrios {
@@ -964,6 +1040,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .contenedor-data-barrios:hover {
@@ -2030,7 +2107,7 @@
 
     }
 
-    .detalles-texto p{
+    .detalles-texto p {
         font-size: x-small;
     }
 
@@ -2216,6 +2293,15 @@
     .fondo-modelo {
         height: 80vh;
         object-fit: cover;
+    }
+
+
+    .section-encabezado-vivir-ds {
+        display: none;
+    }
+
+    .section-encabezado-vivir-ds-mob {
+        display: block;
     }
 
 }
