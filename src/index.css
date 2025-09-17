@@ -669,7 +669,7 @@
 .card-numeros {
 
     width: 25%;
-    height: 40vw;
+
     max-height: 250px;
     min-width: 200px;
     max-width: 400px;
@@ -980,22 +980,17 @@
 
 }
 
-.contenedor-textos-vivir-ds {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 80vh;
-}
+
 
 .texto-vivir-ds-secundario-mob {
     margin-top: 20px;
-      opacity: 0;
-  transform: translateY(40px);
+    opacity: 0;
+    transform: translateY(40px);
 }
 
 .animacion-fade-in {
-      opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
     animation-name: fadeInUp;
     animation-duration: .5s;
     animation-iteration-count: 1;
@@ -2238,6 +2233,8 @@
         margin: 10px;
     }
 
+
+
     /* section-contacto */
 
     .contenedor-contacto {
@@ -2304,9 +2301,43 @@
         display: block;
     }
 
+    .contenedor-textos-vivir-ds {
+        flex-direction: column;
+        height: 80vh;
+        justify-content: space-evenly;
+    }
+
+    /* numeros */
+
+    .section-numeros {
+        width: 100%;
+        padding: 50px 0px;
+    }
+
+    .contenedor-nosotros p {
+        font-size: small;
+        margin: 0;
+
+    }
+
+    .card-numeros {
+        min-width: none;
+        max-width: none;
+        width: 100%;
+
+
+    }
+
+
+
+
+
 }
 
 @media (max-width:500px) {
+
+
+
 
     #boton-slider-1 {
         margin-top: 50px;
