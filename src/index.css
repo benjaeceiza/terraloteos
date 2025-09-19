@@ -1581,6 +1581,11 @@
 
 /* PAGE CONTACTO */
 
+.main-contact{
+    padding: 0px 20px;
+    background-color: #133222;
+}
+
 .encabezado-contacto {
     height: 40vh;
     display: flex;
@@ -1638,7 +1643,7 @@
 }
 
 .subtitle-card-contact {
-    font-size: 12px;
+    font-size: 15px;
     font-family: "1";
     color: white;
     font-weight: 600;
@@ -1738,6 +1743,7 @@
     font-size: small;
     padding-left: 10px;
     font-family: "1";
+       font-weight: bold;
 
 }
 
@@ -1752,6 +1758,7 @@
     padding-left: 5px;
     padding-top: 5px;
     font-family: "1";
+       font-weight: bold;
 }
 
 .button-formulario {
@@ -1874,6 +1881,7 @@
     padding-left: 10px;
     font-family: "1";
     color: #133222;
+       font-weight: bold;
 }
 
 
@@ -1895,6 +1903,7 @@
     padding-left: 5px;
     padding-top: 5px;
     font-family: "1";
+       font-weight: bold;
 }
 
 .button-formulario-mob {
@@ -2234,6 +2243,13 @@
 
         margin-right: 0px;
     }
+
+    .titulo-contacto{
+        width: 90%;
+        font-size: medium;
+        
+        
+    }
 }
 
 @media (max-width:600px) {
@@ -2313,20 +2329,27 @@
     }
 
     .card-contact-container {
-        width: 98%;
+        width: 100%;
         margin: 20px 0px;
+    }
+
+    .section-formulario-contacto {
+        width: 100%;
+        margin: auto;
     }
 
     .input-contacto {
         width: 98%;
         height: 50px;
         margin: 10px auto;
+        font-weight: bold;
     }
 
     .mensaje-formulario-contacto {
         width: 98%;
         margin: auto;
         margin-top: 10px;
+        font-weight: bold;
     }
 
 
@@ -2340,8 +2363,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-
+        justify-content: space-evenly;
+   
 
     }
 
@@ -2449,6 +2472,14 @@
         flex-direction: column;
         height: 80vh;
         justify-content: space-evenly;
+    }
+
+    .sub-textos-ds{
+      font-size: x-large;
+    }
+
+    .info-ds{
+
     }
 
     /* numeros */
