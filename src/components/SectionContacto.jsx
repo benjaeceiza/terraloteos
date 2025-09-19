@@ -11,10 +11,7 @@ const SectionContacto = () => {
             </div>
             <section className="section-contacto">
                 <div className="contenedor-contacto">
-                    <div className="contenedor-logo-nombre mob">
-                        <img src={logo} alt="Logo Terraloteos" />
-                        <p>TERRALOTEOS</p>
-                    </div>
+            
                     <div className="contenedor-horarios">
                         <p className="title-horario">Horario de atención:</p>
                         <p className="texto-horario">Lunes – Viernes: 9hs – 18hs</p>

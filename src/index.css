@@ -274,6 +274,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    text-decoration: none;
 
 
 }
@@ -476,33 +477,27 @@
 
 /*  CATEGORIAS */
 
-.section-categorias {
-
-    background-color: red;
-}
+.section-categorias {}
 
 .contenedor-categorias {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-
     overflow: hidden;
     z-index: 1;
 
 
 }
 
-.contenedor-categoria {
+.link-categoria {
     width: 35%;
-    text-align: center;
-    background-position: center;
-    background-size: cover;
-    height: 600px;
     text-decoration: none;
     transition: all .5s;
+
 }
 
-.contenedor-categoria-activo {
+
+.link-activo {
     width: 80%;
     text-align: center;
     background-position: center;
@@ -510,27 +505,42 @@
     height: 600px;
     text-decoration: none;
     transition: all .5s;
+    text-decoration: none;
+}
+
+.contenedor-categoria {
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    text-decoration: none;
+    transition: all .5s;
+    position: relative;
+
+}
+
+.fondo-categoria {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .fondo-negro {
-    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.616);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#categoria-1 {
-    background-image: url("./assets/categorias/vivir.png");
-}
 
-#categoria-2 {
-    background-image: url("./assets/categorias/inversion.png");
-}
 
-#categoria-3 {
-    background-image: url("./assets/categorias/invertir-2.jpeg");
-}
+
+#categoria-3 {}
 
 #categoria-1-mobile {
     background-image: url("./assets/categorias/vivir.png");
@@ -728,8 +738,9 @@
     width: 100%;
     max-width: 1200px;
     margin: 0px auto;
-    padding: 150px 0px;
+    padding: 150px 20px;
     text-align: center;
+
 
 
 }
@@ -739,6 +750,7 @@
     min-width: 200px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
 
 }
@@ -760,11 +772,11 @@
     list-style: none;
     padding: 0;
 
-
+    margin: 0;
 }
 
 .ubicaciones {
-    margin: 10px 0px;
+    margin-top: 10px;
     text-decoration: none;
     color: white;
     font-family: "1";
@@ -774,6 +786,7 @@
     border: 2px solid #a3a3a3;
     padding: 5px;
     border-radius: 10px;
+
 }
 
 .ubicaciones-active {
@@ -1691,6 +1704,7 @@
 .section-contacto {
 
     background-color: #133222;
+    padding: 0px 20px;
 }
 
 .contenedor-contacto {
@@ -1794,6 +1808,108 @@
     font-weight: bolder;
 }
 
+/* SECTION CONTACT MOB */
+
+.section-contacto-mob {
+    display: none;
+
+}
+
+.contenedor-contacto-mob {
+    background-color: #133222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0px 30px 40px 30px;
+}
+
+.contenedor-logo-nombre-mob {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.logo-footer-contacto-mob {
+    width: 60px;
+}
+
+.title-logo-contacto-mob {
+    padding: 20px 0px;
+    color: white;
+    font-family: "1";
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.contenedor-horarios-mob {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.title-horario-mob {
+    color: white;
+    font-size: medium;
+    font-family: "1";
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.texto-horario-mob {
+    color: white;
+    font-size: small;
+    font-family: "1";
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+
+.input-mob {
+    width: 100%;
+    margin: 5px 0px;
+    border-radius: 50px;
+    border: 0;
+    height: 40px;
+    font-size: small;
+    padding-left: 10px;
+    font-family: "1";
+    color: #133222;
+}
+
+
+
+.contenedor-formulario-mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mensaje-mob {
+    width: 100%;
+    margin: 5px 0px;
+    border-radius: 10px;
+    border: 0;
+    height: 60px;
+    font-size: small;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: "1";
+}
+
+.button-formulario-mob {
+   width: 100px;
+    border: 2px solid #ef8937;
+    background-color: #133222;
+    color: white;
+    font-size: small;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: "1";
+}
 
 /* FUNDACION */
 
@@ -1828,7 +1944,7 @@
 
 .section-nosotros-fundacion {
     height: 90vh;
-    padding-bottom: 30px;
+    
 
 }
 
@@ -1901,7 +2017,7 @@
     background-color: #133222;
     border-top: 1px solid rgba(255, 255, 255, 0.466);
     margin: 0;
-    padding: 0;
+    padding: 0px;
 
 }
 
@@ -2047,9 +2163,37 @@
     .link-barrio {
         width: 100%;
     }
+
+
+    .section-contacto-mob {
+        display: block;
+    }
+
+    .section-contacto {
+        display: none;
+    }
+
+    .sub {
+        width: 90%;
+        font-size: medium;
+    }
 }
 
-@media (max-width:700px) {}
+@media (max-width:800px) {
+
+    .textos {
+
+        padding: 0%;
+        position: relative;
+        margin: auto;
+    }
+
+    .titulo-slider {
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+}
 
 @media (max-width:670px) {
 
@@ -2381,6 +2525,12 @@
         text-align: center;
 
     }
+
+    .contenedor-boton {
+
+    padding: 10px 0px;
+}
+
 
 }
 

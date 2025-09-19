@@ -5,6 +5,7 @@ import SectionContacto from "../../SectionContacto";
 import GaleriaImagenes from "./GaleriaImagenes";
 import SliderModelos from "../desarrollos/SliderModelos"
 import EncabezadoMob from "./EncabezadoMob";
+import SectionContactoMob from "../../SectionContactoMob";
 
 const Barrio = () => {
     const {nombre} =  useParams();
@@ -24,6 +25,7 @@ const Barrio = () => {
               </div>
             <SliderModelos/>
             <SectionContacto/>
+            <SectionContactoMob/>
          </main>
         </>
     )

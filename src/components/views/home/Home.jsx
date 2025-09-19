@@ -5,6 +5,7 @@ import SliderProyectos from "./SliderProyectos";
 import SectionContacto from "../../SectionContacto";
 import { useEffect, useState } from "react";
 import LoadingScreen from "../../LoadingScreen";
+import SectionContactoMob from "../../SectionContactoMob";
 
 const Home = () => {
 
@@ -42,6 +43,7 @@ const Home = () => {
                     </div>
                     <Mapas/>
                     <SectionContacto/>
+                    <SectionContactoMob/>
                 </div>
             </main>}
         </>

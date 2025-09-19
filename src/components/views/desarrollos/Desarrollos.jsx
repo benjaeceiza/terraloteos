@@ -5,6 +5,7 @@ import Encabezado from "./Encabezado";
 import RenderBarrios from "./RenderBarrios";
 import Slidermodelos from "./SliderModelos";
 import EncabezadoMob from "./EncabezadoMob";
+import SectionContactoMob from "../../SectionContactoMob";
 
 const Desarrollos = () => {
 
@@ -37,6 +38,7 @@ const Desarrollos = () => {
               </div>
               <Slidermodelos />
               <SectionContacto />
+              <SectionContactoMob/>
             </div>
           </main>}
     </>

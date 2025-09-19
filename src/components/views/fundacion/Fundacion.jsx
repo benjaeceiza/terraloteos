@@ -5,6 +5,7 @@ import logoIg from "../../../assets/iconos/instagram.png"
 import { Link } from "react-router-dom";
 import LoadingScreen from "../../LoadingScreen";
 import { useEffect, useState } from "react";
+import SectionContactoMob from "../../SectionContactoMob";
 
 
 const Fundacion = () => {
@@ -54,6 +55,7 @@ const Fundacion = () => {
                     </div>
                 </section>
                 <SectionContacto />
+                <SectionContactoMob/>
             </main>}
         </>
     )
