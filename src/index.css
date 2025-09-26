@@ -723,8 +723,8 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 500px;
-
+    width:  500px;
+   
 
 }
 
@@ -732,7 +732,7 @@
 
     width: 25%;
     max-height: 250px;
-    min-width: 200px;
+    min-width: 150px;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -740,7 +740,7 @@
     justify-content: center;
     padding: 20px 10px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px 40px;
 
 
 }
@@ -1489,6 +1489,7 @@
     top: 0;
     bottom: 0;
     width: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.425);
     display: flex;
     flex-direction: column;
@@ -1564,6 +1565,7 @@
 .img-encabezado-casa {
     height: 100vh;
     width: 100%;
+    object-fit: cover;
 }
 
 .contenedor-data-casa {
@@ -1576,14 +1578,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .contenedor-textos-casa {
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: #133222;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    justify-content: center;
+    padding-top: 40px;
 
 }
 
@@ -1591,8 +1592,8 @@
     text-align: center;
     color: white;
     width: fit-content;
-    margin: 40px auto;
     padding: 15px 20px;
+    margin: auto;
     border-bottom: 2px solid #ef8937;
     border-top: 2px solid #ef8937;
     font-family: "1";
@@ -1606,6 +1607,7 @@
     display: flex;
     align-items: start;
     justify-content: space-evenly;
+    margin-top: 50px;
 
 }
 
@@ -3041,6 +3043,41 @@
         margin: 0;
     }
 
+    .title-modelo {
+        font-size: 60px;
+    }
+
+    .contenedor-data-modelo {
+
+        justify-content: space-evenly;
+    }
+
+    .icono-modelo{
+        width: 50px;
+    }
+
+    #boton-slider-1-modelos {
+        rotate: 90deg;
+        height: 100px;
+        margin-left: 50px;
+        margin-top: 20px;
+        backdrop-filter: none;
+        font-size: medium;
+        background-color: transparent;
+        border: 0;
+    }
+
+    #boton-slider-2-modelos {
+        rotate: 90deg;
+        height: 100px;
+        margin-right: 60px;
+        margin-top: 20px;
+        backdrop-filter: none;
+        font-size: medium;
+        background-color: transparent;
+        border: 0;
+    }
+
 
 
 }
@@ -3144,9 +3181,9 @@
 
     .fondo-encabezado-producto {
 
-    height: 95vh;
+        height: 92vh;
 
-}
+    }
 
 }
 

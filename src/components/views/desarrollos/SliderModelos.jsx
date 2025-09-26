@@ -1,4 +1,4 @@
-import fondo from "../../../assets/casas/loft.png";
+
 import reloj from "../../../assets/iconos/reloj-negro.png";
 import metros from "../../../assets/iconos/metros.png";
 import cama from "../../../assets/iconos/cama.png";
