@@ -11,7 +11,7 @@ import BotonWts from './components/BotonWts';
 import Fundacion from './components/views/fundacion/Fundacion';
 import ScrollManager from './components/ScrollManager';
 import Casa from './components/views/casa/Casa';
-import ProductoTerraloteos from './components/views/productoTerraloteos/productoTerraloteos';
+import ProductoTerraloteos from './components/views/productoTerraloteos/ProductoTerraloteos';
 
 
 
