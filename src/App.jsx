@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './components/views/home/Home';
-import Nosotros from './components/views/Nosotros';
+import Nosotros from './components/views/nosotros/Nosotros';
 import Footer from './components/Footer';
 import Desarrollos from './components/views/desarrollos/Desarrollos';
 import Contacto from './components/views/contacto/Contacto';
@@ -11,6 +11,7 @@ import BotonWts from './components/BotonWts';
 import Fundacion from './components/views/fundacion/Fundacion';
 import ScrollManager from './components/ScrollManager';
 import Casa from './components/views/casa/Casa';
+import ProductoTerraloteos from './components/views/productoTerraloteos/productoTerraloteos';
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path={'/nosotros'} element={<Nosotros />} />
           <Route path={'/fundacion'} element={<Fundacion />} />
           <Route path={'/desarrollos'} element={<Desarrollos />} />
+          <Route path={'/productoTerraloteos'} element={<ProductoTerraloteos/>} />
           <Route path={'/barrio/:nombre'} element={<Barrio />} />
           <Route path={'/casa/:tipo'} element={<Casa />} />
           <Route path={'/contacto'} element={<Contacto />} />

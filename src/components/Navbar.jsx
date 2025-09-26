@@ -39,7 +39,7 @@ const Navbar = () => {
                         scrolled || expanded ? "container-fluid-fondo" : ""
                     }`}
                 >
-                    <NavLink to={"/"} className="navbar-brand" onClick={closeMenu}>
+                    <NavLink   to={"/"} className="navbar-brand" onClick={closeMenu}>
                         <img className="header__logo" src={logo} alt="Logo Terraloteos" />
                     </NavLink>
 
