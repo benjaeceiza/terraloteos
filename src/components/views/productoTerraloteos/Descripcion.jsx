@@ -1,10 +1,9 @@
 import logo from "../../../assets/logos/torres.png"
-
 import fotoOne from "../../../assets/productos-terraloteos/torres-1.png"
 import fotoTwo from "../../../assets/productos-terraloteos/torres-2.png"
 import fotoOThree from "../../../assets/productos-terraloteos/torres-3.png"
 
-const Descripcion = () => {
+const Descripcion = ({setIsTrue}) => {
 
     return (
         <>
@@ -23,22 +22,14 @@ const Descripcion = () => {
                 </div>
                 <div className="contenedor-descrpciones-producto">
                     <div className="contenedor-mini-descxripcion-producto">
-                        <img  className="foto-descripcion-producto" src={fotoOne} alt="Torre Community " />
-                        {/* <h2 className="titulo-mini-descripcion-producto">Lorem impiun</h2>
-                        <p className="parrafo-mini-descripcion">Lorem ipsum dolor sit amet consect
-                        etur adipisicing elit. Dolorum molestias assumenda totam, dicta veritatis repudiandae?</p> */}
+                        <img onClick={() => setIsTrue(true)} className="foto-descripcion-producto" src={fotoOne} alt="Torre Community " />
                     </div>
                     <div id="foto-medio" className="contenedor-mini-descxripcion-producto">
-                        <img  className="foto-descripcion-producto" src={fotoTwo} alt="Torre Community " />
-                        {/* <h2 className="titulo-mini-descripcion-producto">Lorem impiun</h2>
-                        <p className="parrafo-mini-descripcion">Lorem ipsum dolor sit amet consect
-                        etur adipisicing elit. Dolorum molestias assumenda totam, dicta veritatis repudiandae?</p> */}
+                        <img onClick={() => setIsTrue(true)} className="foto-descripcion-producto" src={fotoTwo} alt="Torre Community " />
+
                     </div>
                     <div className="contenedor-mini-descxripcion-producto">
-                        <img  className="foto-descripcion-producto" src={fotoOThree} alt="Torre Community " />
-                        {/* <h2 className="titulo-mini-descripcion-producto">Lorem impiun</h2>
-                        <p className="parrafo-mini-descripcion">Lorem ipsum dolor sit amet consect
-                        etur adipisicing elit. Dolorum molestias assumenda totam, dicta veritatis repudiandae?</p> */}
+                        <img onClick={() => setIsTrue(true)} className="foto-descripcion-producto" src={fotoOThree} alt="Torre Community " />
                     </div>
                 </div>
             </section>

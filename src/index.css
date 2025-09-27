@@ -723,8 +723,8 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width:  500px;
-   
+    width: 500px;
+
 
 }
 
@@ -1960,8 +1960,19 @@
 .foto-descripcion-producto {
     width: 100%;
     object-fit: cover;
+    transition: all .5s;
+    cursor: pointer;
+
 
 }
+
+.foto-descripcion-producto:hover {
+    transform: scale(.9);
+    transition: all .5s;
+    opacity: 50%;
+}
+
+
 
 .section-departamentos {
     padding: 50px 20px;
@@ -2029,8 +2040,83 @@
     z-index: 0;
 }
 
+.comodidades-departamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comodidades-lista-departamento {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.item-comodidades-departamento {
+    width: 30%;
+}
+
+.item-comodidades-departamento img {
+    width: 40px;
+}
+
+.item-comodidades-departamento p {
+    font-family: "1";
+    font-size: small;
+    margin-top: 5px;
+}
+
+.contenedor-boton-cerrar {
+    width: 100%;
+    max-width: 1100px;
+    text-align: end;
+
+}
+
+.contenedor-boton-cerrar img {
+    cursor: pointer;
+}
+
+.contenedor-slider-imagenes-torres {
+    background-color: rgba(0, 0, 0, 0.39);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img-slider-torres {
+    object-fit: cover;
+
+}
+
+.slide-torres {
+    padding: 20px 100px;
+    animation-name: fadeInLeft;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+
+}
 
 
+
+.contenedor-slider-torres {
+
+    width: 500px;
+    height: 700px;
+}
+
+.item-slider-torres {}
 
 /* PAGE CONTACTO */
 
@@ -3052,7 +3138,7 @@
         justify-content: space-evenly;
     }
 
-    .icono-modelo{
+    .icono-modelo {
         width: 50px;
     }
 
@@ -3084,8 +3170,22 @@
 
 @media (max-width:500px) {
 
+    .contenedor-boton-cerrar img{
+        width: 25px;
+        margin-right: 10px;
 
+    }
 
+    .contenedor-slider-torres{
+        width: 400px;
+        height: 600px;
+        padding: 0px;
+    }
+
+    .slide-torres {
+       padding: 0;
+    
+    }
 
     #boton-slider-1 {
         margin-top: 50px;
