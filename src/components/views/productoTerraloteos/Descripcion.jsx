@@ -3,7 +3,7 @@ import fotoOne from "../../../assets/productos-terraloteos/torres-1.png"
 import fotoTwo from "../../../assets/productos-terraloteos/torres-2.png"
 import fotoOThree from "../../../assets/productos-terraloteos/torres-3.png"
 
-const Descripcion = ({setIsTrue}) => {
+const Descripcion = ({setSliderVisible}) => {
 
     return (
         <>
@@ -22,14 +22,14 @@ const Descripcion = ({setIsTrue}) => {
                 </div>
                 <div className="contenedor-descrpciones-producto">
                     <div className="contenedor-mini-descxripcion-producto">
-                        <img onClick={() => setIsTrue(true)} className="foto-descripcion-producto" src={fotoOne} alt="Torre Community " />
+                        <img onClick={() => setSliderVisible(true)} className="foto-descripcion-producto" src={fotoOne} alt="Torre Community " />
                     </div>
                     <div id="foto-medio" className="contenedor-mini-descxripcion-producto">
-                        <img onClick={() => setIsTrue(true)} className="foto-descripcion-producto" src={fotoTwo} alt="Torre Community " />
+                        <img onClick={() => setSliderVisible(true)} className="foto-descripcion-producto" src={fotoTwo} alt="Torre Community " />
 
                     </div>
                     <div className="contenedor-mini-descxripcion-producto">
-                        <img onClick={() => setIsTrue(true)} className="foto-descripcion-producto" src={fotoOThree} alt="Torre Community " />
+                        <img onClick={() => setSliderVisible(true)} className="foto-descripcion-producto" src={fotoOThree} alt="Torre Community " />
                     </div>
                 </div>
             </section>

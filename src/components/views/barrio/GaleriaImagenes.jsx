@@ -1,7 +1,7 @@
 import React, { useState } from "react";
     
 
-const GaleriaImagenes = ({ barrio }) => {
+const GaleriaImagenes = ({ barrio,setSliderVisible }) => {
   const [loadedImages, setLoadedImages] = useState({});
 
   const handleLoadImage = (index) => {
@@ -18,6 +18,7 @@ const GaleriaImagenes = ({ barrio }) => {
               alt={`imagen-${index}`}
               className={`box-img ${loadedImages[index] ? "visible" : "hidden"}`}
               onLoad={() => handleLoadImage(index)}
+              onClick={() =>setSliderVisible(true)}
             />
 
             {!loadedImages[index] && (
