@@ -11,7 +11,7 @@ import cerrar from "../../../assets/iconos/cerrar.png";
 
 const ProductoTerraloteos = () => {
 
-   const [sliderVisible, setSliderVisible] = useState(true)
+   const [sliderVisible, setSliderVisible] = useState(false)
    return (
       <>
          <main>
