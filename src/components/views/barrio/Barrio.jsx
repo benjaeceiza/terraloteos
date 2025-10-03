@@ -13,7 +13,7 @@ import { useState } from "react";
 const Barrio = () => {
   const { nombre } = useParams();
   const barrio = barrios.find(e => e.nombre == nombre);
-  const [sliderVisible, setSliderVisible] = useState(true)
+  const [sliderVisible, setSliderVisible] = useState(false)
 
 
 
