@@ -1,11 +1,13 @@
 
 import fondo from "../../../assets/encabezados/desarrollos.jpeg"
+import { useLoading } from "../../context/LoadingContext";
 const Encabezado = () => {
-
+       const { hideLoader } = useLoading();
     return (
+        
         <>
             <section className="section-encabezado-vivir-ds">
-                <img className="img-encabezado-vivir-ds" src={fondo} alt="" />
+                <img className="img-encabezado-vivir-ds" src={fondo} alt=""  onLoad={hideLoader}/>
                 <div className="contenedor-data-vivir-ds">
                     <div className="contenedor-titulo-sub-desarrollos">
                         <h1 className="titulo-vivir-ds">VIVÍ EN NUESTROS DESARROLLOS</h1>

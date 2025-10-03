@@ -39,7 +39,7 @@ const EncabezadoMob = () => {
       </div>
 
       <div className="contenedor-data-vivir-ds-mob">
-        <div className="contenedor-textos-vivir-ds">
+        <div className="contenedor-textos-vivir-ds-mob">
           <div className="texto-vivir-ds-secundario-mob">
             <p className="sub-textos-ds">
               Acá vas a encontrar nuestros desarrollos urbanísticos

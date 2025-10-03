@@ -11,15 +11,17 @@ import iconoTiktokN from "../../../assets/iconos/tiktok-naranja.png";
 import iconoLocation from "../../../assets/iconos/marcador-de-posicion.png";
 import logo from "../../../assets/logos/logo-corto.png";
 import { useState } from "react";
+import { useLoading } from "../../context/LoadingContext";
 
 const Encabezado = () => {
 
     const [isHover, setIsHover] = useState("")
+     const { hideLoader } = useLoading();
 
     return (
         <>
             <section className="section-encabezado-producto">
-                <img className="fondo-encabezado-producto" src={fondo} alt="" />
+                <img className="fondo-encabezado-producto" src={fondo} alt="fondo" onLoad={hideLoader}/>
                 <div className="fondo-negro-encabezado-producto">
                     <div className="contenedor-data-producto-encabezado">
                         <p className="tipo-producto-encabezado">PROYECTO COMERCIAL</p>

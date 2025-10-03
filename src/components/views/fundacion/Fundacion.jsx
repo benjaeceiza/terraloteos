@@ -3,28 +3,13 @@ import SectionContacto from "../../SectionContacto";
 import Encabezado from "./Encabezado";
 import logoIg from "../../../assets/iconos/instagram.png"
 import { Link } from "react-router-dom";
-import LoadingScreen from "../../LoadingScreen";
-import { useEffect, useState } from "react";
 import SectionContactoMob from "../../SectionContactoMob";
 
 
 const Fundacion = () => {
 
-    const [isLoading,setIsLoading] = useState(true)
-
-    useEffect(() => {
-        setTimeout(() => {
-           setIsLoading(false)
-        },1000)
-    },[])
     return (
         <>
-            {
-                
-                isLoading
-                ?
-                <LoadingScreen/>
-                :
                 <main className="main">
                 <Encabezado />
                 <div className="contenedor-title">
@@ -56,7 +41,7 @@ const Fundacion = () => {
                 </section>
                 <SectionContacto />
                 <SectionContactoMob/>
-            </main>}
+            </main>
         </>
     )
 }

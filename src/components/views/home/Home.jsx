@@ -3,38 +3,59 @@ import Mapas from "../../Mapas";
 import Numeros from "./Numeros";
 import SliderProyectos from "./SliderProyectos";
 import SectionContacto from "../../SectionContacto";
-import { useEffect, useState } from "react";
-import LoadingScreen from "../../LoadingScreen";
 import SectionContactoMob from "../../SectionContactoMob";
+import { useEffect } from "react";
 
 const Home = () => {
 
-    const [isLoading,setIsLoading]= useState(true)
-
-    useEffect(() => {
-      setTimeout(() => {
-          setIsLoading(false)
-      },2000)      
-    },[])
+     useEffect(() => {
+        const elements = document.querySelectorAll(".frase");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animacion-fade");
+                observer.unobserve(entry.target); 
+              }
+            });
+          },
+          { threshold: 0.1 } 
+        );
+    
+        elements.forEach((el) => observer.observe(el));
+    
+        return () => observer.disconnect();
+      }, []);
 
     return (
         <>
-          {  
-              isLoading
-              ?
-              <LoadingScreen/>
-              :
+
             <main className="main-index">
                 <div className="fondo-negro-main">
-                    <SliderProyectos />
+                    <SliderProyectos/>
                     <section className="section-frase">
-              
+                        <div className="contenedor-frase">
+                            <p className="frase">CONSTRUIMOS</p>
+                            <p className="frase">|</p>
+                            <p className="frase">DESARROLLAMOS</p>
+                            <p className="frase">|</p>
+                            <p className="frase">INVERTIMOS</p>
+                   
+                        </div>
+                    </section>
+                    <section className="section-frase-mob">
+                        <div className="contenedor-frase-mob">
+                            <p className="frase-mob">CONSTRUIMOS</p>
+                            <p className="frase-mob">DESARROLLAMOS</p>
+                            <p className="frase-mob">INVERTIMOS</p>
+                   
+                        </div>
                     </section>
                     <div className="contenedor-title">
                         <h2 className="sub">ELIGE QUE PARTE DE TERRALOTEOS QUIERES SER</h2>
                     </div>
                     <Categorias />
-                    
+
                     <div className="contenedor-title">
                         <h2 className="sub">NOSOTROS</h2>
                     </div>
@@ -42,11 +63,11 @@ const Home = () => {
                     <div className="contenedor-title">
                         <h2 className="sub">DONDE NOS ENCONTRAMOS</h2>
                     </div>
-                    <Mapas/>
-                    <SectionContacto/>
-                    <SectionContactoMob/>
+                    <Mapas />
+                    <SectionContacto />
+                    <SectionContactoMob />
                 </div>
-            </main>}
+            </main>
         </>
     )
 }

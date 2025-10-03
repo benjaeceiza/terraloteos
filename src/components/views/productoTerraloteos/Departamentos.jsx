@@ -1,5 +1,14 @@
 
 import tipologiaA from "../../../assets/productos-terraloteos/tipologia-a.png";
+import a from "../../../assets/productos-terraloteos/a.png";
+import b from "../../../assets/productos-terraloteos/b.png";
+import c from "../../../assets/productos-terraloteos/c.png";
+import aD from "../../../assets/productos-terraloteos/a-d.png";
+import Bc from "../../../assets/productos-terraloteos/b-c.png";
+import tA from "../../../assets/productos-terraloteos/t-a.png";
+import tB from "../../../assets/productos-terraloteos/t-b.png";
+import tC from "../../../assets/productos-terraloteos/t-c.png";
+import tD from "../../../assets/productos-terraloteos/t-d.png";
 import tipologiaB from "../../../assets/productos-terraloteos/tipologia-b.png";
 import tipologiaC from "../../../assets/productos-terraloteos/tipologia-c.png";
 import tipologiaAd from "../../../assets/productos-terraloteos/tipologia-a-d.png";
@@ -56,7 +65,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA A</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                               <Link to={tipologiaA} target="_blank"><img className="foto-departamento" src={tipologiaA} alt="" /></Link>
+                               <Link to={a} target="_blank"><img className="foto-departamento" src={tipologiaA} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -99,7 +108,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA B</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={tipologiaB} alt="" />
+                                <Link to={b} target="_blank"><img className="foto-departamento" src={tipologiaB} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -142,7 +151,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA C</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={tipologiaC} alt="" />
+                               <Link to={c} target="_blank"><img className="foto-departamento" src={tipologiaC} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -189,7 +198,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA A - D</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={tipologiaAd} alt="" />
+                                <Link to={aD} target="_blank"><img className="foto-departamento" src={tipologiaAd} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -232,7 +241,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA B - C</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={tipologiaBc} alt="" />
+                                <Link to={Bc} target="_blank"><img className="foto-departamento" src={tipologiaBc} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -278,7 +287,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA A</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={terrazaA} alt="" />
+                                <Link to={tA} target="_blank"><img className="foto-departamento" src={terrazaA} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -329,7 +338,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA B</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={terrazaB} alt="" />
+                                <Link to={tB} target="_blank"><img className="foto-departamento" src={terrazaB} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -380,7 +389,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA C</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={terrazaC} alt="" />
+                                <Link to={tC} target="_blank"><img className="foto-departamento" src={terrazaC} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
@@ -431,7 +440,7 @@ const Departamentos = () => {
                         <p>TIPOLOGIA D</p>
                         <div className="contenedor-img-acordeon">
                             <div className="contenedor-imagen-card-departamento">
-                                <img className="foto-departamento" src={terrazaD} alt="" />
+                                <Link to={tD} target="_blank"><img className="foto-departamento" src={terrazaD} alt="" /></Link>
                             </div>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">

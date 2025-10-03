@@ -44,6 +44,9 @@ const SliderTorres = ({isTrue,setIsTrue}) => {
                                 <div className="carousel-item item-slider-torres">
                                     <img src={"https://i.postimg.cc/pXwhrZn2/20240815-125028.jpg"} className="d-block w-100 img-slider-torres" alt="..." />
                                 </div>
+                                <div className="carousel-item item-slider-torres">
+                                    <img src={"https://i.postimg.cc/5yk0Yjw2/IMG-0043.jpg"} className="d-block w-100 img-slider-torres" alt="..." />
+                                </div>   
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

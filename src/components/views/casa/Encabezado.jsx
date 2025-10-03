@@ -1,11 +1,16 @@
 import flecha from "../../../assets/iconos/mas-grande-que.png"
+import { useLoading } from "../../context/LoadingContext";
 
 const Encabezado = ({ casa }) => {
 
+     const { hideLoader } = useLoading();
+
     return (
+
+        
         <>
             <section className="sectionm-encabezado-casa">
-                <img className="img-encabezado-casa" src={casa.imgPrincipal} alt={casa.tipo} />
+                <img className="img-encabezado-casa" src={casa.imgPrincipal} alt={casa.tipo} onLoad={hideLoader}/>
                 <div className="contenedor-data-casa">
                     <h1 className="title-casa-encabezado" >{casa.tipo}</h1>
                 </div>

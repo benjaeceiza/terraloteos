@@ -1,42 +1,58 @@
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './components/views/home/Home';
 import Nosotros from './components/views/nosotros/Nosotros';
-import Footer from './components/Footer';
 import Desarrollos from './components/views/desarrollos/Desarrollos';
 import Contacto from './components/views/contacto/Contacto';
 import Barrio from './components/views/barrio/Barrio';
-import BotonWts from './components/BotonWts';
 import Fundacion from './components/views/fundacion/Fundacion';
-import ScrollManager from './components/ScrollManager';
 import Casa from './components/views/casa/Casa';
 import ProductoTerraloteos from './components/views/productoTerraloteos/ProductoTerraloteos';
+import BotonWts from './components/BotonWts';
+import ScrollManager from './components/ScrollManager';
+import { LoadingProvider, useLoading } from './components/context/LoadingContext';
+import { useEffect } from 'react';
 
 
+const AppContent = () => {
+  const location = useLocation();
+  const { showLoader } = useLoading();
 
-function App() {
+
+  useEffect(() => {
+    showLoader();
+  }, [location.pathname]);
 
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-       <ScrollManager/>
-        <Routes>
-          <Route path={'/'} element={<Home />} />
-          <Route path={'/nosotros'} element={<Nosotros />} />
-          <Route path={'/fundacion'} element={<Fundacion />} />
-          <Route path={'/desarrollos'} element={<Desarrollos />} />
-          <Route path={'/productoTerraloteos'} element={<ProductoTerraloteos/>} />
-          <Route path={'/barrio/:nombre'} element={<Barrio />} />
-          <Route path={'/casa/:tipo'} element={<Casa />} />
-          <Route path={'/contacto'} element={<Contacto />} />
-        </Routes>
-        <BotonWts />
-        <Footer />
-      </BrowserRouter>
+      <Navbar />
+      <ScrollManager />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/fundacion" element={<Fundacion />} />
+        <Route path="/desarrollos" element={<Desarrollos />} />
+        <Route path="/productoTerraloteos" element={<ProductoTerraloteos />} />
+        <Route path="/barrio/:nombre" element={<Barrio />} />
+        <Route path="/casa/:tipo" element={<Casa />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
+      <BotonWts />
+      <Footer />
     </>
-  )
+  );
+};
+
+function App() {
+  return (
+    <BrowserRouter>
+      <LoadingProvider>
+        <AppContent />
+      </LoadingProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -6,17 +6,20 @@ import alumbrado from "../../../assets/iconos/alumbrado.png";
 import comercio from "../../../assets/iconos/comercial.png";
 import calles from "../../../assets/iconos/ruta.png";
 import ingreso from "../../../assets/iconos/portal.png";
+import { useLoading } from "../../context/LoadingContext";
 
 
 
 
 const EncabezadoMob = ({ barrio }) => {
+
+        const { hideLoader } = useLoading();
     return (
         <>
             <>
                 <section className="section-encabezado-barrio-mob">
                     <img id="fondo-encabezado-barrio" className="fondo-encabezado-barrio-mob" src={barrio.imgPrincipal}
-                        alt="" />
+                        alt="fondo" onLoad={hideLoader}/>
                     <div className="contenedor-logo-barrio">
                         <img id="logo-encabezado-barrio" className="logo-encabezado-barrio-mob" src={barrio.logo}
                             alt="" />

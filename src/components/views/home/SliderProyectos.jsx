@@ -11,12 +11,13 @@ import iconoIgN from "../../../assets/iconos/instagram-naranja.png";
 import iconoTiktok from "../../../assets/iconos/tiktok.png";
 import iconoTiktokN from "../../../assets/iconos/tiktok-naranja.png";
 import { useState } from "react";
+import { useLoading } from "../../context/LoadingContext";
 
 
 const SliderProyectos = () => {
 
     const [isHover, setIsHover] = useState("")
-
+    const { hideLoader } = useLoading();
     return (
         <>
             <div id="carouselExampleAutoplaying" className="carousel slide aditional" data-bs-ride="carousel"
@@ -24,7 +25,7 @@ const SliderProyectos = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="contenedor-item-carrucel">
-                            <img src={sliderImg3} className="img-caroucel d-block w-100" alt="..." />
+                            <img src={sliderImg3} className="img-caroucel d-block w-100" alt="..." onLoad={hideLoader} />
                             <Link to={"/productoTerraloteos"} className="contenedor-data-carrucel">
                                 <div className="textos">
                                     <p className="titulo-slider">Torres<br />Comunity</p>
@@ -92,62 +93,62 @@ const SliderProyectos = () => {
 
                     <ul className="redes-slider">
                         <li>
-                            <Link 
-                            to={"https://www.facebook.com/loteosterra"}
-                            target="_blank"
-                            onMouseEnter={() => setIsHover("facebook")}
-                            onMouseLeave={() => setIsHover("")}>
+                            <Link
+                                to={"https://www.facebook.com/loteosterra"}
+                                target="_blank"
+                                onMouseEnter={() => setIsHover("facebook")}
+                                onMouseLeave={() => setIsHover("")}>
                                 {
                                     isHover == "facebook"
-                                    ?
-                                    <img id="fc" src={iconoFacebookN} alt="Icono Facebook" />
-                                    :
-                                    <img id="fc" src={iconoFacebook} alt="Icono Facebook" />
+                                        ?
+                                        <img id="fc" src={iconoFacebookN} alt="Icono Facebook" />
+                                        :
+                                        <img id="fc" src={iconoFacebook} alt="Icono Facebook" />
                                 }
                             </Link>
                         </li>
                         <li>
-                            <Link 
-                            to={"https://www.instagram.com/terraloteos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
-                            target="_blank"
-                            onMouseEnter={() => setIsHover("instagram")}
-                            onMouseLeave={() => setIsHover("")}>
+                            <Link
+                                to={"https://www.instagram.com/terraloteos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
+                                target="_blank"
+                                onMouseEnter={() => setIsHover("instagram")}
+                                onMouseLeave={() => setIsHover("")}>
                                 {
                                     isHover == "instagram"
-                                    ?
-                                    <img id="fc" src={iconoIgN} alt="Icono Instagram" />
-                                    :
-                                    <img id="fc" src={iconoIg} alt="Icono Instagram" />
+                                        ?
+                                        <img id="fc" src={iconoIgN} alt="Icono Instagram" />
+                                        :
+                                        <img id="fc" src={iconoIg} alt="Icono Instagram" />
                                 }
                             </Link>
                         </li>
                         <li>
-                            <Link 
-                            to={"https://www.tiktok.com/@terraloteosoficial?is_from_webapp=1&sender_device=pc"}
-                            target="_blank"
-                            onMouseEnter={() => setIsHover("tiktok")}
-                            onMouseLeave={() => setIsHover("")}>
+                            <Link
+                                to={"https://www.tiktok.com/@terraloteosoficial?is_from_webapp=1&sender_device=pc"}
+                                target="_blank"
+                                onMouseEnter={() => setIsHover("tiktok")}
+                                onMouseLeave={() => setIsHover("")}>
                                 {
                                     isHover == "tiktok"
-                                    ?
-                                    <img id="fc" src={iconoTiktokN} alt="Icono Tiktok" />
-                                    :
-                                    <img id="fc" src={iconoTiktok} alt="Icono Tiktok" />
+                                        ?
+                                        <img id="fc" src={iconoTiktokN} alt="Icono Tiktok" />
+                                        :
+                                        <img id="fc" src={iconoTiktok} alt="Icono Tiktok" />
                                 }
                             </Link>
                         </li>
                         <li>
-                            <Link 
-                            to={""}
-                            target="_blank"
-                            onMouseEnter={() => setIsHover("whatsapp")}
-                            onMouseLeave={() => setIsHover("")}>
+                            <Link
+                                to={""}
+                                target="_blank"
+                                onMouseEnter={() => setIsHover("whatsapp")}
+                                onMouseLeave={() => setIsHover("")}>
                                 {
                                     isHover == "whatsapp"
-                                    ?
-                                    <img id="fc" src={iconoWtsN} alt="Icono Whatsapp" />
-                                    :
-                                    <img id="fc" src={iconoWts} alt="Icono Whatsapp" />
+                                        ?
+                                        <img id="fc" src={iconoWtsN} alt="Icono Whatsapp" />
+                                        :
+                                        <img id="fc" src={iconoWts} alt="Icono Whatsapp" />
                                 }
                             </Link>
                         </li>
