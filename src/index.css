@@ -1097,6 +1097,7 @@
     font-size: 60px;
     font-family: "1";
     font-weight: bold;
+    color: #ef8937;
 }
 
 .titulo-vivir-ds-mob {
@@ -1537,7 +1538,7 @@
     width: 100%;
     padding: 30px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -1549,7 +1550,7 @@
     font-size: x-small;
     font-weight: bold;
     font-family: "1";
-    margin: 0px 10px;
+    margin: 0px 40px;
     border: 2px solid #ef8937;
     color: white;
     background-color: transparent;
@@ -1601,18 +1602,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 5px;
-    padding: 5px;
+    padding: 10px;
+    background-color: #133222;
 }
 
 .box {
     position: relative;
     width: 100%;
     height: 100%;
-
     overflow: hidden;
     border-radius: 12px;
     background: #1a1a1a;
-    /* fondo mientras carga */
+
 }
 
 .box-img {
@@ -1648,7 +1649,7 @@
 }
 
 
-.contenedor-slider-galeria{
+.contenedor-slider-galeria {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1661,7 +1662,7 @@
     padding: 0px 20px;
 }
 
-.contenedor-boton-cerrar-galeria{
+.contenedor-boton-cerrar-galeria {
     text-align: end;
     width: 100%;
     max-width: 550px;
@@ -1679,7 +1680,7 @@
     height: 500px;
     overflow: hidden;
     border-radius: 12px;
-        animation-name: fadeInUp;
+    animation-name: fadeInUp;
     animation-duration: .5s;
     animation-iteration-count: 1;
 }
@@ -1697,7 +1698,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .slide-galeria img {
@@ -1785,9 +1786,11 @@
 
 .contenedor-caracteristicas-data {
     display: flex;
-    align-items: start;
+
+    align-items: center;
     justify-content: space-evenly;
     margin-top: 50px;
+
 
 }
 
@@ -1808,12 +1811,16 @@
 
 .contenedor-descripcion-casa {
     width: 70%;
+    padding: 0px 20px;
 }
 
 .contenedor-descripcion-casa p {
     color: white;
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
+    font-family: "1";
+    font-size: medium;
+
 }
 
 .titulo-lista {
@@ -1828,13 +1835,16 @@
 .lista-caracteristicas-modelo {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     padding-bottom: 50px;
     width: 100%;
     border-left: 1px solid rgba(255, 255, 255, 0.514);
-    padding-left: 40px;
+    padding: 40px;
+    max-width: 600px;
 
 }
 
@@ -1842,7 +1852,13 @@
 
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin: 10px;
+    width: 130px;
+}
+
+.item-caracteristicas-modelo img {
+
+    width: 30px;
 }
 
 .item-caracteristicas-modelo p {
@@ -1851,6 +1867,7 @@
     margin-left: 10px;
     font-family: "1";
     color: white;
+    font-size: small;
 }
 
 
@@ -1900,7 +1917,10 @@
 .contenedor-caracteristicas-data-mob {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
 }
 
 .contenedor-descripcion-casa-mob {
@@ -1914,15 +1934,65 @@
     font-weight: 400;
 }
 
+.titulo-lista-mob {
+    color: white;
+    font-family: "1";
+    font-weight: 400;
+    border-bottom: 1px solid #ef8937;
+    width: 100vw;
+    margin: auto;
+    padding: 10px 0px;
+    text-align: center;
+
+}
+
 .lista-caracteristicas-modelo-mob {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
     margin: 0;
     padding: 0;
-    padding-bottom: 50px;
+    justify-content: space-between;
+    padding-top: 20px;
+
+}
+
+
+/* DETALLES CASA */
+
+.section-detalles-casa {
     width: 100%;
-    padding-left: 40px;
+}
+
+.contenedor-detalles-casa {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lista-detalles-casa {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 60px 0px 50px 0px;
+}
+
+.item-detalle-casa {
+    text-align: center;
+}
+
+.icono-detalle {
+    width: 50px;
+}
+
+.texto-detalle {
+    margin: 0;
+    color: #ef8937;
+    font-family: "1";
+    font-weight: bold;
+    padding-top: 10px;
 }
 
 /* PAGE DETALLE PRODUCTOS */
@@ -2385,7 +2455,7 @@
 
 .section-formulario-contacto {
     width: 100%;
-
+    position: relative;
 }
 
 .formulario-contacto {
@@ -2443,9 +2513,28 @@
 
 }
 
-.contenedor-formulario {
+
+.formulario-spinner {
     width: 30%;
     min-width: 300px;
+    position: relative;
+}
+
+.contenedor-spinner-formulario {
+    position: absolute;
+    background-color: #133222;
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedor-formulario {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2456,8 +2545,8 @@
 .input {
     width: 46%;
     margin: 5px 0px;
-    border-radius: 50px;
-    border: 0;
+    border-radius: 20px;
+    border: none;
     height: 30px;
     font-size: small;
     padding-left: 10px;
@@ -2465,6 +2554,8 @@
     font-weight: bold;
 
 }
+
+
 
 
 .mensaje {
@@ -2539,6 +2630,11 @@
 .section-contacto-mob {
     display: none;
 
+}
+
+.formulario-spinner-mob {
+    width: 100%;
+    position: relative;
 }
 
 .contenedor-contacto-mob {
@@ -2866,6 +2962,8 @@
 }
 
 @media (max-width:990px) {
+
+  
     .navbar-nav {
         width: 100%;
         padding: 20px 0px;
@@ -2911,6 +3009,8 @@
         width: 100%;
 
     }
+
+   
 }
 
 @media (max-width:800px) {
@@ -2927,6 +3027,8 @@
     .section-contacto-mob {
         display: block;
     }
+
+
 
     .section-contacto {
         display: none;
@@ -3239,9 +3341,7 @@
 
     /* ENCABEZADO CASA */
 
-    .sectionm-encabezado-casa-mob {
-        display: block;
-    }
+   
 
     .sectionm-encabezado-casa {
         display: none;

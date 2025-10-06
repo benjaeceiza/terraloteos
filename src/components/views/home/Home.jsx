@@ -6,33 +6,37 @@ import SectionContacto from "../../SectionContacto";
 import SectionContactoMob from "../../SectionContactoMob";
 import { useEffect } from "react";
 
+
 const Home = () => {
 
-     useEffect(() => {
+    useEffect(() => {
         const elements = document.querySelectorAll(".frase");
         const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("animacion-fade");
-                observer.unobserve(entry.target); 
-              }
-            });
-          },
-          { threshold: 0.1 } 
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animacion-fade");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
         );
-    
+
         elements.forEach((el) => observer.observe(el));
-    
+
         return () => observer.disconnect();
-      }, []);
+    }, []);
+
+
+ 
 
     return (
         <>
 
             <main className="main-index">
                 <div className="fondo-negro-main">
-                    <SliderProyectos/>
+                    <SliderProyectos />
                     <section className="section-frase">
                         <div className="contenedor-frase">
                             <p className="frase">CONSTRUIMOS</p>
@@ -40,7 +44,7 @@ const Home = () => {
                             <p className="frase">DESARROLLAMOS</p>
                             <p className="frase">|</p>
                             <p className="frase">INVERTIMOS</p>
-                   
+
                         </div>
                     </section>
                     <section className="section-frase-mob">
@@ -48,7 +52,7 @@ const Home = () => {
                             <p className="frase-mob">CONSTRUIMOS</p>
                             <p className="frase-mob">DESARROLLAMOS</p>
                             <p className="frase-mob">INVERTIMOS</p>
-                   
+
                         </div>
                     </section>
                     <div className="contenedor-title">

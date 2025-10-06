@@ -1,4 +1,5 @@
 import logo from "../assets/logos/logo-corto.png"
+import MailerMob from "./mailer/MailerMob";
 
 const SectionContactoMob = () => {
 
@@ -18,14 +19,7 @@ const SectionContactoMob = () => {
          
                              </div>
          
-                             <div className="contenedor-formulario-mob">
-                                 <input className="input-mob" type="text" placeholder="Nombre" />
-                                 <input className="input-mob" type="text" placeholder="Apellido" />
-                                 <input className="input-mob" type="text" placeholder="Correo Electronico" />
-                                 <input className="input-mob" type="text" placeholder="Numero" />
-                                 <textarea className="mensaje-mob" placeholder="Mensaje" name="" ></textarea>
-                                 <button className="button-formulario-mob">Enviar</button>
-                             </div>
+                             <MailerMob/>
                          </div>
                      </section>
         </>

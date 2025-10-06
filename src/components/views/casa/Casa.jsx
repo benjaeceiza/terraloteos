@@ -4,6 +4,8 @@ import Encabezado from "./Encabezado";
 import SectionContacto from "../../SectionContacto";
 import EncabezadoMob from "./EncabezadoMob";
 import SectionContactoMob from "../../SectionContactoMob";
+import GaleriaImagenes from "./Galeriaimagenes";
+import Detalles from "./Detalles";
 
 
 const Casa = () => {
@@ -14,9 +16,11 @@ const Casa = () => {
     return (
         <>
        
-                    <main>
+                    <main className="main">
                         <Encabezado casa={casa} />
                         <EncabezadoMob casa={casa}/>
+                        <Detalles/>
+                        <GaleriaImagenes casa={casa}/>
                         <SectionContacto />
                         <SectionContactoMob/>
                     </main>

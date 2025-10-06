@@ -1,11 +1,9 @@
 
-
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 
-const FormularioContacto = () => {
-
+const Mailer = () => {
     const form = useRef();
 
     const [isSending, setIsSending] = useState(false)
@@ -59,9 +57,8 @@ const FormularioContacto = () => {
 
     return (
         <>
+            <div className='formulario-spinner'>
 
-
-            <section className="section-formulario-contacto">
                 {
                     isSending
                         ?
@@ -73,18 +70,21 @@ const FormularioContacto = () => {
                         :
                         ""
                 }
-                <form className="formulario-contacto" ref={form} onSubmit={sendEmail}>
-                    <input className="input-contacto" name='user_name' type="text" placeholder="Nombre" required="true"/>
-                    <input className="input-contacto" name='last_name' type="text" placeholder="Apellido" required="true"/>
-                    <input className="input-contacto" name='user_email' type="email" placeholder="Correo Electrónico" required="true"/>
-                    <input className="input-contacto" name='user_phone' type="number" placeholder="Teléfono" required="true"/>
-                    <textarea className="mensaje-formulario-contacto" placeholder="Mensaje" name="message" id=""></textarea>
-                    <input className='button-formulario' type="submit" value={"Enviar"} />
+                <form className="contenedor-formulario" ref={form} onSubmit={sendEmail}>
+                    <input className="input" type="text" name="user_name" placeholder="Nombre" required="true" />
+                    <input className="input" type="text" name="last_name" placeholder="Apellido" required="true" />
+                    <input className="input" type="email" name="user_email" placeholder="Correo Electronico" required="true" />
+                    <input className="input" type="text" name="user_phone" placeholder="Numero" required="true" />
+                    <textarea className="mensaje" placeholder="Mensaje" name="message" ></textarea>
+                    <input type="submit" value={"Enviar"} className="button-formulario" />
                 </form>
-                <ToastContainer/>
-            </section>
+            
+
+            </div>
+            <ToastContainer />
+
         </>
     )
 }
 
-export default FormularioContacto;
+export default Mailer;

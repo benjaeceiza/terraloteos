@@ -1,6 +1,7 @@
 [
     {
         "tipo": "Loft",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft con sala de estar, comedor y cocina, cochera, galería y terraza. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 1,
         "terreno": 106,
         "entrega": 180,
@@ -10,7 +11,7 @@
         "cochera": true,
         "galeria": true,
         "expansion": true,
-        "entrepiso": true,
+        "entrepiso": false,
         "desayunador": false,
         "terraza": true,
         "vestidor": false,
@@ -20,11 +21,15 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/RFzcZCfv/loft-2.jpg","https://i.postimg.cc/W4ZGVqd9/loft-1.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/RFzcZCfv/loft-2.jpg",
+            "https://i.postimg.cc/W4ZGVqd9/loft-1.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/RFzcZCfv/loft-2.jpg"
     },
     {
         "tipo": "Loft A1",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft A1 con sala de estar, comedor, cocina, cochera - galería, y terraza. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 1,
         "terreno": 99,
         "entrega": 180,
@@ -34,7 +39,7 @@
         "cochera": true,
         "galeria": true,
         "expansion": false,
-        "entrepiso": true,
+        "entrepiso": false,
         "desayunador": false,
         "terraza": true,
         "vestidor": false,
@@ -44,11 +49,17 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/xCC9HML5/loft-a1-1.jpg","https://i.postimg.cc/hvQgZny7/loft-a1-2.jpg","https://i.postimg.cc/6Qz9yY4T/loft-a1-3.jpg","https://i.postimg.cc/sXNsJxcr/loft-a1-4.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/xCC9HML5/loft-a1-1.jpg",
+            "https://i.postimg.cc/hvQgZny7/loft-a1-2.jpg",
+            "https://i.postimg.cc/6Qz9yY4T/loft-a1-3.jpg",
+            "https://i.postimg.cc/sXNsJxcr/loft-a1-4.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/xCC9HML5/loft-a1-1.jpg"
     },
     {
         "tipo": "Loft A2",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft A2 con terraza accesible. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 1,
         "terreno": 99,
         "entrega": 180,
@@ -68,11 +79,15 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/1t53HL1p/loft-a2-2.jpg","https://i.postimg.cc/fbvbYMpz/loft-a2-1.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/1t53HL1p/loft-a2-2.jpg",
+            "https://i.postimg.cc/fbvbYMpz/loft-a2-1.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/1t53HL1p/loft-a2-2.jpg"
     },
     {
         "tipo": "Tipología A",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 99,
         "entrega": 180,
@@ -92,11 +107,15 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/L6TYzBPK/tipologia-a-1.jpg","https://i.postimg.cc/rFcR0YKN/tipologia-a-2.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/L6TYzBPK/tipologia-a-1.jpg",
+            "https://i.postimg.cc/rFcR0YKN/tipologia-a-2.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/L6TYzBPK/tipologia-a-1.jpg"
     },
     {
         "tipo": "Tipología B",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 99,
         "entrega": 180,
@@ -116,11 +135,16 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/MK8V0prR/tipologia-b-1.jpg","https://i.postimg.cc/Hs4561fN/tipologia-b-2.jpg","https://i.postimg.cc/Cxh8t60x/tipologia-b-3.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/MK8V0prR/tipologia-b-1.jpg",
+            "https://i.postimg.cc/Hs4561fN/tipologia-b-2.jpg",
+            "https://i.postimg.cc/Cxh8t60x/tipologia-b-3.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/MK8V0prR/tipologia-b-1.jpg"
     },
     {
         "tipo": "Tipología B3",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 119,
         "entrega": 180,
@@ -140,11 +164,17 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/htsLtRsm/tipologia-b3-3.jpg","https://i.postimg.cc/52b5J2B1/tipologia-b3-4.jpg","https://i.postimg.cc/vmmW122N/tipologia-b3-2.jpg","https://i.postimg.cc/d0SGGRzt/tipologia-b3-1.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/htsLtRsm/tipologia-b3-3.jpg",
+            "https://i.postimg.cc/52b5J2B1/tipologia-b3-4.jpg",
+            "https://i.postimg.cc/vmmW122N/tipologia-b3-2.jpg",
+            "https://i.postimg.cc/d0SGGRzt/tipologia-b3-1.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/htsLtRsm/tipologia-b3-3.jpg"
     },
     {
         "tipo": "Tipología C",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 151,
         "entrega": 180,
@@ -164,11 +194,17 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/gkR4d71y/tipologia-c-3.jpg","https://i.postimg.cc/FFwGMvCs/tipologia-c-2.jpg","https://i.postimg.cc/13QBzHZk/tipologia-c-4.jpg","https://i.postimg.cc/XNrQ1q8z/tipologia-c-1.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/gkR4d71y/tipologia-c-3.jpg",
+            "https://i.postimg.cc/FFwGMvCs/tipologia-c-2.jpg",
+            "https://i.postimg.cc/13QBzHZk/tipologia-c-4.jpg",
+            "https://i.postimg.cc/XNrQ1q8z/tipologia-c-1.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/gkR4d71y/tipologia-c-3.jpg"
     },
     {
         "tipo": "Tipología D",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 122,
         "entrega": 180,
@@ -188,11 +224,16 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/855r5FcQ/tipologia-d-2.jpg","https://i.postimg.cc/YS8WMNpz/tipologia-d-1.jpg","https://i.postimg.cc/mrTHvpGr/tipologia-d-3.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/855r5FcQ/tipologia-d-2.jpg",
+            "https://i.postimg.cc/YS8WMNpz/tipologia-d-1.jpg",
+            "https://i.postimg.cc/mrTHvpGr/tipologia-d-3.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/855r5FcQ/tipologia-d-2.jpg"
     },
     {
         "tipo": "Tipología D1",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios y dos baños. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 167,
         "entrega": 180,
@@ -212,11 +253,19 @@
         "hallIngreso": false,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/yNTFW4T9/tipologia-d1-6.jpg","https://i.postimg.cc/bJN1tC65/tipologia-d1-5.jpg","https://i.postimg.cc/tgb3XCFp/tipologia-d1-4.jpg","https://i.postimg.cc/Vkn9QbrK/tipologia-d1-3.jpg","https://i.postimg.cc/HxZX4wRk/tipologia-d1-1.jpg","https://i.postimg.cc/mkK9Kbbx/tipologia-d1-8.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/yNTFW4T9/tipologia-d1-6.jpg",
+            "https://i.postimg.cc/bJN1tC65/tipologia-d1-5.jpg",
+            "https://i.postimg.cc/tgb3XCFp/tipologia-d1-4.jpg",
+            "https://i.postimg.cc/Vkn9QbrK/tipologia-d1-3.jpg",
+            "https://i.postimg.cc/HxZX4wRk/tipologia-d1-1.jpg",
+            "https://i.postimg.cc/mkK9Kbbx/tipologia-d1-8.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/yNTFW4T9/tipologia-d1-6.jpg"
     },
     {
         "tipo": "Tipología E",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de 3 dormitorios, Dos plantas, y dos baños. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 240,
         "entrega": 180,
@@ -233,12 +282,16 @@
         "deposito": true,
         "hallIngreso": false,
         "despensa": false,
-        "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/mDz2J7hD/tipologia-e-1.jpg","https://i.postimg.cc/Qt2x3VWq/tipologia-e-2.jpg"],
+        "banos": 1,
+        "galeriaImagenes": [
+            "https://i.postimg.cc/mDz2J7hD/tipologia-e-1.jpg",
+            "https://i.postimg.cc/Qt2x3VWq/tipologia-e-2.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/mDz2J7hD/tipologia-e-1.jpg"
     },
     {
         "tipo": "Tipología F",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos plantas con tres dormitorios, tres baños, lavadero y despensa. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 208,
         "entrega": 180,
@@ -256,11 +309,17 @@
         "hallIngreso": true,
         "despensa": true,
         "baños": 3,
-        "galeriaImagenes": ["https://i.postimg.cc/BvwnmmSk/tipologia-f-2.jpg","https://i.postimg.cc/pLRrr9cG/tipologia-f-1.jpg","https://i.postimg.cc/Hkzxypfp/tipologia-f-3.jpg","https://i.postimg.cc/2555dsDn/tipologia-f-4.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/BvwnmmSk/tipologia-f-2.jpg",
+            "https://i.postimg.cc/pLRrr9cG/tipologia-f-1.jpg",
+            "https://i.postimg.cc/Hkzxypfp/tipologia-f-3.jpg",
+            "https://i.postimg.cc/2555dsDn/tipologia-f-4.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/BvwnmmSk/tipologia-f-2.jpg"
     },
     {
         "tipo": "Tipología H",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de tres dormitorios, baño y toilet + lavado. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 218,
         "entrega": 180,
@@ -278,7 +337,12 @@
         "hallIngreso": true,
         "despensa": false,
         "baños": 1,
-        "galeriaImagenes": ["https://i.postimg.cc/bwhDnVrR/tipologia-h-3.jpg","https://i.postimg.cc/pV3nWLt4/tipologia-h-2.jpg","https://i.postimg.cc/7Y7JfrH6/tipologia-h-4.jpg","https://i.postimg.cc/nhGsGKQf/topologia-h-2.jpg"],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/bwhDnVrR/tipologia-h-3.jpg",
+            "https://i.postimg.cc/pV3nWLt4/tipologia-h-2.jpg",
+            "https://i.postimg.cc/7Y7JfrH6/tipologia-h-4.jpg",
+            "https://i.postimg.cc/nhGsGKQf/topologia-h-2.jpg"
+        ],
         "imgPrincipal": "https://i.postimg.cc/bwhDnVrR/tipologia-h-3.jpg"
     }
 ]

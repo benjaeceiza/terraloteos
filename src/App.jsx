@@ -16,6 +16,7 @@ import { LoadingProvider, useLoading } from './components/context/LoadingContext
 import { useEffect } from 'react';
 
 
+
 const AppContent = () => {
   const location = useLocation();
   const { showLoader } = useLoading();
@@ -24,6 +25,9 @@ const AppContent = () => {
   useEffect(() => {
     showLoader();
   }, [location.pathname]);
+
+ 
+
 
   return (
     <>
