@@ -16,6 +16,7 @@ import despensa from "../../../assets/iconos/despensa.png";
 import banos from "../../../assets/iconos/bano.png";
 import expansion from "../../../assets/iconos/metros.png";
 
+
 const EncabezadoMob = ({ casa }) => {
 
     const { hideLoader } = useLoading();

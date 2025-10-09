@@ -14,6 +14,7 @@ import BotonWts from './components/BotonWts';
 import ScrollManager from './components/ScrollManager';
 import { LoadingProvider, useLoading } from './components/context/LoadingContext';
 import { useEffect } from 'react';
+import SerSocio from './components/views/socio/SerSocio';
 
 
 
@@ -38,6 +39,7 @@ const AppContent = () => {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/fundacion" element={<Fundacion />} />
         <Route path="/desarrollos" element={<Desarrollos />} />
+        <Route path="/ser-parte-desarrollo" element={<SerSocio />} />
         <Route path="/productoTerraloteos" element={<ProductoTerraloteos />} />
         <Route path="/barrio/:nombre" element={<Barrio />} />
         <Route path="/casa/:tipo" element={<Casa />} />

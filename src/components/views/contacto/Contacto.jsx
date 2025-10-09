@@ -17,7 +17,7 @@ const Contacto = () => {
         <>
             <main className="main-contact">
                 <div className="encabezado-contacto">
-                    <h1 className="titulo-contacto">PONETE EN CONTACTO CON NOSOTROS</h1>
+                    <h1 className="titulo-contacto">COMUNICATE CON NOSOTROS</h1>
                 </div>
                 <CardContact />
                 <FormularioContacto />

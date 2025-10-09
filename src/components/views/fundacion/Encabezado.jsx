@@ -14,6 +14,7 @@ const Encabezado = () => {
                 <img className="fondo-encabezado-fundacion" src={fondo} alt="" onLoad={hideLoader} />
                 <div className="contenedor-logo-fundacion">
                     <img className="logo-fundacion" src={logo} alt="" />
+                    <h1>Sembramos <span className="naranja">futuro</span>, construimos <span className="naranja">conciencia</span>.</h1>
                 </div>
             </section>
         </>

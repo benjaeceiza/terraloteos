@@ -119,7 +119,7 @@ const Navbar = () => {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item" onClick={closeMenu}>
+                                        <NavLink className="dropdown-item" to={"/ser-parte-desarrollo"} onClick={closeMenu}>
                                             Desarrollos Terraloteos
                                         </NavLink>
                                     </li>

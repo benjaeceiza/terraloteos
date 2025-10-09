@@ -6,6 +6,7 @@ import EncabezadoMob from "./EncabezadoMob";
 import SectionContactoMob from "../../SectionContactoMob";
 import GaleriaImagenes from "./Galeriaimagenes";
 import Detalles from "./Detalles";
+import Preguntas from "./Preguntas";
 
 
 const Casa = () => {
@@ -15,16 +16,20 @@ const Casa = () => {
 
     return (
         <>
-       
-                    <main className="main">
-                        <Encabezado casa={casa} />
-                        <EncabezadoMob casa={casa}/>
-                        <Detalles/>
-                        <GaleriaImagenes casa={casa}/>
-                        <SectionContacto />
-                        <SectionContactoMob/>
-                    </main>
-            
+
+            <main className="main">
+                <Encabezado casa={casa} />
+                <EncabezadoMob casa={casa} />
+                <Detalles casa={casa} />
+                <GaleriaImagenes casa={casa} />
+                <div className="contenedor-title">
+                    <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+                </div>
+                <Preguntas />
+                <SectionContacto />
+                <SectionContactoMob />
+            </main>
+
         </>
     )
 }

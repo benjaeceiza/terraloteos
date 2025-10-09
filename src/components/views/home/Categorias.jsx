@@ -50,7 +50,6 @@ const Categorias = () => {
                         className={cardOne ? "link-activo" : "link-categoria"}
                         onMouseEnter={() => agrandar("1")}
                         onMouseLeave={() => achicar("1")}
-
                     >
                         <div id="categoria-1" className="contenedor-categoria">
                              <img className="fondo-categoria" src={fondoOne} alt="" />
@@ -107,49 +106,7 @@ const Categorias = () => {
                     </Link>
                 </div>
             </section>
-            <section className="section-categorias-mobile">
-                <div className="contenedor-categorias">
-                    <div id="categoria-1-mobile" className="contenedor-categoria">
-                        <div className="fondo-negro">
-                            <p id="frase-categoria-1-mobile" className="titulo-categoria">Viví en nuestros desarrollos</p>
-                            <Link href="./pages/vivir-en-desarrollos.html" id="contenedor-data-categoria-1-mobile" className="contenedor-data-categoria">
-                                <img className="logo-categoria" src="./recursos/logos/logo-corto.png" alt="" />
-                                <p className="descripcion-categoria">Encontrá tu lugar ideal para vivir. Descubrí nuestros
-                                    barrios y conocé los diferentes modelos de
-                                    vivienda diseñados para vos.
-                                </p>
-                                <button className="boton-categoria">Click Aqui</button>
-                            </Link>
-                        </div>
-                    </div>
-                    <div id="categoria-2-mobile" className="contenedor-categoria">
-                        <div className="fondo-negro">
-                            <p id="frase-categoria-2-mobile" className="titulo-categoria">Invertí en productos Terraloteos</p>
-                            <Link to={""} id="contenedor-data-categoria-2-mobile" className="contenedor-data-categoria">
-                                <img className="logo-categoria" src="./recursos/logos/logo-corto.png" alt="" />
-                                <p className="descripcion-categoria">Hacé crecer tu capital. Invertí en propiedades
-                                    diseñadas para generar ingresos y valor real en el
-                                    tiempo.
-                                </p>
-                                <button className="boton-categoria">Click Aqui</button>
-                            </Link>
-                        </div>
-                    </div>
-                    <div id="categoria-3-mobile" className="contenedor-categoria">
-                        <div className="fondo-negro">
-                            <p id="frase-categoria-3-mobile" className="titulo-categoria">Invertí en un desarrollo urbanístico</p>
-                            <Link to={""} id="contenedor-data-categoria-3-mobile" className="contenedor-data-categoria">
-                                <img className="logo-categoria" src="./recursos/logos/logo-corto.png" alt="" />
-                                <p className="descripcion-categoria">Convertite en parte de la creación de un barrio desde
-                                    cero. Invertí con capital o con obras y
-                                    obtené beneficios únicos.
-                                </p>
-                                <button className="boton-categoria">Click Aqui</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
         </>
     )
 }

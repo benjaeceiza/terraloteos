@@ -168,14 +168,7 @@ const Encabezado = ({ casa }) => {
                         </div>
                     </div>
                 </div>
-                {/* <div className="contenedor-detalles">
-                    <ul className="lista-detalles">
-                        <li className="item-detalles">
-                            <img className="icono-detalles" src="" alt="" />
-                            <p className="parrafo-detalle">180dias</p>
-                        </li>
-                    </ul>
-                </div> */}
+          
             </section>
         </>
     )

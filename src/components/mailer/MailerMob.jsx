@@ -71,10 +71,10 @@ const MailerMob = () => {
                         ""
                 }
                 <form className="contenedor-formulario-mob" ref={form} onSubmit={sendEmail}>
-                    <input className="input-mob" name='user_name' type="text" placeholder="Nombre" required="true" />
-                    <input className="input-mob" name='last_name' type="text" placeholder="Apellido" required="true" />
-                    <input className="input-mob" name='user_email' type="email" placeholder="Correo Electronico" required="true" />
-                    <input className="input-mob" name='user_phone' type="text" placeholder="Numero" required="true" />
+                    <input className="input-mob" name='user_name' type="text" placeholder="Nombre" required={true} />
+                    <input className="input-mob" name='last_name' type="text" placeholder="Apellido" required={true} />
+                    <input className="input-mob" name='user_email' type="email" placeholder="Correo Electronico" required={true} />
+                    <input className="input-mob" name='user_phone' type="text" placeholder="Numero" required={true} />
                     <textarea className="mensaje-mob" placeholder="Mensaje" name="message"></textarea>
                     <input type='submit' value={"Enviar"} className="button-formulario-mob" />
                 </form>

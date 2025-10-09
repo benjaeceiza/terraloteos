@@ -10,7 +10,7 @@ const Encabezado = () => {
                 <img className="img-encabezado-vivir-ds" src={fondo} alt=""  onLoad={hideLoader}/>
                 <div className="contenedor-data-vivir-ds">
                     <div className="contenedor-titulo-sub-desarrollos">
-                        <h1 className="titulo-vivir-ds">VIVÍ EN NUESTROS DESARROLLOS</h1>
+                        <h1 className="titulo-vivir-ds">VIVÍ EN <span className="naranja">NUESTROS</span> DESARROLLOS</h1>
                         <p className="texto-vivir-ds-principal">En Terraloteos desarrollamos barrios donde la naturaleza y el
                             progreso se
                             encuentran. Si estás
