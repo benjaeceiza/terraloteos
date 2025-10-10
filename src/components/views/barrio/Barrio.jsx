@@ -10,6 +10,7 @@ import SliderGaleria from "./SliderGaleria";
 import cerrar from "../../../assets/iconos/cerrar.png";
 import { useState } from "react";
 import Detalles from "./Detalles";
+import Preguntas from "../casa/Preguntas";
 
 const Barrio = () => {
   const { nombre } = useParams();
@@ -24,21 +25,25 @@ const Barrio = () => {
       <main className="main">
         <Encabezado barrio={barrio} />
         <EncabezadoMob barrio={barrio} />
-        <Detalles barrio={barrio}/>
-        <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible}/>
+        <Detalles barrio={barrio} />
+        <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible} />
         <div className="contenedor-title">
           <h2 className="sub">NUESTROS MODELOS</h2>
         </div>
         <SliderModelos />
+        <div className="contenedor-title">
+          <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+        </div>
+        <Preguntas />
         <SectionContacto />
         <SectionContactoMob />
-        {sliderVisible ? 
-        <div className="contenedor-slider-galeria">
-          <div className="contenedor-boton-cerrar-galeria">
-            <img onClick={() => setSliderVisible(false)} src={cerrar} alt="" />
-          </div>
-          <SliderGaleria barrio={barrio}/>
-        </div> : ""}
+        {sliderVisible ?
+          <div className="contenedor-slider-galeria">
+            <div className="contenedor-boton-cerrar-galeria">
+              <img onClick={() => setSliderVisible(false)} src={cerrar} alt="" />
+            </div>
+            <SliderGaleria barrio={barrio} />
+          </div> : ""}
       </main>
     </>
   )

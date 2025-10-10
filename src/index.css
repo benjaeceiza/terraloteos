@@ -132,24 +132,8 @@
     font-weight: 600;
     letter-spacing: 10px;
     font-size: 1cqmax;
-
+      font-size: clamp(12px, 1vw, 24px);
 }
-
-/* BOTON WTS */
-
-.contenedor-wts {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 0px 25px 100px 0px;
-    z-index: 50;
-}
-
-.contacto-wts {
-    height: 60px;
-}
-
-
 
 
 
@@ -1187,7 +1171,6 @@
 
 .contenedor-titulo-sub-desarrollos {
     text-align: center;
-
     animation-name: fadeInUp;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -2756,6 +2739,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -2771,6 +2755,7 @@
     background-color: #35604a;
     height: 350px;
     width: 31%;
+  
 }
 
 .icono-card-contact {
@@ -3328,10 +3313,7 @@
         width: 33.333333%;
     }
 
-    .section-cards-contact {
-        justify-content: space-evenly;
-    }
-
+ 
 
 
 
@@ -3553,7 +3535,15 @@
 
 @media (max-width:600px) {
 
-
+    
+       .section-cards-contact {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .card-contact-container{
+        width: 100%;
+        margin-top: 20px;
+    }
 
     .sectionm-encabezado-casa-mob {
         display: block;

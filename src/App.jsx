@@ -10,7 +10,6 @@ import Barrio from './components/views/barrio/Barrio';
 import Fundacion from './components/views/fundacion/Fundacion';
 import Casa from './components/views/casa/Casa';
 import ProductoTerraloteos from './components/views/productoTerraloteos/ProductoTerraloteos';
-import BotonWts from './components/BotonWts';
 import ScrollManager from './components/ScrollManager';
 import { LoadingProvider, useLoading } from './components/context/LoadingContext';
 import { useEffect } from 'react';
@@ -45,7 +44,6 @@ const AppContent = () => {
         <Route path="/casa/:tipo" element={<Casa />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
-      <BotonWts />
       <Footer />
     </>
   );

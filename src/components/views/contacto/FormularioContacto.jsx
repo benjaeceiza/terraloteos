@@ -74,10 +74,10 @@ const FormularioContacto = () => {
                         ""
                 }
                 <form className="formulario-contacto" ref={form} onSubmit={sendEmail}>
-                    <input className="input-contacto" name='user_name' type="text" placeholder="Nombre" required="true"/>
-                    <input className="input-contacto" name='last_name' type="text" placeholder="Apellido" required="true"/>
-                    <input className="input-contacto" name='user_email' type="email" placeholder="Correo Electrónico" required="true"/>
-                    <input className="input-contacto" name='user_phone' type="number" placeholder="Teléfono" required="true"/>
+                    <input className="input-contacto" name='user_name' type="text" placeholder="Nombre" required={true}/>
+                    <input className="input-contacto" name='last_name' type="text" placeholder="Apellido" required={true}/>
+                    <input className="input-contacto" name='user_email' type="email" placeholder="Correo Electrónico" required={true}/>
+                    <input className="input-contacto" name='user_phone' type="number" placeholder="Teléfono" required={true}/>
                     <textarea className="mensaje-formulario-contacto" placeholder="Mensaje" name="message" id=""></textarea>
                     <input className='button-formulario' type="submit" value={"Enviar"} />
                 </form>
