@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "../../../assets/logos/logo-corto.png"
 import fondoThree from "../../../assets/categorias/invertir-2.jpeg" 
 import fondoTwo from "../../../assets/categorias/inversion.png" 

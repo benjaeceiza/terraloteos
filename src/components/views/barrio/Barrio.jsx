@@ -9,6 +9,7 @@ import SectionContactoMob from "../../SectionContactoMob";
 import SliderGaleria from "./SliderGaleria";
 import cerrar from "../../../assets/iconos/cerrar.png";
 import { useState } from "react";
+import Detalles from "./Detalles";
 
 const Barrio = () => {
   const { nombre } = useParams();
@@ -23,6 +24,7 @@ const Barrio = () => {
       <main className="main">
         <Encabezado barrio={barrio} />
         <EncabezadoMob barrio={barrio} />
+        <Detalles barrio={barrio}/>
         <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible}/>
         <div className="contenedor-title">
           <h2 className="sub">NUESTROS MODELOS</h2>

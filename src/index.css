@@ -96,7 +96,7 @@
 
 
 .main-index {
-    background-image: url("./assets/fondos/fondo-body.jpg");
+    background-image: url("./assets/fondos/fondo-main.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -640,17 +640,7 @@
 
 }
 
-#categoria-1-mobile {
-    background-image: url("./assets/categorias/vivir.png");
-}
 
-#categoria-2-mobile {
-    background-image: url("./assets/categorias/inversion.png");
-}
-
-#categoria-3-mobile {
-    background-image: url("./assets/categorias/invertir-2.jpeg");
-}
 
 
 
@@ -731,10 +721,102 @@
     animation-iteration-count: 1;
 }
 
-/* CATEGORIA-MOBILE */
-.section-categorias-mobile {
+
+/* Categorias mob */
+
+.section-categorias-mob {
     display: none;
+    width: 100%;
 }
+
+.contenedor-categorias-mob {
+    display: flex;
+    width: 100%;
+    height: 500px;
+
+}
+
+.card-categoria-mob {
+    position: relative;
+    width: 33.5%;
+    transition: all .5s;
+}
+
+.card-categoria-mob-activo {
+    position: relative;
+    width: 120%;
+     transition: all .5s;
+}
+
+
+.fondo-categoria-mob {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: brightness(50%);
+}
+
+.contenedor-title-categoria-mob {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.title-categoria-mob {
+
+    margin: 0;
+    color: white;
+    transform: rotateZ(90deg);
+    font-size: x-large;
+    font-family: "1";
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+}
+
+.contenedor-data-categoria-mob{
+   
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-categoria-mob{
+    width: 80px;
+    margin: 20px 0px;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+}
+
+.parrafo-data-categoria-mob{
+
+    color: white;
+    font-family: "1";
+    font-size: small;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    width: 80%;
+}
+
 
 /* NUMEROS */
 
@@ -1581,7 +1663,7 @@
 .boton-barrio {
     padding: 10px 15px;
     border: 0;
-    height: 40px;
+
     border-radius: 50px;
     font-size: x-small;
     font-weight: bold;
@@ -1590,6 +1672,7 @@
     border: 2px solid #ef8937;
     color: white;
     background-color: transparent;
+    height: fit-content;
 }
 
 .boton-barrio:hover {
@@ -1858,7 +1941,7 @@
     margin: auto;
     font-family: "1";
     font-size: medium;
- 
+
 
 }
 
@@ -2015,18 +2098,33 @@
     justify-content: space-around;
     margin: 0;
     padding: 60px 0px 50px 0px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .item-detalle-casa {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    min-width: 200px;
 
 }
 
-.icono-detalle {
+.contenedor-icono-detalle {
     border: 2px dashed #ef8937;
     border-radius: 50%;
-    padding: 18px;
     width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-detalle {
+    width: 40px;
 }
 
 .texto-detalle {
@@ -3285,6 +3383,18 @@
 
 
 
+
+@media (max-width:1000px) {
+    .section-categorias {
+        display: none;
+    }
+
+    .section-categorias-mob {
+        display: block;
+    }
+
+
+}
 
 @media (max-width:900px) {
 

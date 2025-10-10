@@ -5,8 +5,7 @@ import RenderBarrios from "./RenderBarrios";
 import Slidermodelos from "./SliderModelos";
 import EncabezadoMob from "./EncabezadoMob";
 import SectionContactoMob from "../../SectionContactoMob";
-import { useLoading } from "../../context/LoadingContext";
-
+import Preguntas from "../casa/Preguntas";
 const Desarrollos = () => {
 
 
@@ -25,6 +24,10 @@ const Desarrollos = () => {
             <h2 className="sub">NUESTROS MODELOS</h2>
           </div>
           <Slidermodelos />
+                 <div className="contenedor-title">
+                    <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+                </div>
+                <Preguntas/>
           <SectionContacto />
           <SectionContactoMob />
         </div>

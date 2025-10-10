@@ -5,6 +5,7 @@ import SliderProyectos from "./SliderProyectos";
 import SectionContacto from "../../SectionContacto";
 import SectionContactoMob from "../../SectionContactoMob";
 import { useEffect } from "react";
+import CategoriasMob from "./CategoriasMob";
 
 
 const Home = () => {
@@ -59,7 +60,7 @@ const Home = () => {
                         <h2 className="sub">ELIGE QUE PARTE DE TERRALOTEOS QUIERES SER</h2>
                     </div>
                     <Categorias />
-
+                    <CategoriasMob/>
                     <div className="contenedor-title">
                         <h2 className="sub">NOSOTROS</h2>
                     </div>
