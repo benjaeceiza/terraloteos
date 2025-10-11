@@ -26,7 +26,7 @@ const SliderProyectos = () => {
                     <div className="carousel-item active">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg3} className="img-caroucel d-block w-100" alt="..." onLoad={hideLoader} />
-                            <Link to={"/productoTerraloteos"} className="contenedor-data-carrucel">
+                            <Link to={"/producto"} className="contenedor-data-carrucel">
                                 <div className="textos">
                                     <p className="titulo-slider">Torres<br />Comunity</p>
                                     <div className="detalles-texto">

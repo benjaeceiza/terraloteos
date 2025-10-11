@@ -13,7 +13,7 @@ const Fundacion = () => {
         <>
             <main className="main">
                 <Encabezado />
-                <div className="contenedor-title">
+                <div id="info-data" className="contenedor-title">
                     <h2 className="sub">¿QUIENES SOMOS?</h2>
                 </div>
                 <section className="section-nosotros-fundacion">
@@ -45,15 +45,15 @@ const Fundacion = () => {
                             <p className="title-texto-fundacion">Nuestros Valores:</p>
                             <p className="parrafo-fundacion">Respeto, Pasión, Compromiso y Responsabilidad Social Empresarial.</p>
                         </div>
-                    </div>
-                    <div className="contenedor-boton">
-                        <Link to={"https://www.instagram.com/terraloteos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="} target="_blank" className="boton-ig-fundacion" ><img className="icono-boton-ig" src={logoIg} alt="" /> Seguinos</Link>
+                        <div className="contenedor-boton">
+                            <Link to={"https://www.instagram.com/terraloteos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="} target="_blank" className="boton-ig-fundacion" ><img className="icono-boton-ig" src={logoIg} alt="" /> Seguinos</Link>
+                        </div>
                     </div>
                 </section>
                 <div className="contenedor-title">
                     <h2 className="sub">PREGUNTAS FRECUENTES</h2>
                 </div>
-                <Preguntas/>
+                <Preguntas />
                 <SectionContacto />
                 <SectionContactoMob />
             </main>

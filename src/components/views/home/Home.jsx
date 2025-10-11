@@ -6,6 +6,7 @@ import SectionContacto from "../../SectionContacto";
 import SectionContactoMob from "../../SectionContactoMob";
 import { useEffect } from "react";
 import CategoriasMob from "./CategoriasMob";
+import check from "../../../assets/iconos/check.png"
 
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
     }, []);
 
 
- 
+
 
     return (
         <>
@@ -50,17 +51,27 @@ const Home = () => {
                     </section>
                     <section className="section-frase-mob">
                         <div className="contenedor-frase-mob">
-                            <p className="frase-mob">CONSTRUIMOS</p>
-                            <p className="frase-mob">DESARROLLAMOS</p>
-                            <p className="frase-mob">INVERTIMOS</p>
-
+                            <ul className="lista-frase">
+                                <li className="item-frase">
+                                    <img src={check} alt="" />
+                                    <p className="frase-mob">CONSTRUIMOS</p>
+                                </li>
+                                <li className="item-frase">
+                                    <img src={check} alt="" />
+                                    <p className="frase-mob">DESARROLLAMOS</p>
+                                </li>
+                                <li className="item-frase">
+                                    <img src={check} alt="" />
+                                    <p className="frase-mob">INVERTIMOS</p>
+                                </li>
+                            </ul>
                         </div>
                     </section>
                     <div className="contenedor-title">
                         <h2 className="sub">ELIGE QUE PARTE DE TERRALOTEOS QUIERES SER</h2>
                     </div>
                     <Categorias />
-                    <CategoriasMob/>
+                    <CategoriasMob />
                     <div className="contenedor-title">
                         <h2 className="sub">NOSOTROS</h2>
                     </div>

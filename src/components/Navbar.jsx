@@ -114,7 +114,7 @@ const Navbar = () => {
                                 </button>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <NavLink className="dropdown-item" onClick={closeMenu}>
+                                        <NavLink className="dropdown-item" onClick={closeMenu} to={"/listado-productos"}>
                                             Productos Terraloteos
                                         </NavLink>
                                     </li>

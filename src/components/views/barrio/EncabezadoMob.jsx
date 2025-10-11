@@ -7,6 +7,7 @@ import comercio from "../../../assets/iconos/comercial.png";
 import calles from "../../../assets/iconos/ruta.png";
 import ingreso from "../../../assets/iconos/portal.png";
 import { useLoading } from "../../context/LoadingContext";
+import { Link } from "react-router-dom";
 
 
 
@@ -69,8 +70,8 @@ const EncabezadoMob = ({ barrio }) => {
                                 </div>
                             </div>
                             <div className="contenedor-botones-barrio">
-                                <button className="boton-barrio">¿CÓMO LLEGAR?</button>
-                                <button className="boton-barrio">DESCARGAR BROCHURE</button>
+                                <Link to={barrio.mapa} target="_blank"><button className="boton-barrio">¿CÓMO LLEGAR?</button></Link> 
+                                <a href={barrio.broshure} download={""}><button className="boton-barrio">DESCARGAR BROCHURE</button></a>
                             </div>
                         </div>
                     </div>

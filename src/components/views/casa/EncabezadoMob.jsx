@@ -15,6 +15,7 @@ import hallIngreso from "../../../assets/iconos/hall.png";
 import despensa from "../../../assets/iconos/despensa.png";
 import banos from "../../../assets/iconos/bano.png";
 import expansion from "../../../assets/iconos/metros.png";
+import fleca from "../../../assets/iconos/flecha-hacia-abajo.png"
 
 
 const EncabezadoMob = ({ casa }) => {
@@ -27,10 +28,21 @@ const EncabezadoMob = ({ casa }) => {
                 <img className="img-encabezado-casa-mob" src={casa.imgPrincipal} alt={casa.tipo} onLoad={hideLoader} />
                 <div className="contenedor-logo-modelos">
                     <h1 className="title-casa-encabezado" >{casa.tipo}</h1>
+                     <div className="contenedor-boton-flecha"
+                        onClick={() => {
+                            const section = document.querySelector("#info-casa");
+                            if (section) {
+                                section.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+
+                    >
+                        <img className="flecha-encabezado-mobile" src={fleca} alt="flecha hacia abajo" />
+                    </div>
                 </div>
-                <div className="contenedor-data-casa-mob">
+                <div id="info-casa" className="contenedor-data-casa-mob">
                     <div className="contenedor-textos-casa-mob">
-                        <h2 className="titulo-encabezado-casa-mob">TU CASA IDEAL</h2>
+                        <h2  className="titulo-encabezado-casa-mob">TU CASA IDEAL</h2>
                         <div className="contenedor-caracteristicas-data-mob">
                             <div className="contenedor-descripcion-casa-mob">
                                 <p>{casa.descripcion}</p>

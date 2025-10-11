@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import fondo from "../../../assets/encabezados/desarrollos.jpeg";
+import fleca from "../../../assets/iconos/flecha-hacia-abajo.png"
+
 
 const EncabezadoMob = () => {
 
@@ -27,18 +29,29 @@ const EncabezadoMob = () => {
       <img
         className="img-encabezado-vivir-ds-mob"
         src={fondo}
-        alt=""
+        alt="fondo desarrollos"
       />
       <div className="contenedor-vivir-desarrollo-titulo-mob">
-        <h1 className="sub titulo-vivir-ds-mob">VIVÍ EN NUESTROS DESARROLLOS</h1>
+        <h1 className="titulo-vivir-ds-mob">VIVÍ EN <span className="naranja">NUESTROS</span> DESARROLLOS</h1>
         <p className="texto-vivir-ds-principal-mob">
           En Terraloteos desarrollamos barrios donde la naturaleza y el progreso
           se encuentran. Si estás buscando un lugar para vivir, descansar o
           comenzar una nueva vida, este es tu espacio.
         </p>
+        <div className="contenedor-boton-flecha"
+          onClick={() => {
+            const section = document.querySelector("#info-vivir");
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+         
+        >
+          <img className="flecha-encabezado-mobile" src={fleca} alt="flecha hacia abajo" />
+        </div>
       </div>
 
-      <div className="contenedor-data-vivir-ds-mob">
+      <div id="info-vivir" className="contenedor-data-vivir-ds-mob">
         <div className="contenedor-textos-vivir-ds-mob">
           <div className="texto-vivir-ds-secundario-mob">
             <p className="sub-textos-ds">

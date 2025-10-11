@@ -132,7 +132,7 @@
     font-weight: 600;
     letter-spacing: 10px;
     font-size: 1cqmax;
-      font-size: clamp(12px, 1vw, 24px);
+    font-size: clamp(12px, 1vw, 24px);
 }
 
 
@@ -445,30 +445,13 @@
 
 /* FRASE - INICIO */
 
-/* .section-frase {
-    padding: 50px 0px;
+
+.section-frase-mob {
+    display: none;
 }
-
-.contenedor-frase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 50px;
-    color: white;
-}
-
-
-
-.frase {
- 
-    color: white;
-    font-size: xx-large;
-    font-family: "1";
-    font-weight: bold;
-} */
 
 .section-frase {
-    background: url('/ruta/fondo.jpg') center/cover no-repeat;
+
     padding: 60px 20px;
     display: flex;
     justify-content: center;
@@ -480,12 +463,12 @@
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    /* para que en mobile se apilen */
+
 }
 
 .frase {
     color: #fff;
-    font-size: 2rem;
+    font-size: clamp(15px, 2vw, 50px);
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -527,11 +510,61 @@
         width: 60%;
         height: 2px;
     }
+
+    .section-frase {
+        display: none;
+    }
+
+    .section-frase-mob {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+    }
+
+    .contenedor-frase-mob {
+        gap: 40px;
+    }
+
+    .frase-mob {
+        color: #fff;
+        font-size: clamp(15px, 5vw, 80px);
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        font-family: "1";
+    }
+
+    .lista-frase {
+        list-style: none;
+        width: 100%;
+
+    }
+
+    .item-frase {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .item-frase img {
+        width: 30px;
+    }
+
+    .item-frase p {
+
+        margin: 10px 5px;
+        padding: 0;
+    }
+
 }
 
-.section-frase-mob {
-    display: none;
-}
+
+
 
 
 /*  CATEGORIAS */
@@ -729,7 +762,7 @@
 .card-categoria-mob-activo {
     position: relative;
     width: 120%;
-     transition: all .5s;
+    transition: all .5s;
 }
 
 
@@ -769,8 +802,8 @@
 
 }
 
-.contenedor-data-categoria-mob{
-   
+.contenedor-data-categoria-mob {
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -781,7 +814,7 @@
     justify-content: center;
 }
 
-.logo-categoria-mob{
+.logo-categoria-mob {
     width: 80px;
     margin: 20px 0px;
     animation-name: fadeInUp;
@@ -790,7 +823,7 @@
 
 }
 
-.parrafo-data-categoria-mob{
+.parrafo-data-categoria-mob {
 
     color: white;
     font-family: "1";
@@ -1184,10 +1217,7 @@
     color: white;
 }
 
-.titulo-vivir-ds-mob {
-    margin: 50px 0px 20px 0px;
 
-}
 
 .texto-vivir-ds-principal {
     font-family: "1";
@@ -1198,7 +1228,7 @@
     margin-top: 50px;
 }
 
-.texto-vivir-ds {}
+
 
 .section-textos-vivir-ds {
     width: 100%;
@@ -1223,7 +1253,6 @@
 .contenedor-textos-vivir-ds-mob {
     display: flex;
     height: 80vh;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1282,6 +1311,39 @@
 }
 
 /* VIVIR EN UN DESARROLLO MOB*/
+.titulo-vivir-ds-mob {
+    margin: 50px 0px 20px 0px;
+    color: white;
+    font-family: "1";
+    font-size: clamp(20px, 5vw, 80px);
+    font-weight: 600;
+    animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+
+}
+
+.contenedor-boton-flecha {
+    border: 2px solid #ef8937;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 100px;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    cursor: pointer;
+}
+
+.contenedor-boton-flecha:hover {
+    background-color: #ef8937;
+    transition: all .3s;
+
+}
+
+.flecha-encabezado-mobile {
+    width: 25px;
+
+}
 
 .img-encabezado-vivir-ds-mob {
     height: 95vh;
@@ -1312,10 +1374,11 @@
     font-family: "1";
     font-weight: 600;
     font-size: small;
-    margin-top: 50px;
+    margin-top: 20px;
     animation-name: fadeInUp;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
+
 }
 
 .contenedor-data-vivir-ds-mob {
@@ -1896,7 +1959,7 @@
 }
 
 .title-casa-encabezado {
-    font-size: 5cqmax;
+    font-size: clamp(20px, 10vw, 120px);
     font-family: "1";
     font-weight: bold;
     animation-name: fadeInUp;
@@ -1909,6 +1972,7 @@
 
     width: 50%;
     border-left: 1px solid rgba(255, 255, 255, 0.514);
+
 
 }
 
@@ -1993,6 +2057,7 @@
     height: 100vh;
     position: absolute;
     display: flex;
+    flex-direction: column;
     top: 0;
     bottom: 0;
     justify-content: center;
@@ -2157,6 +2222,7 @@
 .contenedor-socio-encabezado-boton-data {
     display: flex;
     align-items: flex-end;
+    justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
 
@@ -2166,18 +2232,19 @@
 
 .titulo-texto-socio-encabezado {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
 
 }
 
 .titulo-texto-socio-encabezado h1 {
     color: white;
-    font-size: clamp(40px, 5vw, 80px);
+    font-size: clamp(40px, 5vw, 70px);
     font-family: "1";
     font-weight: bold;
     animation-name: fadeInDown;
     animation-duration: 1.8s;
     animation-iteration-count: 1;
+    filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
 
 }
 
@@ -2216,6 +2283,8 @@
     animation-name: fadeInUp;
     animation-duration: 3s;
     animation-iteration-count: 1;
+    background: #ef8a3788;
+    backdrop-filter: blur(4px);
 }
 
 
@@ -2332,6 +2401,102 @@
 .accordion-button::after {
     filter: invert(100%);
     /* hace blanca la flecha */
+}
+
+
+/* LISTADO DE PRODUCTOS TERALOTEOS */
+
+.encabezado-listado {
+    position: relative;
+}
+
+.fondo-encabezado-listado {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.data-encabezado-listado {
+    background-color: rgba(0, 0, 0, 0.274);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textos-flecha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contenedor-textos-encabezado-listado {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 400px;
+    justify-content: space-evenly;
+
+
+}
+
+.contenedor-textos-encabezado-listado h1 {
+    color: white;
+    font-family: "1";
+    font-weight: bold;
+    font-size: clamp(40px, 5vw, 70px);
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    filter: drop-shadow(0px 0px 10px rgb(59, 59, 59));
+}
+
+.contenedor-textos-encabezado-listado p {
+    color: white;
+    font-family: "1";
+    font-weight: 500;
+    font-size: medium;
+    border: 2px solid #ef8937;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.164);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    animation-name: fadeInDown;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+
+}
+
+.contenedor-textos-encabezado-listado button {
+    border: 0;
+    border: 2px solid #ef8937;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-radius: 50px;
+    font-family: "1";
+    background: transparent;
+    margin-top: 20px;
+    animation-name: fadeInUp;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+}
+
+.contenedor-textos-encabezado-listado button:hover {
+    transition: all .3S;
+    background-color: #ef8937;
+    border: 2px solid white;
 }
 
 /* PAGE DETALLE PRODUCTOS */
@@ -2755,7 +2920,7 @@
     background-color: #35604a;
     height: 350px;
     width: 31%;
-  
+
 }
 
 .icono-card-contact {
@@ -3114,11 +3279,15 @@
 .logo-fundacion {
     width: 15vw;
     min-width: 200px;
+
 }
 
-.section-nosotros-fundacion {
-    height: 90vh;
 
+
+
+.section-nosotros-fundacion {
+
+    position: relative;
 
 }
 
@@ -3146,12 +3315,17 @@
     color: #ffffff;
     font-family: "1";
     font-weight: 400;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
+
 
 .contenedor-boton {
     width: 100%;
     text-align: center;
-    padding: 100px 0px;
+    padding: 50px 0px;
+    position: relative;
+
 }
 
 .boton-ig-fundacion {
@@ -3313,7 +3487,7 @@
         width: 33.333333%;
     }
 
- 
+
 
 
 
@@ -3440,6 +3614,78 @@
 
 @media (max-width:800px) {
 
+
+    /* socio */
+
+ 
+    .titulo-texto-socio-encabezado {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+    .titulo-texto-socio-encabezado h1 {
+        font-size: clamp(25px, 3vw, 80px);
+        margin: 0;
+
+    }
+
+    .titulo-texto-socio-encabezado p {
+        font-size: small;
+        margin: 0;
+    }
+
+    .boton-contacto-enzacabezado-socio{
+        display: none;
+    }
+
+
+    /* LISTADO */
+
+
+    .textos-flecha {
+
+        align-items: center;
+
+    }
+
+    .contenedor-textos-encabezado-listado {
+        align-items: center;
+    }
+
+    .contenedor-textos-encabezado-listado h1 {
+
+        font-size: clamp(30px, 5vw, 70px);
+        text-align: center;
+
+    }
+
+    .contenedor-textos-encabezado-listado p {
+
+        font-size: small;
+        text-align: center;
+
+    }
+
+    .contenedor-textos-encabezado-listado button {
+        display: none;
+
+    }
+
+    .contenedor-flecha img {
+        width: 25px;
+
+    }
+
+
+
+    /* a */
+
     .section-contacto-mob {
         display: block;
 
@@ -3506,7 +3752,10 @@
         padding: 0;
         padding: 0px 10px;
 
+
     }
+
+
 
     .item-caracteristicas {
 
@@ -3535,12 +3784,17 @@
 
 @media (max-width:600px) {
 
-    
-       .section-cards-contact {
+    .contenedor-caracteristicas-casa {
+        border: 0;
+        width: 100%;
+    }
+
+    .section-cards-contact {
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .card-contact-container{
+
+    .card-contact-container {
         width: 100%;
         margin-top: 20px;
     }
@@ -3948,6 +4202,7 @@
     .lista-caracteristicas-modelo-mob {
 
         justify-content: space-around;
+
     }
 
 }
