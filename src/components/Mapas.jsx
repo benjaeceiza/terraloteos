@@ -3,7 +3,7 @@ import icono from "../assets/iconos/marcador-de-posicion.png"
 
 const Mapas = () => {
     
-    const [classActiveVm,setClassActiveVm] = useState(false)
+    const [classActiveVm,setClassActiveVm] = useState(true)
     const [classActiveVm2,setClassActiveVm2] = useState(false)
     const [classActiveMerlo,setClassActiveMerlo] = useState(false)
     const [classActiveMerlo2,setClassActiveMerlo2] = useState(false)

@@ -15,6 +15,7 @@ import { LoadingProvider, useLoading } from './components/context/LoadingContext
 import { useEffect } from 'react';
 import SerSocio from './components/views/socio/SerSocio';
 import Listado from './components/views/listado-productos/Listado';
+import NavbarMob from './components/NavbarMob';
 
 
 
@@ -33,6 +34,7 @@ const AppContent = () => {
   return (
     <>
       <Navbar />
+      <NavbarMob/>
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
