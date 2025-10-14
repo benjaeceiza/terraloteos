@@ -2,12 +2,14 @@
 
 import fondo from "../../../assets/encabezados/listado.png";
 import flecha from "../../../assets/iconos/flecha-hacia-abajo.png";
+import { useLoading } from "../../context/LoadingContext";
 
 const Encabezado = () => {
+    const { hideLoader } = useLoading();
     return (
         <>
             <section className="encabezado-listado">
-                <img className="fondo-encabezado-listado" src={fondo} alt="" />
+                <img className="fondo-encabezado-listado" src={fondo} alt="" onLoad={hideLoader}/>
                 <div className="data-encabezado-listado">
                     <div className="textos-flecha">
                         <div className="contenedor-textos-encabezado-listado">

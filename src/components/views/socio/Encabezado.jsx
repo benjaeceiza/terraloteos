@@ -7,13 +7,13 @@ const Encabezado = () => {
 
 
     const { hideLoader } = useLoading();
-    hideLoader()
+
 
 
     return (
         <>
             <section className="contenedor-encabezado-ser-socio">
-                <img className="fondo-ser-socio" src={fondo} alt="Desarrollo" />
+                <img className="fondo-ser-socio" src={fondo} alt="Desarrollo" onLoad={hideLoader}/>
                 <div className="data-encabezado-socio">
                     <div className="contenedor-socio-encabezado-boton-data">
                         <div className="titulo-texto-socio-encabezado">
