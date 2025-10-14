@@ -5,6 +5,11 @@
 
 }
 
+body.modal-abierto {
+    overflow: hidden;
+    height: 100%;
+}
+
 .naranja {
     color: #ef8937;
 }
@@ -265,6 +270,7 @@
     animation-name: fadeInDown;
     animation-duration: .5s;
     animation-iteration-count: 1;
+    z-index: 1000;
 }
 
 .lista-nav-mob {
@@ -287,7 +293,7 @@
 .link-nav-mob p {
     margin: 0;
     font-family: "1";
-     font-weight: bold;
+    font-weight: bold;
 }
 
 .item-nav-mob {
@@ -295,7 +301,7 @@
     margin: 30px 0px;
 }
 
-.contenedor-cruz{
+.contenedor-cruz {
     width: 100%;
     text-align: end;
     padding: 50px 20px 0px 0px;
