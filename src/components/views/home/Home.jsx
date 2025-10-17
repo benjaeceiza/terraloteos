@@ -38,7 +38,7 @@ const Home = () => {
 
             <main className="main-index">
                 <div className="fondo-negro-main">
-                    <SliderProyectos />
+                    <SliderProyectos/>
                     <section className="section-frase">
                         <div className="contenedor-frase">
                             <p className="frase">CONSTRUIMOS</p>
@@ -49,7 +49,7 @@ const Home = () => {
 
                         </div>
                     </section>
-                    <section className="section-frase-mob">
+                    <section className="section-frase-mob pantalla">
                         <div className="contenedor-frase-mob">
                             <ul className="lista-frase">
                                 <li className="item-frase">
@@ -68,7 +68,7 @@ const Home = () => {
                         </div>
                     </section>
                     <div className="contenedor-title">
-                        <h2 className="sub">ELIGE QUE PARTE DE TERRALOTEOS QUIERES SER</h2>
+                        <h2 className="sub">ELEGÍ TU LUGAR EN TERRALOTEOS</h2>
                     </div>
                     <Categorias />
                     <CategoriasMob />

@@ -5,13 +5,23 @@
 
 }
 
+
+
 body.modal-abierto {
     overflow: hidden;
     height: 100%;
 }
 
+
+
 .naranja {
     color: #ef8937;
+}
+
+.fondo-naranja {
+    background-color: #ef8937;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 /* LOADING */
@@ -323,19 +333,23 @@ body.modal-abierto {
 
 .img-caroucel {
     height: 100vh;
+    height: 100dvh;
     animation-name: scale;
     animation-duration: 15s;
     object-fit: cover;
     filter: brightness(50%);
+    width: 100%;
 }
 
 .contenedor-data-carrucel {
 
     position: absolute;
     min-width: 400px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    height: 100dvh;
     top: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -521,6 +535,9 @@ body.modal-abierto {
 
 .section-frase-mob {
     display: none;
+    height: 100vh;
+    height: 100dvh;
+
 }
 
 .section-frase {
@@ -592,8 +609,8 @@ body.modal-abierto {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 60px 20px;
+        justify-content: space-around;
+        padding: 0px 20px;
     }
 
     .contenedor-frase-mob {
@@ -610,12 +627,16 @@ body.modal-abierto {
         transition: color 0.3s ease;
         cursor: pointer;
         font-family: "1";
+
     }
 
     .lista-frase {
         list-style: none;
         width: 100%;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50vh;
     }
 
     .item-frase {
@@ -650,6 +671,7 @@ body.modal-abierto {
     margin: 0 auto;
     overflow: hidden;
     z-index: 1;
+
 
 }
 
@@ -817,12 +839,21 @@ body.modal-abierto {
 .section-categorias-mob {
     display: none;
     width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+
+}
+
+.cate {
+    font-size: 10px;
 }
 
 .contenedor-categorias-mob {
     display: flex;
     width: 100%;
     height: 500px;
+
 
 }
 
@@ -918,7 +949,8 @@ body.modal-abierto {
     justify-content: space-evenly;
     text-align: center;
     flex-wrap: wrap;
-    padding: 100px 0px;
+    height: 100vh;
+    height: 100dvh;
 
 
 }
@@ -1026,6 +1058,11 @@ body.modal-abierto {
 }
 
 
+.none {
+    display: none;
+}
+
+
 /* MAPA */
 
 .mob {
@@ -1044,8 +1081,8 @@ body.modal-abierto {
     margin: 0px auto;
     padding: 150px 20px;
     text-align: center;
-
-
+    height: 100vh;
+    height: 100dvh;
 
 }
 
@@ -1180,15 +1217,26 @@ body.modal-abierto {
 .titulo-encabezado-nosotros {
     color: white;
     font-family: "1";
-    font-size: 100px;
+    font-size: clamp(40px, 10vw, 120px);
     font-weight: bold;
     letter-spacing: 3px;
+}
+
+.title-nosotross {
+    margin: 0px auto;
+}
+
+.parrafo-fundacion-principal {
+    color: white;
+    font-family: "1";
+    font-size: medium;
+    font-weight: 500;
 }
 
 .subtitulo-encabezado-nosotros {
     color: white;
     font-family: "1";
-    font-size: 30px;
+    font-size: clamp(12px, 3vw, 40px);
     font-weight: light;
     letter-spacing: 5px;
 }
@@ -1196,7 +1244,7 @@ body.modal-abierto {
 .contenedor-informacion-nosotros {
     max-width: 900px;
     margin: auto;
-    height: 80vh;
+
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -1217,7 +1265,7 @@ body.modal-abierto {
     text-align: start;
     color: white;
     font-family: "1";
-    font-size: medium;
+    font-size: small;
     font-weight: 400;
 }
 
@@ -1233,7 +1281,7 @@ body.modal-abierto {
     text-align: start;
     color: white;
     font-family: "1";
-    font-size: medium;
+    font-size: small;
     font-weight: 400;
 }
 
@@ -2446,6 +2494,7 @@ body.modal-abierto {
     width: 100%;
     justify-content: center;
     padding: 50px 20px;
+    background-color: #133222;
 }
 
 .accordion {
@@ -2491,7 +2540,7 @@ body.modal-abierto {
 }
 
 .data-encabezado-listado {
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgba(0, 0, 0, 0.507);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2539,10 +2588,9 @@ body.modal-abierto {
     font-family: "1";
     font-weight: 500;
     font-size: medium;
-    border: 2px solid #ef8937;
     padding: 10px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.164);
+
     backdrop-filter: blur(10px);
     max-width: 600px;
     animation-name: fadeInDown;
@@ -2572,6 +2620,144 @@ body.modal-abierto {
     background-color: #ef8937;
     border: 2px solid white;
 }
+
+
+.section-productos {
+    background: linear-gradient(to bottom, #ffffff 40%, #133222 40%);
+}
+
+.section-productos h2 {
+    color: white;
+    padding: 50px 20px 10px 20px;
+    font-family: "1";
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 1px black);
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.contenedor-productos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-producto {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0px;
+    max-width: 350px;
+    min-width: 300px;
+    box-shadow: 0px 0px 3px 2px rgb(189, 189, 189);
+}
+
+
+
+.fondo-card-producto {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: all .3s;
+}
+
+.fondo-card-producto-activo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transform: scale(1.2);
+    transition: all .3s;
+}
+
+
+.info-card-producto {
+    background-color: rgba(0, 0, 0, 0.356);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+
+.contenedor-expandir-icono {
+    padding: 10px;
+    background-color: white;
+    width: fit-content;
+    border-radius: 50px;
+    margin-left: auto;
+    transition: all .3s;
+
+}
+
+.contenedor-expandir-icono-active {
+    padding: 10px;
+    background-color: #fa7e1e;
+    width: fit-content;
+    border-radius: 50px;
+    margin-left: auto;
+    transition: all .3s;
+}
+.contenedor-expandir-icono-active img{
+  width: 25px;
+}
+
+.descripcion-card-producto {
+    color: white;
+    font-size: small;
+    font-family: "1";
+    font-weight: 500;
+    animation-name: fadeInUp;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+}
+
+.contenedor-expandir-icono img {
+    width: 25px;
+}
+
+.nombre-card-producto {
+    color: white;
+    font-family: "1";
+    font-weight: bold;
+    font-size: large;
+    filter: drop-shadow(0px 0px 2px black);
+}
+
+.contenedor-ubicacion-card-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.contenedor-ubicacion-card-producto img {
+    width: 20px;
+}
+
+.contenedor-ubicacion-card-producto p {
+    margin: 0;
+    font-family: "1";
+    color: black;
+    font-size: small;
+    font-weight: bold;
+
+}
+
+
 
 /* PAGE DETALLE PRODUCTOS */
 
@@ -3209,7 +3395,6 @@ body.modal-abierto {
 
 .section-contacto-mob {
     display: none;
-
 }
 
 .formulario-spinner-mob {
@@ -3218,6 +3403,8 @@ body.modal-abierto {
 }
 
 .contenedor-contacto-mob {
+    height: 100vh;
+    height: 100dvh;
     background-color: #133222;
     display: flex;
     flex-direction: column;
@@ -3573,6 +3760,17 @@ body.modal-abierto {
     }
 }
 
+@media (max-width:1100px) {
+    .card-producto {
+        max-width: none;
+        width: 45vw;
+
+    }
+
+}
+
+
+
 @media (max-width:990px) {
 
 
@@ -3615,12 +3813,18 @@ body.modal-abierto {
 
 
 @media (max-width:1000px) {
+
+
     .section-categorias {
         display: none;
     }
 
     .section-categorias-mob {
         display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .header {
@@ -3838,6 +4042,17 @@ body.modal-abierto {
     }
 
 
+    .contenedor-productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-producto {
+        width: 90vw;
+        max-width: none;
+    }
+
+
 
     .item-caracteristicas {
 
@@ -3865,6 +4080,8 @@ body.modal-abierto {
 }
 
 @media (max-width:600px) {
+
+
 
     .contenedor-caracteristicas-casa {
         border: 0;

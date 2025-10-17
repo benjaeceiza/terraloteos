@@ -80,6 +80,7 @@ const Numeros = () => {
 
   return (
     <section className="section-numeros">
+  
       <div className="contenedor-nosotros">
         <h2 className="titulo-nosotros-home">
           <span className="naranja">+</span>15 Años construyendo tu futuro

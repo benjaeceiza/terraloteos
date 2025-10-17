@@ -37,6 +37,7 @@ const CategoriasMob = () => {
     return (
         <>
             <section className="section-categorias-mob">
+                 
                 <div className="contenedor-categorias-mob" >
                     <div className={cardOne ? "card-categoria-mob-activo" : "card-categoria-mob"}>
                         <img className="fondo-categoria-mob" src={fondoOne} alt="" />

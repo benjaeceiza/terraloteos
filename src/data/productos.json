@@ -1,0 +1,45 @@
+[
+    {
+        "nombre": "Garden Village",
+        "descripcion": "Es un desarrollo pensado específicamente para personas mayores que desean mantener su autonomía, rodeados de contención, naturaleza y servicios personalizados. Se define como un senior care village que promueve una forma activa, natural y segura de envejecer, con foco en la salud física, emocional y social. ",
+        "ubicacion": "Villa de Merlo, San Luis",
+        "miniatura":"https://i.postimg.cc/gJzn3dW8/garden.png",
+        "link":""
+    },
+    {
+        "nombre": "Mantra, Cabañas Premiun",
+        "descripcion": "Es un desarrollo boutique ubicado en medio de las sierras de San Luis, pensado como un refugio íntimo y romántico para parejas. Todo el concepto gira en torno a la conexión entre naturaleza, arquitectura y bienestar emocional, ofreciendo privacidad, confort y una estética minimalista que inspira serenidad.",
+        "ubicacion": "Los Molles, San Luis",
+        "miniatura":"https://i.postimg.cc/5y3cLdfQ/mantrax-Photo-7.jpg",
+        "link":""
+    },
+    {
+        "nombre": "Torres Community",
+        "descripcion": "Es un edificio residencial moderno, de 4 pisos y 16 departamentos, que propone un estilo de vida cómodo, contemporáneo y privado. Se plantea como una alternativa habitacional con altura, vistas, y diseño urbano actual, ideal para quienes buscan vivir bien, sin excesos, pero con calidad",
+        "ubicacion": "Boulevard Las Cañadas, San Luis. ",
+        "miniatura":"https://i.postimg.cc/q7XNtq9y/torres-3.png",
+        "link":"/producto/torres-community"
+    },
+    {
+        "nombre": "Atilier Estudiantil",
+        "descripcion": "Residencias Estudiantiles & Ateliér Profesional es un proyecto innovador que integra vivienda universitaria, espacios de trabajo y actividades de desarrollo personal en un mismo lugar.",
+        "ubicacion": "San Luis.",
+        "miniatura":"https://i.postimg.cc/L575d11S/estudiantil.jpg",
+        "link":""
+    },
+    {
+        "nombre": "Locales Comerciales",
+        "descripcion": "",
+        "ubicacion": "San Luis.",
+        "miniatura":"https://i.postimg.cc/d3X3Myyw/card-1.jpg",
+        "link":""
+    },
+    {
+        "nombre": "Torre Pulse",
+        "descripcion": "",
+        "ubicacion": "San Luis.",
+        "miniatura":"https://i.postimg.cc/R0MMDRDJ/Torre-Pulse.jpg",
+        "link":""
+    }
+    
+]

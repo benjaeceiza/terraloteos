@@ -7,14 +7,14 @@ import Encabezado from "./Encabezado";
 
 const Nosotros = () => {
 
-    return(
+    return (
         <>
-         <main className="main">
-           <Encabezado/>
-            <DescripcionNosotros/>
-            <SectionContacto/>
-            <SectionContactoMob/>
-         </main>
+            <main className="main">
+                <Encabezado />
+                <DescripcionNosotros />
+                <SectionContacto />
+                <SectionContactoMob />
+            </main>
         </>
     )
 }
