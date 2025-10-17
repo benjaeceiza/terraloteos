@@ -1446,6 +1446,7 @@ body.modal-abierto {
 }
 
 .contenedor-boton-flecha {
+    display: none;
     border: 2px solid #ef8937;
     padding: 20px;
     border-radius: 50px;
@@ -2230,7 +2231,7 @@ body.modal-abierto {
     font-family: "1";
     font-weight: 400;
     border-bottom: 1px solid #ef8937;
-    width: 100vw;
+    width: fit-content;
     margin: auto;
     padding: 10px 0px;
     text-align: center;
@@ -2246,6 +2247,7 @@ body.modal-abierto {
     padding: 0;
     justify-content: space-between;
     padding-top: 20px;
+
 
 }
 
@@ -3814,6 +3816,10 @@ body.modal-abierto {
 
 @media (max-width:1000px) {
 
+    .contenedor-boton-flecha{
+        display: block;
+    }
+
 
     .section-categorias {
         display: none;
@@ -4501,6 +4507,14 @@ body.modal-abierto {
     .lista-caracteristicas-modelo-mob {
 
         justify-content: space-around;
+        padding-bottom: 10px;
+
+    }
+
+    .item-caracteristicas-modelo {
+
+        justify-content: center;
+      
 
     }
 

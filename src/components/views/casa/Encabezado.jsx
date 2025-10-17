@@ -15,6 +15,7 @@ import despensa from "../../../assets/iconos/despensa.png";
 import banos from "../../../assets/iconos/bano.png";
 import expansion from "../../../assets/iconos/metros.png";
 import { useLoading } from "../../context/LoadingContext";
+import { Link } from "react-router-dom";
 
 const Encabezado = ({ casa }) => {
 
@@ -167,6 +168,9 @@ const Encabezado = ({ casa }) => {
                             </ul>
                         </div>
                     </div>
+                        <div className="contenedor-botones-barrio">
+                            <a href={casa.planos} download={""}><button className="boton-barrio">DESCARGAR PLANOS</button></a>
+                        </div>
                 </div>
           
             </section>

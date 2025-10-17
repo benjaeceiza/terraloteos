@@ -25,7 +25,8 @@
             "https://i.postimg.cc/RFzcZCfv/loft-2.jpg",
             "https://i.postimg.cc/W4ZGVqd9/loft-1.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/RFzcZCfv/loft-2.jpg"
+        "imgPrincipal": "https://i.postimg.cc/RFzcZCfv/loft-2.jpg",
+        "planos":"../../../../../public/pdf/planos-loft.pdf"
     },
     {
         "tipo": "Loft A1",
@@ -55,7 +56,8 @@
             "https://i.postimg.cc/6Qz9yY4T/loft-a1-3.jpg",
             "https://i.postimg.cc/sXNsJxcr/loft-a1-4.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/xCC9HML5/loft-a1-1.jpg"
+        "imgPrincipal": "https://i.postimg.cc/xCC9HML5/loft-a1-1.jpg",
+        "planos":"../../../../../public/pdf/planos-loft-a1.pdf"
     },
     {
         "tipo": "Loft A2",
@@ -83,7 +85,8 @@
             "https://i.postimg.cc/1t53HL1p/loft-a2-2.jpg",
             "https://i.postimg.cc/fbvbYMpz/loft-a2-1.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/1t53HL1p/loft-a2-2.jpg"
+        "imgPrincipal": "https://i.postimg.cc/1t53HL1p/loft-a2-2.jpg",
+        "planos":"../../../../../public/pdf/planos-loft-a2.pdf"
     },
     {
         "tipo": "Tipología A",
@@ -111,7 +114,8 @@
             "https://i.postimg.cc/L6TYzBPK/tipologia-a-1.jpg",
             "https://i.postimg.cc/rFcR0YKN/tipologia-a-2.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/L6TYzBPK/tipologia-a-1.jpg"
+        "imgPrincipal": "https://i.postimg.cc/L6TYzBPK/tipologia-a-1.jpg",
+        "planos":"../../../../../public/pdf/planos-a.pdf"
     },
     {
         "tipo": "Tipología B",
@@ -140,7 +144,8 @@
             "https://i.postimg.cc/Hs4561fN/tipologia-b-2.jpg",
             "https://i.postimg.cc/Cxh8t60x/tipologia-b-3.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/MK8V0prR/tipologia-b-1.jpg"
+        "imgPrincipal": "https://i.postimg.cc/MK8V0prR/tipologia-b-1.jpg",
+        "planos":"../../../../../public/pdf/planos-b.pdf"
     },
     {
         "tipo": "Tipología B3",
@@ -170,7 +175,8 @@
             "https://i.postimg.cc/vmmW122N/tipologia-b3-2.jpg",
             "https://i.postimg.cc/d0SGGRzt/tipologia-b3-1.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/htsLtRsm/tipologia-b3-3.jpg"
+        "imgPrincipal": "https://i.postimg.cc/htsLtRsm/tipologia-b3-3.jpg",
+        "planos":"../../../../../public/pdf/planos-b3.pdf"
     },
     {
         "tipo": "Tipología C",
@@ -200,7 +206,8 @@
             "https://i.postimg.cc/13QBzHZk/tipologia-c-4.jpg",
             "https://i.postimg.cc/XNrQ1q8z/tipologia-c-1.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/gkR4d71y/tipologia-c-3.jpg"
+        "imgPrincipal": "https://i.postimg.cc/gkR4d71y/tipologia-c-3.jpg",
+        "planos":"../../../../../public/pdf/planos-c.pdf"
     },
     {
         "tipo": "Tipología D",
@@ -229,7 +236,8 @@
             "https://i.postimg.cc/YS8WMNpz/tipologia-d-1.jpg",
             "https://i.postimg.cc/mrTHvpGr/tipologia-d-3.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/855r5FcQ/tipologia-d-2.jpg"
+        "imgPrincipal": "https://i.postimg.cc/855r5FcQ/tipologia-d-2.jpg",
+        "planos":"../../../../../public/pdf/planos-d.pdf"
     },
     {
         "tipo": "Tipología D1",
@@ -261,7 +269,8 @@
             "https://i.postimg.cc/HxZX4wRk/tipologia-d1-1.jpg",
             "https://i.postimg.cc/mkK9Kbbx/tipologia-d1-8.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/yNTFW4T9/tipologia-d1-6.jpg"
+        "imgPrincipal": "https://i.postimg.cc/yNTFW4T9/tipologia-d1-6.jpg",
+        "planos":"../../../../../public/pdf/planos-d1.pdf"
     },
     {
         "tipo": "Tipología E",
@@ -287,7 +296,8 @@
             "https://i.postimg.cc/mDz2J7hD/tipologia-e-1.jpg",
             "https://i.postimg.cc/Qt2x3VWq/tipologia-e-2.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/mDz2J7hD/tipologia-e-1.jpg"
+        "imgPrincipal": "https://i.postimg.cc/mDz2J7hD/tipologia-e-1.jpg",
+        "planos":"../../../../../public/pdf/planos-e.pdf"
     },
     {
         "tipo": "Tipología F",
@@ -315,7 +325,8 @@
             "https://i.postimg.cc/Hkzxypfp/tipologia-f-3.jpg",
             "https://i.postimg.cc/2555dsDn/tipologia-f-4.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/BvwnmmSk/tipologia-f-2.jpg"
+        "imgPrincipal": "https://i.postimg.cc/BvwnmmSk/tipologia-f-2.jpg",
+        "planos":"../../../../../public/pdf/planos-f.pdf"
     },
     {
         "tipo": "Tipología H",
@@ -343,6 +354,7 @@
             "https://i.postimg.cc/7Y7JfrH6/tipologia-h-4.jpg",
             "https://i.postimg.cc/nhGsGKQf/topologia-h-2.jpg"
         ],
-        "imgPrincipal": "https://i.postimg.cc/bwhDnVrR/tipologia-h-3.jpg"
+        "imgPrincipal": "https://i.postimg.cc/bwhDnVrR/tipologia-h-3.jpg",
+        "planos":"../../../../../public/pdf/planos-h.pdf"
     }
 ]

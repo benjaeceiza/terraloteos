@@ -28,7 +28,7 @@ const EncabezadoMob = ({ casa }) => {
                 <img className="img-encabezado-casa-mob" src={casa.imgPrincipal} alt={casa.tipo} onLoad={hideLoader} />
                 <div className="contenedor-logo-modelos">
                     <h1 className="title-casa-encabezado" >{casa.tipo}</h1>
-                     <div className="contenedor-boton-flecha"
+                    <div className="contenedor-boton-flecha"
                         onClick={() => {
                             const section = document.querySelector("#info-casa");
                             if (section) {
@@ -42,7 +42,7 @@ const EncabezadoMob = ({ casa }) => {
                 </div>
                 <div id="info-casa" className="contenedor-data-casa-mob">
                     <div className="contenedor-textos-casa-mob">
-                        <h2  className="titulo-encabezado-casa-mob">TU CASA IDEAL</h2>
+                        <h2 className="titulo-encabezado-casa-mob">TU CASA IDEAL</h2>
                         <div className="contenedor-caracteristicas-data-mob">
                             <div className="contenedor-descripcion-casa-mob">
                                 <p>{casa.descripcion}</p>
@@ -177,6 +177,9 @@ const EncabezadoMob = ({ casa }) => {
                                         ""}
                                 </ul>
                             </div>
+                        </div>
+                        <div className="contenedor-botones-barrio">
+                            <a href={casa.planos} download={""}><button className="boton-barrio">DESCARGAR PLANOS</button></a>
                         </div>
                     </div>
                 </div>
