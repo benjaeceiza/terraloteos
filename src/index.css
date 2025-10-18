@@ -111,13 +111,32 @@ body.modal-abierto {
 
 
 .main-index {
-    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./assets/fondos/fondo-main.png");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-   
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.fondo {
+  position: fixed; /* fijo a la pantalla */
+  inset: 0;
+  background-image: url('./assets/fondos/fondo-main.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  z-index: -1;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
 }
 
 .main {
