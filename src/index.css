@@ -115,6 +115,8 @@ body.modal-abierto {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 
 }
 
@@ -385,6 +387,7 @@ body.modal-abierto {
     top: 0;
     left: 0;
     padding-left: 190px;
+  
 
 
 
@@ -1082,8 +1085,8 @@ body.modal-abierto {
     margin: 0px auto;
     padding: 150px 20px;
     text-align: center;
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
 
 }
 
@@ -3406,8 +3409,8 @@ body.modal-abierto {
 }
 
 .contenedor-contacto-mob {
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     background-color: #133222;
     display: flex;
     flex-direction: column;
@@ -3857,6 +3860,8 @@ body.modal-abierto {
 }
 
 @media (max-width:800px) {
+
+ 
 
     .contenedor-ubicacion-producto-encabezado {
         max-width: none;
@@ -4517,6 +4522,12 @@ body.modal-abierto {
         justify-content: center;
       
 
+    }
+
+    .detalles-texto{
+        flex-direction: column;
+     
+   
     }
 
 }
