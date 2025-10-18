@@ -111,13 +111,13 @@ body.modal-abierto {
 
 
 .main-index {
-    background-image: url("./assets/fondos/fondo-main.png");
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./assets/fondos/fondo-main.png");
     background-position: center;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     min-height: 100vh;
-
+   
 }
 
 .main {
