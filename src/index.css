@@ -114,7 +114,7 @@ body.modal-abierto {
     background-image: url("./assets/fondos/fondo-main.png");
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     min-height: 100vh;
 
