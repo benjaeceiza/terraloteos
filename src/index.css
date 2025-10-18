@@ -117,16 +117,16 @@ body.modal-abierto {
 }
 
 .fondo {
-    position: fixed;
-    /* fija el fondo a la pantalla */
-    inset: 0;
-    /* top:0; right:0; bottom:0; left:0 */
-    background-image: url('./assets/fondos/fondo-main.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -2;
-    /* detrás del contenido */
+   position: fixed;
+  inset: 0;
+  background-image: url('./assets/fondos/fondo-main.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  transform: translateZ(0); /* fuerza render GPU */
+  backface-visibility: hidden; /* ayuda en móviles */
+  will-change: transform;     /* mejora el repaint inicial */
 }
 
 .fondo::after {
