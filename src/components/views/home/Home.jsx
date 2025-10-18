@@ -6,7 +6,8 @@ import SectionContacto from "../../SectionContacto";
 import SectionContactoMob from "../../SectionContactoMob";
 import { useEffect } from "react";
 import CategoriasMob from "./CategoriasMob";
-import check from "../../../assets/iconos/check.png"
+import check from "../../../assets/iconos/check.png";
+import fondo from "../../../assets/fondos/fondo-main.png";
 
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
         <>
 
             <main className="main-index">
-                <div className="fondo"></div>
+               <img src={fondo} alt="Fondo" className="fondo-img"/>
                 <div className="contenido">
                     <SliderProyectos />
                     <section className="section-frase">

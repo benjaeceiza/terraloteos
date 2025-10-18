@@ -116,32 +116,21 @@ body.modal-abierto {
     overflow: hidden;
 }
 
-.fondo {
-   position: fixed;
-  inset: 0;
-  background-image: url('./assets/fondos/fondo-main.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -2;
-  transform: translateZ(0); /* fuerza render GPU */
-  backface-visibility: hidden; /* ayuda en móviles */
-  will-change: transform;     /* mejora el repaint inicial */
+.fondo-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* hace que la imagen cubra todo el contenedor */
+  z-index: -1;
 }
 
-.fondo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    /* oscuridad sobre el fondo */
-    z-index: -1;
-}
+
 
 .contenido {
-    position: relative;
-    /* necesario para estar encima del fondo */
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .main {
