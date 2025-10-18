@@ -322,12 +322,12 @@ body.modal-abierto {
 /* CARRUCEL  */
 
 .carousel-inner {
-    min-width: 400px;
+   
 }
 
 .carousel-item {
     position: relative;
-    min-width: 400px;
+    
 }
 
 
@@ -344,7 +344,7 @@ body.modal-abierto {
 .contenedor-data-carrucel {
 
     position: absolute;
-    min-width: 400px;
+    
     width: 100%;
     height: 100vh;
     height: 100dvh;
@@ -362,7 +362,7 @@ body.modal-abierto {
 
 .titulo-slider {
     color: white;
-    font-size: 8cqmax;
+   font-size: clamp(50px, 6vw,150px);
     font-family: "1";
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -759,7 +759,8 @@ body.modal-abierto {
 .titulo-categoria {
     color: white;
     font-family: "1";
-    font-size: 90%;
+    font-size: xx-large;
+    font-weight: 500    ;
 
 }
 
@@ -949,8 +950,8 @@ body.modal-abierto {
     justify-content: space-evenly;
     text-align: center;
     flex-wrap: wrap;
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
 
 
 }
@@ -1091,8 +1092,8 @@ body.modal-abierto {
     min-width: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: flex-start;
+ 
 
 }
 

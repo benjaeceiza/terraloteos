@@ -54,7 +54,7 @@ const Categorias = () => {
                         <div id="categoria-1" className="contenedor-categoria">
                              <img className="fondo-categoria" src={fondoOne} alt="" />
                             <div className="fondo-negro" >
-                                <p id="frase-categoria-1" className={cardOne ? "titulo-categoria-activo" : "titulo-categoria"}>Viví en nuestros desarrollos</p>
+                                <p id="frase-categoria-1" className={cardOne ? "titulo-categoria-activo" : "titulo-categoria"}>VIVIR</p>
                                 <div id="contenedor-data-categoria-1" className={cardOne ? "contenedor-data-categoria-activo" : "contenedor-data-categoria"}>
                                     <img  className="logo-categoria" src={logo} alt="" />
                                     <p className="parrafo-data-categoria">Encontrá tu lugar ideal para vivir. Descubrí nuestros
@@ -73,7 +73,7 @@ const Categorias = () => {
                         <div id="categoria-2" className="contenedor-categoria">
                              <img className="fondo-categoria" src={fondoTwo} alt="" />
                             <div className="fondo-negro">
-                                <p id="frase-categoria-2" className={cardTwo ? "titulo-categoria-activo" : "titulo-categoria"}>Invertí en productos Terraloteos</p>
+                                <p id="frase-categoria-2" className={cardTwo ? "titulo-categoria-activo" : "titulo-categoria"}>INVERTIR</p>
                                 <div id="contenedor-data-categoria-2" className={cardTwo ? "contenedor-data-categoria-activo" : "contenedor-data-categoria"}>
                                     <img className="logo-categoria" src={logo} alt="" />
                                     <p className="parrafo-data-categoria">Hacé crecer tu capital. Invertí en propiedades
@@ -92,7 +92,7 @@ const Categorias = () => {
                         <div id="categoria-3" className="contenedor-categoria">
                             <img className="fondo-categoria" src={fondoThree} alt="" />
                             <div className="fondo-negro">
-                                <p id="frase-categoria-3" className={cardThree ? "titulo-categoria-activo" : "titulo-categoria"}>Invertí en un desarrollo urbanístico</p>
+                                <p id="frase-categoria-3" className={cardThree ? "titulo-categoria-activo" : "titulo-categoria"}>SER PARTE</p>
                                 <div id="contenedor-data-categoria-3" className={cardThree ? "contenedor-data-categoria-activo" : "contenedor-data-categoria"}>
                                     <img className="logo-categoria" src={logo} alt="" />
                                     <p className="parrafo-data-categoria">Convertite en parte de la creación de un barrio desde
