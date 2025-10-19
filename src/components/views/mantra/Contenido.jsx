@@ -19,7 +19,7 @@ const Contenido = () => {
                         Enfocado en el escapismo natural, la reconexión y el descanso. No es un complejo residencial
                         urbano, sino una experiencia sensorial premium.
                     </p>
-                    <img src={logo} alt="logo Mantra" />
+              
                 </div>
 
                 <div className="contenedor-imagenes-mantra">
@@ -53,6 +53,10 @@ const Contenido = () => {
                         <p className="parrafo-mantra">Naturaleza protagonista: las sierras y el silencio como eje central.<br></br>
                             Diseño sensorial: arquitectura integrada al paisaje, luz natural y materiales nobles.<br></br>
                             Enfoque romántico: pensado especialmente para parejas que buscan tranquilidad y reconexión.</p>
+                    </div>
+                    <div className="logo-contenedor-mantra-contenido">
+                     <img className="logo-contenido-mantra" src={logo} alt="" />
+
                     </div>
                 </div>
             </section>

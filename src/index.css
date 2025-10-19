@@ -3189,7 +3189,7 @@ body.modal-abierto {
     width: 25vw;
     max-width: 500px;
     min-width: 250px;
-    filter: drop-shadow(0px 10px 5px black);
+    filter: drop-shadow(0px 5px 5px rgb(255, 255, 255));
 }
 
 
@@ -3202,7 +3202,7 @@ body.modal-abierto {
     align-items: center;
     justify-content: center;
     background-color: #d3c6b58e;
-    filter: drop-shadow(2px 0px 1px #ad8966);
+     filter: drop-shadow(2px 0px 1px #36200a);
     mask-image: linear-gradient(90deg, rgb(0, 0, 0) 90%,
             transparent);
 }
@@ -3222,6 +3222,7 @@ body.modal-abierto {
 
 .icono-red-mantra {
     width: 30px;
+    filter: brightness(80%);
 }
 
 .icono-red-mantra:hover {
@@ -3361,6 +3362,20 @@ body.modal-abierto {
     font-weight: 600;
 }
 
+.logo-contenedor-mantra-contenido{
+    width: 100%;
+    padding: 0px 20px 50px 0px;
+    text-align: center;
+}
+
+
+.logo-contenido-mantra{
+    filter:drop-shadow( 0px 7px 2px #D4B58C);
+    width: 30vw;
+    max-width: 500px;
+    min-width: 250px;
+    text-align: center;
+}
 /* PAGE CONTACTO */
 
 .main-contact {
@@ -4114,7 +4129,10 @@ body.modal-abierto {
     .burbuja-mantra {
         margin-top: 20px;
     }
-
+   
+    .logo-encabezado-mantra{
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    }
 
     .nombre-redes-mantra {
         width: 100%;
@@ -4122,8 +4140,8 @@ body.modal-abierto {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #d3c6b58e;
-        filter: drop-shadow(2px 0px 1px #ad896652);
+        background-color: #d3c6b546;
+        filter: drop-shadow(2px 0px 1px #36200a);
         mask-image: linear-gradient(90deg, rgb(0, 0, 0) 100%,
                 transparent);
         position: relative;
