@@ -25,7 +25,6 @@ import comedor from "../../../assets/iconos/mesa-de-comedor.png";
 import horno from "../../../assets/iconos/estufa-de-cocina.png";
 import jacuzzi from "../../../assets/iconos/jacuzzi.png";
 import parrilla from "../../../assets/iconos/parrilla-de-barbacoa.png";
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 

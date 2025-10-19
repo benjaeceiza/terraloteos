@@ -7,14 +7,18 @@ import iconoIg from "../assets/iconos/instagram.png";
 import iconoIgN from "../assets/iconos/instagram-naranja.png";
 import iconoTiktok from "../assets/iconos/tiktok.png";
 import iconoTiktokN from "../assets/iconos/tiktok-naranja.png";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { useState } from "react";
 
 
 
 const Footer = () => {
 
-    const [isHover,setIsHover] = useState("")
+    const [isHover,setIsHover] = useState("");
+    
+    const location = useLocation();
+   
+    
 
     return (
         <footer className="footer">

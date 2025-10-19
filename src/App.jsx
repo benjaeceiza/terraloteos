@@ -16,6 +16,7 @@ import { useEffect } from 'react';
 import SerSocio from './components/views/socio/SerSocio';
 import Listado from './components/views/listado-productos/Listado';
 import NavbarMob from './components/NavbarMob';
+import Mantra from './components/views/mantra/Mantra';
 
 
 
@@ -28,13 +29,13 @@ const AppContent = () => {
     showLoader();
   }, [location.pathname]);
 
- 
+
 
 
   return (
     <>
       <Navbar />
-      <NavbarMob/>
+      <NavbarMob />
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,6 +45,7 @@ const AppContent = () => {
         <Route path="/ser-parte-desarrollo" element={<SerSocio />} />
         <Route path="/listado-productos" element={<Listado />} />
         <Route path="/producto/torres-community" element={<ProductoTerraloteos />} />
+        <Route path="/producto/mantra" element={<Mantra/>} />
         <Route path="/barrio/:nombre" element={<Barrio />} />
         <Route path="/casa/:tipo" element={<Casa />} />
         <Route path="/contacto" element={<Contacto />} />

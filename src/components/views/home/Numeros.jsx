@@ -1,34 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import iconoReloj from "../../../assets/iconos/tiempo-restante.png";
 import casco from "../../../assets/iconos/casco.png";
 import iconoMapa from "../../../assets/iconos/mapa.png";
 import clientes from "../../../assets/iconos/usuario.png";
 
 const Numeros = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animacion-fade-in");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.2,
-        rootMargin: "0px 0px 200px 0px", // dispara 150px antes de que el elemento entre
-      }
-    );
-
-    const elements = document.querySelectorAll(
-      ".titulo-nosotros-home, .card-numeros, .texto-nosotros"
-    );
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
+  // ✅ Componente que mantiene la animación numérica
   const AnimatedNumber = ({ target, duration = 2000 }) => {
     const [count, setCount] = useState(0);
     const [active, setActive] = useState(false);
@@ -43,13 +21,12 @@ const Numeros = () => {
           }
         },
         {
-          threshold: 0.1,
-          rootMargin: "0px 0px 200px 0px", // empieza antes de que aparezca del todo
+          threshold: 0.2,
+          rootMargin: "0px 0px 200px 0px",
         }
       );
 
       if (ref.current) observer.observe(ref.current);
-
       return () => observer.disconnect();
     }, []);
 
@@ -57,7 +34,7 @@ const Numeros = () => {
       if (!active) return;
 
       let start = 0;
-      const increment = target / (duration / 16); // ~60fps
+      const increment = target / (duration / 16);
       const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
@@ -78,10 +55,23 @@ const Numeros = () => {
     );
   };
 
+  // ✅ Framer Motion variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="section-numeros">
-  
-      <div className="contenedor-nosotros">
+      {/* 🟠 Título y descripción */}
+      <motion.div
+        className="contenedor-nosotros"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <h2 className="titulo-nosotros-home">
           <span className="naranja">+</span>15 Años construyendo tu futuro
         </h2>
@@ -93,51 +83,47 @@ const Numeros = () => {
           pesos o dólares. Propuesta de valor: Accesibilidad, acompañamiento
           integral, compromiso ambiental y alta calidad de vida.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="contendor-numero">
+      {/* 🟠 Números con animación de entrada */}
+      <motion.div
+        className="contendor-numero"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="container-numeros">
-          <div className="card-numeros">
-            <div className="contenedor-textoss">
-              <AnimatedNumber target={15} duration={1500} />
-              <div className="numero-icono">
-                <p className="texto-numeros">Años de experiencia</p>
-                <img className="icono-numeros" src={iconoReloj} alt="" />
+          {[
+            { icon: iconoReloj, text: "Años de experiencia", num: 15 },
+            { icon: casco, text: "Proyectos entregados", num: 18 },
+            { icon: clientes, text: "Clientes satisfechos", num: 4000 },
+            { icon: iconoMapa, text: "Terrenos preparados", num: 537 },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className="card-numeros"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.2 + 0.3,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <div className="contenedor-textoss">
+                <AnimatedNumber target={item.num} duration={2000} />
+                <div className="numero-icono">
+                  <p className="texto-numeros">{item.text}</p>
+                  <img className="icono-numeros" src={item.icon} alt="" />
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="card-numeros">
-            <div className="contenedor-textoss">
-              <AnimatedNumber target={18} duration={1500} />
-              <div className="numero-icono">
-                <p className="texto-numeros">Proyectos entregados</p>
-                <img className="icono-numeros" src={casco} alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div className="card-numeros">
-            <div className="contenedor-textoss">
-              <AnimatedNumber target={4000} duration={2000} />
-              <div className="numero-icono">
-                <p className="texto-numeros">Clientes satisfechos</p>
-                <img className="icono-numeros" src={clientes} alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div className="card-numeros">
-            <div className="contenedor-textoss">
-              <AnimatedNumber target={537} duration={2000} />
-              <div className="numero-icono">
-                <p className="texto-numeros">Terrenos preparados</p>
-                <img className="icono-numeros" src={iconoMapa} alt="" />
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

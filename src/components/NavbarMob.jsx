@@ -4,11 +4,13 @@ import menu from "../assets/iconos/menu.png";
 import { NavLink } from "react-router-dom";
 import cerrar from "../assets/iconos/cerrar-nav.png";
 import { useEffect, useState } from "react";
+import { useLoading } from "./context/LoadingContext";
 
 
 const NavbarMob = () => {
 
     const [isVisible, setIsVisible] = useState(false);
+    const { showLoader } = useLoading();
 
     useEffect(() => {
         if (isVisible) {
@@ -18,7 +20,12 @@ const NavbarMob = () => {
         }
 
     }, [isVisible])
-    
+
+    const onHandlerNav = () => {
+        setIsVisible(false);
+        showLoader();
+    }
+
     return (
         <>
             <header className="header_mob">
@@ -37,38 +44,73 @@ const NavbarMob = () => {
                                 </div>
                                 <ul className="lista-nav-mob">
                                     <li className="item-nav-mob">
-                                        <NavLink to={"/"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p>INICIO</p>
+                                        <NavLink
+                                            to={"/"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            INICIO
                                         </NavLink>
                                     </li>
                                     <li className="item-nav-mob">
-                                        <NavLink to={"/nosotros"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p>NOSOTROS</p>
+                                        <NavLink
+                                            to={"/nosotros"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            NOSOTROS
                                         </NavLink>
                                     </li>
                                     <li className="item-nav-mob">
-                                        <NavLink to={"/fundacion"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p>FUNDACIÓN</p>
+                                        <NavLink
+                                            to={"/fundacion"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            FUNDACIÓN
                                         </NavLink>
                                     </li>
                                     <li className="item-nav-mob">
-                                        <NavLink to={"/desarrollos"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p>DESARROLLOS</p>
+                                        <NavLink
+                                            to={"/desarrollos"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            DESARROLLOS
                                         </NavLink>
                                     </li>
                                     <li className="item-nav-mob">
-                                        <NavLink to={"/listado-productos"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p  >INVERTIR</p>
+                                        <NavLink
+                                            to={"/listado-productos"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            INVERTIR
                                         </NavLink>
                                     </li>
                                     <li className="item-nav-mob">
-                                        <NavLink to={"ser-parte-desarrollo"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p>SER PARTE</p>
+                                        <NavLink
+                                            to={"ser-parte-desarrollo"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            SER PARTE
                                         </NavLink>
                                     </li>
                                     <li className="item-nav-mob">
-                                        <NavLink to={"/contacto"} className="link-nav-mob" onClick={() => setIsVisible(false)}>
-                                            <p>CONTACTO</p>
+                                        <NavLink
+                                            to={"/contacto"}
+                                            className={({ isActive }) =>
+                                                isActive ? "link-nav-mob-active" : "link-nav-mob"
+                                            }
+                                            onClick={onHandlerNav}>
+                                            CONTACTO
                                         </NavLink>
                                     </li>
                                 </ul>
