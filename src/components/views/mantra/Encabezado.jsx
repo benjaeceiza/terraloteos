@@ -31,7 +31,7 @@ const Encabezado = () => {
                     </div>
                     <div className="botones-mantra-encabezado">
                         <Link to={"/contacto"} className="boton-mantra">Contactar</Link>
-                        <a  className="boton-mantra" href="../../../../../public/pdf/mantra.pdf" download={"mantra.pdf"}>Descargar Broshure</a>
+                        <a  className="boton-mantra" href="/pdf/mantra.pdf" download={"mantra.pdf"}>Descargar Broshure</a>
                     </div>
                 </div>
             </section>
