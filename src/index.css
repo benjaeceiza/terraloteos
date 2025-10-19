@@ -3188,8 +3188,8 @@ body.modal-abierto {
 .logo-encabezado-mantra {
     width: 25vw;
     max-width: 500px;
-    min-width: 250px;
-    filter: drop-shadow(0px 5px 5px rgb(255, 255, 255));
+    min-width: 320px;
+   filter: drop-shadow(0pc 5px 5px white);
 }
 
 
@@ -3250,6 +3250,8 @@ body.modal-abierto {
     height: fit-content;
     padding: 10px 20px;
     border-radius: 50px;
+    width: 180px;
+    text-align: center;
     font-size: small;
     font-family: "1";
     font-weight: 600;
@@ -3295,10 +3297,16 @@ body.modal-abierto {
 .contenedor-imagenes-mantra img {
     width: 100%;
     max-width: 400px;
-
+    filter: brightness(70%);
     height: 500px;
     object-fit: cover;
     border-radius: 20px;
+    transition: all .3s;
+}
+.contenedor-imagenes-mantra img:hover {
+    transition: all .3s;
+    filter: brightness(100%);
+
 }
 
 .caracteristicas-mantra {
@@ -4131,7 +4139,7 @@ body.modal-abierto {
     }
    
     .logo-encabezado-mantra{
-        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+        filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
     }
 
     .nombre-redes-mantra {
@@ -4163,12 +4171,7 @@ body.modal-abierto {
 
     }
 
-    .boton-mantra {
-
-        border: 2px solid #ffffff;
-
-    }
-
+  
 
 
 
@@ -4705,6 +4708,16 @@ body.modal-abierto {
 }
 
 @media (max-width:500px) {
+    .botones-mantra-encabezado {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boton-mantra{
+        margin-top: 10px;
+    }
 
     .contenedor-boton-cerrar img {
         width: 25px;

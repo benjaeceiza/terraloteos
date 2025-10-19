@@ -25,7 +25,7 @@
             "https://i.postimg.cc/VLbLn3Z7/DJI-0862.jpg",
             "https://i.postimg.cc/fyVWHFzR/DJI-0870.jpg"
         ],
-        "broshure": "../../../../../public/pdf/arenas-del-rio.pdf"
+        "broshure": "/pdf/arenas-del-rio.pdf"
     },
     {
         "nombre": "Ayres de larca 1",
@@ -58,7 +58,7 @@
             "https://i.postimg.cc/bN3DZw1t/ayresL5.jpg",
             "https://i.postimg.cc/GmtBGnjS/ayresL6.jpg"
         ],
-        "broshure": "../../../../../public/pdf/ayres-de-larca-1.pdf",
+        "broshure": "/pdf/ayres-de-larca-1.pdf",
         "mapa": "https://maps.app.goo.gl/NtuQkUmf1p7REbpz8"
     },
     {
@@ -84,7 +84,7 @@
         "diferenciales": "Extensión directa de Larca I, alta proyección de plusvalía",
         "ubicacion": "Villa Larca, San Luis",
         "galeriaImagenes": [],
-        "broshure": "../../../../../public/pdf/ayres-de-larca-2.pdf"
+        "broshure": "/pdf/ayres-de-larca-2.pdf"
     },
     {
         "nombre": "Estación Conlara",
@@ -121,7 +121,7 @@
             "https://i.postimg.cc/g2hWfMc2/Whats-App-Image-2016-10-08-at-11-00-10.jpg",
             "https://i.postimg.cc/FKgQK7Lt/Whats-App-Image-2016-10-11-at-18-43-12.jpg"
         ],
-        "broshure": "../../../../../public/pdf/estacion-conlara.pdf",
+        "broshure": "/pdf/estacion-conlara.pdf",
         "mapa": "https://maps.app.goo.gl/cEXpDu9E5hT5Vbf96"
     },
     {
@@ -151,7 +151,7 @@
             "https://i.postimg.cc/BQ1k6Xrh/IMG-20241210-WA0012.jpg",
             "https://i.postimg.cc/13hTNyPy/IMG-20241210-WA0013.jpg"
         ],
-        "broshure": "../../../../../public/pdf/estacion-del-valle.pdf",
+        "broshure": "/pdf/estacion-del-valle.pdf",
         "mapa": "https://maps.app.goo.gl/F3JFkByfctjxqPig9"
     },
     {
@@ -181,7 +181,7 @@
             "https://i.postimg.cc/h4JcLPFm/IMG-6807.jpg",
             "https://i.postimg.cc/Kj3qRHHK/IMG-6808.jpg"
         ],
-        "broshure": "../../../../../public/pdf/merlo-village.pdf",
+        "broshure": "/pdf/merlo-village.pdf",
         "mapa": "https://maps.app.goo.gl/ayDJk8wQrhca8ZhP6"
     },
     {
@@ -207,7 +207,7 @@
         "diferenciales": "Palmeras caranday, entorno natural, sin expensas",
         "ubicacion": "Cortaderas, San Luis",
         "galeriaImagenes": [],
-        "broshure": "../../../../../public/pdf/palmares-balcarce.pdf",
+        "broshure": "/pdf/palmares-balcarce.pdf",
         "mapa": "https://maps.app.goo.gl/aKzcJidXi3r62f3g8"
     },
     {
@@ -223,7 +223,7 @@
         "diferenciales": "",
         "ubicacion": "",
         "galeriaImagenes": [],
-        "broshure": "../../../../../public/pdf/pueblo-mio.pdf",
+        "broshure": "/pdf/pueblo-mio.pdf",
         "mapa": "https://maps.app.goo.gl/7beyFQPLjNCusbR4A"
     },
     {
@@ -254,7 +254,7 @@
             "https://i.postimg.cc/TYqSmZPm/DJI-0672.jpg",
             "https://i.postimg.cc/SNp3nymk/DJI-0665.jpg"
         ],
-        "broshure": "../../../../../public/pdf/terrazas-del-talar.pdf",
+        "broshure": "/pdf/terrazas-del-talar.pdf",
         "mapa": "https://maps.app.goo.gl/k78CGbPCCSNy9ceY6"
     },
     {
@@ -280,7 +280,7 @@
         "diferenciales": "Polo gastronómico, amenities, 30% de bosque nativo",
         "ubicacion": "La Punta, San Luis",
         "galeriaImagenes": [],
-        "broshure": "../../../../../public/pdf/miralba.pdf",
+        "broshure": "/pdf/miralba.pdf",
         "mapa": "https://maps.app.goo.gl/wEgkKTBhsoAAQQHv9"
     }
 ]
