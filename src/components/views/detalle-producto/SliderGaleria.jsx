@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const SliderGaleria = ({ barrio, images = barrio.galeriaImagenes }) => {
+const SliderGaleria = ({ detalleProducto, images = detalleProducto }) => {
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(1); 
+  const [direction, setDirection] = useState(1); // 1: siguiente, -1: anterior
   const [animating, setAnimating] = useState(false);
 
   const nextSlide = () => {

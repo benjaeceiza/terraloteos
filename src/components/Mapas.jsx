@@ -3,8 +3,8 @@ import icono from "../assets/iconos/marcador-de-posicion.png"
 
 const Mapas = () => {
 
-    const [classActiveVm, setClassActiveVm] = useState(true)
-    const [classActiveVm2, setClassActiveVm2] = useState(false)
+    const [classActiveVm, setClassActiveVm] = useState(false)
+    const [classActiveVm2, setClassActiveVm2] = useState(true)
     const [classActiveMerlo, setClassActiveMerlo] = useState(false)
     const [classActiveMerlo2, setClassActiveMerlo2] = useState(false)
     const [classActiveRc, setClassActiveRc] = useState(false)
@@ -59,31 +59,32 @@ const Mapas = () => {
 
     return (
         <section className="contenedor-mapa">
- 
+
             <div className="contenedor-ubciaciones ">
                 <p className="titulo-ubicaciones desk">Nuestras oficinas</p>
                 <ul className="lista-ubicaciones">
-                    <li id="mapa-vm-1" className={classActiveVm ? "ubicaciones-active" : "ubicaciones"} onClick={() => activar(mapaVm)}>
-                        <div className="nombre-icono-contenedor">
-                            <img className="IconoUbicacion" src={icono} alt="" />
-                            <p className="nombre-ubicacion">Villa Mercedes </p>
-                        </div>
-                        <p className="direccion-mapa">direccion</p>
-
-                    </li>
                     <li id="mapa-vm-2" className={classActiveVm2 ? "ubicaciones-active" : "ubicaciones"} onClick={() => activar(mapaVm2)}>
                         <div className="nombre-icono-contenedor">
                             <img className="IconoUbicacion" src={icono} alt="" />
                             <p className="nombre-ubicacion">Villa Mercedes </p>
                         </div>
-                        <p className="direccion-mapa">direccion</p>
+                        <p className="direccion-mapa">Av. Bartolomé Mitre 1260</p>
                     </li>
+                    <li id="mapa-vm-1" className={classActiveVm ? "ubicaciones-active" : "ubicaciones"} onClick={() => activar(mapaVm)}>
+                        <div className="nombre-icono-contenedor">
+                            <img className="IconoUbicacion" src={icono} alt="" />
+                            <p className="nombre-ubicacion">Villa Mercedes </p>
+                        </div>
+                        <p className="direccion-mapa">Av. Bartolomé Mitre 734</p>
+
+                    </li>
+
                     <li id="mapa-sl" className={classActiveSl ? "ubicaciones-active" : "ubicaciones"} onClick={() => activar(mapaSl)}>
                         <div className="nombre-icono-contenedor">
                             <img className="IconoUbicacion" src={icono} alt="" />
                             <p className="nombre-ubicacion">San Luis</p>
                         </div>
-                        <p className="direccion-mapa">direccion</p>
+                        <p className="direccion-mapa">Av. Boulevard Las Cañadas</p>
                     </li>
                     <li id="mapa-merlo-1" className={classActiveMerlo ? "ubicaciones-active" : "ubicaciones"} onClick={() => activar(mapaMerlo1)}>
                         <div className="nombre-icono-contenedor">
@@ -104,7 +105,7 @@ const Mapas = () => {
                             <img className="IconoUbicacion" src={icono} alt="" />
                             <p className="nombre-ubicacion">Rio Cuarto</p>
                         </div>
-                        <p className="direccion-mapa">direccion</p>
+                        <p className="direccion-mapa">Alberdi 717</p>
                     </li>
 
                 </ul>

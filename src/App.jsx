@@ -9,14 +9,13 @@ import Contacto from './components/views/contacto/Contacto';
 import Barrio from './components/views/barrio/Barrio';
 import Fundacion from './components/views/fundacion/Fundacion';
 import Casa from './components/views/casa/Casa';
-import ProductoTerraloteos from './components/views/detalle-producto/ProductoTerraloteos';
 import ScrollManager from './components/ScrollManager';
 import { LoadingProvider, useLoading } from './components/context/LoadingContext';
 import { useEffect } from 'react';
 import SerSocio from './components/views/socio/SerSocio';
 import Listado from './components/views/listado-productos/Listado';
 import NavbarMob from './components/NavbarMob';
-import Mantra from './components/views/mantra/Mantra';
+import Detalle from './components/views/detalle-producto/Detalle';
 
 
 
@@ -44,8 +43,7 @@ const AppContent = () => {
         <Route path="/desarrollos" element={<Desarrollos />} />
         <Route path="/ser-parte-desarrollo" element={<SerSocio />} />
         <Route path="/listado-productos" element={<Listado />} />
-        <Route path="/producto/torres-community" element={<ProductoTerraloteos />} />
-        <Route path="/producto/mantra" element={<Mantra/>} />
+        <Route path="/producto/:id" element={<Detalle/>} />
         <Route path="/barrio/:nombre" element={<Barrio />} />
         <Route path="/casa/:tipo" element={<Casa />} />
         <Route path="/contacto" element={<Contacto />} />

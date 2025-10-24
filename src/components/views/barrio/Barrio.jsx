@@ -7,7 +7,7 @@ import SliderModelos from "../desarrollos/SliderModelos"
 import EncabezadoMob from "./EncabezadoMob";
 import SectionContactoMob from "../../SectionContactoMob";
 import SliderGaleria from "./SliderGaleria";
-import cerrar from "../../../assets/iconos/cerrar.png";
+import cerrar from "../../../assets/iconos/borrar.png";
 import { useState } from "react";
 import Detalles from "./Detalles";
 import Preguntas from "../casa/Preguntas";
@@ -40,7 +40,7 @@ const Barrio = () => {
         {sliderVisible ?
           <div className="contenedor-slider-galeria">
             <div className="contenedor-boton-cerrar-galeria">
-              <img onClick={() => setSliderVisible(false)} src={cerrar} alt="" />
+              <img onClick={() => setSliderVisible(false)} src={cerrar} alt="Cerrar" />
             </div>
             <SliderGaleria barrio={barrio} />
           </div> : ""}

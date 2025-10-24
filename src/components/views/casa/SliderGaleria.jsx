@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SliderGaleria = ({ barrio, images = barrio.galeriaImagenes }) => {
+const SliderGaleria = ({ casa, images = casa.galeriaImagenes }) => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1); 
   const [animating, setAnimating] = useState(false);

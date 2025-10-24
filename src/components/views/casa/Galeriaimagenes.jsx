@@ -1,7 +1,7 @@
 import  { useState } from "react";
 
 
-const GaleriaImagenes = ({ casa }) => {
+const GaleriaImagenes = ({ casa,setSliderVisible}) => {
     const [loadedImages, setLoadedImages] = useState({});
 
     const handleLoadImage = (index) => {
