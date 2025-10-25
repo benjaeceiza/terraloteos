@@ -749,6 +749,7 @@ body.modal-abierto {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -1470,6 +1471,7 @@ body.modal-abierto {
     animation-duration: 2s;
     animation-iteration-count: 1;
     cursor: pointer;
+    width: fit-content;
 }
 
 .contenedor-boton-flecha:hover {
@@ -2376,7 +2378,7 @@ body.modal-abierto {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(45%);
 }
 
 .data-encabezado-socio {
@@ -2429,12 +2431,13 @@ body.modal-abierto {
     animation-name: fadeInDown;
     animation-duration: 2.3s;
     animation-iteration-count: 1;
+    margin-bottom: 50px;
+
 }
 
 .boton-contacto-enzacabezado-socio {
     border: 0;
     border: 2px solid #ef8937;
-    width: 150px;
     color: white;
     height: 50px;
     border-radius: 50px;
@@ -2445,6 +2448,9 @@ body.modal-abierto {
     animation-name: fadeInUp;
     animation-duration: 3s;
     animation-iteration-count: 1;
+    text-decoration: none;
+    padding: 10px 20px;
+   
 }
 
 .contenedor-flecha {
@@ -2455,7 +2461,7 @@ body.modal-abierto {
     animation-name: fadeInUp;
     animation-duration: 3s;
     animation-iteration-count: 1;
-    background: #ef8a3788;
+
     backdrop-filter: blur(4px);
 }
 
@@ -2467,7 +2473,7 @@ body.modal-abierto {
 }
 
 .contenedor-flecha img {
-    width: 45px;
+    width: 30px;
 
 }
 
@@ -2590,7 +2596,7 @@ body.modal-abierto {
 }
 
 .data-encabezado-listado {
-    background-color: rgba(0, 0, 0, 0.507);
+    background-color: rgba(0, 0, 0, 0.63);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2649,11 +2655,11 @@ body.modal-abierto {
 
 }
 
-.contenedor-textos-encabezado-listado button {
+
+.boton-encabezado-listado{
     border: 0;
     border: 2px solid #ef8937;
-    width: 150px;
-    height: 50px;
+    padding: 10px 20px;
     color: white;
     border-radius: 50px;
     font-family: "1";
@@ -2662,10 +2668,12 @@ body.modal-abierto {
     animation-name: fadeInUp;
     animation-duration: 3s;
     animation-iteration-count: 1;
+    text-decoration: none;
+    text-align: center;
 
 }
 
-.contenedor-textos-encabezado-listado button:hover {
+.boton-encabezado-listado:hover {
     transition: all .3S;
     background-color: #ef8937;
     border: 2px solid white;
@@ -2769,6 +2777,7 @@ body.modal-abierto {
     align-items: center;
     margin-bottom: 16px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 
@@ -3375,7 +3384,7 @@ body.modal-abierto {
 .boton-garden {
     text-decoration: none;
     color: white;
-    border: 2px solid #50370ffd;
+    border: 2px solid #cececefd;
     height: fit-content;
     padding: 10px 20px;
     border-radius: 50px;
@@ -3388,7 +3397,8 @@ body.modal-abierto {
 }
 
 .boton-garden:hover {
-    background-color: #7e530ffd;
+    background-color: #7e530f80;
+    border-color:#7e530ffd ;
     transition: all .3s;
 }
 
@@ -3415,7 +3425,7 @@ body.modal-abierto {
 .boton-atilier {
     text-decoration: none;
     color: white;
-    border: 2px solid #7e530ffd;
+    border: 2px solid #ad8a66;
     height: fit-content;
     padding: 10px 20px;
     border-radius: 50px;
@@ -3428,7 +3438,7 @@ body.modal-abierto {
 }
 
 .boton-atilier:hover {
-    background-color: #7e530ffd;
+    background-color: #ad8a66;
     transition: all .3s;
 }
 
@@ -4594,16 +4604,10 @@ body.modal-abierto {
     }
 
     .logo-encabezado-mantra {
-        filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
+        filter: drop-shadow(2px 5px 5px rgb(255, 255, 255));
     }
 
-    .logo-encabezado-torres {
-        filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
-    }
-
-    .logo-encabezado-garden {
-        filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
-    }
+   
 
     .logo-encabezado-atilier {
         filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
@@ -4794,7 +4798,7 @@ body.modal-abierto {
     }
 
     .titulo-texto-socio-encabezado h1 {
-        font-size: clamp(25px, 3vw, 80px);
+        font-size: clamp(25px, 5vw, 80px);
         margin: 0;
 
     }
@@ -4836,7 +4840,7 @@ body.modal-abierto {
 
     }
 
-    .contenedor-textos-encabezado-listado button {
+    .boton-encabezado-listado {
         display: none;
 
     }

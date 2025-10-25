@@ -8,24 +8,35 @@ import calles from "../../../assets/iconos/ruta.png";
 import ingreso from "../../../assets/iconos/portal.png";
 import { useLoading } from "../../context/LoadingContext";
 import { Link } from "react-router-dom";
-
+import fleca from "../../../assets/iconos/flecha-hacia-abajo.png";
 
 
 
 const EncabezadoMob = ({ barrio }) => {
 
-        const { hideLoader } = useLoading();
+    const { hideLoader } = useLoading();
     return (
         <>
             <>
                 <section className="section-encabezado-barrio-mob">
                     <img id="fondo-encabezado-barrio" className="fondo-encabezado-barrio-mob" src={barrio.imgPrincipal}
-                        alt="fondo" onLoad={hideLoader}/>
+                        alt="fondo" onLoad={hideLoader} />
                     <div className="contenedor-logo-barrio">
                         <img id="logo-encabezado-barrio" className="logo-encabezado-barrio-mob" src={barrio.logo}
-                            alt="" />
+                            alt="Logo barrio" />
+                    <div className="contenedor-boton-flecha"
+                        onClick={() => {
+                            const section = document.querySelector("#descripcion");
+                            if (section) {
+                                section.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+
+                    >
+                        <img className="flecha-encabezado-mobile" src={fleca} alt="flecha hacia abajo" />
                     </div>
-                    <div className="contenedor-data-barrio-mob">
+                    </div>
+                    <div id="descripcion" className="contenedor-data-barrio-mob">
                         <div className="contenedor-info-barrio-mob">
                             <h1 className="sub titulo-barrio">UN LUGAR DIFERENTE</h1>
                             <div className="contenedor-datos">
@@ -70,7 +81,7 @@ const EncabezadoMob = ({ barrio }) => {
                                 </div>
                             </div>
                             <div className="contenedor-botones-barrio">
-                                <Link to={barrio.mapa} target="_blank"><button className="boton-barrio">¿CÓMO LLEGAR?</button></Link> 
+                                <Link to={barrio.mapa} target="_blank"><button className="boton-barrio">¿CÓMO LLEGAR?</button></Link>
                                 <a href={barrio.broshure} download={""}><button className="boton-barrio">DESCARGAR BROCHURE</button></a>
                             </div>
                         </div>

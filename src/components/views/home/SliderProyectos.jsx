@@ -87,7 +87,7 @@ const SliderProyectos = () => {
                 </div>
                 <div className="contacto-slider">
                     <div className="contenedor-botones-slider">
-                        <Link className="button-slider" to={""}>Ver más proyectos</Link>
+                        <Link className="button-slider" to={"/listado-productos"}>Ver más proyectos</Link>
                         <Link className="button-slider" to={"/contacto"}>Contactar</Link>
                     </div>
 

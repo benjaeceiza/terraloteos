@@ -40,7 +40,7 @@ const CategoriasMob = () => {
                  
                 <div className="contenedor-categorias-mob" >
                     <div className={cardOne ? "card-categoria-mob-activo" : "card-categoria-mob"}>
-                        <img className="fondo-categoria-mob" src={fondoOne} alt="" />
+                        <img className="fondo-categoria-mob" src={fondoOne} alt="Fondo Vivir en un desarrollo" />
                         <div className="contenedor-title-categoria-mob" onClick={() => agrandar("1")}>
                             {cardOne ? "" : <p className="title-categoria-mob">VIVIR</p>}
                         </div>
@@ -49,7 +49,7 @@ const CategoriasMob = () => {
                                 ?
                                 <Link to={"/desarrollos"}>
                                     <div className="contenedor-data-categoria-mob">
-                                        <img className="logo-categoria-mob" src={logo} alt="" />
+                                        <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Encontrá tu lugar ideal para vivir. Descubrí nuestros
                                             barrios y conocé los diferentes modelos de
                                             vivienda diseñados para vos.
@@ -62,16 +62,16 @@ const CategoriasMob = () => {
 
                     </div>
                     <div className={cardTwo ? "card-categoria-mob-activo" : "card-categoria-mob"}>
-                        <img className="fondo-categoria-mob" src={fondoTwo} alt="" />
+                        <img className="fondo-categoria-mob" src={fondoTwo} alt="Fondo invertir en un desarrollo" />
                         <div className="contenedor-title-categoria-mob" onClick={() => agrandar("2")}>
                             {cardTwo ? "" : <p className="title-categoria-mob">INVERTIR</p>}
                         </div>
                         {
                             cardTwo
                                 ?
-                                <Link>
+                                <Link to={"/listado-productos"}>
                                     <div className="contenedor-data-categoria-mob">
-                                        <img className="logo-categoria-mob" src={logo} alt="" />
+                                        <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Hacé crecer tu capital. Invertí en propiedades
                                             diseñadas para generar ingresos y valor real en el
                                             tiempo.
@@ -84,16 +84,16 @@ const CategoriasMob = () => {
 
                     </div>
                     <div className={cardThree ? "card-categoria-mob-activo" : "card-categoria-mob"}>
-                        <img className="fondo-categoria-mob" src={fondoThree} alt="" />
+                        <img className="fondo-categoria-mob" src={fondoThree} alt="Fondo ser parte de un desarrollo" />
                         <div className="contenedor-title-categoria-mob" onClick={() => agrandar("3")}>
                             {cardThree ? "" : <p className="title-categoria-mob">SER PARTE</p>}
                         </div>
                         {
                             cardThree
                                 ?
-                                <Link>
+                                <Link to={"/ser-parte-desarrollo"}>
                                     <div className="contenedor-data-categoria-mob">
-                                        <img className="logo-categoria-mob" src={logo} alt="" />
+                                        <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Convertite en parte de la creación de un barrio desde
                                             cero. Invertí con capital o con obras y
                                             obtené beneficios únicos.

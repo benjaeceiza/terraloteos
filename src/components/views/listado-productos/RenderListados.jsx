@@ -13,7 +13,7 @@ const RenderListados = () => {
     const [buttonExpand, setButtonExpand] = useState("")
     return (
         <>
-            <section className="section-productos">
+            <section id="listado" className="section-productos">
                 <h2><span className="fondo-naranja">Nuestros</span> <span className="naranja">Productos</span>.</h2>
                 <div className="contenedor-productos">
                     {

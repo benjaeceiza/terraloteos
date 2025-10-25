@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import fondo from "../../../assets/encabezados/desarrollos.jpeg";
-import fleca from "../../../assets/iconos/flecha-hacia-abajo.png"
+import fleca from "../../../assets/iconos/flecha-hacia-abajo.png";
 
 
 const EncabezadoMob = () => {

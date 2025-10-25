@@ -52,11 +52,11 @@ const Categorias = () => {
                         onMouseLeave={() => achicar("1")}
                     >
                         <div id="categoria-1" className="contenedor-categoria">
-                             <img className="fondo-categoria" src={fondoOne} alt="" />
+                             <img className="fondo-categoria" src={fondoOne} alt="Fondo vivir en un desarrollo" />
                             <div className="fondo-negro" >
                                 <p id="frase-categoria-1" className={cardOne ? "titulo-categoria-activo" : "titulo-categoria"}>VIVIR</p>
                                 <div id="contenedor-data-categoria-1" className={cardOne ? "contenedor-data-categoria-activo" : "contenedor-data-categoria"}>
-                                    <img  className="logo-categoria" src={logo} alt="" />
+                                    <img  className="logo-categoria" src={logo} alt="Logo terraloteos" />
                                     <p className="parrafo-data-categoria">Encontrá tu lugar ideal para vivir. Descubrí nuestros
                                         barrios y conocé los diferentes modelos de
                                         vivienda diseñados para vos.
@@ -65,17 +65,17 @@ const Categorias = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to={""}
+                    <Link to={"/listado-productos"}
                         id="link-categoria-2"
                         className={cardTwo ? "link-activo" : "link-categoria"}
                         onMouseEnter={() => agrandar("2")}
                         onMouseLeave={() => achicar("2")}>
                         <div id="categoria-2" className="contenedor-categoria">
-                             <img className="fondo-categoria" src={fondoTwo} alt="" />
+                             <img className="fondo-categoria" src={fondoTwo} alt="Fondo invertir" />
                             <div className="fondo-negro">
                                 <p id="frase-categoria-2" className={cardTwo ? "titulo-categoria-activo" : "titulo-categoria"}>INVERTIR</p>
                                 <div id="contenedor-data-categoria-2" className={cardTwo ? "contenedor-data-categoria-activo" : "contenedor-data-categoria"}>
-                                    <img className="logo-categoria" src={logo} alt="" />
+                                    <img className="logo-categoria" src={logo} alt="Logo terraloteos" />
                                     <p className="parrafo-data-categoria">Hacé crecer tu capital. Invertí en propiedades
                                         diseñadas para generar ingresos y valor real en el
                                         tiempo.
@@ -84,17 +84,17 @@ const Categorias = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to={""}
+                    <Link to={"/ser-parte-desarrollo"}
                         id="link-categoria-3"
                         className={cardThree ? "link-activo" : "link-categoria"}
                         onMouseEnter={() => agrandar("3")}
                         onMouseLeave={() => achicar("3")}>
                         <div id="categoria-3" className="contenedor-categoria">
-                            <img className="fondo-categoria" src={fondoThree} alt="" />
+                            <img className="fondo-categoria" src={fondoThree} alt="Fondo ser parte de un desarrollo" />
                             <div className="fondo-negro">
                                 <p id="frase-categoria-3" className={cardThree ? "titulo-categoria-activo" : "titulo-categoria"}>SER PARTE</p>
                                 <div id="contenedor-data-categoria-3" className={cardThree ? "contenedor-data-categoria-activo" : "contenedor-data-categoria"}>
-                                    <img className="logo-categoria" src={logo} alt="" />
+                                    <img className="logo-categoria" src={logo} alt="Logo terraloteos" />
                                     <p className="parrafo-data-categoria">Convertite en parte de la creación de un barrio desde
                                         cero. Invertí con capital o con obras y
                                         obtené beneficios únicos.

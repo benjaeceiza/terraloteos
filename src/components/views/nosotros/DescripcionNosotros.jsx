@@ -4,7 +4,7 @@ const DescripcionNosotros = () => {
 
     return (
         <>
-            <div className="contenedor-informacion-nosotros">
+            <div id="nosotros" className="contenedor-informacion-nosotros">
                 <div  className="contenedor-title title-nosotross">
                     <h2 className="sub">¿QUE ES TERRALOTEOS?</h2>
                 </div>
