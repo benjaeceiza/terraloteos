@@ -1,7 +1,7 @@
 
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Mailer = () => {
     const form = useRef();
@@ -12,24 +12,27 @@ const Mailer = () => {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
+        closeOnClick: true,
+        pauseOnHover: false,
         draggable: true,
         progress: undefined,
         theme: "light",
+
+
 
     });;
 
     const notifyError = () => toast.error('Error al enviar el formulario', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
-        transition: Bounce,
+    
+
     })
 
 
@@ -71,18 +74,16 @@ const Mailer = () => {
                         ""
                 }
                 <form className="contenedor-formulario" ref={form} onSubmit={sendEmail}>
-                    <input className="input" type="text" name="user_name" placeholder="Nombre" required={true}/>
+                    <input className="input" type="text" name="user_name" placeholder="Nombre" required={true} />
                     <input className="input" type="text" name="last_name" placeholder="Apellido" required={true} />
                     <input className="input" type="email" name="user_email" placeholder="Correo Electronico" required={true} />
                     <input className="input" type="text" name="user_phone" placeholder="Numero" required={true} />
                     <textarea className="mensaje" placeholder="Mensaje" name="message" ></textarea>
                     <input type="submit" value={"Enviar"} className="button-formulario" />
                 </form>
-            
+
 
             </div>
-            <ToastContainer />
-
         </>
     )
 }

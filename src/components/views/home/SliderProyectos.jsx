@@ -17,7 +17,7 @@ import { useLoading } from "../../context/LoadingContext";
 const SliderProyectos = () => {
 
     const [isHover, setIsHover] = useState("")
-    const { hideLoader } = useLoading();
+    const { hideLoader,showLoader } = useLoading();
     return (
         <>
             <div id="carouselExampleAutoplaying" className="carousel slide aditional" data-bs-ride="carousel"
@@ -26,7 +26,7 @@ const SliderProyectos = () => {
                     <div className="carousel-item active">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg3} className="img-caroucel d-block w-100" alt="..." onLoad={hideLoader} />
-                            <Link to={"/producto"} className="contenedor-data-carrucel">
+                            <Link to={"/producto"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
                                 <div className="textos">
                                     <p className="titulo-slider">Torres<br />Comunity</p>
                                     <div className="detalles-texto">
@@ -46,7 +46,7 @@ const SliderProyectos = () => {
                     <div className="carousel-item">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg1} className="img-caroucel d-block w-100" alt="..." />
-                            <Link to={""} className="contenedor-data-carrucel">
+                            <Link to={""} className="contenedor-data-carrucel" onClick={() => showLoader()}>
                                 <div className="textos">
                                     <p className="titulo-slider">Garden<br />Village</p>
                                     <div className="detalles-texto">
@@ -66,7 +66,7 @@ const SliderProyectos = () => {
                     <div className="carousel-item">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg2} className="img-caroucel d-block w-100" alt="..." />
-                            <Link href="" className="contenedor-data-carrucel">
+                            <Link href="" className="contenedor-data-carrucel" onClick={() => showLoader()}>
                                 <div className="textos">
                                     <p className="titulo-slider">Atilier<br />Estudiantil</p>
                                     <div className="detalles-texto">
@@ -87,8 +87,8 @@ const SliderProyectos = () => {
                 </div>
                 <div className="contacto-slider">
                     <div className="contenedor-botones-slider">
-                        <Link className="button-slider" to={"/listado-productos"}>Ver más proyectos</Link>
-                        <Link className="button-slider" to={"/contacto"}>Contactar</Link>
+                        <Link className="button-slider" to={"/listado-productos"} onClick={() => showLoader()}>Ver más proyectos</Link>
+                        <Link className="button-slider" to={"/contacto"} onClick={() => showLoader()}>Contactar</Link >
                     </div>
 
                     <ul className="redes-slider">

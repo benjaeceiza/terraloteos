@@ -6,11 +6,13 @@ import ubi from "../../../assets/iconos/marcador-de-posicion.png";
 import flecha from "../../../assets/iconos/mas-grande-que.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useLoading } from "../../context/LoadingContext";
 
 const RenderListados = () => {
 
     const [isVisible, setIsVisible] = useState("");
     const [buttonExpand, setButtonExpand] = useState("")
+    const { showLoader } = useLoading();
     return (
         <>
             <section id="listado" className="section-productos">
@@ -18,7 +20,7 @@ const RenderListados = () => {
                 <div className="contenedor-productos">
                     {
                         productos.map(producto => (
-                            <Link to={producto.link} key={producto.nombre} >
+                            <Link to={producto.link} key={producto.nombre} onClick={() => showLoader()}>
                                 <div className="card-producto" onMouseEnter={() => setIsVisible(producto.nombre)} onMouseLeave={() => setIsVisible("")}>
                                     <img className={isVisible == producto.nombre ? "fondo-card-producto-activo" : "fondo-card-producto"} src={producto.miniatura} alt="desarrollo" />
                                     <div className="info-card-producto">
@@ -34,7 +36,7 @@ const RenderListados = () => {
                                             <div>
                                                 <div className="titulo-flecha-producto">
                                                     <p className="nombre-card-producto" >{producto.nombre}</p>
-                                                     <img className={isVisible == producto.nombre ? "flecha-card-active":"flecha-card"} src={flecha} alt="Desplegar" onClick={()=> setIsVisible(producto.nombre)} />
+                                                    <img className={isVisible == producto.nombre ? "flecha-card-active" : "flecha-card"} src={flecha} alt="Desplegar" onClick={() => setIsVisible(producto.nombre)} />
                                                 </div>
                                                 <p className={isVisible == producto.nombre ? "descripcion-card-producto" : "none"}>{producto.descripcion}</p>
                                             </div>

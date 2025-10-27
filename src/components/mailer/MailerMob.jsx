@@ -1,7 +1,7 @@
 
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const MailerMob = () => {
     const form = useRef();
@@ -22,14 +22,13 @@ const MailerMob = () => {
 
     const notifyError = () => toast.error('Error al enviar el formulario', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
-        transition: Bounce,
     })
 
 
@@ -79,10 +78,7 @@ const MailerMob = () => {
                     <input type='submit' value={"Enviar"} className="button-formulario-mob" />
                 </form>
 
-
             </div>
-            <ToastContainer />
-
         </>
     )
 }

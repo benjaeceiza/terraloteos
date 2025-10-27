@@ -9,7 +9,7 @@ const Encabezado = ({detalleProducto}) => {
      
     
     
-     const { hideLoader } = useLoading();
+     const { hideLoader,showLoader } = useLoading();
 
     return (
         <>
@@ -28,8 +28,8 @@ const Encabezado = ({detalleProducto}) => {
                       
                     </div>
                     <div className="botones-mantra-encabezado">
-                        <Link to={"/contacto"} className={`boton-${detalleProducto.clase}`}>Contactar</Link>
-                        <a  className={`boton-${detalleProducto.clase}`} href={detalleProducto.broshure} download={"mantra.pdf"}>Descargar Broshure</a>
+                        <Link to={"/contacto"} className={`boton-${detalleProducto.clase}`} onClick={() => showLoader()}>Contactar</Link>
+                        <a  className={`boton-${detalleProducto.clase}`} href={detalleProducto.broshure} download={`${detalleProducto.nombre}.pdf`}>Descargar Broshure</a>
                     </div>
                 </div>
             </section>

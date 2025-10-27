@@ -5,10 +5,12 @@ import logo from "../../../assets/logos/logo-corto.png"
 import fondoThree from "../../../assets/categorias/invertir-2.jpeg" 
 import fondoTwo from "../../../assets/categorias/inversion.png" 
 import fondoOne from "../../../assets/categorias/vivir.png" 
+import { useLoading } from "../../context/LoadingContext";
 
 
 const Categorias = () => {
-
+    
+    const { showLoader } = useLoading();
     const [cardOne, setCardOne] = useState(false)
     const [cardTwo, setCardTwo] = useState(false)
     const [cardThree, setCardThree] = useState(false)
@@ -50,6 +52,7 @@ const Categorias = () => {
                         className={cardOne ? "link-activo" : "link-categoria"}
                         onMouseEnter={() => agrandar("1")}
                         onMouseLeave={() => achicar("1")}
+                        onClick={() => showLoader()}
                     >
                         <div id="categoria-1" className="contenedor-categoria">
                              <img className="fondo-categoria" src={fondoOne} alt="Fondo vivir en un desarrollo" />
@@ -69,7 +72,8 @@ const Categorias = () => {
                         id="link-categoria-2"
                         className={cardTwo ? "link-activo" : "link-categoria"}
                         onMouseEnter={() => agrandar("2")}
-                        onMouseLeave={() => achicar("2")}>
+                        onMouseLeave={() => achicar("2")}
+                        onClick={() => showLoader()}>
                         <div id="categoria-2" className="contenedor-categoria">
                              <img className="fondo-categoria" src={fondoTwo} alt="Fondo invertir" />
                             <div className="fondo-negro">
@@ -88,7 +92,8 @@ const Categorias = () => {
                         id="link-categoria-3"
                         className={cardThree ? "link-activo" : "link-categoria"}
                         onMouseEnter={() => agrandar("3")}
-                        onMouseLeave={() => achicar("3")}>
+                        onMouseLeave={() => achicar("3")}
+                        onClick={() => showLoader()}>
                         <div id="categoria-3" className="contenedor-categoria">
                             <img className="fondo-categoria" src={fondoThree} alt="Fondo ser parte de un desarrollo" />
                             <div className="fondo-negro">

@@ -6,12 +6,14 @@ import logo from "../../../assets/logos/logo-corto.png"
 import fondoThree from "../../../assets/categorias/invertir-2.jpeg"
 import fondoTwo from "../../../assets/categorias/inversion.png"
 import fondoOne from "../../../assets/categorias/vivir.png"
+import { useLoading } from "../../context/LoadingContext";
 
 
 const CategoriasMob = () => {
     const [cardOne, setCardOne] = useState(false)
     const [cardTwo, setCardTwo] = useState(false)
     const [cardThree, setCardThree] = useState(false)
+    const {showLoader} = useLoading
 
     const agrandar = (valor) => {
         if (valor == "1") {
@@ -47,7 +49,7 @@ const CategoriasMob = () => {
                         {
                             cardOne
                                 ?
-                                <Link to={"/desarrollos"}>
+                                <Link to={"/desarrollos"} onClick={() => showLoader()}>
                                     <div className="contenedor-data-categoria-mob">
                                         <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Encontrá tu lugar ideal para vivir. Descubrí nuestros
@@ -69,7 +71,7 @@ const CategoriasMob = () => {
                         {
                             cardTwo
                                 ?
-                                <Link to={"/listado-productos"}>
+                                <Link to={"/listado-productos"} onClick={() => showLoader()}>
                                     <div className="contenedor-data-categoria-mob">
                                         <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Hacé crecer tu capital. Invertí en propiedades
@@ -91,7 +93,7 @@ const CategoriasMob = () => {
                         {
                             cardThree
                                 ?
-                                <Link to={"/ser-parte-desarrollo"}>
+                                <Link to={"/ser-parte-desarrollo"} onClick={() => showLoader()}>
                                     <div className="contenedor-data-categoria-mob">
                                         <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Convertite en parte de la creación de un barrio desde

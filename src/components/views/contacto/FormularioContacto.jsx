@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const FormularioContacto = () => {
 
@@ -31,11 +31,12 @@ const FormularioContacto = () => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        transition: Bounce,
+
     })
 
 
     const sendEmail = (e) => {
+
         e.preventDefault();
         setIsSending(true)
         emailjs
@@ -74,14 +75,13 @@ const FormularioContacto = () => {
                         ""
                 }
                 <form className="formulario-contacto" ref={form} onSubmit={sendEmail}>
-                    <input className="input-contacto" name='user_name' type="text" placeholder="Nombre" required={true}/>
-                    <input className="input-contacto" name='last_name' type="text" placeholder="Apellido" required={true}/>
-                    <input className="input-contacto" name='user_email' type="email" placeholder="Correo Electrónico" required={true}/>
-                    <input className="input-contacto" name='user_phone' type="number" placeholder="Teléfono" required={true}/>
+                    <input className="input-contacto" name='user_name' type="text" placeholder="Nombre" required={true} />
+                    <input className="input-contacto" name='last_name' type="text" placeholder="Apellido" required={true} />
+                    <input className="input-contacto" name='user_email' type="email" placeholder="Correo Electrónico" required={true} />
+                    <input className="input-contacto" name='user_phone' type="number" placeholder="Teléfono" required={true} />
                     <textarea className="mensaje-formulario-contacto" placeholder="Mensaje" name="message" id=""></textarea>
                     <input className='button-formulario' type="submit" value={"Enviar"} />
                 </form>
-                <ToastContainer/>
             </section>
         </>
     )

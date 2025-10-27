@@ -4,9 +4,12 @@ import metros from "../../../assets/iconos/metros.png";
 import cama from "../../../assets/iconos/cama.png";
 import modelos from "../../../data/casas.json";
 import { Link } from "react-router-dom";
+import { useLoading } from "../../context/LoadingContext";
 
 const Slidermodelos = () => {
 
+const {showLoader} = useLoading()
+    
     return (
         <>
             <section className="section-modelos">
@@ -16,7 +19,7 @@ const Slidermodelos = () => {
                             modelos.map(e => (
                                 <div className={e.tipo == "Loft"? "carousel-item active slider-item" : "carousel-item slider-item"} key={Math.random()}>
                                     <img className="fondo-modelo" src={e.imgPrincipal} alt="" />
-                                    <Link to={"/casa/"+ e.tipo}className="link-modelo">
+                                    <Link to={"/casa/"+ e.tipo}className="link-modelo" onClick={() => showLoader()}>
                                         <div className="contenedor-data-modelo">
                                             <p className="title-modelo">{e.tipo}</p>
                                             <ul className="lista-modelo">

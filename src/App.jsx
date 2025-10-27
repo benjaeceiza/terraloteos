@@ -16,6 +16,7 @@ import SerSocio from './components/views/socio/SerSocio';
 import Listado from './components/views/listado-productos/Listado';
 import NavbarMob from './components/NavbarMob';
 import Detalle from './components/views/detalle-producto/Detalle';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -43,11 +44,12 @@ const AppContent = () => {
         <Route path="/desarrollos" element={<Desarrollos />} />
         <Route path="/ser-parte-desarrollo" element={<SerSocio />} />
         <Route path="/listado-productos" element={<Listado />} />
-        <Route path="/producto/:id" element={<Detalle/>} />
+        <Route path="/producto/:id" element={<Detalle />} />
         <Route path="/barrio/:nombre" element={<Barrio />} />
         <Route path="/casa/:tipo" element={<Casa />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+      <ToastContainer />
       <Footer />
     </>
   );
