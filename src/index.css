@@ -6,20 +6,19 @@
 }
 
 html,
-body {
-  background-color: #133222; /* mismo color del fondo */
-  overscroll-behavior: none;
-  height: 100%;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #133222; 
+  overflow-x: hidden;     
 }
 
-/* evita el repintado al cambiar la barra del navegador */
 body {
-
-  backface-visibility: hidden;
-  will-change: scroll-position;
+    background-color: #000;
+    overflow-x: hidden;
 }
+
 
 
 body.modal-abierto {
@@ -130,20 +129,28 @@ body.modal-abierto {
 .main-index {
   position: relative;
   min-height: 100vh;
-  background-color: #133222; 
   overflow: hidden;
+  background-color: transparent; 
 }
+
+/* fondo visible detrás del contenido */
 .fondo-fijo {
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 0; 
   background: url("./assets/fondos/fondo-main.png") center/cover no-repeat;
   filter: brightness(50%);
 
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0,0,0);
   backface-visibility: hidden;
   will-change: transform;
-  -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+@supports (-webkit-touch-callout: none) {
+    .fondo-fijo {
+        background-attachment: scroll;
+    }
 }
 
 
@@ -4439,7 +4446,8 @@ body.modal-abierto {
     border-top: 1px solid rgba(255, 255, 255, 0.466);
     margin: 0;
     padding: 0px;
-
+    position: relative;
+    z-index: 2;
 }
 
 .footer-mantra {
@@ -4448,6 +4456,7 @@ body.modal-abierto {
     border-top: 1px solid rgba(255, 255, 255, 0.466);
     margin: 0;
     padding: 0px;
+
 }
 
 .footer-lista {
