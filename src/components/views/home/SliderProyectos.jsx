@@ -26,17 +26,17 @@ const SliderProyectos = () => {
                     <div className="carousel-item active">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg3} className="img-caroucel d-block w-100" alt="..." onLoad={hideLoader} />
-                            <Link to={"/producto"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
+                            <Link to={"/producto/Torres Community"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
                                 <div className="textos">
-                                    <p className="titulo-slider">Torres<br />Comunity</p>
+                                    <p className="titulo-slider">Torres<br />Community</p>
                                     <div className="detalles-texto">
                                         <div className="texto-contenedor">
                                             <p className="titulo-texto">TIPO DE PROYECTO /</p>
-                                            <p className="texto-decorado">COMERCIAL</p>
+                                            <p className="texto-decorado">RESIDENCIAL</p>
                                         </div>
                                         <div className="texto-contenedor">
                                             <p className="titulo-texto">UBICACION /</p>
-                                            <p className="texto-decorado">MERLO, SAN LUIS</p>
+                                            <p className="texto-decorado">SAN LUIS</p>
                                         </div>
                                     </div>
                                 </div>
@@ -46,13 +46,13 @@ const SliderProyectos = () => {
                     <div className="carousel-item">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg1} className="img-caroucel d-block w-100" alt="..." />
-                            <Link to={""} className="contenedor-data-carrucel" onClick={() => showLoader()}>
+                            <Link to={"/producto/Garden Village"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
                                 <div className="textos">
                                     <p className="titulo-slider">Garden<br />Village</p>
                                     <div className="detalles-texto">
                                         <div className="texto-contenedor">
                                             <p className="titulo-texto">TIPO DE PROYECTO /</p>
-                                            <p className="texto-decorado">COMERCIAL</p>
+                                            <p className="texto-decorado">RESIDENCIAL</p>
                                         </div>
                                         <div className="texto-contenedor">
                                             <p className="titulo-texto">UBICACION /</p>
@@ -66,17 +66,17 @@ const SliderProyectos = () => {
                     <div className="carousel-item">
                         <div className="contenedor-item-carrucel">
                             <img src={sliderImg2} className="img-caroucel d-block w-100" alt="..." />
-                            <Link href="" className="contenedor-data-carrucel" onClick={() => showLoader()}>
+                            <Link to={"/producto/Atilier Estudiantil"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
                                 <div className="textos">
                                     <p className="titulo-slider">Atilier<br />Estudiantil</p>
                                     <div className="detalles-texto">
                                         <div className="texto-contenedor">
                                             <p className="titulo-texto">TIPO DE PROYECTO /</p>
-                                            <p className="texto-decorado">COMERCIAL</p>
+                                            <p className="texto-decorado">RESIDENCIAL</p>
                                         </div>
                                         <div className="texto-contenedor">
                                             <p className="titulo-texto">UBICACION /</p>
-                                            <p className="texto-decorado">MERLO, SAN LUIS</p>
+                                            <p className="texto-decorado">SAN LUIS</p>
                                         </div>
                                     </div>
                                 </div>

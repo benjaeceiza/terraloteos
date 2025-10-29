@@ -16,7 +16,6 @@ const Home = () => {
       <div className="contenido">
         <SliderProyectos />
 
-  
         <motion.section
           className="section-frase"
           initial={{ opacity: 0, y: 40 }}

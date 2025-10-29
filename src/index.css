@@ -116,6 +116,7 @@ body.modal-abierto {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+     background-color: #000;
 }
 
 .fondo-img {
@@ -5066,6 +5067,12 @@ body.modal-abierto {
         margin: 0;
     }
 
+}
+
+@media (max-width: 768px) {
+  .fondo-img {
+    position: absolute;
+  }
 }
 
 @media (max-width:670px) {
