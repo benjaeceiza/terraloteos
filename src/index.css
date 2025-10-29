@@ -5,19 +5,6 @@
 
 }
 
-html,
-
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #133222; 
-  overflow-x: hidden;     
-}
-
-body {
-    background-color: #000;
-    overflow-x: hidden;
-}
 
 
 
@@ -131,27 +118,22 @@ body.modal-abierto {
   min-height: 100vh;
   overflow: hidden;
   background-color: transparent; 
+  background-color: #133222;
 }
 
-/* fondo visible detrás del contenido */
+
 .fondo-fijo {
   position: fixed;
   inset: 0;
   z-index: 0; 
   background: url("./assets/fondos/fondo-main.png") center/cover no-repeat;
   filter: brightness(50%);
-
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
   will-change: transform;
 }
 
 
-@supports (-webkit-touch-callout: none) {
-    .fondo-fijo {
-        background-attachment: scroll;
-    }
-}
 
 
 
