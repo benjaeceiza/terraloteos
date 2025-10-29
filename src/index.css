@@ -116,7 +116,7 @@ body.modal-abierto {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-     background-color: #000;
+
 }
 
 .fondo-img {
@@ -187,7 +187,7 @@ body.modal-abierto {
 
 }
 
-.toast{
+.toast {
     z-index: 1000;
     background-color: red;
 }
@@ -3300,6 +3300,7 @@ body.modal-abierto {
     min-width: 320px;
 
 }
+
 .logo-encabezado-paseo {
     width: 25vw;
     max-width: 500px;
@@ -3359,6 +3360,7 @@ body.modal-abierto {
     mask-image: linear-gradient(90deg, rgb(0, 0, 0) 90%,
             transparent);
 }
+
 .nombre-redes-paseo {
     height: 100%;
     width: 40%;
@@ -3448,6 +3450,7 @@ body.modal-abierto {
     border-color: #7e530ffd;
     transition: all .3s;
 }
+
 .boton-paseo {
     text-decoration: none;
     color: white;
@@ -3557,6 +3560,7 @@ body.modal-abierto {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .contenedor-imagenes-paseo {
     display: flex;
     justify-content: space-evenly;
@@ -3602,6 +3606,7 @@ body.modal-abierto {
     border-radius: 20px;
     transition: all .3s;
 }
+
 .contenedor-imagenes-paseo img {
     width: 100%;
     max-width: 400px;
@@ -3635,6 +3640,7 @@ body.modal-abierto {
     filter: brightness(100%);
 
 }
+
 .contenedor-imagenes-paseo img:hover {
     transition: all .3s;
     filter: brightness(100%);
@@ -3660,6 +3666,7 @@ body.modal-abierto {
     background: linear-gradient(to bottom, #d3c6b5 15%, #50370f 15%);
     padding: 0px 20px;
 }
+
 .caracteristicas-paseo {
     background: linear-gradient(to bottom, #d3c6b5 15%, #444444 15%);
     padding: 0px 20px;
@@ -3729,6 +3736,7 @@ body.modal-abierto {
     align-items: center;
     justify-content: center;
 }
+
 .burbuja-paseo {
     background-color: #d4b58c;
     text-align: center;
@@ -3776,6 +3784,7 @@ body.modal-abierto {
     font-family: "1";
     margin-top: 20px;
 }
+
 .nombre-burbuja-paseo {
     font-size: medium;
     font-weight: 600;
@@ -3826,6 +3835,7 @@ body.modal-abierto {
     margin: 10px 0px;
 
 }
+
 .titulo-parrafo-paseo {
     color: gray;
     filter: drop-shadow(1px 0px 1px white);
@@ -3843,6 +3853,7 @@ body.modal-abierto {
     font-weight: 600;
     margin: 0;
 }
+
 .parrafo-paseo {
     color: #ffffff;
     font-family: "1";
@@ -3912,6 +3923,7 @@ body.modal-abierto {
     min-width: 250px;
     text-align: center;
 }
+
 .logo-contenido-paseo {
     filter: drop-shadow(2px 2px 2px #f7f7f7);
     width: 30vw;
@@ -4578,6 +4590,7 @@ body.modal-abierto {
         padding: 0px 20px;
 
     }
+
     .contenedor-imagenes-paseo {
         padding: 0px 20px;
 
@@ -4610,6 +4623,7 @@ body.modal-abierto {
         margin-top: 20px;
 
     }
+
     .contenedor-imagenes-paseo img {
         width: 100%;
         max-width: none;
@@ -4726,6 +4740,7 @@ body.modal-abierto {
     .fondo-atilier {
         height: 90vh;
     }
+
     .fondo-paseo {
         height: 90vh;
     }
@@ -4747,6 +4762,7 @@ body.modal-abierto {
     .burbuja-atilier {
         margin-top: 20px;
     }
+
     .burbuja-paseo {
         margin-top: 20px;
     }
@@ -4760,6 +4776,7 @@ body.modal-abierto {
     .logo-encabezado-atilier {
         filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
     }
+
     .logo-encabezado-paseo {
         filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
     }
@@ -4815,6 +4832,7 @@ body.modal-abierto {
                 transparent);
         position: relative;
     }
+
     .nombre-redes-paseo {
         width: 100%;
         display: flex;
@@ -4843,6 +4861,7 @@ body.modal-abierto {
     .texto-logo-atilier p {
         margin-top: 20px;
     }
+
     .texto-logo-paseo p {
         margin-top: 20px;
     }
@@ -4887,6 +4906,7 @@ body.modal-abierto {
         max-width: none;
         margin-bottom: 80px;
     }
+
     .botones-paseo-encabezado {
         height: fit-content;
         position: absolute;
@@ -5070,9 +5090,9 @@ body.modal-abierto {
 }
 
 @media (max-width: 768px) {
-  .fondo-img {
-    position: absolute;
-  }
+    .fondo-img {
+        position: absolute;
+    }
 }
 
 @media (max-width:670px) {
@@ -5467,6 +5487,7 @@ body.modal-abierto {
         justify-content: center;
         align-items: center;
     }
+
     .botones-paseo-encabezado {
         flex-direction: column;
         width: 100%;
@@ -5489,6 +5510,7 @@ body.modal-abierto {
     .boton-atilier {
         margin-top: 10px;
     }
+
     .boton-paseo {
         margin-top: 10px;
     }
