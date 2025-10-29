@@ -12,7 +12,7 @@ import fondo from "../../../assets/fondos/fondo-main.png";
 const Home = () => {
   return (
     <main className="main-index">
-      <img src={fondo} alt="Fondo" className="fondo-img" />
+      <div className="fondo-fijo"></div>
       <div className="contenido">
         <SliderProyectos />
 
