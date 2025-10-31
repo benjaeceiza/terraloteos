@@ -114,23 +114,23 @@ body.modal-abierto {
 
 
 .main-index {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: transparent; 
-  background-color: #133222;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+    background-color: #133222;
 }
 
 
 .fondo-fijo {
-  position: fixed;
-  inset: 0;
-  z-index: 0; 
-  background: url("./assets/fondos/fondo-main.png") center/cover no-repeat;
-  filter: brightness(50%);
-  transform: translate3d(0,0,0);
-  backface-visibility: hidden;
-  will-change: transform;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: url("./assets/fondos/fondo-main.png") center/cover no-repeat;
+    filter: brightness(50%);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
 
@@ -1149,6 +1149,8 @@ body.modal-abierto {
     border: 2px solid #a3a3a3;
     padding: 5px;
     border-radius: 10px;
+    width: 200px;
+
 
 }
 
@@ -1163,6 +1165,7 @@ body.modal-abierto {
     border: 2px solid #ef8937;
     padding: 5px;
     border-radius: 10px;
+    width: 200px;
 }
 
 .nombre-icono-contenedor {
@@ -2869,6 +2872,35 @@ body.modal-abierto {
 
 }
 
+.loader-card {
+    width: 100%;
+    max-width: 350px;
+    min-width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+}
+
+.spinner-card {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top-color: #ff6600;
+    /* color del loader */
+    border-radius: 50%;
+    animation: spinCard 0.9s linear infinite;
+}
+
+@keyframes spinCard {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 
 /* PAGE DETALLE PRODUCTOS */
@@ -3250,6 +3282,22 @@ body.modal-abierto {
     background-color: #d3c6b5;
 
 }
+.main-paseo {
+    background-color: #cacaca;
+
+}
+.main-garden {
+    background-color: #d3c6b5;
+
+}
+.main-atilier {
+    background-color: #d3c6b5;
+
+}
+.main-torres {
+    background-color: #dbdbdb;
+
+}
 
 .encabezado-mantra {
     width: 100%;
@@ -3278,7 +3326,7 @@ body.modal-abierto {
     width: 25vw;
     max-width: 500px;
     min-width: 320px;
-    filter: drop-shadow(0pc 5px 5px white);
+    filter: drop-shadow(0pc 3px 5px white);
 }
 
 .logo-encabezado-garden {
@@ -3299,6 +3347,7 @@ body.modal-abierto {
     width: 25vw;
     max-width: 500px;
     min-width: 320px;
+    filter: drop-shadow(2px 3px 2px rgb(0, 0, 0));
 
 }
 
@@ -3306,6 +3355,7 @@ body.modal-abierto {
     width: 25vw;
     max-width: 500px;
     min-width: 320px;
+    filter: drop-shadow(0px 3px 2px white);
 
 }
 
@@ -3317,9 +3367,9 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #d3c6b58e;
-    filter: drop-shadow(2px 0px 1px #36200a);
-    mask-image: linear-gradient(90deg, rgb(0, 0, 0) 90%,
+    background-color: #c4b39ea4;
+    filter: drop-shadow(2px 1000px 1px #ffffff);
+    mask-image: linear-gradient(90deg, rgb(173, 173, 173) 80%,
             transparent);
 }
 
@@ -3356,8 +3406,8 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #d47c3446;
-    filter: drop-shadow(2px 0px 1px #b6af9b);
+    background-color: #d8b39485;
+    filter: drop-shadow(2px 1000px 1px #b6af9b);
     mask-image: linear-gradient(90deg, rgb(0, 0, 0) 90%,
             transparent);
 }
@@ -3370,7 +3420,7 @@ body.modal-abierto {
     align-items: center;
     justify-content: center;
     background-color: #11111177;
-    filter: drop-shadow(3px 1px 1px #ffffff);
+    filter: drop-shadow(3px 1000px 1px #ffffff);
     mask-image: linear-gradient(90deg, rgb(0, 0, 0) 90%,
             transparent);
 }
@@ -3576,6 +3626,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
+    cursor: pointer;
 }
 
 .contenedor-imagenes-torres img {
@@ -3586,6 +3637,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
+      cursor: pointer;
 }
 
 .contenedor-imagenes-garden img {
@@ -3596,6 +3648,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
+      cursor: pointer;
 }
 
 .contenedor-imagenes-atilier img {
@@ -3606,6 +3659,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
+      cursor: pointer;
 }
 
 .contenedor-imagenes-paseo img {
@@ -3616,6 +3670,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
+      cursor: pointer;
 }
 
 .contenedor-imagenes-mantra img:hover {
@@ -3654,7 +3709,7 @@ body.modal-abierto {
 }
 
 .caracteristicas-torres {
-    background: linear-gradient(to bottom, #d3c6b5 15%, #b7b7b7 15%);
+    background: linear-gradient(to bottom, #dbdbdb 15%, #b7b7b7 15%);
     padding: 0px 20px;
 }
 
@@ -3669,7 +3724,7 @@ body.modal-abierto {
 }
 
 .caracteristicas-paseo {
-    background: linear-gradient(to bottom, #d3c6b5 15%, #444444 15%);
+    background: linear-gradient(to bottom, #cacaca 15%, #444444 15%);
     padding: 0px 20px;
 }
 
@@ -3694,10 +3749,11 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 5px 2px rgb(73, 73, 73);
 }
 
 .burbuja-torres {
-    background-color: #bca083;
+    background-color: #bda893;
     text-align: center;
     padding: 10px 40px;
     border-radius: 20px;
@@ -3708,6 +3764,8 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 5px 2px rgb(73, 73, 73);
+    
 }
 
 .burbuja-atilier {
@@ -3722,6 +3780,7 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .burbuja-garden {
@@ -3736,10 +3795,11 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 5px 2px rgb(73, 73, 73);
 }
 
 .burbuja-paseo {
-    background-color: #d4b58c;
+    background-color: #bebebe;
     text-align: center;
     padding: 10px 40px;
     border-radius: 20px;
@@ -3750,6 +3810,7 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 5px 2px black;
 }
 
 .icono-burbujar-mantra {

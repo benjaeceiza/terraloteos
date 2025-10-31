@@ -30,7 +30,7 @@ const Detalle = () => {
 
     return (
         <>
-            <main className="main-mantra">
+            <main className={`main-${detalleProducto.clase}`}>
                 <Encabezado detalleProducto={detalleProducto} />
                 <Contenido detalleProducto={detalleProducto} setSliderVisible={setSliderVisible}/>
                 {sliderVisible ?
