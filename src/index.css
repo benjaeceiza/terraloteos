@@ -1670,12 +1670,13 @@ body.modal-abierto {
     max-width: 1200px;
     height: 700px;
     object-fit: cover;
+    filter: brightness(50%);
 }
 
 
 .contenedor-data-modelo {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.377);
+    
     margin: auto;
     width: 100%;
     height: 100%;
