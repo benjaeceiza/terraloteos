@@ -5248,6 +5248,9 @@ body.modal-abierto {
 
 @media (max-width:600px) {
 
+    .slider-galeria {
+   height: auto;
+}
 
 
     .contenedor-caracteristicas-casa {
