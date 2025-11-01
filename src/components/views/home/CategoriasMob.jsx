@@ -49,15 +49,16 @@ const CategoriasMob = () => {
                         {
                             cardOne
                                 ?
-                                <Link to={"/desarrollos"} onClick={() => showLoader()}>
+                               
                                     <div className="contenedor-data-categoria-mob">
                                         <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Encontrá tu lugar ideal para vivir. Descubrí nuestros
                                             barrios y conocé los diferentes modelos de
                                             vivienda diseñados para vos.
                                         </p>
+                                         <Link to={"/desarrollos"} onClick={() => showLoader()}><button className="boton-categoria-vermas">Ver más</button></Link>
                                     </div>
-                                </Link>
+                                
                                 :
                                 ""
                         }
@@ -71,15 +72,16 @@ const CategoriasMob = () => {
                         {
                             cardTwo
                                 ?
-                                <Link to={"/listado-productos"} onClick={() => showLoader()}>
+                              
                                     <div className="contenedor-data-categoria-mob">
                                         <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Hacé crecer tu capital. Invertí en propiedades
                                             diseñadas para generar ingresos y valor real en el
                                             tiempo.
                                         </p>
+                                         <Link to={"/listado-productos"} onClick={() => showLoader()}><button className="boton-categoria-vermas">Ver más</button></Link>
                                     </div>
-                                </Link>
+                             
                                 :
                                 ""
                         }
@@ -93,15 +95,14 @@ const CategoriasMob = () => {
                         {
                             cardThree
                                 ?
-                                <Link to={"/ser-parte-desarrollo"} onClick={() => showLoader()}>
                                     <div className="contenedor-data-categoria-mob">
                                         <img className="logo-categoria-mob" src={logo} alt="Logo terraloteos" />
                                         <p className="parrafo-data-categoria-mob">Convertite en parte de la creación de un barrio desde
                                             cero. Invertí con capital o con obras y
                                             obtené beneficios únicos.
                                         </p>
+                                        <Link to={"/ser-parte-desarrollo"} onClick={() => showLoader()}><button className="boton-categoria-vermas">Ver más</button></Link>
                                     </div>
-                                </Link>
                                 :
                                 ""
                         }

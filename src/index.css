@@ -958,8 +958,25 @@ body.modal-abierto {
     animation-duration: 1s;
     animation-iteration-count: 1;
     width: 80%;
+    text-align: center;
 }
 
+
+.boton-categoria-vermas {
+    border: none;
+    background-color: #ef8937;
+    width: 80px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+    font-size: small;
+    font-weight: 600;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    margin-top: 20px;
+}
 
 /* NUMEROS */
 
@@ -1713,7 +1730,6 @@ body.modal-abierto {
     justify-content: center;
     z-index: 0;
     margin-right: 1px;
-
     width: 7vw;
     min-width: 40px;
     font-size: 1.5cqmin;
@@ -3282,18 +3298,22 @@ body.modal-abierto {
     background-color: #d3c6b5;
 
 }
+
 .main-paseo {
     background-color: #cacaca;
 
 }
+
 .main-garden {
     background-color: #d3c6b5;
 
 }
+
 .main-atilier {
     background-color: #d3c6b5;
 
 }
+
 .main-torres {
     background-color: #dbdbdb;
 
@@ -3637,7 +3657,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
-      cursor: pointer;
+    cursor: pointer;
 }
 
 .contenedor-imagenes-garden img {
@@ -3648,7 +3668,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
-      cursor: pointer;
+    cursor: pointer;
 }
 
 .contenedor-imagenes-atilier img {
@@ -3659,7 +3679,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
-      cursor: pointer;
+    cursor: pointer;
 }
 
 .contenedor-imagenes-paseo img {
@@ -3670,7 +3690,7 @@ body.modal-abierto {
     object-fit: cover;
     border-radius: 20px;
     transition: all .3s;
-      cursor: pointer;
+    cursor: pointer;
 }
 
 .contenedor-imagenes-mantra img:hover {
@@ -3765,7 +3785,7 @@ body.modal-abierto {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 5px 2px rgb(73, 73, 73);
-    
+
 }
 
 .burbuja-atilier {
@@ -3780,7 +3800,7 @@ body.modal-abierto {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .burbuja-garden {
@@ -5378,7 +5398,7 @@ body.modal-abierto {
 
     .titulo-nosotros-home {
         color: white;
-        font-size: 50px;
+        font-size: 45px;
 
         text-align: start;
         font-family: "1";
@@ -5503,7 +5523,7 @@ body.modal-abierto {
         margin-left: 50px;
         margin-top: 20px;
         backdrop-filter: none;
-        font-size: medium;
+        font-size: x-small;
         background-color: transparent;
         border: 0;
     }
@@ -5514,7 +5534,7 @@ body.modal-abierto {
         margin-right: 60px;
         margin-top: 20px;
         backdrop-filter: none;
-        font-size: medium;
+        font-size: x-small;
         background-color: transparent;
         border: 0;
     }

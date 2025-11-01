@@ -73,7 +73,7 @@ const Numeros = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <h2 className="titulo-nosotros-home">
-          <span className="naranja">+</span>15 Años construyendo tu futuro
+          <span className="naranja">+</span>15 Años<br></br> construyendo tu futuro
         </h2>
         <p className="texto-nosotros">
           Terraloteos es una empresa líder en urbanización y vivienda llave en
