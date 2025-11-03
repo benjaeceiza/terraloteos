@@ -33,7 +33,12 @@ const {showLoader} = useLoading()
                                                 </li>
                                                 <li className="item-modelo">
                                                     <img className="icono-modelo" src={cama} alt="" />
+                                                    {e.habitaciones == 1
+                                                    ?
+                                                    <p className="texto-icono">{e.habitaciones} Habitacion</p>
+                                                    :
                                                     <p className="texto-icono">{e.habitaciones} Habitaciones</p>
+                                                }
                                                 </li>
                                             </ul>
                                             <button className="button-slider animacion">Más información</button>

@@ -10,7 +10,7 @@ import { useLoading } from "../../context/LoadingContext";
 const RenderListados = () => {
     const [isVisible, setIsVisible] = useState("");
     const [buttonExpand, setButtonExpand] = useState("");
-    const [loadedImages, setLoadedImages] = useState({}); // <-- Estado para cada imagen cargada
+    const [loadedImages, setLoadedImages] = useState({}); 
     const { showLoader } = useLoading();
 
     const handleImageLoad = (nombre) => {
@@ -75,7 +75,7 @@ const RenderListados = () => {
                                     </div>
                                     <div>
                                         <div>
-                                            <div className="titulo-flecha-producto">
+                                            <div className="titulo-flecha-producto" onClick={() => setIsVisible(producto.nombre)}>
                                                 <p className="nombre-card-producto">
                                                     {producto.nombre}
                                                 </p>

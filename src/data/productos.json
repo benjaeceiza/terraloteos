@@ -99,7 +99,7 @@
         "ubicacion": "San Luis.",
         "miniatura":"https://i.postimg.cc/d3X3Myyw/card-1.jpg",
         "imgEncabezado":"",
-        "link":"/producto/locales-comerciales"
+        "link":"/producto/Locales Comerciales"
     },
     {
         "nombre": "Torre Pulse",
@@ -116,7 +116,7 @@
         "ubicacion": "San Luis.",
         "miniatura":"https://i.postimg.cc/R0MMDRDJ/Torre-Pulse.jpg",
         "imgEncabezado":"",
-        "link":"/producto/torre-pulse"
+        "link":"/producto/Torre Pulse"
     }
     
 ]

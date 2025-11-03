@@ -1259,7 +1259,7 @@ body.modal-abierto {
 .titulo-encabezado-nosotros {
     color: white;
     font-family: "1";
-    font-size: clamp(40px, 10vw, 120px);
+    font-size: clamp(40px, 10vw, 100px);
     font-weight: bold;
     letter-spacing: 3px;
 }
@@ -1278,7 +1278,7 @@ body.modal-abierto {
 .subtitulo-encabezado-nosotros {
     color: white;
     font-family: "1";
-    font-size: clamp(12px, 3vw, 40px);
+    font-size: clamp(12px, 3vw, 30px);
     font-weight: light;
     letter-spacing: 5px;
 }
@@ -1286,7 +1286,6 @@ body.modal-abierto {
 .contenedor-informacion-nosotros {
     max-width: 900px;
     margin: auto;
-
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -1699,11 +1698,16 @@ body.modal-abierto {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-
+    padding: 0;
     animation-name: fadeInUp;
     animation-duration: 1.3s;
     animation-iteration-count: 1;
     width: 100%;
+    margin: 0;
+}
+
+.item-modelo{
+    width: 150px;
 }
 
 
@@ -2635,6 +2639,16 @@ body.modal-abierto {
 
 /* LISTADO DE PRODUCTOS TERALOTEOS */
 
+.div-proximamente{
+    background-color: #133222;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 .encabezado-listado {
     position: relative;
 }
@@ -2828,6 +2842,7 @@ body.modal-abierto {
     margin-bottom: 16px;
     justify-content: space-between;
     cursor: pointer;
+    z-index: 10;
 }
 
 
@@ -3603,7 +3618,7 @@ body.modal-abierto {
 .texto-logo-mantra p {
     max-width: 800px;
     min-width: 200px;
-    font-size: small;
+    font-size: medium;
     font-family: "1";
     font-weight: 600;
     color: #7c5d52;
@@ -4853,13 +4868,13 @@ body.modal-abierto {
     }
 
     .logo-encabezado-mantra {
-        filter: drop-shadow(2px 5px 5px rgb(255, 255, 255));
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
 
 
     .logo-encabezado-atilier {
-        filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
+        filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));
     }
 
     .logo-encabezado-paseo {
@@ -4872,8 +4887,8 @@ body.modal-abierto {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #d3c6b546;
-        filter: drop-shadow(2px 0px 1px #36200a);
+        background-color: #9b8d7b7a;
+  
         mask-image: linear-gradient(90deg, rgb(0, 0, 0) 100%,
                 transparent);
         position: relative;
@@ -4899,7 +4914,7 @@ body.modal-abierto {
         align-items: center;
         justify-content: center;
         background-color: #d3c6b546;
-        filter: drop-shadow(2px 0px 1px #36200a);
+        
         mask-image: linear-gradient(90deg, rgb(0, 0, 0) 100%,
                 transparent);
         position: relative;
@@ -4912,7 +4927,6 @@ body.modal-abierto {
         align-items: center;
         justify-content: center;
         background-color: #d3c6b546;
-        filter: drop-shadow(2px 0px 1px #36200a);
         mask-image: linear-gradient(90deg, rgb(0, 0, 0) 100%,
                 transparent);
         position: relative;
@@ -4924,8 +4938,8 @@ body.modal-abierto {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #5252528e;
-        filter: drop-shadow(1px 0px 1px #696969);
+        background-color: #3b3b3b8e;
+       
         mask-image: linear-gradient(90deg, rgb(0, 0, 0) 100%,
                 transparent);
         position: relative;
@@ -4933,22 +4947,28 @@ body.modal-abierto {
 
     .texto-logo-mantra p {
         margin-top: 20px;
+        text-align: center;
     }
 
     .texto-logo-garden p {
         margin-top: 20px;
+        text-align: center;
     }
 
     .texto-logo-torres p {
         margin-top: 20px;
+        text-align: center;
     }
 
     .texto-logo-atilier p {
         margin-top: 20px;
+        text-align: center;
     }
 
     .texto-logo-paseo p {
         margin-top: 20px;
+        text-align: center;
+
     }
 
 
