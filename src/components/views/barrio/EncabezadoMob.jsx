@@ -6,6 +6,7 @@ import alumbrado from "../../../assets/iconos/alumbrado.png";
 import comercio from "../../../assets/iconos/comercial.png";
 import calles from "../../../assets/iconos/ruta.png";
 import ingreso from "../../../assets/iconos/portal.png";
+import privado from "../../../assets/iconos/privado.png";
 import { useLoading } from "../../context/LoadingContext";
 import { Link } from "react-router-dom";
 import fleca from "../../../assets/iconos/flecha-hacia-abajo.png";
@@ -46,36 +47,40 @@ const EncabezadoMob = ({ barrio }) => {
                                 <div className="caracteristicas">
                                     <ul className="lista-caracteristicas">
                                         {barrio.servicios.luz ? <li className="item-caracteristicas">
-                                            <img src={luz} alt="" />
+                                            <img src={luz} alt="Luz" />
                                             <p>Luz</p>
                                         </li> : ""}
                                         {barrio.servicios.agua ? <li className="item-caracteristicas">
-                                            <img src={agua} alt="" />
+                                            <img src={agua} alt="Agua" />
                                             <p>Agua</p>
                                         </li> : ""}
                                         {barrio.servicios.alumbrado ? <li className="item-caracteristicas">
-                                            <img src={alumbrado} alt="" />
+                                            <img src={alumbrado} alt="Alumbrado" />
                                             <p>Alumbrado</p>
                                         </li> : ""}
                                         {barrio.servicios.ingreso ? <li className="item-caracteristicas">
-                                            <img src={ingreso} alt="" />
+                                            <img src={ingreso} alt="Ingreso" />
                                             <p>Portal de ingreso</p>
                                         </li> : ""}
                                         {barrio.servicios.calles ? <li className="item-caracteristicas">
-                                            <img src={calles} alt="" />
+                                            <img src={calles} alt="Calles" />
                                             <p>Calles Consolidadas</p>
                                         </li> : ""}
                                         {barrio.servicios.seguridad ? <li className="item-caracteristicas">
-                                            <img src={seguridad} alt="" />
+                                            <img src={seguridad} alt="Seguridad" />
                                             <p>Seguridad</p>
                                         </li> : ""}
                                         {barrio.servicios.comercial ? <li className="item-caracteristicas">
-                                            <img src={comercio} alt="" />
+                                            <img src={comercio} alt="Comercios" />
                                             <p>Area Comercial</p>
                                         </li> : ""}
                                         {barrio.servicios.plantaAgua ? <li className="item-caracteristicas">
-                                            <img src={plataAgua} alt="" />
+                                            <img src={plataAgua} alt="Planta de agua" />
                                             <p>Planta de Agua</p>
+                                        </li> : ""}
+                                        {barrio.servicios.sectorPrivado ? <li className="item-caracteristicas">
+                                            <img src={privado} alt="sector privado" />
+                                            <p>Acceso jerarquizado</p>
                                         </li> : ""}
                                     </ul>
                                 </div>

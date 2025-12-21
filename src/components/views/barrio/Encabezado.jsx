@@ -6,6 +6,7 @@ import alumbrado from "../../../assets/iconos/alumbrado.png";
 import comercio from "../../../assets/iconos/comercial.png";
 import calles from "../../../assets/iconos/ruta.png";
 import ingreso from "../../../assets/iconos/portal.png";
+import privado from "../../../assets/iconos/privado.png";
 
 import { useLoading } from "../../context/LoadingContext";
 import { Link } from "react-router-dom";
@@ -65,6 +66,10 @@ const Encabezado = ({ barrio }) => {
                                     {barrio.servicios.plantaAgua ? <li className="item-caracteristicas">
                                         <img src={plataAgua} alt="" />
                                         <p>Planta de Agua</p>
+                                    </li> : ""}
+                                    {barrio.servicios.sectorPrivado ? <li className="item-caracteristicas">
+                                        <img src={privado} alt="" />
+                                        <p>Acceso jerarquizado</p>
                                     </li> : ""}
 
                                 </ul>

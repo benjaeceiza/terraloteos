@@ -29,7 +29,7 @@ const Encabezado = ({detalleProducto}) => {
                     </div>
                     <div className="botones-mantra-encabezado">
                         <Link to={"/contacto"} className={`boton-${detalleProducto.clase}`} onClick={() => showLoader()}>Contactar</Link>
-                        <a  className={`boton-${detalleProducto.clase}`} href={detalleProducto.broshure} download={`${detalleProducto.nombre}.pdf`}>Descargar Broshure</a>
+                        <a  className={`boton-${detalleProducto.clase}`} href={detalleProducto.broshure} download={`${detalleProducto.nombre}.pdf`}>Descargar Brochure</a>
                     </div>
                 </div>
             </section>
