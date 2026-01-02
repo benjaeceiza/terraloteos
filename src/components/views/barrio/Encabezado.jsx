@@ -10,21 +10,32 @@ import privado from "../../../assets/iconos/privado.png";
 
 import { useLoading } from "../../context/LoadingContext";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 
 const Encabezado = ({ barrio }) => {
 
-        const { hideLoader } = useLoading();
+    const { hideLoader } = useLoading();
+    const [animateLogo, setAnimateLogo] = useState(false);
+
+    useEffect(() => {
+        // Se ejecuta SIEMPRE cuando el componente se monta
+        const timer = setTimeout(() => {
+            setAnimateLogo(true);
+        }, 100); // pequeño delay para asegurar render
+
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <>
             <section className="section-encabezado-barrio">
                 <img id="fondo-encabezado-barrio" className="fondo-encabezado-barrio" src={barrio.imgPrincipal}
-                    alt="Fondo" onLoad={hideLoader}/>
+                    alt="Fondo" onLoad={hideLoader} />
                 <div className="contenedor-data-barrio">
                     <div className="logo-container-imagen-barrio">
-                        <img id="logo-encabezado-barrio" className="logo-encabezado-barrio" src={barrio.logo} alt="Logo" />
+                        <img id="logo-encabezado-barrio" className={`logo-encabezado-barrio ${animateLogo ? "logo-animate" : ""}`} src={barrio.logo} alt="Logo" />
 
                     </div>
                     <div className="contenedor-info-barrio">
@@ -76,7 +87,7 @@ const Encabezado = ({ barrio }) => {
                             </div>
                         </div>
                         <div className="contenedor-botones-barrio">
-                            <Link to={barrio.mapa} target="_blank"><button className="boton-barrio">¿CÓMO LLEGAR?</button></Link> 
+                            <Link to={barrio.mapa} target="_blank"><button className="boton-barrio">¿CÓMO LLEGAR?</button></Link>
                             <a href={barrio.broshure} download={""}><button className="boton-barrio">DESCARGAR BROCHURE</button></a>
                         </div>
                     </div>
