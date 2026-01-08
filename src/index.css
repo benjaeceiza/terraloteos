@@ -124,16 +124,28 @@ body.modal-abierto {
 
 .fondo-fijo {
     position: fixed;
-    inset: 0;
-    z-index: 0;
+    /* En lugar de inset: 0, usamos top y left */
+    top: 0;
+    left: 0;
+    
+    /* Usamos vw y vh para el tamaño */
+    width: 100vw;
+    height: 100vh; /* 100vh es más estable que 100% en este caso */
+    
+    /* Z-index negativo asegura que quede SIEMPRE detrás del contenido */
+    z-index: -1; 
+    
     background: url("./assets/fondos/fondo-main.png") center/cover no-repeat;
     filter: brightness(50%);
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
+    
+    /* Optimizaciones para aceleración de hardware (ya las tenías bien) */
+    transform: translateZ(0); /* Es mejor translateZ(0) que translate3d para esto */
     will-change: transform;
+    
+    /* IMPORTANTE: Evita el comportamiento de rebote en iOS */
+    touch-action: none; 
+    pointer-events: none; /* Para que el scroll no se trabe si tocas el fondo sin querer */
 }
-
-
 
 
 
@@ -763,18 +775,11 @@ body.modal-abierto {
 
 
 
-
-
-
 #categoria-2 {
 
     z-index: 0;
 
-
 }
-
-
-
 
 
 .titulo-categoria {
@@ -1962,56 +1967,85 @@ body.modal-abierto {
 
 }
 
-/* GALERIA DE IMAGENES */
 
 .galeria-imagenes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5px;
-    padding: 10px;
-    background-color: #133222;
+  display: grid;
+  /* CAMBIO AQUÍ: Aumentamos de 150px a 250px (o lo que quieras) */
+  /* Esto define el ancho mínimo de una columna antes de que salte de línea */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
+  /* CAMBIO AQUÍ: Aumentamos la altura base de las filas */
+  grid-auto-rows: 250px;
+  
+  /* Aumenté un poquito el espacio entre fotos para que respire mejor */
+  gap: 15px; 
+  grid-auto-flow: dense;
+  padding: 20px;
+  max-width: 1680px;
+  margin: auto;
 }
 
+.galeria-imagenes-casa{
+    max-width: 1200px;
+}
+
+/* El contenedor de la imagen */
 .box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #1a1a1a;
-
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background-color: #e0e0e0; /* Un gris un poco más oscuro para el placeholder */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* Por defecto, una caja ocupa 1x1 */
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
+.box:hover {
+  transform: scale(1.02);
+  z-index: 2; /* Asegura que el hover quede por encima */
+}
+
+/* --- CLASES DINÁMICAS APLICADAS POR REACT --- */
+
+/* Si React detecta que es muy ancha */
+.box.wide {
+  grid-column: span 2;
+}
+
+/* Si React detecta que es muy alta (vertical) */
+.box.tall {
+  grid-row: span 2;
+}
+
+/* Opcional: Si quieres imágenes MUY grandes (ej. panorámicas o verticales extremas)
+   puedes descomentar esto y ajustar la lógica en el JS:
+.box.big-square { grid-column: span 2; grid-row: span 2; }
+*/
+
+
+/* Estilos de la imagen y spinner (igual que antes) */
 .box-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.4s ease-in-out;
-    opacity: 0;
-    filter: brightness(60%);
-    cursor: pointer;
-}
-
-.box img:hover {
-    transition: .5s;
-    transform: scale(1.01);
-    filter: brightness(90%);
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .box-img.visible {
-    opacity: 1;
-}
-
-.box-img.hidden {
-    opacity: 0;
+  opacity: 1;
+  min-height: 200px;
 }
 
 .conteiner-spinner-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 
@@ -2360,6 +2394,7 @@ body.modal-abierto {
     padding: 60px 0px 50px 0px;
     flex-wrap: wrap;
     width: 100%;
+  
 }
 
 .item-detalle-casa {
@@ -4825,6 +4860,141 @@ body.modal-abierto {
 @media (max-width:900px) {
 
 
+
+    
+.mob {
+    display: none;
+}
+
+#mapa {
+    width: 100%;
+}
+
+.contenedor-mapa {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 150px 20px;
+    text-align: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+}
+
+.contenedor-ubciaciones {
+    margin-right: 20px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+}
+
+.titulo-ubicaciones {
+
+    color: white;
+    font-size: 20px;
+    border-top: 2px solid #ef8937;
+    border-bottom: 2px solid #ef8937;
+    padding: 10px 0px;
+    font-family: "1";
+    font-weight: 600;
+}
+
+
+
+.lista-ubicaciones {
+    list-style: none;
+    padding: 0;
+
+    margin: 0;
+}
+
+.ubicaciones {
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "1";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #a3a3a3;
+    padding: 5px;
+    border-radius: 10px;
+    width: 200px;
+
+
+}
+
+.ubicaciones-active {
+    margin: 10px 0px;
+    text-decoration: none;
+    color: #ef8937;
+    font-family: "1";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ef8937;
+    padding: 5px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.nombre-icono-contenedor {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.IconoUbicacion {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.nombre-ubicacion {
+    margin: 0;
+    padding: 0;
+    font-family: "1";
+    font-weight: 600;
+    font-size: medium;
+}
+
+.num-ubicacion {
+    font-size: x-small;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.direccion-mapa {
+    margin: 0;
+    padding: 0;
+    font-size: smaller;
+    color: gray;
+    font-family: "1";
+    font-weight: 600;
+
+}
+
+
+.ubicaciones:hover {
+    color: #ef8937;
+    transition: all .5s;
+    cursor: pointer;
+    border-color: #ef8937;
+}
+
+
+.mapa {
+    max-width: 1200px;
+    width: 100%;
+
+}
+
+
     .input {
         width: 100%;
 
@@ -5035,6 +5205,8 @@ body.modal-abierto {
 
 
 }
+
+
 
 @media (max-width:800px) {
 
@@ -5575,6 +5747,13 @@ body.modal-abierto {
 }
 
 @media (max-width:500px) {
+
+    .ubicaciones{
+       width: 100%;
+    }
+    .ubicaciones-active{
+       width: 100%;
+    }
     .botones-mantra-encabezado {
         flex-direction: column;
         width: 100%;

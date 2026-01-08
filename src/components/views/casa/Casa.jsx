@@ -16,7 +16,8 @@ import cerrar from "../../../assets/iconos/borrar.png";
 const Casa = () => {
     const { tipo } = useParams();
     const casa = casas.find(e => e.tipo == tipo);
-    const [sliderVisible, setSliderVisible] = useState(false)
+    const [sliderVisible, setSliderVisible] = useState(false);
+      const [imagenSeleccionada, setImagenSeleccionada] = useState(0);
 
     return (
         <>
@@ -25,7 +26,7 @@ const Casa = () => {
                 <Encabezado casa={casa} />
                 <EncabezadoMob casa={casa} />
                 <Detalles casa={casa} />
-                <GaleriaImagenes casa={casa}  setSliderVisible={setSliderVisible}/>
+                <GaleriaImagenes casa={casa} setSliderVisible={setSliderVisible} setImagenSeleccionada={setImagenSeleccionada} />
                 <div className="contenedor-title">
                     <h2 className="sub">PREGUNTAS FRECUENTES</h2>
                 </div>
@@ -37,7 +38,7 @@ const Casa = () => {
                         <div className="contenedor-boton-cerrar-galeria">
                             <img onClick={() => setSliderVisible(false)} src={cerrar} alt="Cerrar" />
                         </div>
-                        <SliderGaleria casa={casa} />
+                        <SliderGaleria casa={casa} indiceInicial={imagenSeleccionada}/>
                     </div> : ""}
             </main>
 

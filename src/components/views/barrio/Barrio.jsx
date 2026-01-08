@@ -16,6 +16,7 @@ const Barrio = () => {
   const { nombre } = useParams();
   const barrio = barrios.find(e => e.nombre == nombre);
   const [sliderVisible, setSliderVisible] = useState(false)
+  const [imagenSeleccionada, setImagenSeleccionada] = useState(0);
 
 
 
@@ -26,7 +27,7 @@ const Barrio = () => {
         <Encabezado barrio={barrio} />
         <EncabezadoMob barrio={barrio} />
         <Detalles barrio={barrio} />
-        <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible} />
+        <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible} setImagenSeleccionada={setImagenSeleccionada} />
         <div className="contenedor-title">
           <h2 className="sub">NUESTROS MODELOS</h2>
         </div>
@@ -42,7 +43,7 @@ const Barrio = () => {
             <div className="contenedor-boton-cerrar-galeria">
               <img onClick={() => setSliderVisible(false)} src={cerrar} alt="Cerrar" />
             </div>
-            <SliderGaleria barrio={barrio} />
+            <SliderGaleria barrio={barrio} indiceInicial={imagenSeleccionada} />
           </div> : ""}
       </main>
     </>
