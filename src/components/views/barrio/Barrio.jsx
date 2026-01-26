@@ -5,7 +5,6 @@ import SectionContacto from "../../SectionContacto";
 import GaleriaImagenes from "./GaleriaImagenes";
 import SliderModelos from "../desarrollos/SliderModelos"
 import EncabezadoMob from "./EncabezadoMob";
-import SectionContactoMob from "../../SectionContactoMob";
 import SliderGaleria from "./SliderGaleria";
 import cerrar from "../../../assets/iconos/borrar.png";
 import { useState } from "react";
@@ -37,7 +36,6 @@ const Barrio = () => {
         </div>
         <Preguntas />
         <SectionContacto />
-        <SectionContactoMob />
         {sliderVisible ?
           <div className="contenedor-slider-galeria">
             <div className="contenedor-boton-cerrar-galeria">

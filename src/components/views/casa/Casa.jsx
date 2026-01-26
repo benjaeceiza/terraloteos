@@ -3,7 +3,6 @@ import casas from "../../../data/casas.json";
 import Encabezado from "./Encabezado";
 import SectionContacto from "../../SectionContacto";
 import EncabezadoMob from "./EncabezadoMob";
-import SectionContactoMob from "../../SectionContactoMob";
 import GaleriaImagenes from "./Galeriaimagenes";
 import Detalles from "./Detalles";
 import Preguntas from "./Preguntas";
@@ -32,7 +31,6 @@ const Casa = () => {
                 </div>
                 <Preguntas />
                 <SectionContacto />
-                <SectionContactoMob />
                 {sliderVisible ?
                     <div className="contenedor-slider-galeria">
                         <div className="contenedor-boton-cerrar-galeria">

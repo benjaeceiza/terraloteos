@@ -1,16 +1,11 @@
 import productos from "../../../data/productos.json";
-import expandir from "../../../assets/iconos/expandir.png";
-import expandirBlanco from "../../../assets/iconos/expandir-blanco.png";
 import ubi from "../../../assets/iconos/marcador-de-posicion.png";
-import flecha from "../../../assets/iconos/mas-grande-que.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useLoading } from "../../context/LoadingContext";
 
 const RenderListados = () => {
-    const [isVisible, setIsVisible] = useState("");
-    const [buttonExpand, setButtonExpand] = useState("");
-    const [loadedImages, setLoadedImages] = useState({}); 
+    const [loadedImages, setLoadedImages] = useState({});
     const { showLoader } = useLoading();
 
     const handleImageLoad = (nombre) => {
@@ -19,95 +14,57 @@ const RenderListados = () => {
 
     return (
         <section id="listado" className="section-productos">
-            <h2>
-                <span className="fondo-naranja">Nuestros</span>{" "}
-                <span className="naranja">Productos</span>.
-            </h2>
-            <div className="contenedor-productos">
+            <div className="header-section">
+                <h2>
+                    <span className="texto-claro">Nuestros</span>{" "}
+                    <span className="texto-destacado">Desarrollos</span>
+                </h2>
+                <div className="linea-decorativa"></div>
+            </div>
+
+            <div className="grid-productos">
                 {productos.map((producto) => (
                     <Link
                         to={producto.link}
                         key={producto.nombre}
+                        className="card-link"
                         onClick={() => showLoader()}
                     >
-                        <div
-                            className="card-producto"
-                            onMouseEnter={() => setIsVisible(producto.nombre)}
-                            onMouseLeave={() => setIsVisible("")}
-                        >
-                            {/* --- Imagen de fondo --- */}
-                            <img
-                                className={
-                                    isVisible === producto.nombre
-                                        ? "fondo-card-producto-activo"
-                                        : "fondo-card-producto"
-                                }
-                                src={producto.miniatura}
-                                alt="desarrollo"
-                                onLoad={() => handleImageLoad(producto.nombre)}
-                                style={{ display: loadedImages[producto.nombre] ? "block" : "none" }}
-                            />
+                        <article className="card-cinematica">
+                            
+                            {/* --- Wrapper de Imagen con efecto Zoom --- */}
+                            <div className="imagen-wrapper">
+                                <img
+                                    src={producto.miniatura}
+                                    alt={producto.nombre}
+                                    className={`imagen-producto ${loadedImages[producto.nombre] ? 'loaded' : ''}`}
+                                    onLoad={() => handleImageLoad(producto.nombre)}
+                                />
+                                {/* Loader interno de la imagen */}
+                                {!loadedImages[producto.nombre] && (
+                                    <div className="skeleton-loader"></div>
+                                )}
+                                <div className="overlay-gradiente"></div>
+                            </div>
 
-                            {/* --- Loader mientras carga --- */}
-                            {!loadedImages[producto.nombre] && (
-                                <div className="loader-card">
-                                    <div className="spinner-card"></div>
-                                </div>
-                            )}
-
-                            {/* --- Contenido de la card --- */}
-                            {loadedImages[producto.nombre] && (
-                                <div className="info-card-producto">
-                                    <div
-                                        className={
-                                            buttonExpand === producto.nombre
-                                                ? "contenedor-expandir-icono-active"
-                                                : "contenedor-expandir-icono"
-                                        }
-                                        onMouseEnter={() => setButtonExpand(producto.nombre)}
-                                        onMouseLeave={() => setButtonExpand("")}
-                                    >
-                                        {buttonExpand === producto.nombre ? (
-                                            <img src={expandirBlanco} alt="expandir" />
-                                        ) : (
-                                            <img src={expandir} alt="expandir" />
-                                        )}
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <div className="titulo-flecha-producto" onClick={() => setIsVisible(producto.nombre)}>
-                                                <p className="nombre-card-producto">
-                                                    {producto.nombre}
-                                                </p>
-                                                <img
-                                                    className={
-                                                        isVisible === producto.nombre
-                                                            ? "flecha-card-active"
-                                                            : "flecha-card"
-                                                    }
-                                                    src={flecha}
-                                                    alt="Desplegar"
-                                                    onClick={() => setIsVisible(producto.nombre)}
-                                                />
-                                            </div>
-                                            <p
-                                                className={
-                                                    isVisible === producto.nombre
-                                                        ? "descripcion-card-producto"
-                                                        : "none"
-                                                }
-                                            >
-                                                {producto.descripcion}
-                                            </p>
-                                        </div>
-                                        <div className="contenedor-ubicacion-card-producto">
-                                            <img src={ubi} alt="Ubicacion" />
-                                            <p>{producto.ubicacion}</p>
-                                        </div>
+                            {/* --- Info Flotante --- */}
+                            <div className="info-content">
+                                <div className="info-header">
+                                    <h3 className="card-titulo">{producto.nombre}</h3>
+                                    <div className="etiqueta-ubicacion">
+                                        <img src={ubi} alt="Ubicación" />
+                                        <span>{producto.ubicacion}</span>
                                     </div>
                                 </div>
-                            )}
-                        </div>
+
+                                <div className="info-body">
+                                    <p className="card-descripcion">
+                                        {producto.descripcion}
+                                    </p>
+                                    <span className="btn-ver-mas">Ver Proyecto →</span>
+                                </div>
+                            </div>
+                        </article>
                     </Link>
                 ))}
             </div>

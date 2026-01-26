@@ -1,122 +1,299 @@
 [
     {
         "nombre": "Garden Village",
-        "logo":"https://i.postimg.cc/tgrdFXDZ/gardeb.png",
-        "cardImages":["https://i.postimg.cc/qM9DP7xs/4.png","https://i.postimg.cc/mgCpBGmH/garden-village.png","https://i.postimg.cc/7YptFLn0/5.png"],
-        "sliderImages":["https://i.postimg.cc/yYwpMNyR/3.png","https://i.postimg.cc/qM9DP7xs/4.png","https://i.postimg.cc/7YptFLn0/5.png","https://i.postimg.cc/mgCpBGmH/garden-village.png"],
-        "brochure":"/pdf/garden-village.pdf",
-        "clase":"garden",
-        "pricipalesCaracteristicas":[{"icono":"https://i.postimg.cc/fRdMLZZp/bombilla-1.png","caracteristica":"Modelo innovador en Argentina"},{"icono":"https://i.postimg.cc/Cx8w1YYW/latido-del-corazon.png","caracteristica":"Atención al bienestar integral"},{"icono":"https://i.postimg.cc/nhmnzZZN/cama-matrimonial.png","caracteristica":"Capacidad: 112 camas"}],
-        "caracterisiticas":["Ubicación: Villa de Merlo, San Luis. (Se lleva a cabo en un sector exclusivo en Merlo Village).","Superficie total: 7.680 m2.","Capacidad: 112 camas.","Diseño: espacios verdes y áreas comunes para actividades recreativas y de integración."],
-        "diferenciales":["Comunidad pensada exclusivamente para adultos mayores.","Atención al bienestar integral: físico, emocional y social.","Modelo innovador en Argentina (senior care village).","Inversión sostenible con alta proyección de demanda."],
-        "descripcionLarga":"Garden Village es un desarrollo pensado para brindar bienestar, contención y calidad de vida a personas mayores que eligen vivir con autonomía, acompañadas en un entorno seguro, accesible y natural.Ubicado en Villa de Merlo, San Luis, propone una forma innovadora de envejecer: activa, conectada con la naturaleza y con servicios diseñados especialmente para esta etapa de la vida. No se trata solo de un complejo habitacional, sino de un senior community que prioriza la salud física, emocional y social de sus residentes. Ante el crecimiento sostenido de la población adulta mayor en Argentina y la falta de propuestas modernas, accesibles y humanizadas, Garden Village se presenta como una alternativa innovadora y sostenible, que responde tanto a una necesidad social como a una oportunidad de inversión.",
+        "logo": "https://i.postimg.cc/tgrdFXDZ/gardeb.png",
+        "cardImages": [
+            "https://i.postimg.cc/qM9DP7xs/4.png",
+            "https://i.postimg.cc/mgCpBGmH/garden-village.png",
+            "https://i.postimg.cc/7YptFLn0/5.png"
+        ],
+        "sliderImages": [
+            "https://i.postimg.cc/yYwpMNyR/3.png",
+            "https://i.postimg.cc/qM9DP7xs/4.png",
+            "https://i.postimg.cc/7YptFLn0/5.png",
+            "https://i.postimg.cc/mgCpBGmH/garden-village.png"
+        ],
+        "brochure": "/pdf/garden-village.pdf",
+        "clase": "garden",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "https://i.postimg.cc/fRdMLZZp/bombilla-1.png",
+                "caracteristica": "Modelo innovador en Argentina"
+            },
+            {
+                "icono": "https://i.postimg.cc/Cx8w1YYW/latido-del-corazon.png",
+                "caracteristica": "Atención al bienestar integral"
+            },
+            {
+                "icono": "https://i.postimg.cc/nhmnzZZN/cama-matrimonial.png",
+                "caracteristica": "Capacidad: 112 camas"
+            }
+        ],
+        "caracterisiticas": [
+            "Ubicación: Villa de Merlo, San Luis. (Se lleva a cabo en un sector exclusivo en Merlo Village).",
+            "Superficie total: 7.680 m2.",
+            "Capacidad: 112 camas.",
+            "Diseño: espacios verdes y áreas comunes para actividades recreativas y de integración."
+        ],
+        "diferenciales": [
+            "Comunidad pensada exclusivamente para adultos mayores.",
+            "Atención al bienestar integral: físico, emocional y social.",
+            "Modelo innovador en Argentina (senior care village).",
+            "Inversión sostenible con alta proyección de demanda."
+        ],
+        "descripcionLarga": "Garden Village es un desarrollo pensado para brindar bienestar, contención y calidad de vida a personas mayores que eligen vivir con autonomía, acompañadas en un entorno seguro, accesible y natural.Ubicado en Villa de Merlo, San Luis, propone una forma innovadora de envejecer: activa, conectada con la naturaleza y con servicios diseñados especialmente para esta etapa de la vida. No se trata solo de un complejo habitacional, sino de un senior community que prioriza la salud física, emocional y social de sus residentes. Ante el crecimiento sostenido de la población adulta mayor en Argentina y la falta de propuestas modernas, accesibles y humanizadas, Garden Village se presenta como una alternativa innovadora y sostenible, que responde tanto a una necesidad social como a una oportunidad de inversión.",
         "descripcion": "Es un desarrollo pensado específicamente para personas mayores que desean mantener su autonomía, rodeados de contención, naturaleza y servicios personalizados. Se define como un senior care village que promueve una forma activa, natural y segura de envejecer, con foco en la salud física, emocional y social. ",
         "ubicacion": "Villa de Merlo, San Luis",
-        "miniatura":"https://i.postimg.cc/gJzn3dW8/garden.png",
-        "imgEncabezado":"https://i.postimg.cc/yYwpMNyR/3.png",
-        "link":"/producto/Garden Village"
+        "miniatura": "https://i.postimg.cc/gJzn3dW8/garden.png",
+        "imgEncabezado": "https://i.postimg.cc/yYwpMNyR/3.png",
+        "link": "/producto/Garden Village"
     },
     {
         "nombre": "Mantra, Cabañas Premiun",
-        "logo":"https://i.postimg.cc/MHnjxqm2/mantra.png",
-        "cardImages":["https://i.postimg.cc/Bn919WL0/mantra.jpg","https://i.postimg.cc/t43n9rWT/mantra-1.jpg","https://i.postimg.cc/8zQrQ8JG/mantra-7.jpg"],
-        "sliderImages":["https://i.postimg.cc/Bn919WL0/mantra.jpg","https://i.postimg.cc/t43n9rWT/mantra-1.jpg","https://i.postimg.cc/CKwB5jsC/mantra-2.jpg","https://i.postimg.cc/6QB2qdfM/mantra-3.jpg","https://i.postimg.cc/9fcR0GYx/mantra-5.jpg","https://i.postimg.cc/8zQrQ8Jg/mantra-6.jpg","https://i.postimg.cc/8zQrQ8JG/mantra-7.jpg","https://i.postimg.cc/YCKmKcGk/mantra-8.jpg"],
-        "brochure":"/pdf/mantra.pdf",
-        "clase":"mantra",
-        "pricipalesCaracteristicas":[{"icono":"https://i.postimg.cc/X74qdX7r/privacidad.png","caracteristica":"Privacidad total"},{"icono":"https://i.postimg.cc/brjJ6wxV/hoja.png","caracteristica":"Naturaleza protagonista"},{"icono":"https://i.postimg.cc/t4R1QJKb/casa.png","caracteristica":"Cabañas independientes"}],
-        "caracterisiticas":["6 cabañas independientes, rodeadas de vegetación autóctona.","Diseño minimalista y natural, con grandes ventanales y terrazas privadas.","Equipamiento premium: dormitorio amplio, estar integrado, kitchenette, baño completo y jacuzzi privado.","Privacidad total: sin espacios compartidos, con amplios espacios verdes entre unidades."],
-        "diferenciales":["Naturaleza protagonista: las sierras y el silencio como eje central.","Diseño sensorial: arquitectura integrada al paisaje, luz natural y materiales nobles.","Enfoque romántico: pensado especialmente para parejas que buscan tranquilidad y reconexión."],
-        "descripcionLarga":"Mantra – Cabañas Premium es un desarrollo boutique ubicado en medio de las sierras de San Luis, pensado como un refugio íntimo y romántico para parejas. Todo el concepto gira en torno a la conexión entre naturaleza, arquitectura y bienestar emocional, ofreciendo privacidad, confort y una estética minimalista que inspira serenidad. Enfocado en el escapismo natural, la reconexión y el descanso. No es un complejo residencial urbano, sino una experiencia sensorial premium.",
+        "logo": "https://i.postimg.cc/MHnjxqm2/mantra.png",
+        "cardImages": [
+            "https://i.postimg.cc/Bn919WL0/mantra.jpg",
+            "https://i.postimg.cc/t43n9rWT/mantra-1.jpg",
+            "https://i.postimg.cc/8zQrQ8JG/mantra-7.jpg"
+        ],
+        "sliderImages": [
+            "https://i.postimg.cc/Bn919WL0/mantra.jpg",
+            "https://i.postimg.cc/t43n9rWT/mantra-1.jpg",
+            "https://i.postimg.cc/CKwB5jsC/mantra-2.jpg",
+            "https://i.postimg.cc/6QB2qdfM/mantra-3.jpg",
+            "https://i.postimg.cc/9fcR0GYx/mantra-5.jpg",
+            "https://i.postimg.cc/8zQrQ8Jg/mantra-6.jpg",
+            "https://i.postimg.cc/8zQrQ8JG/mantra-7.jpg",
+            "https://i.postimg.cc/YCKmKcGk/mantra-8.jpg"
+        ],
+        "brochure": "/pdf/mantra.pdf",
+        "clase": "mantra",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "https://i.postimg.cc/X74qdX7r/privacidad.png",
+                "caracteristica": "Privacidad total"
+            },
+            {
+                "icono": "https://i.postimg.cc/brjJ6wxV/hoja.png",
+                "caracteristica": "Naturaleza protagonista"
+            },
+            {
+                "icono": "https://i.postimg.cc/t4R1QJKb/casa.png",
+                "caracteristica": "Cabañas independientes"
+            }
+        ],
+        "caracterisiticas": [
+            "6 cabañas independientes, rodeadas de vegetación autóctona.",
+            "Diseño minimalista y natural, con grandes ventanales y terrazas privadas.",
+            "Equipamiento premium: dormitorio amplio, estar integrado, kitchenette, baño completo y jacuzzi privado.",
+            "Privacidad total: sin espacios compartidos, con amplios espacios verdes entre unidades."
+        ],
+        "diferenciales": [
+            "Naturaleza protagonista: las sierras y el silencio como eje central.",
+            "Diseño sensorial: arquitectura integrada al paisaje, luz natural y materiales nobles.",
+            "Enfoque romántico: pensado especialmente para parejas que buscan tranquilidad y reconexión."
+        ],
+        "descripcionLarga": "Mantra – Cabañas Premium es un desarrollo boutique ubicado en medio de las sierras de San Luis, pensado como un refugio íntimo y romántico para parejas. Todo el concepto gira en torno a la conexión entre naturaleza, arquitectura y bienestar emocional, ofreciendo privacidad, confort y una estética minimalista que inspira serenidad. Enfocado en el escapismo natural, la reconexión y el descanso. No es un complejo residencial urbano, sino una experiencia sensorial premium.",
         "descripcion": "Es un desarrollo boutique ubicado en medio de las sierras de San Luis, pensado como un refugio íntimo y romántico para parejas. Todo el concepto gira en torno a la conexión entre naturaleza, arquitectura y bienestar emocional, ofreciendo privacidad, confort y una estética minimalista que inspira serenidad.",
         "ubicacion": "Los Molles, San Luis",
-        "miniatura":"https://i.postimg.cc/5y3cLdfQ/mantrax-Photo-7.jpg",
-        "imgEncabezado":"https://i.postimg.cc/TP7Tqmnm/mantra.jpg",
-        "link":"/producto/Mantra, Cabañas Premiun"
+        "miniatura": "https://i.postimg.cc/5y3cLdfQ/mantrax-Photo-7.jpg",
+        "imgEncabezado": "https://i.postimg.cc/TP7Tqmnm/mantra.jpg",
+        "link": "/producto/Mantra, Cabañas Premiun"
     },
     {
         "nombre": "Torres Community",
-        "logo":"https://i.postimg.cc/5t9r3RmQ/torres.png",
-        "cardImages":["https://i.postimg.cc/zfPgQynJ/20240815-124759.jpg","https://i.postimg.cc/RhwJqGyX/20240815-124433.jpg","https://i.postimg.cc/tgmxcsFB/20240815-124912.jpg"],
-        "sliderImages":["https://i.postimg.cc/0QTJ8hWV/20240815-124343.jpg","https://i.postimg.cc/sfWhnDxS/20240815-124650.jpg","https://i.postimg.cc/tgmxcsFB/20240815-124912.jpg","https://i.postimg.cc/63kG9FjR/20240815-124955.jpg","https://i.postimg.cc/FKKSGyk7/20240815-125028.jpg","https://i.postimg.cc/zf3LTq4k/Captura-de-pantalla-2025-01-06-171955.png"],
-        "brochure":"/pdf/torres-community.pdf",
-        "clase":"torres",
-        "pricipalesCaracteristicas":[{"icono":"https://i.postimg.cc/hP8XJTLL/marcador-de-posicion-1.png","caracteristica":"Ubicación estratégica"},{"icono":"https://i.postimg.cc/43yyF0r9/binoculares.png","caracteristica":"Hermosa vista panorámica"},{"icono":"https://i.postimg.cc/43yyF0rh/departamento.png","caracteristica":"De 1 a 3 dormitorios"}],
-        "caracterisiticas":["Ubicación exacta: Antes del ingreso al barrio Miralba, sobre Boulevard Las Cañadas, San Luis."," Entorno: Vista directa a las sierras, rodeado de verde, cerca del Estadio Provincial Juan Gilberto Funes, Club de Cazadores Deportivos San Luis, y la Ciudad de La Punta."],
-        "diferenciales":["Vistas panorámicas a la Sierra desde múltiples orientaciones.","Construcción: Edificio compacto de baja densidad (16 unidades).","Tipologías variadas, desde 1 hasta 3 dormitorios.", "Equipamiento extra: Unidades con asador, jacuzzi y terraza privada."],
-        "descripcionLarga":"Es un moderno edificio residencial que ofrece un estilo de vida único y exclusivo. Con sus 4 pisos, 16 departamentos y un diseño contemporáneo, esta torre te brinda la comodidad y privacidad que siempre has deseado. Se ubican previo al ingreso del Barrio Miralba, contando con un acceso ágil y cómodo, en un entorno verde y cerano al centro comercial y terminal de omnibus",
+        "logo": "https://i.postimg.cc/5t9r3RmQ/torres.png",
+        "cardImages": [
+            "https://i.postimg.cc/zfPgQynJ/20240815-124759.jpg",
+            "https://i.postimg.cc/RhwJqGyX/20240815-124433.jpg",
+            "https://i.postimg.cc/tgmxcsFB/20240815-124912.jpg"
+        ],
+        "sliderImages": [
+            "https://i.postimg.cc/0QTJ8hWV/20240815-124343.jpg",
+            "https://i.postimg.cc/sfWhnDxS/20240815-124650.jpg",
+            "https://i.postimg.cc/tgmxcsFB/20240815-124912.jpg",
+            "https://i.postimg.cc/63kG9FjR/20240815-124955.jpg",
+            "https://i.postimg.cc/FKKSGyk7/20240815-125028.jpg",
+            "https://i.postimg.cc/zf3LTq4k/Captura-de-pantalla-2025-01-06-171955.png"
+        ],
+        "brochure": "/pdf/torres-community.pdf",
+        "clase": "torres",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "https://i.postimg.cc/hP8XJTLL/marcador-de-posicion-1.png",
+                "caracteristica": "Ubicación estratégica"
+            },
+            {
+                "icono": "https://i.postimg.cc/43yyF0r9/binoculares.png",
+                "caracteristica": "Hermosa vista panorámica"
+            },
+            {
+                "icono": "https://i.postimg.cc/43yyF0rh/departamento.png",
+                "caracteristica": "De 1 a 3 dormitorios"
+            }
+        ],
+        "caracterisiticas": [
+            "Ubicación exacta: Antes del ingreso al barrio Miralba, sobre Boulevard Las Cañadas, San Luis.",
+            " Entorno: Vista directa a las sierras, rodeado de verde, cerca del Estadio Provincial Juan Gilberto Funes, Club de Cazadores Deportivos San Luis, y la Ciudad de La Punta."
+        ],
+        "diferenciales": [
+            "Vistas panorámicas a la Sierra desde múltiples orientaciones.",
+            "Construcción: Edificio compacto de baja densidad (16 unidades).",
+            "Tipologías variadas, desde 1 hasta 3 dormitorios.",
+            "Equipamiento extra: Unidades con asador, jacuzzi y terraza privada."
+        ],
+        "descripcionLarga": "Es un moderno edificio residencial que ofrece un estilo de vida único y exclusivo. Con sus 4 pisos, 16 departamentos y un diseño contemporáneo, esta torre te brinda la comodidad y privacidad que siempre has deseado. Se ubican previo al ingreso del Barrio Miralba, contando con un acceso ágil y cómodo, en un entorno verde y cerano al centro comercial y terminal de omnibus",
         "descripcion": "Es un edificio residencial moderno, de 4 pisos y 16 departamentos, que propone un estilo de vida cómodo, contemporáneo y privado. Se plantea como una alternativa habitacional con altura, vistas, y diseño urbano actual, ideal para quienes buscan vivir bien, sin excesos, pero con calidad",
         "ubicacion": "Boulevard Las Cañadas, San Luis",
-        "miniatura":"https://i.postimg.cc/q7XNtq9y/torres-3.png",
-        "imgEncabezado":"https://i.postimg.cc/3wWy23zV/IMG-0044.jpg",
-        "link":"/producto/Torres Community"
+        "miniatura": "https://i.postimg.cc/q7XNtq9y/torres-3.png",
+        "imgEncabezado": "https://i.postimg.cc/3wWy23zV/IMG-0044.jpg",
+        "link": "/producto/Torres Community"
     },
     {
         "nombre": "Atilier Estudiantil",
-        "logo":"https://i.postimg.cc/435YCmVn/atilier.png",
-        "cardImages":["https://i.postimg.cc/Kv4dXwXr/Atilier-Estudiantil-9-Photo.jpg","https://i.postimg.cc/yYWwqtqh/Atilier-Estudiantil-7-Photo.jpg","https://i.postimg.cc/RV82vd4n/Atilier-Estudiantil-4-Photo.jpg"],
-        "sliderImages":["https://i.postimg.cc/154Lx2hQ/Atilier-Estudiantil-12-Foto.jpg","https://i.postimg.cc/CLt9w7Sy/Atilier-Estudiantil-16-Foto.jpg","https://i.postimg.cc/8P3xT4Nz/Atilier-Estudiantil-3-Photo.jpg","https://i.postimg.cc/RV82vd4n/Atilier-Estudiantil-4-Photo.jpg","https://i.postimg.cc/m2h0xJxS/Atilier-Estudiantil-5-Photo.jpg","https://i.postimg.cc/yYWwqtqh/Atilier-Estudiantil-7-Photo.jpg","https://i.postimg.cc/vHDpRkRP/Atilier-Estudiantil-8-Photo.jpg","https://i.postimg.cc/Kv4dXwXr/Atilier-Estudiantil-9-Photo.jpg"],
-        "brochure":"/pdf/residencias-estudiantiles.pdf",
-        "clase":"atilier",
-        "pricipalesCaracteristicas":[{"icono":"https://i.postimg.cc/76rbmMrC/negocio-local.png","caracteristica":"Locales comerciales"},{"icono":"https://i.postimg.cc/brjJ6wxV/hoja.png","caracteristica":"Naturaleza protagonista"},{"icono":"https://i.postimg.cc/t4R1QJKb/casa.png","caracteristica":"55 Módulos habitacionales"}],
-        "caracterisiticas":["Residencias universitarias con 55 módulos habitacionales.","Espacios comunes: cafetería, áreas de encuentro y oficinas corporativas.","Locales comerciales para servicios de cercanía.","Actividades deportivas y espacios verdes.","Terrazas de encuentros para socialización y eventos.","Parking para bicicletas y autos.","Talleres / Ateliér profesional para actividades prácticas y creativas."],
-        "diferenciales":["Proyecto mixto que integra vivienda, trabajo y recreación.","Enfoque en la vida al aire libre y el contacto con la naturaleza.","Modelo adaptable a la vida universitaria y profesional moderna.","Oportunidad de inversión con alta demanda en ciudades con crecimiento académico y corporativo."],
-        "descripcionLarga":"Residencias Estudiantiles & Ateliér Profesional es un proyecto innovador que integra vivienda universitaria, espacios de trabajo y actividades de desarrollo personal en un mismo lugar. Diseñado para jóvenes estudiantes y profesionales, el complejo combina habitaciones, oficinas, talleres, áreas deportivas y verdes, con el objetivo de brindar un entorno integral que potencie tanto el estudio como la vida social y recreativa. En cada rincón se respira una sensación de armonía, invitando a los residentes a conectarse con la naturaleza mientras disfrutan de una calidad de vida inigualable.",
+        "logo": "https://i.postimg.cc/435YCmVn/atilier.png",
+        "cardImages": [
+            "https://i.postimg.cc/Kv4dXwXr/Atilier-Estudiantil-9-Photo.jpg",
+            "https://i.postimg.cc/yYWwqtqh/Atilier-Estudiantil-7-Photo.jpg",
+            "https://i.postimg.cc/RV82vd4n/Atilier-Estudiantil-4-Photo.jpg"
+        ],
+        "sliderImages": [
+            "https://i.postimg.cc/154Lx2hQ/Atilier-Estudiantil-12-Foto.jpg",
+            "https://i.postimg.cc/CLt9w7Sy/Atilier-Estudiantil-16-Foto.jpg",
+            "https://i.postimg.cc/8P3xT4Nz/Atilier-Estudiantil-3-Photo.jpg",
+            "https://i.postimg.cc/RV82vd4n/Atilier-Estudiantil-4-Photo.jpg",
+            "https://i.postimg.cc/m2h0xJxS/Atilier-Estudiantil-5-Photo.jpg",
+            "https://i.postimg.cc/yYWwqtqh/Atilier-Estudiantil-7-Photo.jpg",
+            "https://i.postimg.cc/vHDpRkRP/Atilier-Estudiantil-8-Photo.jpg",
+            "https://i.postimg.cc/Kv4dXwXr/Atilier-Estudiantil-9-Photo.jpg"
+        ],
+        "brochure": "/pdf/residencias-estudiantiles.pdf",
+        "clase": "atilier",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "https://i.postimg.cc/76rbmMrC/negocio-local.png",
+                "caracteristica": "Locales comerciales"
+            },
+            {
+                "icono": "https://i.postimg.cc/brjJ6wxV/hoja.png",
+                "caracteristica": "Naturaleza protagonista"
+            },
+            {
+                "icono": "https://i.postimg.cc/t4R1QJKb/casa.png",
+                "caracteristica": "55 Módulos habitacionales"
+            }
+        ],
+        "caracterisiticas": [
+            "Residencias universitarias con 55 módulos habitacionales.",
+            "Espacios comunes: cafetería, áreas de encuentro y oficinas corporativas.",
+            "Locales comerciales para servicios de cercanía.",
+            "Actividades deportivas y espacios verdes.",
+            "Terrazas de encuentros para socialización y eventos.",
+            "Parking para bicicletas y autos.",
+            "Talleres / Ateliér profesional para actividades prácticas y creativas."
+        ],
+        "diferenciales": [
+            "Proyecto mixto que integra vivienda, trabajo y recreación.",
+            "Enfoque en la vida al aire libre y el contacto con la naturaleza.",
+            "Modelo adaptable a la vida universitaria y profesional moderna.",
+            "Oportunidad de inversión con alta demanda en ciudades con crecimiento académico y corporativo."
+        ],
+        "descripcionLarga": "Residencias Estudiantiles & Ateliér Profesional es un proyecto innovador que integra vivienda universitaria, espacios de trabajo y actividades de desarrollo personal en un mismo lugar. Diseñado para jóvenes estudiantes y profesionales, el complejo combina habitaciones, oficinas, talleres, áreas deportivas y verdes, con el objetivo de brindar un entorno integral que potencie tanto el estudio como la vida social y recreativa. En cada rincón se respira una sensación de armonía, invitando a los residentes a conectarse con la naturaleza mientras disfrutan de una calidad de vida inigualable.",
         "descripcion": "Residencias Estudiantiles & Ateliér Profesional es un proyecto innovador que integra vivienda universitaria, espacios de trabajo y actividades de desarrollo personal en un mismo lugar.",
         "ubicacion": "San Luis",
-        "miniatura":"https://i.postimg.cc/L575d11S/estudiantil.jpg",
-        "imgEncabezado":"https://i.postimg.cc/154Lx2hQ/Atilier-Estudiantil-12-Foto.jpg",
-        "link":"/producto/Atilier Estudiantil"
+        "miniatura": "https://i.postimg.cc/L575d11S/estudiantil.jpg",
+        "imgEncabezado": "https://i.postimg.cc/154Lx2hQ/Atilier-Estudiantil-12-Foto.jpg",
+        "link": "/producto/Atilier Estudiantil"
     },
     {
         "nombre": "Paseo Conlara",
-        "logo":"https://i.postimg.cc/pXf58MxX/image-Photoroom-1.png",
-        "cardImages":["https://i.postimg.cc/N0MKWyX4/00-1-Photo.jpg","https://i.postimg.cc/TPwKZybV/00-render.jpg","https://i.postimg.cc/5t0XZHzP/02-render.jpg"],
-        "sliderImages":["https://i.postimg.cc/N0MKWyX4/00-1-Photo.jpg","https://i.postimg.cc/TPwKZybV/00-render.jpg","https://i.postimg.cc/VN6J3StB/01-render.jpg","https://i.postimg.cc/5t0XZHzP/02-render.jpg"],
-        "brochure":"/pdf/paseo-conlara.pdf",
-        "clase":"paseo",
-        "pricipalesCaracteristicas":[{"icono":"https://i.postimg.cc/WbfgwsSd/marcador-de-posicion-2.png","caracteristica":"Ubicación estratégica"},{"icono":"https://i.postimg.cc/x86xPBF0/hoja.png","caracteristica":"Innovación y naturaleza en equilibrio"},{"icono":"https://i.postimg.cc/pdksvwRX/envio-al-mundo-entero-1.png","caracteristica":"Espacios para crecer"}],
-        "caracterisiticas":["Espacios disponibles: locales comerciales, showroom, coworking y consultorios.","En venta: módulos con ingreso jerárquico, baños privados, cerramientos de vidrio, patios y expansiones frontales.","Diseño: fachada integral, pisos de cemento alisado, cierre perimetral y terrazas frontales.","Propuesta: gastronomía, compras y servicios “todo en un solo lugar”.","Enfoque: Proyecto único, versátil y sustentable, con múltiples rubros y orientación al disfrute del entorno natural."],
-        "diferenciales":["Integración con la naturaleza","Sustentabilidad y eficiencia","Diseño arquitectónico contemporáneo","Versatilidad de usos","Ubicación estratégica"],
-        "descripcionLarga":"Desarrollo mixto que combina naturaleza, sostenibilidad y espacios sociales, ofreciendo un shopping a cielo abierto con variedad de rubros y servicios.",
+        "logo": "https://i.postimg.cc/pXf58MxX/image-Photoroom-1.png",
+        "cardImages": [
+            "https://i.postimg.cc/N0MKWyX4/00-1-Photo.jpg",
+            "https://i.postimg.cc/TPwKZybV/00-render.jpg",
+            "https://i.postimg.cc/5t0XZHzP/02-render.jpg"
+        ],
+        "sliderImages": [
+            "https://i.postimg.cc/N0MKWyX4/00-1-Photo.jpg",
+            "https://i.postimg.cc/TPwKZybV/00-render.jpg",
+            "https://i.postimg.cc/VN6J3StB/01-render.jpg",
+            "https://i.postimg.cc/5t0XZHzP/02-render.jpg"
+        ],
+        "brochure": "/pdf/paseo-conlara.pdf",
+        "clase": "paseo",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "https://i.postimg.cc/WbfgwsSd/marcador-de-posicion-2.png",
+                "caracteristica": "Ubicación estratégica"
+            },
+            {
+                "icono": "https://i.postimg.cc/x86xPBF0/hoja.png",
+                "caracteristica": "Innovación y naturaleza en equilibrio"
+            },
+            {
+                "icono": "https://i.postimg.cc/pdksvwRX/envio-al-mundo-entero-1.png",
+                "caracteristica": "Espacios para crecer"
+            }
+        ],
+        "caracterisiticas": [
+            "Espacios disponibles: locales comerciales, showroom, coworking y consultorios.",
+            "En venta: módulos con ingreso jerárquico, baños privados, cerramientos de vidrio, patios y expansiones frontales.",
+            "Diseño: fachada integral, pisos de cemento alisado, cierre perimetral y terrazas frontales.",
+            "Propuesta: gastronomía, compras y servicios “todo en un solo lugar”.",
+            "Enfoque: Proyecto único, versátil y sustentable, con múltiples rubros y orientación al disfrute del entorno natural."
+        ],
+        "diferenciales": [
+            "Integración con la naturaleza",
+            "Sustentabilidad y eficiencia",
+            "Diseño arquitectónico contemporáneo",
+            "Versatilidad de usos",
+            "Ubicación estratégica"
+        ],
+        "descripcionLarga": "Desarrollo mixto que combina naturaleza, sostenibilidad y espacios sociales, ofreciendo un shopping a cielo abierto con variedad de rubros y servicios.",
         "descripcion": "Desarrollo mixto que combina naturaleza, sostenibilidad y espacios sociales, ofreciendo un shopping a cielo abierto con variedad de rubros y servicios.",
         "ubicacion": "Santa Rosa de Conlara",
-        "miniatura":"https://i.postimg.cc/TPwKZybV/00-render.jpg",
-        "imgEncabezado":"https://i.postimg.cc/VN6J3StB/01-render.jpg",
-        "link":"/producto/Paseo Conlara"
+        "miniatura": "https://i.postimg.cc/TPwKZybV/00-render.jpg",
+        "imgEncabezado": "https://i.postimg.cc/VN6J3StB/01-render.jpg",
+        "link": "/producto/Paseo Conlara"
     },
     {
-        "nombre": "Locales Comerciales",
-        "logo":"",
-        "cardImages":[""],
-        "sliderImages":[""],
-        "brochure":"",
-        "clase":"",
-        "pricipalesCaracteristicas":[{"icono":"","caracteristica":""},{"icono":"","caracteristica":""},{"icono":"","caracteristica":""}],
-        "caracterisiticas":"",
-        "diferenciales":"",
-        "descripcionLarga":"",
+        "nombre": "el viejo mercado",
+        "logo": "https://i.postimg.cc/BbNRrzcK/logo_viejo_mercado.png",
+        "cardImages": [
+            "https://i.postimg.cc/C5J932HG/5.jpg",
+            "https://i.postimg.cc/Gh7ZzZpC/6.jpg",
+            "https://i.postimg.cc/x89WFQHG/7.jpg"
+        ],
+        "sliderImages": [
+            "https://i.postimg.cc/C5J932HG/5.jpg",
+            "https://i.postimg.cc/Gh7ZzZpC/6.jpg",
+            "https://i.postimg.cc/x89WFQHG/7.jpg",
+            "https://i.postimg.cc/9F8v1vfm/8.jpg",
+            "https://i.postimg.cc/WzsQfVrG/9.jpg"
+        ],
+        "brochure": "https://i.postimg.cc/fT2656bw/Faltante_pagina_web_21012026_(1).png",
+        "clase": "paseo",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "",
+                "caracteristica": ""
+            },
+            {
+                "icono": "",
+                "caracteristica": ""
+            },
+            {
+                "icono": "",
+                "caracteristica": ""
+            }
+        ],
+        "caracterisiticas": "as",
+        "diferenciales": "",
+        "descripcionLarga": "",
         "descripcion": "",
         "ubicacion": "San Luis.",
-        "miniatura":"https://i.postimg.cc/d3X3Myyw/card-1.jpg",
-        "imgEncabezado":"",
-        "link":"/producto/Locales Comerciales"
-    },
-    {
-        "nombre": "Torre Pulse",
-        "logo":"",
-        "cardImages":[""],
-        "sliderImages":[""],
-        "brochure":"",
-        "clase":"",
-        "pricipalesCaracteristicas":[{"icono":"","caracteristica":""},{"icono":"","caracteristica":""},{"icono":"","caracteristica":""}],
-        "caracterisiticas":"",
-        "diferenciales":"",
-        "descripcionLarga":"",
-        "descripcion": "",
-        "ubicacion": "San Luis.",
-        "miniatura":"https://i.postimg.cc/R0MMDRDJ/Torre-Pulse.jpg",
-        "imgEncabezado":"",
-        "link":"/producto/Torre Pulse"
+        "miniatura": "https://i.postimg.cc/C5J932HG/5.jpg",
+        "imgEncabezado": "https://i.postimg.cc/C5J932HG/5.jpg",
+        "link": "/producto/el viejo mercado"
     }
-    
 ]

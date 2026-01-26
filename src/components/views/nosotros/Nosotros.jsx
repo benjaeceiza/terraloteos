@@ -1,5 +1,4 @@
 import SectionContacto from "../../SectionContacto";
-import SectionContactoMob from "../../SectionContactoMob";
 import DescripcionNosotros from "./DescripcionNosotros";
 import Encabezado from "./Encabezado";
 
@@ -13,7 +12,6 @@ const Nosotros = () => {
                 <Encabezado />
                 <DescripcionNosotros />
                 <SectionContacto />
-                <SectionContactoMob />
             </main>
         </>
     )

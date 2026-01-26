@@ -4,7 +4,6 @@ import Mapas from "../../Mapas";
 import Numeros from "./Numeros";
 import SliderProyectos from "./SliderProyectos";
 import SectionContacto from "../../SectionContacto";
-import SectionContactoMob from "../../SectionContactoMob";
 import CategoriasMob from "./CategoriasMob";
 import check from "../../../assets/iconos/check.png";
 import fondo from "../../../assets/fondos/fondo-main.png";
@@ -95,7 +94,6 @@ const Home = () => {
 
         <Mapas />
         <SectionContacto />
-        <SectionContactoMob />
       </div>
     </main>
   );

@@ -1,100 +1,88 @@
+import React from 'react';
 
+const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
 
-const Contenido = ({ detalleProducto = {},setSliderVisible}) => {
+    // Aseguramos arrays vacíos si no existen datos
+    const images = detalleProducto.cardImages || [];
+    const icons = detalleProducto.pricipalesCaracteristicas || [];
+    const caracteristicas = detalleProducto.caracterisiticas || [];
+    const diferenciales = detalleProducto.diferenciales || [];
 
-
-    const images = Array.isArray(detalleProducto.cardImages)
-        ? detalleProducto.cardImages
-        : [];
-
-    const icons = Array.isArray(detalleProducto.pricipalesCaracteristicas)
-        ? detalleProducto.pricipalesCaracteristicas
-        :
-        [];
-    const caracterisiticas = Array.isArray(detalleProducto.caracterisiticas)
-        ? detalleProducto.caracterisiticas
-        :
-        [];
-    const diferenciales = Array.isArray(detalleProducto.diferenciales)
-        ? detalleProducto.diferenciales
-        :
-        [];
+    // Definimos la clase del tema para el contenedor principal
+    const themeClass = detalleProducto.clase ? `theme-${detalleProducto.clase}` : 'theme-default';
 
     return (
-        <>
-            <section className="contenido-mantra">
-                <div className="texto-logo-mantra">
-                    <p>
-                        {detalleProducto.descripcionLarga}
-                    </p>
+        <section className={`contenido-section ${themeClass}`}>
+            
+            {/* 1. Descripción Larga */}
+            <div className="contenido-intro">
+                <p className="texto-descripcion">
+                    {detalleProducto.descripcionLarga}
+                </p>
+                {/* Logo decorativo pequeño */}
+                <div className="logo-intro-container">
+                    <img src={detalleProducto.logo} alt="Logo Decorativo" />
                 </div>
+            </div>
 
-                <div className={`contenedor-imagenes-${detalleProducto.clase}`}>
-                    {images.length > 0 ? (
-                        images.map((item, idx) => (
+            {/* 2. Galería de Imágenes (Grid) */}
+            {images.length > 0 && (
+                <div className="galeria-grid">
+                    {images.map((item, idx) => (
+                        <img
+                            key={idx} // Usamos índice porque la lista es estática
+                            src={item}
+                            alt={`${detalleProducto.nombre} - ${idx}`}
+                            loading="lazy"
+                            onClick={() => setSliderVisible(true)}
+                            className="galeria-img"
+                        />
+                    ))}
+                </div>
+            )}
 
-                            <img
-                                key={item?.toString() ?? idx}
-                                src={item}
-                                alt={detalleProducto.nombre ?? `imagen-${idx}`}
-                                loading="lazy"
-                                onClick={() => setSliderVisible(true)}
+            {/* 3. Sección de Características (Fondo con degradado) */}
+            <div className="seccion-caracteristicas">
+                
+                {/* Burbujas de Iconos */}
+                {icons.length > 0 && (
+                    <div className="burbujas-container">
+                        {icons.map((item, idx) => (
+                            <div key={idx} className="burbuja-card">
+                                <img src={item?.icono} alt={item.caracteristica} />
+                                <p>{item.caracteristica}</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
 
-                            />
-                        ))
-                    ) : (
-                        <p>No hay imágenes disponibles</p>
+                {/* Textos de Detalles */}
+                <div className="textos-detalles">
+                    
+                    {caracteristicas.length > 0 && (
+                        <div className="bloque-texto">
+                            <h3 className="titulo-seccion">Características principales</h3>
+                            {caracteristicas.map((item, idx) => (
+                                <p key={idx} className="parrafo-detalle">{item}</p>
+                            ))}
+                        </div>
                     )}
-                </div>
 
-                <div className={`caracteristicas-${detalleProducto.clase}`}>
-                    <div className="contenedor-burbujas-mantra">
+                    {diferenciales.length > 0 && (
+                        <div className="bloque-texto">
+                            <h3 className="titulo-seccion">Diferenciales</h3>
+                            {diferenciales.map((item, idx) => (
+                                <p key={idx} className="parrafo-detalle">{item}</p>
+                            ))}
+                        </div>
+                    )}
 
-                        {icons.length > 0 ? (
-                            icons.map((item) => (
-
-                                <div key={item.caracteristica} className={`burbuja-${detalleProducto.clase}`}>
-                                    <img className="icono-burbujar-mantra" src={item.icono} alt="Privacidad" />
-                                    <p className={`nombre-burbuja-${detalleProducto.clase}`}>{item.caracteristica}</p>
-                                </div>
-                            ))
-                        ) : (
-                            ""
-                        )}
-
-                    </div>
-
-                    <div className="contenedor-textos-mantra">
-                        <p className={`titulo-parrafo-${detalleProducto.clase}`}>Características principales</p>
-
-                        {caracterisiticas.length > 0 ? (
-                            caracterisiticas.map((item) => (
-
-                                <p key={Math.random()}  className={`parrafo-${detalleProducto.clase}`}>{item}</p>
-                            )))
-                            :
-                            (
-                                ""
-                            )}
-
-                        <p className={`titulo-parrafo-${detalleProducto.clase}`}>Diferenciales</p>
-                        {diferenciales.length > 0 ? (
-                            diferenciales.map((item) => (
-
-                                <p key={Math.random()} className={`parrafo-${detalleProducto.clase}`}>{item}</p>
-                            )))
-                            :
-                            (
-                                ""
-                            )}
-                    </div>
-
-                    <div className="logo-contenedor-mantra-contenido">
-                        <img className={`logo-contenido-${detalleProducto.clase}`} src={detalleProducto.logo} alt="Logo Mantra" />
+                    <div className="logo-footer-container">
+                        <img src={detalleProducto.logo} alt="Logo Final" />
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

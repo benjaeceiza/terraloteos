@@ -1,5 +1,4 @@
 import SectionContacto from "../../SectionContacto";
-import SectionContactoMob from "../../SectionContactoMob";
 import Descripcion from "./Descripcion";
 import Encabezado from "./Encabezado";
 import Preguntas from "./Preguntas";
@@ -16,7 +15,6 @@ const SerSocio = () => {
                 </div>
                 <Preguntas />
                 <SectionContacto />
-                <SectionContactoMob />
             </main>
         </>
     )

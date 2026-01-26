@@ -3,7 +3,6 @@ import SectionContacto from "../../SectionContacto";
 import Encabezado from "./Encabezado";
 import logoIg from "../../../assets/iconos/instagram.png"
 import { Link } from "react-router-dom";
-import SectionContactoMob from "../../SectionContactoMob";
 import Preguntas from "./Preguntas";
 
 
@@ -55,7 +54,6 @@ const Fundacion = () => {
                 </div>
                 <Preguntas />
                 <SectionContacto />
-                <SectionContactoMob />
             </main>
         </>
     )
