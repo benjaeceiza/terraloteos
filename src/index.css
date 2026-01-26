@@ -833,14 +833,14 @@ body.modal-abierto {
     overflow: hidden;
 }
 
-.accordion-container {
+.accordion-container-categorias {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
 /* --- ÍTEM DEL ACORDEÓN --- */
-.accordion-item {
+.accordion-item-categorias {
     position: relative;
     flex: 1;
     /* Todos ocupan el mismo espacio inicialmente */
@@ -858,7 +858,7 @@ body.modal-abierto {
 }
 
 /* Efecto al pasar el mouse (Hover) */
-.accordion-item:hover {
+.accordion-item-categorias:hover {
     flex: 3;
     /* El ítem se expande 3 veces su tamaño */
 }
@@ -877,7 +877,7 @@ body.modal-abierto {
 }
 
 /* Efecto Zoom en la foto al expandir */
-.accordion-item:hover .accordion-bg {
+.accordion-item-categorias:hover .accordion-bg {
     transform: scale(1.1);
 }
 
@@ -894,7 +894,7 @@ body.modal-abierto {
     z-index: 2;
 }
 
-.accordion-item:hover .accordion-overlay {
+.accordion-item-categorias:hover .accordion-overlay {
     background: rgba(0, 0, 0, 0.7);
     /* Más oscuro al expandir para leer texto */
 }
@@ -925,7 +925,7 @@ body.modal-abierto {
 }
 
 /* Desaparece el título vertical al expandir */
-.accordion-item:hover .accordion-title-vertical {
+.accordion-item-categorias:hover .accordion-title-vertical {
     opacity: 0;
     transform: translateY(-20px);
 }
@@ -950,7 +950,7 @@ body.modal-abierto {
 }
 
 /* Aparece al expandir */
-.accordion-item:hover .accordion-content {
+.accordion-item-categorias:hover .accordion-content {
     opacity: 1;
     transform: translateY(0);
 }
@@ -992,19 +992,19 @@ body.modal-abierto {
     transition: 0.3s;
 }
 
-.accordion-item:hover .accordion-btn:hover {
+.accordion-item-categorias:hover .accordion-btn:hover {
     background: #ef8937;
     color: white;
 }
 
 /* --- RESPONSIVE (Móvil) --- */
 @media (max-width: 768px) {
-    .accordion-container {
+    .accordion-container-categorias {
         flex-direction: column;
         /* Apilados verticalmente en celular */
     }
 
-    .accordion-item {
+    .accordion-item-categorias {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);

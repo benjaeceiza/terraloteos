@@ -37,12 +37,12 @@ const Categorias = () => {
 
     return (
         <section className="section-categorias-premium">
-            <div className="accordion-container">
+            <div className="accordion-container-categorias">
                 {categorias.map((cat) => (
                     <Link 
                         to={cat.link} 
                         key={cat.id} 
-                        className="accordion-item"
+                        className="accordion-item-categorias"
                         onClick={showLoader}
                     >
                         {/* Imagen de fondo con efecto Parallax sutil */}
