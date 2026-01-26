@@ -5,9 +5,10 @@ import casco from "../../../assets/iconos/casco.png";
 import iconoMapa from "../../../assets/iconos/mapa.png";
 import clientes from "../../../assets/iconos/usuario.png";
 
+
 const Numeros = () => {
-  // ✅ Componente que mantiene la animación numérica
-  const AnimatedNumber = ({ target, duration = 2000 }) => {
+  // ✅ Lógica del contador (Optimizada con símbolo opcional)
+  const AnimatedNumber = ({ target, duration = 2000, suffix = "" }) => {
     const [count, setCount] = useState(0);
     const [active, setActive] = useState(false);
     const ref = useRef(null);
@@ -20,19 +21,14 @@ const Numeros = () => {
             observer.unobserve(ref.current);
           }
         },
-        {
-          threshold: 0.2,
-          rootMargin: "0px 0px 200px 0px",
-        }
+        { threshold: 0.2 }
       );
-
       if (ref.current) observer.observe(ref.current);
       return () => observer.disconnect();
     }, []);
 
     useEffect(() => {
       if (!active) return;
-
       let start = 0;
       const increment = target / (duration / 16);
       const timer = setInterval(() => {
@@ -41,89 +37,79 @@ const Numeros = () => {
           clearInterval(timer);
           setCount(target);
         } else {
-          setCount(Math.floor(start));
+          setCount(Math.ceil(start));
         }
       }, 16);
-
       return () => clearInterval(timer);
     }, [active, target, duration]);
 
     return (
-      <p ref={ref} className="numeros">
-        {count}
-      </p>
+      <span ref={ref} className="numero-animado-numeros">
+        {count}{suffix}
+      </span>
     );
   };
 
-  // ✅ Framer Motion variants
   const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
   };
 
+  const stats = [
+    { icon: iconoReloj, text: "Años de experiencia", num: 15, suffix: "+" },
+    { icon: casco, text: "Proyectos entregados", num: 18, suffix: "" },
+    { icon: clientes, text: "Clientes satisfechos", num: 4000, suffix: "+" },
+    { icon: iconoMapa, text: "Terrenos preparados", num: 537, suffix: "" },
+  ];
+
   return (
     <section className="section-numeros">
-      {/* 🟠 Título y descripción */}
-      <motion.div
-        className="contenedor-nosotros"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <h2 className="titulo-nosotros-home">
-          <span className="naranja">+</span>15 Años<br></br> construyendo tu futuro
-        </h2>
-        <p className="texto-nosotros">
-          Terraloteos es una empresa líder en urbanización y vivienda llave en
-          mano, con más de 15 años de trayectoria desde su fundación en 2010. Se
-          especializa en el desarrollo de barrios abiertos y cerrados, y en la
-          construcción tradicional de viviendas, con financiación propia en
-          pesos o dólares. Propuesta de valor: Accesibilidad, acompañamiento
-          integral, compromiso ambiental y alta calidad de vida.
-        </p>
-      </motion.div>
+      <div className="max-width-container-numeros">
+        
+        {/* 🟠 Lado Izquierdo: Texto */}
+        <motion.div
+          className="columna-texto-numeros"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="titulo-seccion-numeros">
+            <span className="naranja">+</span>15 Años
+            <br /> <span className="texto-blanco-numeros">construyendo futuro</span>
+          </h2>
+          <div className="separador-naranja-numeros"></div>
+          <p className="descripcion-seccion-numeros">
+            Terraloteos es una empresa líder en urbanización y vivienda llave en
+            mano. Nos especializamos en el desarrollo de barrios abiertos y cerrados,
+            ofreciendo financiación propia y un compromiso real con la calidad de vida.
+          </p>
+        </motion.div>
 
-      {/* 🟠 Números con animación de entrada */}
-      <motion.div
-        className="contendor-numero"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="container-numeros">
-          {[
-            { icon: iconoReloj, text: "Años de experiencia", num: 15 },
-            { icon: casco, text: "Proyectos entregados", num: 18 },
-            { icon: clientes, text: "Clientes satisfechos", num: 4000 },
-            { icon: iconoMapa, text: "Terrenos preparados", num: 537 },
-          ].map((item, i) => (
+        {/* 🟠 Lado Derecho: Grilla de Números */}
+        <div className="columna-grid-numeros">
+          {stats.map((item, i) => (
             <motion.div
               key={i}
-              className="card-numeros"
-              initial={{ opacity: 0, y: 40 }}
+              className="card-stat-numeros"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.2 + 0.3,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true }}
             >
-              <div className="contenedor-textoss">
-                <AnimatedNumber target={item.num} duration={2000} />
-                <div className="numero-icono">
-                  <p className="texto-numeros">{item.text}</p>
-                  <img className="icono-numeros" src={item.icon} alt="" />
-                </div>
+              <div className="icon-wrapper-numeros">
+                <img src={item.icon} alt={item.text} />
+              </div>
+              <div className="stat-content-numeros">
+                <AnimatedNumber target={item.num} suffix={item.suffix} />
+                <p className="stat-label-numeros">{item.text}</p>
               </div>
             </motion.div>
           ))}
         </div>
-      </motion.div>
+
+      </div>
     </section>
   );
 };

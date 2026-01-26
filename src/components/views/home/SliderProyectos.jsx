@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom"
-import sliderImg1 from "../../../assets/slider-index/1.jpg"
-import sliderImg2 from "../../../assets/slider-index/2.jpeg"
-import sliderImg3 from "../../../assets/slider-index/3.jpg"
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useLoading } from "../../context/LoadingContext";
+import { useState } from "react";
+
+// Imágenes
+import sliderImg1 from "../../../assets/slider-index/1.jpg";
+import sliderImg2 from "../../../assets/slider-index/2.jpeg";
+import sliderImg3 from "../../../assets/slider-index/3.jpg";
+
+// Iconos
 import iconoFacebook from "../../../assets/iconos/facebook.png";
 import iconoFacebookN from "../../../assets/iconos/facebook-naranja.png";
 import iconoWts from "../../../assets/iconos/whatsapp.png";
@@ -10,164 +17,144 @@ import iconoIg from "../../../assets/iconos/instagram.png";
 import iconoIgN from "../../../assets/iconos/instagram-naranja.png";
 import iconoTiktok from "../../../assets/iconos/tiktok.png";
 import iconoTiktokN from "../../../assets/iconos/tiktok-naranja.png";
-import { useState } from "react";
-import { useLoading } from "../../context/LoadingContext";
+
 
 
 const SliderProyectos = () => {
+    const [isHover, setIsHover] = useState("");
+    const { hideLoader, showLoader } = useLoading();
 
-    const [isHover, setIsHover] = useState("")
-    const { hideLoader,showLoader } = useLoading();
+    // 1. Configuración de los Slides (Para no repetir código HTML)
+    const slides = [
+        {
+            id: 1,
+            img: sliderImg3,
+            titulo: ["Torres", "Community"],
+            tipo: "RESIDENCIAL",
+            ubicacion: "SAN LUIS",
+            link: "/producto/Torres Community"
+        },
+        {
+            id: 2,
+            img: sliderImg1,
+            titulo: ["Garden", "Village"],
+            tipo: "RESIDENCIAL",
+            ubicacion: "MERLO, SAN LUIS",
+            link: "/producto/Garden Village"
+        },
+        {
+            id: 3,
+            img: sliderImg2,
+            titulo: ["Atilier", "Estudiantil"],
+            tipo: "RESIDENCIAL",
+            ubicacion: "SAN LUIS",
+            link: "/producto/Atilier Estudiantil"
+        }
+    ];
+
+    // 2. ARREGLO DEL AUTOPLAY: Forzamos la inicialización con JS
+    useEffect(() => {
+        const carouselElement = document.getElementById('carouselExampleAutoplaying');
+        // Verificamos si bootstrap está disponible en window (común en proyectos con CDN o import global)
+        if (window.bootstrap) {
+            const carousel = new window.bootstrap.Carousel(carouselElement, {
+                interval: 5000,
+                ride: 'carousel',
+                pause: false // 'hover' para pausar al pasar el mouse, false para que siga
+            });
+            carousel.cycle();
+        }
+    }, []);
+
     return (
-        <>
-            <div id="carouselExampleAutoplaying" className="carousel slide aditional" data-bs-ride="carousel"
-                data-bs-interval="5000">
+        <section className="slider-container">
+            <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <div className="contenedor-item-carrucel">
-                            <img src={sliderImg3} className="img-caroucel d-block w-100" alt="..." onLoad={hideLoader} />
-                            <Link to={"/producto/Torres Community"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
-                                <div className="textos">
-                                    <p className="titulo-slider">Torres<br />Community</p>
-                                    <div className="detalles-texto">
-                                        <div className="texto-contenedor">
-                                            <p className="titulo-texto">TIPO DE PROYECTO /</p>
-                                            <p className="texto-decorado">RESIDENCIAL</p>
-                                        </div>
-                                        <div className="texto-contenedor">
-                                            <p className="titulo-texto">UBICACION /</p>
-                                            <p className="texto-decorado">SAN LUIS</p>
-                                        </div>
-                                    </div>
+                    {slides.map((slide, index) => (
+                        <div key={slide.id} className={`carousel-item ${index === 0 ? "active" : ""}`} data-bs-interval="5000">
+                            <div className="slide-wrapper">
+                                {/* Imagen con efecto Zoom */}
+                                <div className="img-container">
+                                    <img src={slide.img} className="img-fluid" alt={slide.titulo.join(" ")} onLoad={index === 0 ? hideLoader : undefined} />
+                                    <div className="overlay-dark"></div>
                                 </div>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <div className="contenedor-item-carrucel">
-                            <img src={sliderImg1} className="img-caroucel d-block w-100" alt="..." />
-                            <Link to={"/producto/Garden Village"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
-                                <div className="textos">
-                                    <p className="titulo-slider">Garden<br />Village</p>
-                                    <div className="detalles-texto">
-                                        <div className="texto-contenedor">
-                                            <p className="titulo-texto">TIPO DE PROYECTO /</p>
-                                            <p className="texto-decorado">RESIDENCIAL</p>
-                                        </div>
-                                        <div className="texto-contenedor">
-                                            <p className="titulo-texto">UBICACION /</p>
-                                            <p className="texto-decorado">MERLO, SAN LUIS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <div className="contenedor-item-carrucel">
-                            <img src={sliderImg2} className="img-caroucel d-block w-100" alt="..." />
-                            <Link to={"/producto/Atilier Estudiantil"} className="contenedor-data-carrucel" onClick={() => showLoader()}>
-                                <div className="textos">
-                                    <p className="titulo-slider">Atilier<br />Estudiantil</p>
-                                    <div className="detalles-texto">
-                                        <div className="texto-contenedor">
-                                            <p className="titulo-texto">TIPO DE PROYECTO /</p>
-                                            <p className="texto-decorado">RESIDENCIAL</p>
-                                        </div>
-                                        <div className="texto-contenedor">
-                                            <p className="titulo-texto">UBICACION /</p>
-                                            <p className="texto-decorado">SAN LUIS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
 
+                                {/* Contenido */}
+                                <Link to={slide.link} className="slide-content" onClick={showLoader}>
+                                    <div className="text-box animate-fade-up">
+                                        <h2 className="slide-title">
+                                            {slide.titulo[0]}<br />
+                                            <span className="text-highlight">{slide.titulo[1]}</span>
+                                        </h2>
+                                        
+                                        <div className="slide-meta">
+                                            <div className="meta-item">
+                                                <span className="meta-label">TIPO DE PROYECTO /</span>
+                                                <span className="meta-value">{slide.tipo}</span>
+                                            </div>
+                                            <div className="meta-item">
+                                                <span className="meta-label">UBICACIÓN /</span>
+                                                <span className="meta-value">{slide.ubicacion}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className="contacto-slider">
-                    <div className="contenedor-botones-slider">
-                        <Link className="button-slider" to={"/listado-productos"} onClick={() => showLoader()}>Ver más proyectos</Link>
-                        <Link className="button-slider" to={"/contacto"} onClick={() => showLoader()}>Contactar</Link >
+
+                {/* Botones de Navegación (Estilo Glass) */}
+                <button className="carousel-control-prev custom-control" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <div className="control-box">
+                        <span className="control-text">ANTERIOR</span>
+                    </div>
+                </button>
+                <button className="carousel-control-next custom-control" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <div className="control-box">
+                        <span className="control-text">SIGUIENTE</span>
+                    </div>
+                </button>
+
+                {/* Footer del Slider (Botones y Redes) */}
+                <div className="slider-footer">
+                    <div className="footer-actions">
+                        <Link className="btn-slider-outline" to={"/listado-productos"} onClick={showLoader}>Ver Proyectos</Link>
+                        <Link className="btn-slider-solid" to={"/contacto"} onClick={showLoader}>Contactar</Link>
                     </div>
 
-                    <ul className="redes-slider">
+                    <ul className="footer-socials">
                         <li>
-                            <Link
-                                to={"https://www.facebook.com/loteosterra"}
-                                target="_blank"
-                                onMouseEnter={() => setIsHover("facebook")}
-                                onMouseLeave={() => setIsHover("")}>
-                                {
-                                    isHover == "facebook"
-                                        ?
-                                        <img id="fc" src={iconoFacebookN} alt="Icono Facebook" />
-                                        :
-                                        <img id="fc" src={iconoFacebook} alt="Icono Facebook" />
-                                }
-                            </Link>
+                            <a href="https://facebook.com/loteosterra" target="_blank" rel="noreferrer"
+                               onMouseEnter={() => setIsHover("facebook")} onMouseLeave={() => setIsHover("")}>
+                                <img src={isHover === "facebook" ? iconoFacebookN : iconoFacebook} alt="Facebook" />
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                to={"https://www.instagram.com/terraloteos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
-                                target="_blank"
-                                onMouseEnter={() => setIsHover("instagram")}
-                                onMouseLeave={() => setIsHover("")}>
-                                {
-                                    isHover == "instagram"
-                                        ?
-                                        <img id="fc" src={iconoIgN} alt="Icono Instagram" />
-                                        :
-                                        <img id="fc" src={iconoIg} alt="Icono Instagram" />
-                                }
-                            </Link>
+                            <a href="https://instagram.com" target="_blank" rel="noreferrer"
+                               onMouseEnter={() => setIsHover("instagram")} onMouseLeave={() => setIsHover("")}>
+                                <img src={isHover === "instagram" ? iconoIgN : iconoIg} alt="Instagram" />
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                to={"https://www.tiktok.com/@terraloteosoficial?is_from_webapp=1&sender_device=pc"}
-                                target="_blank"
-                                onMouseEnter={() => setIsHover("tiktok")}
-                                onMouseLeave={() => setIsHover("")}>
-                                {
-                                    isHover == "tiktok"
-                                        ?
-                                        <img id="fc" src={iconoTiktokN} alt="Icono Tiktok" />
-                                        :
-                                        <img id="fc" src={iconoTiktok} alt="Icono Tiktok" />
-                                }
-                            </Link>
+                            <a href="https://tiktok.com" target="_blank" rel="noreferrer"
+                               onMouseEnter={() => setIsHover("tiktok")} onMouseLeave={() => setIsHover("")}>
+                                <img src={isHover === "tiktok" ? iconoTiktokN : iconoTiktok} alt="TikTok" />
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                to={""}
-                                target="_blank"
-                                onMouseEnter={() => setIsHover("whatsapp")}
-                                onMouseLeave={() => setIsHover("")}>
-                                {
-                                    isHover == "whatsapp"
-                                        ?
-                                        <img id="fc" src={iconoWtsN} alt="Icono Whatsapp" />
-                                        :
-                                        <img id="fc" src={iconoWts} alt="Icono Whatsapp" />
-                                }
-                            </Link>
+                            <a href="#" target="_blank" rel="noreferrer"
+                               onMouseEnter={() => setIsHover("whatsapp")} onMouseLeave={() => setIsHover("")}>
+                                <img src={isHover === "whatsapp" ? iconoWtsN : iconoWts} alt="WhatsApp" />
+                            </a>
                         </li>
                     </ul>
-
                 </div>
-                <button id="boton-slider-2" className="carousel-control-prev" type="button"
-                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <p className="boton-slider girar">ANTERIOR</p>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button id="boton-slider-1" className="carousel-control-next" type="button"
-                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <p className="boton-slider girar">SIGUIENTE</p>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
-        </>
-    )
-}
 
-export default SliderProyectos
+            </div>
+        </section>
+    );
+};
+
+export default SliderProyectos;

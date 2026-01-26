@@ -1,33 +1,41 @@
 import fondo from "../../../assets/encabezados/fondo-nosotros.jpeg";
-import fleca from "../../../assets/iconos/flecha-hacia-abajo.png";
+import flecha from "../../../assets/iconos/flecha-hacia-abajo.png";
 import { useLoading } from "../../context/LoadingContext";
 
 const Encabezado = () => {
-
   const { hideLoader } = useLoading();
-  return (
-    <>
-      <section className="section-encabezado-nosotros">
-        <img className="fondo-encabezado-nosotros" src={fondo} alt="" onLoad={hideLoader} />
-        <div className="fondo-negro">
-          <div className="contenedor-titulos">
-            <h1 className="titulo-encabezado-nosotros">TERRALOTEOS</h1>
-            <h2 className="subtitulo-encabezado-nosotros">DESARROLLOS URBANISTICOS</h2>
-          </div>
-            <div className="contenedor-boton-flecha"
-            onClick={() => {
-              const section = document.querySelector("#nosotros");
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
 
-          >
-            <img className="flecha-encabezado-mobile" src={fleca} alt="flecha hacia abajo" />
-          </div>
+  const handleScroll = () => {
+    const section = document.querySelector("#historia");
+    if (section) {
+      const y = section.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="hero-nosotros">
+      <div className="hero-bg-wrapper-nosotros">
+        <img 
+            className="hero-bg-img-nosotros" 
+            src={fondo} 
+            alt="Fondo Nosotros" 
+            onLoad={hideLoader} 
+        />
+        <div className="hero-overlay-nosotros"></div>
+      </div>
+
+      <div className="hero-content-nosotros">
+        <h1 className="titulo-hero-nosotros animate-up">TERRALOTEOS</h1>
+        <div className="linea-decorativa"></div>
+        <h2 className="subtitulo-hero-nosotros animate-up delay-1">DESARROLLOS URBANÍSTICOS</h2>
+        
+        <div className="scroll-btn-nosotros animate-up delay-2" onClick={handleScroll}>
+            <span>Conocé nuestra historia</span>
+            <img src={flecha} alt="Bajar" />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
 

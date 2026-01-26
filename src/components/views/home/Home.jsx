@@ -4,7 +4,6 @@ import Mapas from "../../Mapas";
 import Numeros from "./Numeros";
 import SliderProyectos from "./SliderProyectos";
 import SectionContacto from "../../SectionContacto";
-import CategoriasMob from "./CategoriasMob";
 import check from "../../../assets/iconos/check.png";
 import fondo from "../../../assets/fondos/fondo-main.png";
 
@@ -80,7 +79,7 @@ const Home = () => {
         </div>
 
         <Categorias />
-        <CategoriasMob />
+ 
 
         <div className="contenedor-title">
           <h2 className="sub">NOSOTROS</h2>

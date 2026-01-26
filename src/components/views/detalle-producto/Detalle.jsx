@@ -1,57 +1,62 @@
-
-import { useParams } from "react-router-dom";
-import SectionContacto from "../../SectionContacto";
-import Contenido from "./Contenido";
-import Encabezado from "./Encabezado";
 import { useEffect, useState } from "react";
+import { useParams, Navigate } from "react-router-dom";
 import productos from "../../../data/productos.json";
-import cerrar from "../../../assets/iconos/borrar.png";
-import SliderGaleria from "./SliderGaleria";
 import { useLoading } from "../../context/LoadingContext";
-import emoticon from "../../../assets/iconos/emoticonos.png";
 
+// Componentes
+import Encabezado from "./Encabezado";
+import Contenido from "./Contenido";
+import SectionContacto from "../../SectionContacto";
+import SliderGaleria from "./SliderGaleria";
+import cerrar from "../../../assets/iconos/borrar.png";
 
 
 
 const Detalle = () => {
-
-    const producto = useParams();
-    const [detalleProducto, setDetalleProducto] = useState({});
-    const [sliderVisible, setSliderVisible] = useState(false)
+    const { id } = useParams();
+    const [detalleProducto, setDetalleProducto] = useState(null);
+    const [sliderVisible, setSliderVisible] = useState(false);
     const { hideLoader } = useLoading();
 
     useEffect(() => {
+        // Buscamos por nombre (o id si cambiaste el JSON)
+        const found = productos.find(p => p.nombre === id);
+        if (found) {
+            setDetalleProducto(found);
+        }
+    }, [id]);
 
-        const productPrev = productos.find(p => producto.id === p.nombre);
-        setDetalleProducto(productPrev)
-        
-        
-        
-        
-    }, [])
-
-
+    if (!detalleProducto) return null; // O un spinner
 
     return (
-        <>
+        <main className="detalle-wrapper">
+            
+            <Encabezado detalleProducto={detalleProducto} />
+            
+            <Contenido 
+                detalleProducto={detalleProducto} 
+                setSliderVisible={setSliderVisible} 
+            />
 
+            {/* LIGHTBOX MODAL */}
+            {sliderVisible && (
+                <div className="lightbox-modal">
+                    <img 
+                        src={cerrar} 
+                        alt="Cerrar" 
+                        className="btn-close-modal" 
+                        onClick={() => setSliderVisible(false)} 
+                    />
+                    {/* Reutilizamos tu Slider pero ahora vive dentro del modal */}
+                    <SliderGaleria 
+                        detalleProducto={detalleProducto} 
+                        images={detalleProducto.cardImages} 
+                    />
+                </div>
+            )}
 
-            <main className={`main-${detalleProducto?.clase}`}>
-                <Encabezado detalleProducto={detalleProducto} />
-                <Contenido detalleProducto={detalleProducto} setSliderVisible={setSliderVisible} />
-                {sliderVisible ?
-                    <div className="contenedor-slider-galeria">
-                        <div className="contenedor-boton-cerrar-galeria">
-                            <img onClick={() => setSliderVisible(false)} src={cerrar} alt="Cerrar" />
-                        </div>
-                        <SliderGaleria detalleProducto={detalleProducto.sliderImages} />
-                    </div> : ""}
-                <SectionContacto />
-         
-            </main>
-
-
-        </>
+            <SectionContacto />
+        </main>
     )
 }
 

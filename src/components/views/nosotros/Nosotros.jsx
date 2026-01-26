@@ -3,17 +3,13 @@ import DescripcionNosotros from "./DescripcionNosotros";
 import Encabezado from "./Encabezado";
 
 
-
 const Nosotros = () => {
-
     return (
-        <>
-            <main className="main">
-                <Encabezado />
-                <DescripcionNosotros />
-                <SectionContacto />
-            </main>
-        </>
+        <main className="main-nosotros">
+            <Encabezado />
+            <DescripcionNosotros />
+            <SectionContacto />
+        </main>
     )
 }
 
