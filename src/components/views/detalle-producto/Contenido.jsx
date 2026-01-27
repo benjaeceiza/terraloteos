@@ -66,7 +66,7 @@ const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
                     <div className="spec-column">
                         <h3>Características</h3>
                         {caracteristicas.map((item, idx) => (
-                            <div key={idx} className="spec-item">
+                            <div key={idx} className="spec-item-producto">
                                 <span className="bullet">▸</span>
                                 <p>{item}</p>
                             </div>
@@ -78,7 +78,7 @@ const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
                     <div className="spec-column">
                         <h3>Diferenciales</h3>
                         {diferenciales.map((item, idx) => (
-                            <div key={idx} className="spec-item">
+                            <div key={idx} className="spec-item-producto">
                                 <span className="bullet">★</span>
                                 <p>{item}</p>
                             </div>

@@ -2,45 +2,53 @@ import lote from "../../../assets/iconos/lote.png";
 import diferenciales from "../../../assets/iconos/diferenciales.png";
 import distancia from "../../../assets/iconos/distancia.png";
 
+
 const Detalles = ({ barrio }) => {
     return (
-        <>
-            <section className="section-detalles-casa">
-                <div className="contenedor-detalles-casa">
-                    <ul className="lista-detalles-casa">
-                        <li className="item-detalle-casa">
-                            <div className="contenedor-icono-detalle">
-                                <img src={lote} alt="" className="icono-detalle" />
-                            </div>
-                            <p className="texto-detalle">Lotes</p>
-                            {isNaN(barrio.lotes)
-                                ?
-                                < p className="sub-texto-detalle">{barrio.lotes}</p>
-                                :
-                                <p className="sub-texto-detalle">Desde {barrio.lotes}m2</p>
-
+        <section className="specs-bar-container-barrio">
+            <div className="specs-grid-barrio">
+                
+                {/* ITEM 1: LOTES */}
+                <div className="spec-card-barrio">
+                    <div className="spec-icon-wrapper-barrio">
+                        <img src={lote} alt="Lotes" />
+                    </div>
+                    <div className="spec-content-barrio">
+                        <span className="spec-title-barrio">Superficie</span>
+                        <span className="spec-value-barrio">
+                            {isNaN(barrio.lotes) 
+                                ? barrio.lotes 
+                                : `Desde ${barrio.lotes} m²`
                             }
-                        </li>
-                        <li className="item-detalle-casa">
-                            <div className="contenedor-icono-detalle">
-                                <img src={diferenciales} alt="" className="icono-detalle" />
-                            </div>
-                            <p className="texto-detalle">Diferenciales</p>
-                            <p className="sub-texto-detalle">{barrio.diferenciales}</p>
-                        </li>
-                        <li className="item-detalle-casa">
-                            <div className="contenedor-icono-detalle">
-                                <img src={distancia} alt="" className="icono-detalle" />
-                            </div>
-                            <p className="texto-detalle">Distancias</p>
-                            <p className="sub-texto-detalle">{barrio.distancias}</p>
-                        </li>
-
-                    </ul>
+                        </span>
+                    </div>
                 </div>
-            </section >
-        </>
-    )
+
+                {/* ITEM 2: DIFERENCIALES */}
+                <div className="spec-card-barrio">
+                    <div className="spec-icon-wrapper-barrio">
+                        <img src={diferenciales} alt="Diferenciales" />
+                    </div>
+                    <div className="spec-content-barrio">
+                        <span className="spec-title-barrio">Propuesta</span>
+                        <span className="spec-value-barrio">{barrio.diferenciales}</span>
+                    </div>
+                </div>
+
+                {/* ITEM 3: DISTANCIAS */}
+                <div className="spec-card-barrio highlight-barrio">
+                    <div className="spec-icon-wrapper-barrio">
+                        <img src={distancia} alt="Distancias" />
+                    </div>
+                    <div className="spec-content-barrio">
+                        <span className="spec-title-barrio">Ubicación</span>
+                        <span className="spec-value-barrio">{barrio.distancias}</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
 }
 
 export default Detalles;

@@ -1,46 +1,65 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import casas from "../../../data/casas.json";
-import Encabezado from "./Encabezado";
-import SectionContacto from "../../SectionContacto";
-import EncabezadoMob from "./EncabezadoMob";
-import GaleriaImagenes from "./Galeriaimagenes";
-import Detalles from "./Detalles";
-import Preguntas from "./Preguntas";
-import SliderGaleria from "./SliderGaleria";
-import { useState } from "react";
-import cerrar from "../../../assets/iconos/borrar.png";
 
+// Componentes
+import Encabezado from "./Encabezado"; // Este será el nuevo súper componente
+import GaleriaImagenes from "./Galeriaimagenes";
+import Preguntas from "./Preguntas";
+import SectionContacto from "../../SectionContacto";
+import cerrar from "../../../assets/iconos/borrar.png";
 
 
 const Casa = () => {
     const { tipo } = useParams();
-    const casa = casas.find(e => e.tipo == tipo);
+    const [casa, setCasa] = useState(null);
     const [sliderVisible, setSliderVisible] = useState(false);
-      const [imagenSeleccionada, setImagenSeleccionada] = useState(0);
+    const [imagenSeleccionada, setImagenSeleccionada] = useState(0);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        if (tipo) {
+            // Decodificamos la URL para que encuentre "Tipología A" aunque venga como "Tipología%20A"
+            const nombreNormalizado = decodeURIComponent(tipo);
+            const casaEncontrada = casas.find(e => e.tipo === nombreNormalizado);
+            setCasa(casaEncontrada);
+        }
+    }, [tipo]);
+
+    if (!casa) return <div className="loading-screen">Cargando propiedad...</div>;
 
     return (
-        <>
+        <main className="main-casa-premium">
 
-            <main className="main">
-                <Encabezado casa={casa} />
-                <EncabezadoMob casa={casa} />
-                <Detalles casa={casa} />
-                <GaleriaImagenes casa={casa} setSliderVisible={setSliderVisible} setImagenSeleccionada={setImagenSeleccionada} />
-                <div className="contenedor-title">
+            {/* 1. HERO SECTION: Foto principal + Todos los detalles técnicos */}
+            <Encabezado casa={casa} />
+
+            {/* 2. GALERÍA */}
+            <section className="seccion-premium">
+                <div className="contenedor-titulo-seccion">
+                     <h2 className="sub">GALERÍA DE IMÁGENES</h2>
+                </div>
+                <GaleriaImagenes
+                    casa={casa} 
+                    setSliderVisible={setSliderVisible}
+                    setImagenSeleccionada={setImagenSeleccionada}
+                />
+            </section>
+
+            {/* 3. PREGUNTAS */}
+            <section className="seccion-premium bg-darker">
+                <div className="contenedor-titulo-seccion">
                     <h2 className="sub">PREGUNTAS FRECUENTES</h2>
                 </div>
                 <Preguntas />
-                <SectionContacto />
-                {sliderVisible ?
-                    <div className="contenedor-slider-galeria">
-                        <div className="contenedor-boton-cerrar-galeria">
-                            <img onClick={() => setSliderVisible(false)} src={cerrar} alt="Cerrar" />
-                        </div>
-                        <SliderGaleria casa={casa} indiceInicial={imagenSeleccionada}/>
-                    </div> : ""}
-            </main>
+            </section>
 
-        </>
+            {/* 4. CONTACTO */}
+            <SectionContacto />
+
+            
+
+        </main>
     )
 }
 

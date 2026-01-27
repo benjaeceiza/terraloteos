@@ -2,7 +2,7 @@
     {
         "nombre": "Estación Conlara",
         "logo": "https://i.postimg.cc/x12t7Ynx/logo-conlara.png",
-        "imgPrincipal": "https://i.postimg.cc/j2yhdY1L/fondo-4.jpg",
+        "imgPrincipal": "https://i.postimg.cc/G28MMHQQ/20250930_0923_Caballos_en_Pasto_Ralo_remix_01k6d93tj1fg09x9qbjnexy8dv.png",
         "descripcion": "Hay lugares que invitan a quedarse, a construir sueños en armonía con la naturaleza. Estebarrio nació con esa esencia un refugio donde el paisaje serrano se une con la tranquilidad yla posibilidad de un nuevo comienzo. Cada amanecer ilumina sus calles, mientras la brisa y lalaguna propia enmarcan un entorno que inspira. Un barrio abierto, sin apuros ni límites, donde la vida fluye con la misma calma que la naturaleza que lo rodea.",
         "estado": "Terminado",
         "distancias": "10 min de Merlo / 6 min de Palo Alto",
@@ -50,7 +50,7 @@
     {
         "nombre": "Ayres de larca 1",
         "logo": "https://i.postimg.cc/Jhq2P53N/ayres-de-larca-Photoroom.png",
-        "imgPrincipal": "https://i.postimg.cc/44cP1p3s/fondo-2.jpg",
+        "imgPrincipal": "https://i.postimg.cc/Dz2hzrDM/entorno_de_ayres.png",
         "descripcion": "En Ayres de Larca, cada rincón te invita a conectar con la naturaleza. Con impresionantes vistas a las sierras, este barrio es el refugio perfecto para quienes buscan tranquilidad y bienestar. Aquí, el paisaje se convierte en parte de tu vida diaria, ofreciéndote el espacio ideal para comenzar una nueva etapa. Vive rodeado de calma, disfrutando de la serenidad que solo un entorno natural puede brindar.",
         "estado": "Terminado",
         "distancias": "15 min de Merlo / 4.000 m del Dique Piscu Yaco",
@@ -71,18 +71,26 @@
         "diferenciales": "Vistas abiertas, sin expensas, retorno rápido",
         "ubicacion": "Villa Larca, San Luis",
         "galeriaImagenes": [
-            "https://i.postimg.cc/q7cbG5d5/ayres_L1.png",
-            "https://i.postimg.cc/9fHgZjsy/ayres_L5.jpg",
-            "https://i.postimg.cc/6QxbnNFY/ayres_L6.jpg",
-            "https://i.postimg.cc/k5N1ypmd/AYRESL2.jpg",
-            "https://i.postimg.cc/XvKHgz0P/AYRESL3.jpg",
-            "https://i.postimg.cc/N0vCmwZn/Ayres_L3.png",
-            "https://i.postimg.cc/bvfVkj4m/ayres_L4.jpg",
-            "https://i.postimg.cc/JhCYZWSJ/cascada_entorno_ayres.png",
-            "https://i.postimg.cc/YSBDYwTL/Chorro_san_de_san_ignacio.webp",
-            "https://i.postimg.cc/43R2VTjy/diquepiscuyaco.webp",
-            "https://i.postimg.cc/R0xpKz2n/entorno_de_ayres.png",
-            "https://i.postimg.cc/QMg4qy3x/Trekking.jpg"
+            "https://i.postimg.cc/MX22JVVP/20251025_110607.jpg",
+            "https://i.postimg.cc/HLBg8J1D/ayres_L1.png",
+            "https://i.postimg.cc/XvVWvfmM/ayres_L2.png",
+            "https://i.postimg.cc/HLpmLwKB/Ayres_L3.png",
+            "https://i.postimg.cc/Bn5ssYhy/ayres_L4.jpg",
+            "https://i.postimg.cc/k5nC5QZv/ayres_L5.jpg",
+            "https://i.postimg.cc/zGw55tdQ/ayres_L6.jpg",
+            "https://i.postimg.cc/nzXhHK9Q/AYRESL2.jpg",
+            "https://i.postimg.cc/Y9vCpNGZ/AYRESL3.jpg",
+            "https://i.postimg.cc/ZqTmq8g2/cascada_entorno_ayres.png",
+            "https://i.postimg.cc/P5bhh36V/Chorro_san_de_san_ignacio.webp",
+            "https://i.postimg.cc/xjWc1ZRD/diquepiscuyaco.webp",
+            "https://i.postimg.cc/Dz2hzrDM/entorno_de_ayres.png",
+            "https://i.postimg.cc/25zY5QJw/Nueva.png",
+            "https://i.postimg.cc/nzrt4Hn1/pexels_busranur_aydin_3800407_16556855.jpg",
+            "https://i.postimg.cc/T3cwQ3XR/Trekking.jpg",
+            "https://i.postimg.cc/t4dyySrr/Whats_App_Image_2026_01_21_at_11_42_03.jpg",
+            "https://i.postimg.cc/x1GYYxs6/Whats_App_Image_2026_01_21_at_20_07_56.jpg",
+            "https://i.postimg.cc/6pVwwjHY/Whats_App_Image_2026_01_21_at_20_08_39_(1).jpg",
+            "https://i.postimg.cc/ZqKqQzTq/Whats_App_Image_2026_01_21_at_20_08_41.jpg"
         ],
         "broshure": "/pdf/ayres-de-larca-1.pdf",
         "mapa": "https://maps.app.goo.gl/NtuQkUmf1p7REbpz8"
@@ -110,14 +118,24 @@
         "propuesta": "Hasta 84 cuotas, entrega mínima",
         "diferenciales": "Extensión directa de Larca I, alta proyección de plusvalía",
         "ubicacion": "Villa Larca, San Luis",
-        "galeriaImagenes": [],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/SKWGg8xC/20250303_115614.jpg",
+            "https://i.postimg.cc/fbjxcN8X/20251007_130440.jpg",
+            "https://i.postimg.cc/fbhcSLjr/8C0A1D2C_40C2_436C_A435_FA6E36F6AED9.jpg",
+            "https://i.postimg.cc/jjzhMNSx/Copia_de_Whats_App_Image_2026_01_21_at_20_08_39_(1).jpg",
+            "https://i.postimg.cc/J0hc72cB/DJI_0911_(1).jpg",
+            "https://i.postimg.cc/pTRJ4Tmz/pexels_izmir_28641064.jpg",
+            "https://i.postimg.cc/FKjxTcHY/pexels_leonardo_delsabio_2150529415_32217975.jpg",
+            "https://i.postimg.cc/Sskf3snX/pexels_sanmosconi_14667188.jpg",
+            "https://i.postimg.cc/25F4QD0x/pexels_urielluphoto_34065779.jpg"
+        ],
         "broshure": "/pdf/ayres-de-larca-2.pdf",
-        "mapa":"https://maps.app.goo.gl/yQ2yu9kewBazDjmQA"
+        "mapa": "https://maps.app.goo.gl/yQ2yu9kewBazDjmQA"
     },
     {
         "nombre": "Terrazas del Talar",
         "logo": "https://i.postimg.cc/CxmFfkZW/Gemini-Generated-Image-kh8y6fkh8y6fkh8y-Photoroom.png",
-        "imgPrincipal": "https://i.postimg.cc/d1y24Kw4/fondo-9.jpg",
+        "imgPrincipal": "https://i.postimg.cc/yN2pp99D/fondo.png",
         "descripcion": "Loteo exclusivo que nos propone una experiencia única, garantiza do comodidad, bienestar y calidad de vida para quienes deciden invertir.  Situado en la avenida de acceso a el Talar, ruta N°1, Km 13 en la localidad de Los Molles, al pie de las Sierras de Los Comechingones ya pocos metros del camping y balneario. Además como valor agregado cuenta con 112 hectáreas que conforman LA PRIMERA RESERVA NATURAL PRIVADA PROTEGIDA POR LA PROVINCIA. ",
         "estado": "En desarrollo",
         "distancias": "Ruta N°1 Km 13, cerca del balneario",
@@ -138,10 +156,29 @@
         "diferenciales": "Área Natural Protegida, lotes grandes, entorno exclusivo, camping y balneario 'el talar'",
         "ubicacion": "Los Molles, San Luis",
         "galeriaImagenes": [
-            "https://i.postimg.cc/Mp5Ckh2x/DJI-0480.jpg",
-            "https://i.postimg.cc/PxgczHZb/DJI-0660.jpg",
-            "https://i.postimg.cc/TYqSmZPm/DJI-0672.jpg",
-            "https://i.postimg.cc/SNp3nymk/DJI-0665.jpg"
+            "https://i.postimg.cc/mr1FjFB7/02EB69F7_E423_4F6C_98F5_6FD7F9C93B0C.jpg",
+            "https://i.postimg.cc/j5zn00WM/20241018_164448(1).jpg",
+            "https://i.postimg.cc/4ygtmNkk/20250727-155208.jpg",
+            "https://i.postimg.cc/0jPM9WmV/20250727-161609.jpg",
+            "https://i.postimg.cc/858f0PCs/20250727-183517.jpg",
+            "https://i.postimg.cc/j2twRgP0/20250729-122631.jpg",
+            "https://i.postimg.cc/SKYzdzkC/20251025-130119.jpg",
+            "https://i.postimg.cc/hPMxtB2Q/20251025-130125.jpg",
+            "https://i.postimg.cc/pXk8LHsZ/20251025-130140.jpg",
+            "https://i.postimg.cc/7Z6zCWcx/6D16D0C9-D575-4A06-BCF3-CB070B3AF2F7-JPG.jpg",
+            "https://i.postimg.cc/sDKSgrTm/Copia-de-DJI-0089.jpg",
+            "https://i.postimg.cc/Fz4c7s5t/DEF0020E-7BE2-4DD6-8674-88153066D9B9.jpg",
+            "https://i.postimg.cc/D0Ts8ykT/DJI-0665.jpg",
+            "https://i.postimg.cc/7Z6zCWc4/E47A885B-E2B0-4375-97FE-55762CC904A5-JPG.jpg",
+            "https://i.postimg.cc/xTgH1266/IMG-5213.jpg",
+            "https://i.postimg.cc/zBnHZZLj/IMG-5238.jpg",
+            "https://i.postimg.cc/cJt8h80p/pexels-kampus-5937225.jpg",
+            "https://i.postimg.cc/W1Hk07LG/pexels-martin-que-243128669-29581854.jpg",
+            "https://i.postimg.cc/Wz8DzGwT/pexels-ramon-hernandez-243129494-27600453.jpg",
+            "https://i.postimg.cc/x82HcTr7/pexels-urielluphoto-34027990.jpg",
+            "https://i.postimg.cc/g2JhwT7f/Whats-App-Image-2026-01-21-at-11-42-28.jpg",
+            "https://i.postimg.cc/FsGcH4Tn/Whats-App-Image-2026-01-21-at-11-42-46.jpg",
+            "https://i.postimg.cc/W13ZDHy5/Whats-App-Image-2026-01-21-at-20-07-59.jpg" 
         ],
         "broshure": "/pdf/terrazas-del-talar.pdf",
         "mapa": "https://maps.app.goo.gl/k78CGbPCCSNy9ceY6"
@@ -197,9 +234,31 @@
         "diferenciales": "Reserva ecológica, humedales, vistas a las sierras",
         "ubicacion": "Villa de Merlo, San Luis",
         "galeriaImagenes": [
-            "https://i.postimg.cc/BtWhDBrm/IMG-6806.jpg",
-            "https://i.postimg.cc/h4JcLPFm/IMG-6807.jpg",
-            "https://i.postimg.cc/Kj3qRHHK/IMG-6808.jpg"
+            "https://i.postimg.cc/qRvjgqpd/20250303_115628.jpg",
+            "https://i.postimg.cc/DZwBm07v/20250303_124622.jpg",
+            "https://i.postimg.cc/9fWBN0RM/20250610_121732.jpg",
+            "https://i.postimg.cc/JtVN3zCy/20250610_124631.jpg",
+            "https://i.postimg.cc/dVRBBr1Z/20250610_155701.jpg",
+            "https://i.postimg.cc/zB2phNf0/20250906_135118.jpg",
+            "https://i.postimg.cc/NFyD7nyJ/20251013_153443(1).jpg",
+            "https://i.postimg.cc/JnYKX8h6/20251025_110548(1).jpg",
+            "https://i.postimg.cc/CKF465BB/20260107_165411.jpg",
+            "https://i.postimg.cc/vB2Xnymr/BA14B61B_EBE8_44C1_9B4D_0129F83676C6_JPG.jpg",
+            "https://i.postimg.cc/t4GkW2XG/BEF00E90_D6A1_4689_928E_5A314E719FBB.jpg",
+            "https://i.postimg.cc/w38X5jY3/D77E048F_5562_46F9_9149_B0F81B426C2E.jpg",
+            "https://i.postimg.cc/kMVLyYPZ/DJI_0588.jpg",
+            "https://i.postimg.cc/W4j9LSKh/obras_mv_II.jpg",
+            "https://i.postimg.cc/xdYsDg7J/obras_mv_III.jpg",
+            "https://i.postimg.cc/qRvjgqp0/pexels_julieta_hernandez_3271125_34139871.jpg",
+            "https://i.postimg.cc/d1V4D3J0/pexels_mahmoud_yahyaoui_27866034.jpg",
+            "https://i.postimg.cc/kgyH5kWW/pexels_urielluphoto_34000806.jpg",
+            "https://i.postimg.cc/Z5mg4TvW/Whats_App_Image_2026_01_21_at_11_43_01.jpg",
+            "https://i.postimg.cc/9fVx51SL/Whats_App_Image_2026_01_21_at_11_43_16.jpg",
+            "https://i.postimg.cc/qvrY4k6J/Whats_App_Image_2026_01_21_at_11_43_50.jpg",
+            "https://i.postimg.cc/q70mVQY2/Whats_App_Image_2026_01_21_at_11_48_30.jpg",
+            "https://i.postimg.cc/QdDPhXKV/Whats_App_Image_2026_01_21_at_11_52_06.jpg",
+            "https://i.postimg.cc/HLHSD3Kr/Whats_App_Image_2026_01_21_at_20_07_58_(2).jpg",
+            "https://i.postimg.cc/YSkXK8V2/Whats_App_Image_2026_01_21_at_20_08_39_(2).jpg"
         ],
         "broshure": "/pdf/merlo-village.pdf",
         "mapa": "https://maps.app.goo.gl/ayDJk8wQrhca8ZhP6"
@@ -229,11 +288,12 @@
         "ubicacion": "",
         "galeriaImagenes": [
             "https://i.postimg.cc/fWPR3wCt/DJI-0861.jpg",
-            "https://i.postimg.cc/VLbLn3Z7/DJI-0862.jpg",
-            "https://i.postimg.cc/fyVWHFzR/DJI-0870.jpg"
+            "https://i.postimg.cc/8cv94c93/IMG_ARENAS_I.jpg",
+            "https://i.postimg.cc/MHBN5HNF/IMG_ARENAS_II.jpg",
+            "https://i.postimg.cc/tJ6wkJwc/IMG_ARENAS_III.jpg"
         ],
         "broshure": "/pdf/arenas-del-rio.pdf",
-        "mapa":"https://maps.app.goo.gl/7Uo6evvbacaAQSHe9?g_st=aw"
+        "mapa": "https://maps.app.goo.gl/7Uo6evvbacaAQSHe9?g_st=aw"
     },
     {
         "nombre": "Estación del Valle",
@@ -296,7 +356,7 @@
     {
         "nombre": "Pueblo Mio",
         "logo": "https://i.postimg.cc/C1X44pc4/logo-pueblo-mio.png",
-        "imgPrincipal": "https://i.postimg.cc/3x8Z76Fx/fondo-8.png",
+        "imgPrincipal": "https://i.postimg.cc/T1f6SrxX/pexels_emareynares_17300127.jpg",
         "descripcion": "Pueblo Mío, loteo situado sobre el km 33 de la ruta provincial Nº1, a 900 metros de Villa Larca, a 20 minutos de Merlo, San Luis. Frente al ingreso del atrac�vo turis�co Chorro de San Ignacio. Es un desarrollo de 250 lotes. Caracterizado por la presencia de Palmeras Caranday.",
         "estado": "",
         "distancias": "",
@@ -316,7 +376,18 @@
         "propuesta": "",
         "diferenciales": "",
         "ubicacion": "",
-        "galeriaImagenes": [],
+        "galeriaImagenes": [
+            "https://i.postimg.cc/yY6KyXnQ/20260117_152242.jpg",
+            "https://i.postimg.cc/fTHN2tg6/86B07AC8_8CBC_4486_A666_6C3531391B8C.jpg",
+            "https://i.postimg.cc/nL9pQF26/Captura_de_pantalla_2026_01_21_121614.png",
+            "https://i.postimg.cc/LXzSNxrc/DJI_0146.jpg",
+            "https://i.postimg.cc/xCKQt6wS/DJI_0151.jpg",
+            "https://i.postimg.cc/G2kRqXZ7/DJI_0161.jpg",
+            "https://i.postimg.cc/T1f6SrxX/pexels_emareynares_17300127.jpg",
+            "https://i.postimg.cc/1XBQZfRB/pexels_the_ahnafpiash_17859519.jpg",
+            "https://i.postimg.cc/9Fxh8RNx/pexels_urielluphoto_34087790.jpg",
+            "https://i.postimg.cc/C57gVzMk/pueblo_mio_item3.webp"
+        ],
         "broshure": "/pdf/pueblo-mio.pdf",
         "mapa": "https://maps.app.goo.gl/7beyFQPLjNCusbR4A"
     }

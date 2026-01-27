@@ -12,12 +12,6 @@ const Mapas = () => {
             mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.494102030164!2d-65.4608835!3d-33.670268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16a63a6ac37f9%3A0x1d81cd2d27c11a7b!2sTerraloteos!5e0!3m2!1ses-419!2sar!4v1756247020567!5m2!1ses-419!2sar" // Tu mapaVm2
         },
         {
-            id: 2,
-            ciudad: "Villa Mercedes",
-            direccion: "Av. Bartolomé Mitre 734",
-            mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.12755068707!2d-65.4636013!3d-33.67976129999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16a88ab099ea7%3A0xbaa9df1d0c1964bc!2sAv.%20Bartolom%C3%A9%20Mitre%20734%2C%20D5730%20Villa%20Mercedes%2C%20San%20Luis!5e0!3m2!1ses-419!2sar!4v1756246973648!5m2!1ses-419!2sar" // Tu mapaVm
-        },
-        {
             id: 3,
             ciudad: "San Luis",
             direccion: "Av. Boulevard Las Cañadas",

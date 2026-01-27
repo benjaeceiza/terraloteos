@@ -5,7 +5,6 @@ import SectionContacto from "../../SectionContacto";
 import GaleriaImagenes from "./GaleriaImagenes";
 import SliderModelos from "../desarrollos/SliderModelos"
 import EncabezadoMob from "./EncabezadoMob";
-import SliderGaleria from "./SliderGaleria";
 import cerrar from "../../../assets/iconos/borrar.png";
 import { useState } from "react";
 import Detalles from "./Detalles";
@@ -26,6 +25,9 @@ const Barrio = () => {
         <Encabezado barrio={barrio} />
         <EncabezadoMob barrio={barrio} />
         <Detalles barrio={barrio} />
+        <div className="contenedor-titulo-seccion my-5">
+          <h2 className="sub">GALERÍA DE IMÁGENES</h2>
+        </div>
         <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible} setImagenSeleccionada={setImagenSeleccionada} />
         <div className="contenedor-title">
           <h2 className="sub">NUESTROS MODELOS</h2>
@@ -36,13 +38,6 @@ const Barrio = () => {
         </div>
         <Preguntas />
         <SectionContacto />
-        {sliderVisible ?
-          <div className="contenedor-slider-galeria">
-            <div className="contenedor-boton-cerrar-galeria">
-              <img onClick={() => setSliderVisible(false)} src={cerrar} alt="Cerrar" />
-            </div>
-            <SliderGaleria barrio={barrio} indiceInicial={imagenSeleccionada} />
-          </div> : ""}
       </main>
     </>
   )

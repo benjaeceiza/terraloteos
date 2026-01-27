@@ -9,6 +9,14 @@ const Encabezado = () => {
 
     const { hideLoader } = useLoading();
 
+    const handleScroll = () => {
+        const section = document.querySelector("#info-data");
+        if (section) {
+            const y = section.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <section className="encabezado-fundacion">
@@ -16,17 +24,11 @@ const Encabezado = () => {
                 <div className="contenedor-logo-fundacion">
                     <img className="logo-fundacion" src={logo} alt="" />
                     <h1>Sembramos <span className="naranja">futuro</span>, construimos <span className="naranja">conciencia</span>.</h1>
-                    <div className="contenedor-boton-flecha"
-                        onClick={() => {
-                            const section = document.querySelector("#info-data");
-                            if (section) {
-                                section.scrollIntoView({ behavior: "smooth" });
-                            }
-                        }}
+                </div>
 
-                    >
-                        <img className="flecha-encabezado-mobile" src={fleca} alt="flecha hacia abajo" />
-                    </div>
+                <div className="scroll-btn-nosotros scroll-fundacion animate-up delay-2 " onClick={handleScroll}>
+                    <span>Conocé más</span>
+                    <img src={fleca} alt="Bajar" />
                 </div>
             </section>
         </>

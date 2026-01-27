@@ -1,10 +1,12 @@
-import flecha from "../../../assets/iconos/mas-grande-que.png";
+import { useLoading } from "../../context/LoadingContext";
+
+// --- IMPORTACIÓN DE TODOS LOS ICONOS NECESARIOS ---
 import habitacion from "../../../assets/iconos/habitacion.png";
 import salaEstar from "../../../assets/iconos/sala-de-estar.png";
 import comedor from "../../../assets/iconos/comedor.png";
 import cocina from "../../../assets/iconos/cocina.png";
 import cochera from "../../../assets/iconos/cochera.png";
-import galeria from "../../../assets/iconos/hall.png";
+import galeriaIcon from "../../../assets/iconos/hall.png"; // Usando hall para galería
 import entrepiso from "../../../assets/iconos/entrepiso.png";
 import desayunador from "../../../assets/iconos/desayunador.png";
 import terraza from "../../../assets/iconos/terraza.png";
@@ -12,170 +14,132 @@ import lavadero from "../../../assets/iconos/lavadero.png";
 import deposito from "../../../assets/iconos/deposito.png";
 import hallIngreso from "../../../assets/iconos/hall.png";
 import despensa from "../../../assets/iconos/despensa.png";
-import banos from "../../../assets/iconos/bano.png";
+import banosIcon from "../../../assets/iconos/bano.png";
 import expansion from "../../../assets/iconos/metros.png";
-import { useLoading } from "../../context/LoadingContext";
-import { Link } from "react-router-dom";
+// Iconos genéricos para los que faltaban en tu lista anterior
+import vestidorIcon from "../../../assets/iconos/vestidor.png";
+import banoSuiteIcon from "../../../assets/iconos/bano.png";
+import tiempoIcon from "../../../assets/iconos/reloj-negro.png"; // Para días de obra
+
+// --- MAPEO: Conecta las claves de tu JSON con el icono y el nombre a mostrar ---
+const iconMap = {
+    salaEstar: { icon: salaEstar, label: "Sala de Estar" },
+    comedor: { icon: comedor, label: "Comedor" },
+    cocina: { icon: cocina, label: "Cocina" },
+    cochera: { icon: cochera, label: "Cochera" },
+    galeria: { icon: galeriaIcon, label: "Galería" },
+    expansion: { icon: expansion, label: "Posible Expansión" },
+    entrepiso: { icon: entrepiso, label: "Entrepiso" },
+    desayunador: { icon: desayunador, label: "Desayunador" },
+    terraza: { icon: terraza, label: "Terraza" },
+    lavadero: { icon: lavadero, label: "Lavadero" },
+    deposito: { icon: deposito, label: "Depósito" },
+    hallIngreso: { icon: hallIngreso, label: "Hall de Ingreso" },
+    despensa: { icon: despensa, label: "Despensa" },
+    vestidor: { icon: vestidorIcon, label: "Vestidor" },
+    banoSuite: { icon: banoSuiteIcon, label: "Baño en Suite" }
+    // Nota: Habitaciones y Baños los trato aparte en la barra de datos clave
+};
 
 const Encabezado = ({ casa }) => {
-
     const { hideLoader } = useLoading();
 
+    // Filtramos las características booleanas (true/false) del JSON
+    const activeFeatures = Object.keys(casa).filter(key =>
+        iconMap[key] && casa[key] === true
+    );
+
     return (
+        <section className="hero-split-layout">
 
-
-        <>
-            <section className="sectionm-encabezado-casa">
-                <img className="img-encabezado-casa" src={casa.imgPrincipal} alt={casa.tipo} onLoad={hideLoader} />
-                <div className="contenedor-data-casa">
-                    <h1 className="title-casa-encabezado" >{casa.tipo}</h1>
+            {/* --- COLUMNA IZQUIERDA: VISUAL --- */}
+            <div className="hero-visual-side">
+                <div className="image-container-sticky">
+                    <img
+                        src={casa.imgPrincipal}
+                        alt={`Modelo ${casa.tipo}`}
+                        className="hero-image-main"
+                        onLoad={hideLoader}
+                    />
+                    <div className="hero-overlay-gradient"></div>
                 </div>
-                <div className="contenedor-textos-casa">
-                    <h2 className="titulo-encabezado-casa">TU CASA IDEAL</h2>
-                    <div className="contenedor-caracteristicas-data">
-                        <div className="contenedor-descripcion-casa">
-                            <p>{casa.descripcion}</p>
+            </div>
+
+            {/* --- COLUMNA DERECHA: INFORMACIÓN --- */}
+            <div className="hero-info-side">
+                <div className="info-content-wrapper">
+
+                    {/* 1. Título */}
+                    <div className="header-block">
+                        <span className="accent-label">MODELO DE VIVIENDA</span>
+                        <h1 className="model-title">{casa.tipo}</h1>
+                        <div className="separator-line"></div>
+                    </div>
+
+                    {/* 2. Barra de Datos Clave (Resumen rápido) */}
+                    <div className="key-specs-bar">
+                         {/* Usamos el icono de reloj que tenías */}
+                         <div className="spec-item highlight">
+                            <img src={tiempoIcon} alt="Tiempo" className="spec-icon-small"/>
+                             <div>
+                                <span className="spec-value">{casa.entrega || 180} Días</span>
+                                <span className="spec-label">Plazo de Obra</span>
+                             </div>
                         </div>
-                        <div className="contenedor-caracteristicas-casa">
-                            <p className="titulo-lista">CARACTERISTICAS</p>
-                            <ul className="lista-caracteristicas-modelo">
-                                {casa.habitaciones
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={habitacion} alt="" />
-                                        {casa.habitaciones == 1
-                                         ?
-                                         <p>1 Habitacion</p>
-                                         :
-                                         <p>{casa.habitaciones} Habitaciones</p>
-                                        }
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.salaEstar
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={salaEstar} alt="" />
-                                        <p>Sala estar</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.comedor
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={comedor} alt="" />
-                                        <p>Comedor</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.cocina
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={cocina} alt="" />
-                                        <p>Cocina</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.cochera
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={cochera} alt="" />
-                                        <p>Cochera</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.galeria
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={galeria} alt="" />
-                                        <p>Galeria</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.expansion
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={expansion} alt="" />
-                                        <p>Expansión</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.entrepiso
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={entrepiso} alt="" />
-                                        <p>Entrepiso</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.desayunador
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={desayunador} alt="" />
-                                        <p>Desayunador</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.terraza
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={terraza} alt="" />
-                                        <p>Terraza</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.lavadero
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={lavadero} alt="" />
-                                        <p>Lavadero</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.deposito
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={deposito} alt="" />
-                                        <p>Depósito</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.hallIngreso
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={hallIngreso} alt="" />
-                                        <p>Hall ingreso</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.despensa
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={despensa} alt="" />
-                                        <p>Despensa</p>
-                                    </li>
-                                    :
-                                    ""}
-                                {casa.banos
-                                    ?
-                                    <li className="item-caracteristicas-modelo">
-                                        <img src={banos} alt="" />
-                                        <p>Baño</p>
-                                    </li>
-                                    :
-                                    ""}
-                               
-                            </ul>
+                        <div className="spec-item">
+                            <span className="spec-value">{casa.terreno} m²</span>
+                            <span className="spec-label">Terreno</span>
+                        </div>
+                        <div className="spec-item">
+                            <span className="spec-value">{casa.habitaciones}</span>
+                            <span className="spec-label">Dormitorios</span>
+                        </div>
+                        <div className="spec-item">
+                            {/* Usamos la clave exacta de tu JSON: "baños" */}
+                            <span className="spec-value">{casa.baños}</span>
+                            <span className="spec-label">Baños</span>
                         </div>
                     </div>
-                        <div className="contenedor-botones-barrio">
-                            <a href={casa.planos} download={""}><button className="boton-barrio">DESCARGAR PLANOS</button></a>
+
+                    {/* 3. Descripción */}
+                    <div className="description-block">
+                        <h3 className="section-subtitle">Descripción</h3>
+                        <p>{casa.descripcion}</p>
+                    </div>
+
+                    {/* 4. Grilla de Comodidades (Iconos) */}
+                    {activeFeatures.length > 0 && (
+                        <div className="features-block">
+                            <h3 className="section-subtitle">Comodidades y Servicios</h3>
+                            <div className="features-grid">
+                                {activeFeatures.map((key) => (
+                                    <div key={key} className="feature-card">
+                                        <div className="feature-icon-box">
+                                            <img src={iconMap[key].icon} alt={iconMap[key].label} />
+                                        </div>
+                                        <span className="feature-name">{iconMap[key].label}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
+                    )}
+
+                    {/* 5. Botón de Acción (CTA) */}
+                    <div className="cta-block">
+                        {casa.planos ? (
+                            <a href={casa.planos} download className="btn-download-plans">
+                                DESCARGAR PLANOS PDF
+                            </a>
+                        ) : (
+                            <button className="btn-download-plans disabled">Planos no disponibles</button>
+                        )}
+                         <p className="cta-disclaimer">Consultá por financiación y detalles técnicos específicos.</p>
+                    </div>
+
                 </div>
-          
-            </section>
-        </>
-    )
-}
+            </div>
+        </section>
+    );
+};
 
 export default Encabezado;

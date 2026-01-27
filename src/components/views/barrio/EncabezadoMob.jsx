@@ -16,6 +16,16 @@ import fleca from "../../../assets/iconos/flecha-hacia-abajo.png";
 const EncabezadoMob = ({ barrio }) => {
 
     const { hideLoader } = useLoading();
+
+    const handleScrollDown = () => {
+        const section = document.querySelector("#subtitulo");
+        if (section) {
+            // El offset -80 es para que el menú de arriba no tape el título del listado
+            const y = section.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <>
@@ -25,21 +35,14 @@ const EncabezadoMob = ({ barrio }) => {
                     <div className="contenedor-logo-barrio">
                         <img id="logo-encabezado-barrio" className="logo-encabezado-barrio-mob" src={barrio.logo}
                             alt="Logo barrio" />
-                    <div className="contenedor-boton-flecha"
-                        onClick={() => {
-                            const section = document.querySelector("#descripcion");
-                            if (section) {
-                                section.scrollIntoView({ behavior: "smooth" });
-                            }
-                        }}
-
-                    >
-                        <img className="flecha-encabezado-mobile" src={fleca} alt="flecha hacia abajo" />
-                    </div>
+                        <div className="scroll-arrow-container  animate-fade-in delay-3" onClick={handleScrollDown}>
+                            <span>Ver Productos</span>
+                            <img src={fleca} alt="Bajar" className="bounce-arrow" />
+                        </div>
                     </div>
                     <div id="descripcion" className="contenedor-data-barrio-mob">
                         <div className="contenedor-info-barrio-mob">
-                            <h1 className="sub titulo-barrio">UN LUGAR DIFERENTE</h1>
+                            <h1 id="subtitulo" className="sub titulo-barrio">UN LUGAR DIFERENTE</h1>
                             <div className="contenedor-datos">
                                 <div className="descripcion">
                                     <p>{barrio.descripcion}</p>
@@ -91,6 +94,7 @@ const EncabezadoMob = ({ barrio }) => {
                             </div>
                         </div>
                     </div>
+
                 </section>
             </>
         </>

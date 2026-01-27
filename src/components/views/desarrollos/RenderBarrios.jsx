@@ -1,80 +1,60 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import barrios from "../../../data/barrios.json";
 import { useLoading } from "../../context/LoadingContext";
-import { useState } from "react";
+
 
 const RenderBarrios = () => {
     const { showLoader } = useLoading();
-    const [loadingImages, setLoadingImages] = useState({});
+    // Estado simple para controlar qué imágenes ya cargaron
+    const [imagesLoaded, setImagesLoaded] = useState({});
 
     const handleImageLoad = (nombre) => {
-        setLoadingImages(prev => ({
-            ...prev,
-            [nombre]: false,
-        }));
-    };
-
-    const handleImageStart = (nombre) => {
-        setLoadingImages(prev => ({
-            ...prev,
-            [nombre]: true,
-        }));
+        setImagesLoaded(prev => ({ ...prev, [nombre]: true }));
     };
 
     return (
-        <section id="section-barrios" className="section-barrios">
-            {barrios.map(item => {
-                const isLoading = loadingImages[item.nombre] !== false;
+        <section id="section-barrios" className="barrios-grid-container">
+            {barrios.map((item) => (
+                <Link
+                    key={item.nombre}
+                    to={`/barrio/${item.nombre}`}
+                    onClick={showLoader}
+                    className="barrio-card"
+                >
+                    {/* Contenedor de Imagen con Efecto Zoom */}
+                    <div className="barrio-img-wrapper">
+                        <img
+                            src={item.imgPrincipal}
+                            alt={item.nombre}
+                            className={`barrio-bg ${imagesLoaded[item.nombre] ? 'loaded' : ''}`}
+                            onLoad={() => handleImageLoad(item.nombre)}
+                        />
+                        
+                        {/* Spinner de carga (solo si no ha cargado la imagen) */}
+                        {!imagesLoaded[item.nombre] && (
+                            <div className="barrio-loader">
+                                <div className="spinner-border text-light" role="status"></div>
+                            </div>
+                        )}
+                    </div>
 
-                return (
-                    <Link
-                        key={item.nombre}
-                        to={`/barrio/${item.nombre}`}
-                        onClick={showLoader}
-                        className="link-barrio"
-                    >
-                        <div className="card-barrios">
-
-                            {isLoading ? (
-                                /* 🔄 SOLO LOADER */
-                                <div className="spinner-barrio">
-                                    <div className="spinner-border text-white" role="status">
-                                        <span className="visually-hidden">Loading...</span>
-                                    </div>
-                                </div>
-                            ) : (
-                                /* ✅ CONTENIDO REAL */
-                                <>
-                                    <img
-                                        className="fondo-card-barrio"
-                                        src={item.imgPrincipal}
-                                        alt="Barrio"
-                                    />
-
-                                    <div className="contenedor-data-barrios">
-                                        <img
-                                            className="logo-card-barrios"
-                                            src={item.logo}
-                                            alt="Logo Barrio"
-                                        />
-                                    </div>
-                                </>
-                            )}
-
-                            {/* imagen invisible SOLO para detectar carga */}
+                    {/* Overlay y Contenido (Siempre presentes pero animados) */}
+                    <div className="barrio-overlay">
+                        <div className="barrio-content">
                             <img
-                                src={item.imgPrincipal}
-                                alt=""
-                                style={{ display: "none" }}
-                                onLoad={() => handleImageLoad(item.nombre)}
-                                onError={() => handleImageLoad(item.nombre)}
-                                onLoadStart={() => handleImageStart(item.nombre)}
+                                className="barrio-logo"
+                                src={item.logo}
+                                alt={`Logo ${item.nombre}`}
                             />
-
+                            <div className="barrio-cta">
+                                <span className="linea-naranja"></span>
+                                <span className="texto-ver">VER PROYECTO</span>
+                            </div>
                         </div>
-                    </Link>
-                );
-            })}
+                    </div>
+                </Link>
+            ))}
         </section>
     );
 };

@@ -30,11 +30,11 @@ const Encabezado = () => {
         <div className="linea-decorativa"></div>
         <h2 className="subtitulo-hero-nosotros animate-up delay-1">DESARROLLOS URBANÍSTICOS</h2>
         
-        <div className="scroll-btn-nosotros animate-up delay-2" onClick={handleScroll}>
+      </div>
+        <div className="scroll-btn-nosotros animate-up delay-2 " onClick={handleScroll}>
             <span>Conocé nuestra historia</span>
             <img src={flecha} alt="Bajar" />
         </div>
-      </div>
     </section>
   )
 }
