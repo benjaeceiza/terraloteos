@@ -36,7 +36,7 @@ const EncabezadoMob = ({ barrio }) => {
                         <img id="logo-encabezado-barrio" className="logo-encabezado-barrio-mob" src={barrio.logo}
                             alt="Logo barrio" />
                         <div className="scroll-arrow-container  animate-fade-in delay-3" onClick={handleScrollDown}>
-                            <span>Ver Productos</span>
+                            <span>Ver desarrollo</span>
                             <img src={fleca} alt="Bajar" className="bounce-arrow" />
                         </div>
                     </div>
