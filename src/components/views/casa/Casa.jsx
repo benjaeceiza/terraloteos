@@ -37,10 +37,14 @@ const Casa = () => {
             {/* 2. GALERÍA */}
             <section className="seccion-premium">
                 <div className="contenedor-titulo-seccion">
-                     <h2 className="sub">GALERÍA DE IMÁGENES</h2>
+                    <div className="completed-header">
+                        <span className="completed-subtitle">IMÁGENES</span>
+                        <h2 className="completed-title">GALERIA DE IMÁGENES</h2>
+                        <div className="completed-line"></div>
+                    </div>
                 </div>
                 <GaleriaImagenes
-                    casa={casa} 
+                    casa={casa}
                     setSliderVisible={setSliderVisible}
                     setImagenSeleccionada={setImagenSeleccionada}
                 />
@@ -49,7 +53,11 @@ const Casa = () => {
             {/* 3. PREGUNTAS */}
             <section className="seccion-premium bg-darker">
                 <div className="contenedor-titulo-seccion">
-                    <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+                    <div className="completed-header">
+                        <span className="completed-subtitle">INFORMACIÓN</span>
+                        <h2 className="completed-title">PREGUNTAS FRECUENTES</h2>
+                        <div className="completed-line"></div>
+                    </div>
                 </div>
                 <Preguntas />
             </section>
@@ -57,7 +65,7 @@ const Casa = () => {
             {/* 4. CONTACTO */}
             <SectionContacto />
 
-            
+
 
         </main>
     )

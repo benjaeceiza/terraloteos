@@ -1,16 +1,20 @@
 import logo from "../assets/logos/logo-corto.png";
-import Mailer from "./mailer/Mailer"; 
+import Mailer from "./mailer/Mailer";
 
 const SectionContacto = () => {
     return (
         <>
             <div className="contenedor-title">
-                <h2 className="sub">COMUNICATE CON NOSOTROS</h2>
+                <div className="completed-header">
+                    <span className="completed-subtitle">CONTACTO</span>
+                    <h2 className="completed-title">COMUNÍCATE CON NOSOTROS</h2>
+                    <div className="completed-line"></div>
+                </div>
             </div>
-            
+
             <section className="section-contacto">
                 <div className="contenedor-contacto">
-                    
+
                     {/* 1. HORARIOS */}
                     <div className="contenedor-horarios">
                         <p className="title-horario">Contacto</p>
@@ -26,10 +30,10 @@ const SectionContacto = () => {
 
                     {/* 3. FORMULARIO (MAILER) */}
                     <div className="formulario-wrapper">
-                         {/* Asegúrate que Mailer use las clases genéricas 'input' y 'mensaje' */}
+                        {/* Asegúrate que Mailer use las clases genéricas 'input' y 'mensaje' */}
                         <Mailer />
                     </div>
-                    
+
                 </div>
             </section>
         </>

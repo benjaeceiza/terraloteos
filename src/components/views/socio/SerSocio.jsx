@@ -11,7 +11,11 @@ const SerSocio = () => {
                 <Encabezado />
                 <Descripcion />
                 <div className="contenedor-title">
-                    <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+                    <div className="completed-header">
+                        <span className="completed-subtitle">INFORMACIÓN</span>
+                        <h2 className="completed-title">PREGUNTAS FRECUENTES</h2>
+                        <div className="completed-line"></div>
+                    </div>
                 </div>
                 <Preguntas />
                 <SectionContacto />

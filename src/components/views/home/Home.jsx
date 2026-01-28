@@ -75,20 +75,32 @@ const Home = () => {
         </motion.section>
 
         <div className="contenedor-title">
-          <h2 className="sub">ELEGÍ TU LUGAR EN TERRALOTEOS</h2>
+          <div className="completed-header">
+            <span className="completed-subtitle">TU LUGAR</span>
+            <h2 className="completed-title">ELIGÍ TU LUGAR EN TERRALOTEOS</h2>
+            <div className="completed-line"></div>
+          </div>
         </div>
 
         <Categorias />
- 
+
 
         <div className="contenedor-title">
-          <h2 className="sub">NOSOTROS</h2>
+          <div className="completed-header">
+            <span className="completed-subtitle">NOSOTROS</span>
+            <h2 className="completed-title">¿QUIÉNES SOMOS?</h2>
+            <div className="completed-line"></div>
+          </div>
         </div>
 
         <Numeros />
 
         <div className="contenedor-title">
-          <h2 className="sub">DONDE NOS ENCONTRAMOS</h2>
+          <div className="completed-header">
+            <span className="completed-subtitle">UBICACIÓN</span>
+            <h2 className="completed-title">DÓNDE NOS ENCONTRAMOS</h2>
+            <div className="completed-line"></div>
+          </div>
         </div>
 
         <Mapas />

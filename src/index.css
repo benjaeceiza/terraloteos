@@ -1974,7 +1974,123 @@ body.modal-abierto {
 }
 
 
+/* LISTADO BARRIOS TERMINADOS */
 
+
+/* --- SECCIÓN PRINCIPAL --- */
+.completed-projects-section {
+    background-color: #133222;
+    /* Un negro apenas distinto para separar secciones */
+    padding: 80px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+/* --- ENCABEZADO --- */
+.completed-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.completed-subtitle {
+    color: #ef8937;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: "1", sans-serif;
+}
+
+.completed-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    font-family: "1", sans-serif;
+}
+
+.completed-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ef8937;
+    margin-top: 20px;
+}
+
+/* --- CONTENEDOR DE LOGOS (GRILLA FLEXIBLE) --- */
+.logos-track-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que bajen si no entran */
+    justify-content: center;
+    /* Centrado perfecto */
+    align-items: center;
+    gap: 60px;
+    /* Buen espacio entre logos */
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* --- LOGO INDIVIDUAL --- */
+.logo-item-link {
+    display: block;
+    width: 180px;
+    /* Ancho base del logo */
+    height: 100px;
+    /* Altura fija para alinear */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.project-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Asegura que el logo entre entero */
+
+    /* EL EFECTO PREMIUM: */
+    filter: grayscale(100%) opacity(0.5);
+    /* Gris y apagado por defecto */
+    transition: all 0.4s ease;
+}
+
+/* --- HOVER EFFECT --- */
+.logo-item-link:hover .project-logo {
+    filter: grayscale(0%) opacity(1);
+    /* Color real y brillo total */
+    transform: scale(1.1);
+    /* Pequeño zoom */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .completed-projects-section {
+        padding: 60px 20px;
+    }
+
+    .completed-title {
+        font-size: 1.8rem;
+    }
+
+    .logos-track-container {
+        gap: 40px;
+        /* Menos espacio en móvil */
+    }
+
+    .logo-item-link {
+        width: 140px;
+        /* Logos un poco más chicos */
+        height: 80px;
+    }
+
+    /* En móvil, quizás quieras que se vean un poco más claros por defecto */
+    .project-logo {
+        opacity: 0.7;
+    }
+}
 
 
 /* SECTION BARRIOS */
@@ -2347,10 +2463,7 @@ body.modal-abierto {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .modelo-img-container {
-        height: 600px;
-        /* Un poco menos alto en móvil */
-    }
+  
 
     .modelo-info-card {
         padding: 30px 20px;

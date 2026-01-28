@@ -13,7 +13,11 @@ const Fundacion = () => {
             <main className="main">
                 <Encabezado />
                 <div id="info-data" className="contenedor-title">
-                    <h2 className="sub">¿QUIENES SOMOS?</h2>
+                    <div className="completed-header">
+                        <span className="completed-subtitle">FUNDACIÓN TERRA</span>
+                        <h2 className="completed-title">¿QUIÉNES SOMOS?</h2>
+                        <div className="completed-line"></div>
+                    </div>
                 </div>
                 <section className="section-nosotros-fundacion">
                     <div className="contenedor-textos-fundacion">
@@ -50,7 +54,11 @@ const Fundacion = () => {
                     </div>
                 </section>
                 <div className="contenedor-title">
-                    <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+                    <div className="completed-header">
+                        <span className="completed-subtitle">INFORMACIÓN</span>
+                        <h2 className="completed-title">PREGUNTAS FRECUENTES</h2>
+                        <div className="completed-line"></div>
+                    </div>
                 </div>
                 <Preguntas />
                 <SectionContacto />

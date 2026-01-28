@@ -26,15 +26,27 @@ const Barrio = () => {
         <EncabezadoMob barrio={barrio} />
         <Detalles barrio={barrio} />
         <div className="contenedor-titulo-seccion my-5">
-          <h2 className="sub">GALERÍA DE IMÁGENES</h2>
+          <div className="completed-header">
+            <span className="completed-subtitle">IMÁGENES</span>
+            <h2 className="completed-title">GALERIA DE IMÁGENES</h2>
+            <div className="completed-line"></div>
+          </div>
         </div>
         <GaleriaImagenes barrio={barrio} setSliderVisible={setSliderVisible} setImagenSeleccionada={setImagenSeleccionada} />
         <div className="contenedor-title">
-          <h2 className="sub">NUESTROS MODELOS</h2>
+          <div className="completed-header">
+            <span className="completed-subtitle">VIVIENDAS</span>
+            <h2 className="completed-title">NUESTROS MODELOS</h2>
+            <div className="completed-line"></div>
+          </div>
         </div>
         <SliderModelos />
         <div className="contenedor-title">
-          <h2 className="sub">PREGUNTAS FRECUENTES</h2>
+          <div className="completed-header">
+            <span className="completed-subtitle">INFORMACIÓN</span>
+            <h2 className="completed-title">PREGUNTAS FRECUENTES</h2>
+            <div className="completed-line"></div>
+          </div>
         </div>
         <Preguntas />
         <SectionContacto />
