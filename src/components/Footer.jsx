@@ -23,6 +23,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-redes">
+                <h2 className="titleFooter">Seguinos</h2>
                 <ul className="footer-lista">
                     <li className="footer-item">
                         <Link
@@ -71,7 +72,7 @@ const Footer = () => {
                     </li>
                     <li className="footer-item">
                         <Link
-                         to={""}
+                         to={`https://wa.me/5492657604317`}
                          target="_blank"
                          onMouseEnter={() => setIsHover("whatsapp")}
                          onMouseLeave={() => setIsHover("")}>

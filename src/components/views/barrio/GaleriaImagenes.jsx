@@ -1,24 +1,22 @@
 import { useState } from "react";
-
+import { optimizarImagen } from "../../../utils/cloudinary"; // Asegúrate que la ruta sea correcta
 
 const GaleriaImagenes = ({ barrio, setSliderVisible, setImagenSeleccionada }) => {
-  // el estado guardará objetos: { loaded: boolean, shape: string }
   const [imageStates, setImageStates] = useState({});
 
   const handleLoadImage = (index, event) => {
     const imgElement = event.target;
-    // Calculamos la relación de aspecto usando las dimensiones naturales de la imagen
+    // Cloudinary mantiene el aspect ratio al redimensionar, 
+    // así que este cálculo sigue funcionando perfecto.
     const width = imgElement.naturalWidth;
     const height = imgElement.naturalHeight;
 
-    let shape = "standard"; // Por defecto cuadrado (1x1)
+    let shape = "standard"; 
 
-    // Si el alto es notablemente mayor que el ancho (ej. un 20% más), es vertical
+    // Ajuste de umbrales para detectar formas
     if (height > width * 1.2) {
       shape = "tall";
-    }
-    // Si el ancho es notablemente mayor que el alto, es horizontal
-    else if (width > height * 1.2) {
+    } else if (width > height * 1.2) {
       shape = "wide";
     }
 
@@ -37,20 +35,21 @@ const GaleriaImagenes = ({ barrio, setSliderVisible, setImagenSeleccionada }) =>
 
         return (
           <div
-            // aplicamos una clase según la forma detectada
             className={`box ${imgState.shape}`}
             key={index}
           >
             <img
-              src={imgUrl}
+              // ✅ AQUI ESTÁ LA MAGIA:
+              // Pedimos la imagen optimizada a 600px de ancho.
+              // Esto hace que la carga inicial de la grilla sea instantánea.
+              src={optimizarImagen(imgUrl, 600)} 
+              
               alt={`imagen-${index}`}
-              // Usamos imgState.loaded para la opacidad
               className={`box-img ${imgState.loaded ? "visible" : "hidden"}`}
-              // Pasamos el evento 'e' para poder medir la imagen
               onLoad={(e) => handleLoadImage(index, e)}
               onClick={() => {
-                setImagenSeleccionada(index); // 1. Guardamos cuál se tocó
-                setSliderVisible(true);       // 2. Abrimos el slider
+                setImagenSeleccionada(index); 
+                setSliderVisible(true);
               }}
               loading="lazy"
             />

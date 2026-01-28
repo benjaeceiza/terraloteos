@@ -23,10 +23,10 @@ const Encabezado = ({ detalleProducto }) => {
                 <img className="hero-logo animate-up" src={detalleProducto.logo} alt="Logo" />
                 
                 <ul className="hero-socials animate-up delay-1">
-                    <li><a href="https://facebook.com"><img src={iconoFacebook} alt="FB"/></a></li>
-                    <li><a href="https://instagram.com"><img src={iconoIg} alt="IG"/></a></li>
-                    <li><a href="https://tiktok.com"><img src={iconoTiktok} alt="TT"/></a></li>
-                    <li><a href="https://wa.me"><img src={iconoWts} alt="WA"/></a></li>
+                    <li><a href="https://www.facebook.com/loteosterra" target="_blank"><img src={iconoFacebook} alt="FB"/></a></li>
+                    <li><a href="https://www.instagram.com/terraloteos/" target="_blank"><img src={iconoIg} alt="IG"/></a></li>
+                    <li><a href="https://www.tiktok.com/@terraloteosoficial?is_from_webapp=1&sender_device=pc" target="_blank"><img src={iconoTiktok} alt="TT"/></a></li>
+                    <li><a href="https://wa.me/5492657604317" target="_blank"><img src={iconoWts} alt="WA"/></a></li>
                 </ul>
 
                 <div className="hero-actions animate-up delay-2">

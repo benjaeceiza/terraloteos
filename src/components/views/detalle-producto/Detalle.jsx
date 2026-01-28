@@ -7,7 +7,6 @@ import { useLoading } from "../../context/LoadingContext";
 import Encabezado from "./Encabezado";
 import Contenido from "./Contenido";
 import SectionContacto from "../../SectionContacto";
-import SliderGaleria from "./SliderGaleria";
 import cerrar from "../../../assets/iconos/borrar.png";
 
 
@@ -37,24 +36,6 @@ const Detalle = () => {
                 detalleProducto={detalleProducto} 
                 setSliderVisible={setSliderVisible} 
             />
-
-            {/* LIGHTBOX MODAL */}
-            {sliderVisible && (
-                <div className="lightbox-modal">
-                    <img 
-                        src={cerrar} 
-                        alt="Cerrar" 
-                        className="btn-close-modal" 
-                        onClick={() => setSliderVisible(false)} 
-                    />
-                    {/* Reutilizamos tu Slider pero ahora vive dentro del modal */}
-                    <SliderGaleria 
-                        detalleProducto={detalleProducto} 
-                        images={detalleProducto.cardImages} 
-                    />
-                </div>
-            )}
-
             <SectionContacto />
         </main>
     )

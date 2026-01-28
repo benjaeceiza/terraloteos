@@ -257,7 +257,7 @@
         "link": "/producto/Paseo Conlara"
     },
     {
-        "nombre": "el viejo mercado",
+        "nombre": "El Viejo Mercado",
         "logo": "https://i.postimg.cc/05M9Rmt1/logo-viejo-mercado.png",
         "cardImages": [
             "https://i.postimg.cc/C5J932HG/5.jpg",
@@ -271,29 +271,85 @@
             "https://i.postimg.cc/9F8v1vfm/8.jpg",
             "https://i.postimg.cc/WzsQfVrG/9.jpg"
         ],
-        "brochure": "https://i.postimg.cc/fT2656bw/Faltante_pagina_web_21012026_(1).png",
+        "brochure": "/pdf/viejo-mercado.pdf",
         "clase": "paseo",
         "pricipalesCaracteristicas": [
             {
-                "icono": "",
-                "caracteristica": ""
+                "icono": "https://i.postimg.cc/MKdFLRMB/tienda.png",
+                "caracteristica": "Mercado Gastronómico y Orgánico"
             },
             {
-                "icono": "",
-                "caracteristica": ""
+                "icono": "https://i.postimg.cc/vH3NK9gV/restaurante.png",
+                "caracteristica": "Locales de Producción Artesanal"
             },
             {
-                "icono": "",
-                "caracteristica": ""
+                "icono": "https://i.postimg.cc/x86xPBF0/hoja.png",
+                "caracteristica": "Entorno Natural y Paseos Integrados"
             }
         ],
-        "caracterisiticas": [""],
-        "diferenciales": "",
-        "descripcionLarga": "",
-        "descripcion": "",
-        "ubicacion": "San Luis.",
+        "caracterisiticas": [
+            "Locales gastronómicos de producción artesanal y alimentos frescos",
+            "Proveedurías boutique e insumos de cocina",
+            "Patio de comidas de uso común y espacios creativos",
+            "Islas con exhibidores al público y amplios pasillos",
+            "Variedad de rubros: Cafetería, Cervecería, Hamburguesería, Pizzería, Carnicería y Pastelería"
+        ],
+        "diferenciales": [
+            "Convivencia única de mercado de productos e ingredientes con restaurantes a la vista y tiendas gourmet en un entorno natural."
+        ],
+        "descripcionLarga": "El Viejo Mercado es un desarrollo con concepto orgánico situado en la Ciudad de La Punta. Es un espacio gastronómico donde los mejores productos, ingredientes e insumos para la cocina conviven activamente con restaurantes a la vista y tiendas gourmet. El diseño incluye espacios creativos, paseos integrados y un patio de comidas común, todo rodeado de paisajes hermosos para satisfacer tanto a quienes buscan alimentación saludable como a quienes disfrutan de platos variados.",
+        "descripcion": "Mercado gastronómico y orgánico en La Punta con locales artesanales, tiendas gourmet y patio de comidas en un entorno natural.",
+        "ubicacion": "Boulevard Las Cañadas, Ciudad de La Punta, San Luis.",
         "miniatura": "https://i.postimg.cc/C5J932HG/5.jpg",
         "imgEncabezado": "https://i.postimg.cc/C5J932HG/5.jpg",
-        "link": "/producto/el viejo mercado"
+        "link": "/producto/El Viejo Mercado"
+    },
+    {
+        "nombre": "Vivienda transportable",
+        "logo": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769528045/Logo_terra_blanco_bnouwn.png",
+        "cardImages": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769573137/vivienda_ue9z5f.png",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572670/vivienda-transportable_1_icuh1l.png"
+        ],
+        "brochure": "/pdf/vivienda-transportable.pdf",
+        "clase": "vivienda",
+        "pricipalesCaracteristicas": [
+            {
+                "icono": "/src/assets/iconos/reloj.png",
+                "caracteristica": "Entrega en 60-90 días"
+            },
+            {
+                "icono": "/src/assets/iconos/la-seguridad.png",
+                "caracteristica": "Estructura de Acero Autoportante"
+            },
+            {
+                "icono": "/src/assets/iconos/aislante.png",
+                "caracteristica": "Aislación Térmica y Acústica Superior"
+            }
+        ],
+        "caracterisiticas": [
+            "Módulos fabricados en taller con estructura de caños estructurales 70x70.",
+            "Muros en Steel Framing con lana de vidrio interior para máxima aislación.",
+            "Revestimiento exterior con Siding, Chapa o Placa de Fibrocemento (barrera hidrófuga).",
+            "Interiores con placas de yeso y terminaciones en PVC símil madera o Calacatta.",
+            "Pisos flotantes y techos de PVC resistentes a la humedad y el agua.",
+            "Instalaciones eléctricas y sanitarias completas embutidas en muros.",
+            "Incluye tanque de reserva de 1.000 litros y termotanque de 50 litros.",
+            "Aberturas de aluminio con vidrios de 6mm (opcional DVH)."
+        ],
+        "diferenciales": [
+            "No es un contenedor: Mayor confort, habitabilidad y aislación real.",
+            "Obra limpia con costos previsibles y plazos cortos.",
+            "Durabilidad similar o superior a la construcción tradicional.",
+            "Sistema modular ampliable y transportable.",
+            "Apto para escriturar y cumple con normativas constructivas vigentes."
+        ],
+        "descripcionLarga": "Nuestras viviendas transportables representan una forma moderna de construir. Son módulos fabricados en taller y montados en obra, diseñados específicamente para habitar con el máximo confort. A diferencia de un contenedor, cuentan con una estructura de acero robusta, correcta estanqueidad y una aislación térmica eficiente que protege tanto del frío como del calor. Ofrecemos una solución llave en mano con terminaciones de alta calidad listas para el uso diario.",
+        "descripcion": "Viviendas modulares de estructura de acero, transportables y listas para habitar en 90 días.",
+        "ubicacion": "Todo el país / Región según logística",
+        "miniatura": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
+        "imgEncabezado": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
+        "link": "/producto/Vivienda transportable"
     }
 ]

@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import barrios from "../../../data/barrios.json";
 import { useLoading } from "../../context/LoadingContext";
+import { optimizarImagen } from "../../../utils/cloudinary"; // Asegúrate de importar esto
 
 
 const RenderBarrios = () => {
     const { showLoader } = useLoading();
-    // Estado simple para controlar qué imágenes ya cargaron
     const [imagesLoaded, setImagesLoaded] = useState({});
 
     const handleImageLoad = (nombre) => {
@@ -25,13 +25,15 @@ const RenderBarrios = () => {
                     {/* Contenedor de Imagen con Efecto Zoom */}
                     <div className="barrio-img-wrapper">
                         <img
-                            src={item.imgPrincipal}
+                            // Pedimos la imagen optimizada a 600px de ancho (suficiente para la grilla)
+                            src={optimizarImagen(item.imgPrincipal, 600)}
                             alt={item.nombre}
                             className={`barrio-bg ${imagesLoaded[item.nombre] ? 'loaded' : ''}`}
                             onLoad={() => handleImageLoad(item.nombre)}
+                            loading="lazy"
                         />
                         
-                        {/* Spinner de carga (solo si no ha cargado la imagen) */}
+                        {/* Spinner de carga */}
                         {!imagesLoaded[item.nombre] && (
                             <div className="barrio-loader">
                                 <div className="spinner-border text-light" role="status"></div>
@@ -39,14 +41,16 @@ const RenderBarrios = () => {
                         )}
                     </div>
 
-                    {/* Overlay y Contenido (Siempre presentes pero animados) */}
+                    {/* Overlay y Contenido */}
                     <div className="barrio-overlay">
                         <div className="barrio-content">
+                            {/* Logo optimizado también (ancho 300px sobra) */}
                             <img
                                 className="barrio-logo"
-                                src={item.logo}
+                                src={optimizarImagen(item.logo, 300)}
                                 alt={`Logo ${item.nombre}`}
                             />
+                            
                             <div className="barrio-cta">
                                 <span className="linea-naranja"></span>
                                 <span className="texto-ver">VER PROYECTO</span>

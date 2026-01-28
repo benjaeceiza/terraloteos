@@ -2374,7 +2374,7 @@ body.modal-abierto {
     }
 
     /* Ocultar flechas en móvil para dar prioridad al swipe o tap */
-   
+
 }
 
 /* DETALLE BARRIO */
@@ -4917,128 +4917,326 @@ body.modal-abierto {
 }
 
 /* PAGE CONTACTO */
-
-.main-contact {
-    padding: 0px 20px;
+/* --- CONFIGURACIÓN GENERAL --- */
+.main-contact-contacto {
     background-color: #133222;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    font-family: "1", sans-serif;
+    /* Tu fuente */
+    color: #e0e0e0;
 }
 
-.encabezado-contacto {
-    height: 40vh;
+/* --- ENCABEZADO --- */
+.encabezado-contacto-contacto {
+    padding: 100px 20px 60px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.titulo-contacto {
-    width: fit-content;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ef8937;
-    border-top: 2px solid #ef8937;
+.subtitulo-encabezado-contacto {
+    color: #ef8937;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.titulo-contacto-contacto {
     color: white;
-    letter-spacing: 10px;
-    font-size: 1.2dvw;
-    text-align: center;
-    font-family: "1";
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
 }
 
-.section-cards-contact {
-    max-width: 1200px;
-    margin: auto;
+.linea-naranja-contacto {
+    width: 60px;
+    height: 4px;
+    background-color: #ef8937;
+    margin-top: 20px;
+}
+
+/* --- LAYOUT DIVIDIDO (WRAPPER) --- */
+.contact-wrapper-contacto {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    gap: 60px;
+    /* Espacio entre columnas */
 }
 
-.card-contact-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 30px;
-    background-color: #35604a;
-    height: 350px;
-    width: 31%;
-
+/* Columna Izquierda (Info) */
+.contact-info-col-contacto {
+    flex: 1;
+    min-width: 300px;
 }
 
-.icono-card-contact {
-    background-color: #133222;
-    padding: 10px;
-    border-radius: 50px;
+.contact-text-contacto {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
 }
 
-.title-card-contact {
-    font-size: x-large;
-    font-family: "1";
-    color: white;
-    font-weight: 600;
-
-}
-
-.subtitle-card-contact {
-    font-size: 15px;
-    font-family: "1";
-    color: white;
-    font-weight: 600;
-
-}
-
-
-.button-card-contact {
-    border: 3px solid #ef8937;
-    border-radius: 50px;
-    height: 40px;
-    padding: 0px 15px;
-    font-size: small;
+.contact-col-title-contacto {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
     color: #ef8937;
     font-family: "1";
-    font-weight: 600;
+    font-weight: bold;
 }
 
-/* FORMULARIO */
-
-.section-formulario-contacto {
-    width: 100%;
-    position: relative;
+/* Columna Derecha (Form) */
+.contact-form-col-contacto {
+    flex: 1.5;
+    /* El formulario ocupa más espacio */
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.formulario-contacto {
-    max-width: 1200px;
-    margin: auto;
+/* --- LISTA DE CONTACTO (CardContacto) --- */
+.info-list-contacto {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.input-contacto {
-    width: 49%;
-    border-radius: 30px;
-    margin: 10px 0px;
-    padding: 10px 10px;
-    border: 0;
-    font-family: "1";
-    font-size: small;
-    font-family: 600;
-
-
+.info-item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.mensaje-formulario-contacto {
+.icon-circle-contacto {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(239, 137, 55, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-circle-contacto img {
+    width: 24px;
+}
+
+.info-data-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label-contacto {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.info-value-contacto {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.info-value-contacto:hover {
+    color: #ef8937;
+}
+
+/* --- FORMULARIO MODERNO --- */
+.formulario-moderno-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group-row-contacto {
+    display: flex;
+    gap: 20px;
+}
+
+.input-moderno-contacto,
+.textarea-moderno-contacto {
     width: 100%;
-    border-radius: 20px 20px 0px 20px;
-    padding: 10px;
-    height: 100px;
-    margin-top: 10px;
-    font-family: "1";
-    font-size: small;
-    font-family: 600;
+    border: 0;
+    background-color: #dadada;
+    border-bottom: 2px solid #d17024;
+    padding: 15px;
+    color: black;
+    font-family: "1", sans-serif;
+    border-radius: 8px;
+    /* Bordes sutiles, no redondos */
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s;
 }
 
+.input-moderno-contacto:focus,
+.textarea-moderno-contacto:focus {
+    border: 2px solid #ef8937;
+
+}
+
+.textarea-moderno-contacto {
+    height: 150px;
+    resize: none;
+}
+
+.btn-enviar-contacto {
+    background-color: #ef8937;
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "1", sans-serif;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-enviar-contacto:hover {
+    background-color: #d17024;
+    transform: translateY(-2px);
+}
+
+.btn-enviar-contacto:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+
+/* --- ESTILOS NUEVOS PARA EL SELECTOR --- */
+
+/* Wrapper para contener tabs y lista */
+.card-contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Contenedor de las pestañas */
+.contact-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+/* Botón individual (Tab) */
+.tab-btn {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #aaa;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "1", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tab-btn:hover {
+    border-color: #ef8937;
+    color: white;
+}
+
+/* Estado Activo (Botón seleccionado) */
+.tab-btn.active {
+    background-color: #ef8937;
+    border-color: #ef8937;
+    color: white;
+    box-shadow: 0 4px 15px rgba(239, 137, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Color naranja para resaltar el horario */
+.highlight-text {
+    color: #ef8937 !important;
+}
+
+/* Ajuste Responsive para los botones */
+@media (max-width: 480px) {
+    .contact-tabs {
+        justify-content: center;
+        /* Centrar botones en celular */
+    }
+
+    .tab-btn {
+        flex: 1;
+        /* Que ocupen el ancho disponible */
+        text-align: center;
+        font-size: 0.75rem;
+    }
+}
+
+/* --- MAPA --- */
+.mapa-section-contacto {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.mapa-section-contacto:hover {
+    opacity: 1;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .contact-wrapper-contacto {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .input-group-row-contacto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titulo-contacto-contacto {
+        font-size: 2rem;
+    }
+
+    .contact-form-col-contacto {
+        padding: 25px;
+    }
+}
 
 /* --- ESTILOS GENERALES (Desktop First) --- */
 
@@ -5129,6 +5327,10 @@ body.modal-abierto {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #284938;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgb(32, 32, 32);
+    padding: 10px;
 }
 
 .title-horario {
@@ -5136,13 +5338,28 @@ body.modal-abierto {
     font-size: larger;
     font-family: "1", sans-serif;
     font-weight: bold;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.384);
 }
 
 .texto-horario {
     color: white;
     font-weight: bold;
     margin: 2px 0;
+    text-align: center;
+    margin: 10px 0px;
+    border-radius: 15px;
+    font-family: "1";
+    font-size: small;
+    width: 100%;
+}
+
+.texto-horario:hover {
+    color: #ef8937;
+    transition: all .3s;
+    cursor: pointer;
 }
 
 /* 3. ESTILOS DEL LOGO */
@@ -5394,7 +5611,7 @@ body.modal-abierto {
     justify-content: center;
     width: 200px;
     margin: 10px auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px 0px;
 
 }
@@ -5405,13 +5622,24 @@ body.modal-abierto {
 
 .derechos {
     margin: 0;
-    color: white;
+    color: rgb(151, 151, 151);
     text-align: center;
     padding: 20px 0px;
+    font-size: small;
+    font-family: "1";
 }
 
 
+.titleFooter {
+    text-align: center;
+    margin-top: 20px;
+    color: #ef8937;
+    font-size: small;
+    font-family: "1";
+    text-transform: uppercase;
+    font-weight: bold;
 
+}
 
 /* TIPOGRAFIAS */
 

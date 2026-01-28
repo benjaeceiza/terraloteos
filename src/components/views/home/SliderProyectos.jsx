@@ -126,28 +126,28 @@ const SliderProyectos = () => {
 
                     <ul className="footer-socials">
                         <li>
-                            <a href="https://facebook.com/loteosterra" target="_blank" rel="noreferrer"
+                            <Link to="https://facebook.com/loteosterra" target="_blank" rel="noreferrer"
                                onMouseEnter={() => setIsHover("facebook")} onMouseLeave={() => setIsHover("")}>
                                 <img src={isHover === "facebook" ? iconoFacebookN : iconoFacebook} alt="Facebook" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="https://instagram.com" target="_blank" rel="noreferrer"
+                            <Link to="https://www.instagram.com/terraloteos/" target="_blank" rel="noreferrer"
                                onMouseEnter={() => setIsHover("instagram")} onMouseLeave={() => setIsHover("")}>
                                 <img src={isHover === "instagram" ? iconoIgN : iconoIg} alt="Instagram" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="https://tiktok.com" target="_blank" rel="noreferrer"
+                            <Link to="https://www.tiktok.com/@terraloteosoficial" target="_blank" rel="noreferrer"
                                onMouseEnter={() => setIsHover("tiktok")} onMouseLeave={() => setIsHover("")}>
                                 <img src={isHover === "tiktok" ? iconoTiktokN : iconoTiktok} alt="TikTok" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" target="_blank" rel="noreferrer"
+                            <Link to={`https://wa.me/5492657604317`} target="_blank" rel="noreferrer"
                                onMouseEnter={() => setIsHover("whatsapp")} onMouseLeave={() => setIsHover("")}>
                                 <img src={isHover === "whatsapp" ? iconoWtsN : iconoWts} alt="WhatsApp" />
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

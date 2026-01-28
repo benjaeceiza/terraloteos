@@ -13,9 +13,9 @@ const SectionContacto = () => {
                     
                     {/* 1. HORARIOS */}
                     <div className="contenedor-horarios">
-                        <p className="title-horario">Horario de atención:</p>
-                        <p className="texto-horario">Lunes – Viernes: 9hs – 18hs</p>
-                        <p className="texto-horario">Atención por WhatsApp: 24/7</p>
+                        <p className="title-horario">Contacto</p>
+                        <p className="texto-horario">+54 9 2657 60-4317</p>
+                        <p className="texto-horario"> info@terraloteos.com</p>
                     </div>
 
                     {/* 2. LOGO Y NOMBRE */}

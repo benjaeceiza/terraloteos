@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import lupa from "../../../assets/iconos/lupa.png"; // Icono lupa genérico para el zoom
 
 const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
@@ -40,19 +41,19 @@ const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
             {images.length > 0 && (
                 <section className="section-gallery">
                     <h2 className="gallery-title">Galería de <span>Imágenes</span></h2>
-                    
+
                     <div className="masonry-grid">
                         {images.map((img, idx) => (
-                            <div 
-                                key={idx} 
+                            <div
+                                key={idx}
                                 className="gallery-item"
                                 onClick={() => setSliderVisible(true)} // Abre el modal
                             >
                                 <img src={img} alt={`Galeria ${idx}`} loading="lazy" />
-                                <div className="gallery-overlay">
-                                    {/* Icono de Lupa o Ojo para indicar zoom */}
+                                <a href={img} target="_blank"><div className="gallery-overlay">
+            
                                     <img src={lupa} alt="Ver" className="icon-zoom" />
-                                </div>
+                                </div></a>
                             </div>
                         ))}
                     </div>
@@ -61,7 +62,7 @@ const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
 
             {/* 4. ESPECIFICACIONES TÉCNICAS */}
             <section className="section-specs">
-                
+
                 {caracteristicas.length > 0 && (
                     <div className="spec-column">
                         <h3>Características</h3>
