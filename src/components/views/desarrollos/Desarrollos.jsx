@@ -12,7 +12,7 @@ const Desarrollos = () => {
       {/* El Encabezado nuevo y profesional */}
       <Encabezado />
 
-      <div className="contenedor-title" style={{ marginTop: "60px" }}>
+      <div id="listado" className="contenedor-title" style={{ marginTop: "60px" }}>
         <div className="completed-header">
           <span className="completed-subtitle">BARRIOS</span>
           <h2 className="completed-title">DÓNDE COMENZAR TU HOGAR</h2>

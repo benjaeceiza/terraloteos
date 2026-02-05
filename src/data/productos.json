@@ -316,15 +316,15 @@
         "clase": "vivienda",
         "pricipalesCaracteristicas": [
             {
-                "icono": "/src/assets/iconos/reloj.png",
+                "icono": "https://res.cloudinary.com/dmnksm3th/image/upload/v1770298488/reloj_npmgjn.png",
                 "caracteristica": "Entrega en 60-90 días"
             },
             {
-                "icono": "/src/assets/iconos/la-seguridad.png",
+                "icono": "https://res.cloudinary.com/dmnksm3th/image/upload/v1770298442/la-seguridad_pzct7p.png",
                 "caracteristica": "Estructura de Acero Autoportante"
             },
             {
-                "icono": "/src/assets/iconos/aislante.png",
+                "icono": "https://res.cloudinary.com/dmnksm3th/image/upload/v1770298406/aislante_nczzcw.png",
                 "caracteristica": "Aislación Térmica y Acústica Superior"
             }
         ],
