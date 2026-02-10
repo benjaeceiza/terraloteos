@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import { useLoading } from "../../context/LoadingContext";
 import { useState } from "react";
 
-// Imágenes
-import sliderImg1 from "../../../assets/slider-index/1.jpg";
-import sliderImg2 from "../../../assets/slider-index/2.jpeg";
-import sliderImg3 from "../../../assets/slider-index/3.jpg";
 
 // Iconos
 import iconoFacebook from "../../../assets/iconos/facebook.png";
@@ -28,7 +24,7 @@ const SliderProyectos = () => {
     const slides = [
         {
             id: 1,
-            img: sliderImg3,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527822/IMG_0044_bjxpyn.jpg",
             titulo: ["Torres", "Community"],
             tipo: "RESIDENCIAL",
             ubicacion: "SAN LUIS",
@@ -36,7 +32,7 @@ const SliderProyectos = () => {
         },
         {
             id: 2,
-            img: sliderImg1,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527600/5_zgdtvv.png",
             titulo: ["Garden", "Village"],
             tipo: "RESIDENCIAL",
             ubicacion: "MERLO, SAN LUIS",
@@ -44,11 +40,43 @@ const SliderProyectos = () => {
         },
         {
             id: 3,
-            img: sliderImg2,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527519/AtilierEstudiantil_8_-_Photo_h3fbrt.jpg",
             titulo: ["Atilier", "Estudiantil"],
             tipo: "RESIDENCIAL",
             ubicacion: "SAN LUIS",
             link: "/producto/Atilier Estudiantil"
+        },
+        {
+            id: 4,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527435/mantrax_Photo_-_7_khysau.jpg",
+            titulo: ["Mantra", "Cabañas"],
+            tipo: "RESIDENCIAL",
+            ubicacion: "SAN LUIS",
+            link: "/producto/Mantra, Cabañas Premiun"
+        },
+        {
+            id: 5,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527686/00-render_obsm7b.jpg",
+            titulo: ["Paseo", "Conlara"],
+            tipo: "COMERCIAL",
+            ubicacion: "SANTA ROSA DE CONLARA",
+            link: "/producto/Paseo Conlara"
+        },
+        {
+            id: 6,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527114/5_e310gu.jpg",
+            titulo: ["El Viejo", "Mercado"],
+            tipo: "COMERCIAL",
+            ubicacion: "LA PUNTA",
+            link: "/producto/El Viejo Mercado"
+        },
+        {
+            id: 7,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
+            titulo: ["Vivienda", "Trasnportable"],
+            tipo: "RESIDENCIAL",
+            ubicacion: "SAN LUIS",
+            link: "/producto/Vivienda Transportable"
         }
     ];
 
