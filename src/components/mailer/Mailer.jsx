@@ -40,8 +40,8 @@ const Mailer = () => {
         e.preventDefault();
         setIsSending(true)
         emailjs
-            .sendForm('service_9bojsir', 'template_n3yh8h7', form.current, {
-                publicKey: 'ozycZTfYueG9-OUJR',
+            .sendForm('service_saiuowe', 'template_qftn1lx', form.current, {
+                publicKey: "wQKiSjnmmbuHFTPUf",
             })
             .then(
                 () => {

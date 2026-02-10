@@ -41,22 +41,18 @@ const DescripcionNosotros = () => {
                 <h3 className="subtitulo-seccion">Qué Ofrecemos</h3>
                 <div className="grid-servicios-nosotros">
                     <div className="card-servicio-nosotros">
-                        <div className="icono-servicio-nosotros">📍</div>
                         <h4>Venta de Lotes</h4>
                         <p>Ubicaciones estratégicas con proyección de crecimiento.</p>
                     </div>
                     <div className="card-servicio-nosotros">
-                        <div className="icono-servicio-nosotros">🔑</div>
                         <h4>Casas Llave en Mano</h4>
                         <p>Nos encargamos de todo, vos solo entrás a vivir.</p>
                     </div>
                     <div className="card-servicio-nosotros">
-                        <div className="icono-servicio-nosotros">💰</div>
                         <h4>Financiación Propia</h4>
                         <p>Planes en pesos o dólares adaptados a tu realidad.</p>
                     </div>
                     <div className="card-servicio-nosotros">
-                        <div className="icono-servicio-nosotros">🤝</div>
                         <h4>Gestión Integral</h4>
                         <p>Asesoramiento legal, técnico y comercial constante.</p>
                     </div>

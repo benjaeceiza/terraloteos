@@ -308,6 +308,25 @@ body.modal-abierto {
     height: 30px;
 }
 
+.dropdown-menu {
+    background-color: rgba(207, 207, 207, 0.493);
+    box-shadow: 0px 0px 10px 2px rgb(68, 68, 68);
+}
+
+.dropdown-item {
+    font-family: "1";
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.dropdown-item:hover {
+    color: #ef8937;
+    transition: all .3s;
+    background-color: transparent;
+}
+
 /* NAV MOB */
 
 
@@ -1737,6 +1756,7 @@ body.modal-abierto {
     min-height: 700px;
     /* Altura mínima para que no se rompa en pantallas bajas */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -1798,14 +1818,14 @@ body.modal-abierto {
     position: relative;
     z-index: 2;
     width: 90%;
-    max-width: 1100px;
+    max-width: 900px;
+    /* Un poco más angosto para que el texto se lea mejor */
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Centrado vertical general */
-    padding-bottom: 50px;
-    /* Espacio abajo para que respire */
+    align-items: center;
+    text-align: center;
 }
 
 /* Título y Descripción */
@@ -1833,58 +1853,101 @@ body.modal-abierto {
     /* Gris claro para no competir con el título */
 }
 
-/* --- TARJETAS DE INFORMACIÓN --- */
-.info-cards-container-desarrollos {
+.info-section-container {
+    background-color: #121212;
+    /* Negro profundo coherente con tu web */
+    padding: 100px 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    width: 100%;
+    overflow: hidden;
 }
 
-.info-card-desarrollos {
-    flex: 1;
-    /* Ocupan el mismo espacio */
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.07);
-    /* Fondo casi transparente */
-    backdrop-filter: blur(10px);
-    /* Efecto cristal esmerilado */
-    padding: 35px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Borde sutil */
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.info-card-desarrollos:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-    /* Se levanta un poco al pasar el mouse */
-}
-
-.card-title-desarrollos {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+.info-cards-wrapper {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+
+    /* Estado inicial para la animación (invisible y desplazado) */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Pequeña barra naranja decorativa al lado del título */
-.accent-bar-desarrollos {
-    display: block;
-    width: 4px;
-    height: 25px;
+/* Clase que se agrega con JS para activar la animación */
+.info-cards-wrapper.animar-entrada {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- TARJETAS PRO --- */
+.info-card-pro {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card-pro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(239, 137, 55, 0.3);
+    /* Borde naranja sutil al hover */
+}
+
+/* Línea naranja decorativa arriba */
+.card-icon-line {
+    width: 50px;
+    height: 4px;
     background-color: #ef8937;
+    margin-bottom: 25px;
     border-radius: 2px;
 }
 
-.card-text-desarrollos {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
-    margin: 0;
+.card-title-pro {
+    color: white;
+    font-family: "1", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card-text-pro {
+    color: #a0a0a0;
+    font-family: "1", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* --- RESPONSIVE --- */
+
+
+@media (max-width: 1000px) {
+    .hero-desarrollos {
+        height: 90vh;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .info-cards-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-section-container {
+        padding: 60px 20px;
+    }
+
+    /* En móvil, reducimos el desplazamiento de la animación para que sea más suave */
+    .info-cards-wrapper {
+        transform: translateY(30px);
+    }
 }
 
 /* --- ANIMACIONES DE ENTRADA --- */
@@ -1900,13 +1963,18 @@ body.modal-abierto {
 
 .scroll-arrow-container-desarrollos {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
+    /* Un poco más arriba */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
     cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.scroll-arrow-container-desarrollos:hover {
+    opacity: 1;
 }
 
 .scroll-arrow-container-desarrollos span {
@@ -1931,7 +1999,7 @@ body.modal-abierto {
     }
 
     .scroll-arrow-container-desarrollos {
-        display: none;
+        bottom: 0;
     }
 }
 
@@ -1941,10 +2009,7 @@ body.modal-abierto {
         /* Padding arriba y abajo */
     }
 
-    .hero-content-wrapper-desarrollos {
-        justify-content: flex-start;
-        /* Alinear arriba */
-    }
+
 
     .main-title-box-desarrollos {
         margin-bottom: 50px;
@@ -2463,7 +2528,7 @@ body.modal-abierto {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  
+
 
     .modelo-info-card {
         padding: 30px 20px;
@@ -5399,6 +5464,11 @@ body.modal-abierto {
     color: #133222;
 }
 
+.input:focus-visible {
+    outline: none;
+    border: 2px solid #ef8937;
+}
+
 .mensaje {
     width: 100%;
     margin: 5px 0px;
@@ -5412,6 +5482,11 @@ body.modal-abierto {
     font-weight: bold;
     color: #133222;
     resize: none;
+}
+
+.mensaje:focus {
+    outline: none;
+    border: 2px solid #ef8937;
 }
 
 .button-formulario {
@@ -5434,46 +5509,138 @@ body.modal-abierto {
 }
 
 /* 2. ESTILOS DE HORARIOS */
-.contenedor-horarios {
+/* CONTENEDOR PRINCIPAL */
+.contact-card-modern-horario {
     width: 30%;
-    text-align: right;
-    /* Alineado a la derecha en Desktop */
+    min-width: 280px;
+    background: rgba(40, 73, 56, 0.95);
+    /* Tu verde #284938 con un toque de transparencia */
+    backdrop-filter: blur(10px);
+    /* Efecto vidrio esmerilado (moderno) */
+    border-radius: 12px;
+    /* Bordes más sutiles, no tan redondos */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #284938;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 3px rgb(32, 32, 32);
-    padding: 10px;
+    align-items: flex-start;
+    /* Alineado a la izquierda se ve más pro */
 }
 
-.title-horario {
+/* TÍTULO */
+.contact-card-title-horario {
     color: white;
-    font-size: larger;
     font-family: "1", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 5px;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.384);
+    /* Tu fuente */
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.texto-horario {
+/* LÍNEA DIVISORIA NARANJA */
+.contact-card-divider-horario {
+    width: 40px;
+    height: 3px;
+    background-color: #ef8937;
+    /* Tu naranja */
+    margin: 15px 0 25px 0;
+    border-radius: 2px;
+}
+
+/* CONTENEDOR DE ITEMS */
+.contact-card-items-horario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FILA INDIVIDUAL (ENLACE) */
+.contact-item-row-horario {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.contact-item-row-horario:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Efecto hover sutil */
+    transform: translateX(5px);
+    /* Pequeño movimiento a la derecha */
+}
+
+/* CAJA DEL ICONO */
+.contact-icon-box-horario {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon-box-horario img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+.contact-item-row-horario:hover .contact-icon-box-horario {
+    background-color: #ef8937;
+    /* El icono se pone naranja al pasar el mouse */
+}
+
+/* TEXTOS */
+.contact-info-text-horario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label-horario {
+    font-size: 0.75rem;
+    color: #aaa;
+    /* Gris claro para la etiqueta */
+    text-transform: uppercase;
+    font-family: "1", sans-serif;
+    letter-spacing: 1px;
+}
+
+.contact-value-horario {
     color: white;
-    font-weight: bold;
-    margin: 2px 0;
-    text-align: center;
-    margin: 10px 0px;
-    border-radius: 15px;
-    font-family: "1";
-    font-size: small;
-    width: 100%;
+    font-size: 0.95rem;
+    font-family: "1", sans-serif;
+    font-weight: 600;
 }
 
-.texto-horario:hover {
-    color: #ef8937;
-    transition: all .3s;
-    cursor: pointer;
+/* RESPONSIVE (Para celular) */
+@media (max-width: 768px) {
+    .contact-card-modern-horario {
+        width: 90%;
+        margin-top: 20px;
+        align-items: center;
+        /* En celular centramos todo */
+    }
+
+    .contact-card-items-horario {
+        align-items: center;
+        /* Centrar items */
+    }
+
+    .contact-item-row-horario {
+        width: 100%;
+        justify-content: center;
+        /* Centrar contenido de la fila */
+    }
 }
 
 /* 3. ESTILOS DEL LOGO */
@@ -5520,14 +5687,6 @@ body.modal-abierto {
         /* Tamaño grande como pedías en mob */
     }
 
-    .contenedor-horarios {
-        width: 100%;
-        text-align: center;
-        /* En celular queda mejor centrado o izquierda */
-        margin-bottom: 30px;
-        align-items: center;
-        /* Para centrar el flex column interno */
-    }
 
     .formulario-wrapper {
         width: 100%;
@@ -6305,11 +6464,7 @@ body.modal-abierto {
 
 
 
-    .contenedor-horarios {
-        width: 40%;
-        text-align: start;
 
-    }
 
     /* ENCABEZADO BARRIO */
 
@@ -6476,19 +6631,9 @@ body.modal-abierto {
     .contenedor-contacto {
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
+
 
     }
-
-
-
-    .contenedor-horarios {
-        width: 90%;
-        text-align: center;
-
-    }
-
-
 
 
     .card-numeros {}

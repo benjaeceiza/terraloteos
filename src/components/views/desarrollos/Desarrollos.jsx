@@ -4,6 +4,7 @@ import RenderBarrios from "./RenderBarrios";
 import Slidermodelos from "./SliderModelos";
 import Preguntas from "../casa/Preguntas";
 import BarriosTerminados from "./BarriosTerminados";
+import InfoDesarrollos from "./InfoDesarrollos";
 
 
 const Desarrollos = () => {
@@ -11,7 +12,7 @@ const Desarrollos = () => {
     <main className="main-index" style={{ backgroundColor: "#121212", minHeight: "100vh" }}>
       {/* El Encabezado nuevo y profesional */}
       <Encabezado />
-
+      <InfoDesarrollos />
       <div id="listado" className="contenedor-title" style={{ marginTop: "60px" }}>
         <div className="completed-header">
           <span className="completed-subtitle">BARRIOS</span>

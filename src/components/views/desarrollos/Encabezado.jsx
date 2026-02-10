@@ -6,9 +6,9 @@ const Encabezado = () => {
     const { hideLoader } = useLoading();
 
     const handleScrollDown = () => {
-        const section = document.querySelector("#listado");
+        // Ahora buscamos la sección nueva por ID
+        const section = document.getElementById("info-desarrollos");
         if (section) {
-            // El offset -80 es para que el menú de arriba no tape el título del listado
             const y = section.getBoundingClientRect().top + window.scrollY - 80;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -16,7 +16,7 @@ const Encabezado = () => {
 
     return (
         <section className="hero-desarrollos">
-            {/* Imagen de fondo con efecto Ken Burns y Overlay */}
+            {/* Fondo Ken Burns */}
             <div className="hero-bg-wrapper-desarrollos">
                 <img
                     className="hero-bg-img-desarrollos"
@@ -27,9 +27,8 @@ const Encabezado = () => {
                 <div className="hero-overlay-gradient-desarrollos"></div>
             </div>
 
-            {/* Contenido Principal */}
+            {/* Contenido Principal Limpio */}
             <div className="hero-content-wrapper-desarrollos">
-
                 <div className="main-title-box-desarrollos animate-fade-up">
                     <h1>
                         VIVÍ EN <span className="text-orange">NUESTROS</span> DESARROLLOS
@@ -41,38 +40,9 @@ const Encabezado = () => {
                     </p>
                 </div>
 
-                {/* Tarjetas de Información Inferiores */}
-                <div className="info-cards-container-desarrollos animate-fade-up delay-1">
-
-                    {/* Tarjeta 1 */}
-                    <div className="info-card-desarrollos">
-                        <h3 className="card-title-desarrollos">
-                            <span className="accent-bar-desarrollos"></span>
-                            Desarrollos Urbanísticos
-                        </h3>
-                        <p className="card-text-desarrollos">
-                            Abiertos y privados, en entornos naturales únicos, con
-                            infraestructura y servicios propios. Podés comprar tu lote y
-                            elegir entre distintos modelos de vivienda.
-                        </p>
-                    </div>
-
-                    {/* Tarjeta 2 */}
-                    <div className="info-card-desarrollos">
-                        <h3 className="card-title-desarrollos">
-                            <span className="accent-bar-desarrollos"></span>
-                            Planes Flexibles
-                        </h3>
-                        <p className="card-text-desarrollos">
-                            Nuestros planes de construcción son escalonados y pensados para
-                            que puedas mudarte con el 60% del valor abonado. El resto lo
-                            financiás con tranquilidad.
-                        </p>
-                    </div>
-
-                </div>
+                {/* Flecha para bajar */}
                 <div className="scroll-arrow-container-desarrollos animate-fade-in delay-3" onClick={handleScrollDown}>
-                    <span>Ver Productos</span>
+                    <span>Descubrir Más</span>
                     <img src={flecha} alt="Bajar" className="bounce-arrow" />
                 </div>
             </div>
