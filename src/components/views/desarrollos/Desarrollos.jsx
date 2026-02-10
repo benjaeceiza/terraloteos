@@ -9,7 +9,7 @@ import InfoDesarrollos from "./InfoDesarrollos";
 
 const Desarrollos = () => {
   return (
-    <main className="main-index" style={{ backgroundColor: "#121212", minHeight: "100vh" }}>
+    <main className="main-index" style={{ backgroundColor: "#133222", minHeight: "100vh" }}>
       {/* El Encabezado nuevo y profesional */}
       <Encabezado />
       <InfoDesarrollos />

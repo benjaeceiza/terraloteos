@@ -1854,7 +1854,7 @@ body.modal-abierto {
 }
 
 .info-section-container {
-    background-color: #121212;
+    background-color: #133222;
     /* Negro profundo coherente con tu web */
     padding: 100px 20px;
     width: 100%;
@@ -1885,7 +1885,7 @@ body.modal-abierto {
 /* --- TARJETAS PRO --- */
 .info-card-pro {
     flex: 1;
-    background: #1a1a1a;
+    background: #35604a;
     padding: 40px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -5513,7 +5513,6 @@ body.modal-abierto {
 .contact-card-modern-horario {
     width: 30%;
     min-width: 280px;
-    background: rgba(40, 73, 56, 0.95);
     /* Tu verde #284938 con un toque de transparencia */
     backdrop-filter: blur(10px);
     /* Efecto vidrio esmerilado (moderno) */
@@ -5521,7 +5520,6 @@ body.modal-abierto {
     /* Bordes más sutiles, no tan redondos */
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
