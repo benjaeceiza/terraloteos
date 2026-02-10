@@ -57,7 +57,6 @@ const SectionContacto = () => {
 
                     {/* 3. FORMULARIO (MAILER) */}
                     <div className="formulario-wrapper">
-                        {/* Asegúrate que Mailer use las clases genéricas 'input' y 'mensaje' */}
                         <Mailer />
                     </div>
 

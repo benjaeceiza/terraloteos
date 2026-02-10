@@ -5443,6 +5443,10 @@ body.modal-abierto {
     min-width: 300px;
 }
 
+.contenedor-spinner-formulario{
+    text-align: center;
+}
+
 /* IMPORTANTE: Usa estas clases dentro de tu componente Mailer */
 .contenedor-formulario {
     display: flex;

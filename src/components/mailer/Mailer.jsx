@@ -31,7 +31,7 @@ const Mailer = () => {
         draggable: true,
         progress: undefined,
         theme: "light",
-    
+
 
     })
 
@@ -71,16 +71,16 @@ const Mailer = () => {
                             </div>
                         </div>
                         :
-                        ""
+
+                        <form className="contenedor-formulario" ref={form} onSubmit={sendEmail}>
+                            <input className="input" type="text" name="user_name" placeholder="Nombre" required={true} />
+                            <input className="input" type="text" name="last_name" placeholder="Apellido" required={true} />
+                            <input className="input" type="email" name="user_email" placeholder="Correo Electronico" required={true} />
+                            <input className="input" type="text" name="user_phone" placeholder="Numero" required={true} />
+                            <textarea className="mensaje" placeholder="Mensaje" name="message" ></textarea>
+                            <input type="submit" value={"Enviar"} className="button-formulario" />
+                        </form>
                 }
-                <form className="contenedor-formulario" ref={form} onSubmit={sendEmail}>
-                    <input className="input" type="text" name="user_name" placeholder="Nombre" required={true} />
-                    <input className="input" type="text" name="last_name" placeholder="Apellido" required={true} />
-                    <input className="input" type="email" name="user_email" placeholder="Correo Electronico" required={true} />
-                    <input className="input" type="text" name="user_phone" placeholder="Numero" required={true} />
-                    <textarea className="mensaje" placeholder="Mensaje" name="message" ></textarea>
-                    <input type="submit" value={"Enviar"} className="button-formulario" />
-                </form>
 
 
             </div>
