@@ -30,7 +30,7 @@ const Detalles = ({ barrio }) => {
                         <img src={diferenciales} alt="Diferenciales" />
                     </div>
                     <div className="spec-content-barrio">
-                        <span className="spec-title-barrio">Propuesta</span>
+                        <span className="spec-title-barrio">Diferenciales</span>
                         <span className="spec-value-barrio">{barrio.diferenciales}</span>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ const Detalles = ({ barrio }) => {
                     </div>
                     <div className="spec-content-barrio">
                         <span className="spec-title-barrio">Ubicación</span>
-                        <span className="spec-value-barrio">{barrio.distancias}</span>
+                        <span className="spec-value-barrio">{barrio.ubicacion}</span>
                     </div>
                 </div>
 
