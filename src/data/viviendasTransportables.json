@@ -1,0 +1,42 @@
+[
+    {
+        "nombre": "Aruma",
+        "tipo": "Casa",
+        "metros": 64,
+        "imgPrincipal": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
+        "galeriaImagenes": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003039/interior_11zon_ln7twp.webp"
+        ]
+    },
+    {
+        "nombre": "Zerum",
+        "tipo": "Quincho",
+        "metros": 26,
+        "imgPrincipal": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003087/24_11zon_mgevfz.webp",
+        "galeriaImagenes": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003087/24_11zon_mgevfz.webp"
+        ]
+    },
+    {
+        "nombre": "Aura",
+        "tipo": "Cabaña",
+        "metros": 32,
+        "imgPrincipal": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002994/3_11zon_xiizkd.webp",
+        "galeriaImagenes": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002994/3_11zon_xiizkd.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002999/5_11zon_oqhrrh.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002996/4_11zon_fyeftr.webp"
+        ]
+    },
+    {
+        "nombre": "Varese",
+        "tipo": "Refugio",
+        "metros": 26,
+        "imgPrincipal": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002944/34_11zon_hhfxxz.webp",
+        "galeriaImagenes": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002944/34_11zon_hhfxxz.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002942/35_11zon_idaddj.webp"
+        ]
+    }
+]

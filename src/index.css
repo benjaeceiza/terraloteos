@@ -4708,7 +4708,233 @@ body.modal-abierto {
     height: 600px;
 }
 
-.item-slider-torres {}
+
+
+/* estilos de galeria de imagenes vivienda transportable */
+
+/* --- ESTILOS GALERÍA (modelo-vivienda-transportable) --- */
+
+.galeria-modelo-vivienda-transportable {
+    padding: 60px 20px;
+}
+
+.grid-modelo-vivienda-transportable {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+/* Tarjeta */
+.card-modelo-vivienda-transportable {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-modelo-vivienda-transportable:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.img-modelo-vivienda-transportable {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card-modelo-vivienda-transportable:hover .img-modelo-vivienda-transportable {
+    transform: scale(1.1);
+}
+
+/* Overlay Hover */
+.overlay-modelo-vivienda-transportable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-modelo-vivienda-transportable:hover .overlay-modelo-vivienda-transportable {
+    opacity: 1;
+}
+
+/* Textos e Info */
+.titulo-modelo-vivienda-transportable {
+    color: white;
+    font-family: "1", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.subtitulo-modelo-vivienda-transportable {
+    color: #ef8937;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s;
+}
+
+.btn-modelo-vivienda-transportable {
+    padding: 10px 25px;
+    border: 2px solid #ef8937;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.3s;
+}
+
+.btn-modelo-vivienda-transportable:hover {
+    background: #ef8937;
+    color: white;
+}
+
+.card-modelo-vivienda-transportable:hover .titulo-modelo-vivienda-transportable,
+.card-modelo-vivienda-transportable:hover .subtitulo-modelo-vivienda-transportable,
+.card-modelo-vivienda-transportable:hover .btn-modelo-vivienda-transportable {
+    transform: translateY(0);
+}
+
+
+/* --- ESTILOS MODAL (modelo-vivienda-transportable) --- */
+
+.modal-overlay-modelo-vivienda-transportable {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.582);
+    z-index: 2000;
+    /* Z-index alto para tapar todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+}
+
+.modal-content-modelo-vivienda-transportable {
+    background: #163a28;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.btn-close-modelo-vivienda-transportable {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color:#ef8937;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 0.8;
+}
+
+.slider-container-modelo-vivienda-transportable {
+    position: relative;
+    height: 60vh;
+    /* Altura adaptable */
+    min-height: 400px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-img-modelo-vivienda-transportable {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding: 20px 0px;
+ 
+}
+
+.slider-nav-btn-modelo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#ef8937;
+    border: none;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+    background-color: transparent;
+     transition: all .3s;
+}
+
+.slider-nav-btn-modelo:hover {
+   font-size: 2rem;
+   transition: all .3s;
+}
+
+.slider-nav-btn-modelo.prev {
+    left: 0;
+}
+
+.slider-nav-btn-modelo.next {
+    right: 0;
+}
+
+.info-footer-modelo-vivienda-transportable {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid #333;
+}
+
+.info-footer-modelo-vivienda-transportable h2 {
+    margin: 0;
+    font-family: "1";
+    color: #ef8937;
+}
+
+.info-footer-modelo-vivienda-transportable p {
+    margin-top: 5px;
+    color: #aaa;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* --- 1. VARIABLES GLOBALES (Tema Dark Premium) --- */
 :root {
@@ -5443,7 +5669,7 @@ body.modal-abierto {
     min-width: 300px;
 }
 
-.contenedor-spinner-formulario{
+.contenedor-spinner-formulario {
     text-align: center;
 }
 

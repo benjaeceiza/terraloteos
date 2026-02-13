@@ -308,9 +308,9 @@
         "nombre": "Vivienda transportable",
         "logo": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769528045/Logo_terra_blanco_bnouwn.png",
         "cardImages": [
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769573137/vivienda_ue9z5f.png",
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572670/vivienda-transportable_1_icuh1l.png"
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003039/interior_11zon_ln7twp.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002942/35_11zon_idaddj.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002996/4_11zon_fyeftr.webp"
         ],
         "brochure": "/pdf/vivienda-transportable.pdf",
         "clase": "vivienda",
@@ -348,8 +348,8 @@
         "descripcionLarga": "Nuestras viviendas transportables representan una forma moderna de construir. Son módulos fabricados en taller y montados en obra, diseñados específicamente para habitar con el máximo confort. A diferencia de un contenedor, cuentan con una estructura de acero robusta, correcta estanqueidad y una aislación térmica eficiente que protege tanto del frío como del calor. Ofrecemos una solución llave en mano con terminaciones de alta calidad listas para el uso diario.",
         "descripcion": "Viviendas modulares de estructura de acero, transportables y listas para habitar en 90 días.",
         "ubicacion": "Todo el país / Región según logística",
-        "miniatura": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
-        "imgEncabezado": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
+        "miniatura": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
+        "imgEncabezado": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
         "link": "/producto/Vivienda transportable"
     }
 ]

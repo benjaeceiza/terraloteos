@@ -192,7 +192,7 @@
     },
     {
         "nombre": "Miralba",
-        "logo": "https://i.postimg.cc/XJp8FYkJ/Logo-Miralba-blanco.png",
+        "logo": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771002473/Logo_Miralba_blanco_lbipdm_uyhvrk.png",
         "imgPrincipal": "https://i.postimg.cc/d1y24Kw4/fondo-9.jpg",
         "descripcion": "MIRALBA es uno de los urbanismos más destacados de la provincia, inserto dentro del circuito grande de las Sierras Centrales de San Luis, nos permite disfrutar de una inmejorable vista y accesibilidad a los mejores puntos turísticos de a zona. A solo 5 minutos de Potrero de los Funes, a 15 minutos de la cuidad de San Luis y a metros del ingreso de la Cuidad de La Punta. Dentro del mismo encontramos al Polo Gastronómico más importantes de la región, EL VIEJO MERCADO que contará con 4 locales Gastronómicos y 16 locales comerciales de alimentos frescos y proveedurías boutique, patio de comidas, terraza cervecera y paseo orgánico.",
         "estado": "Preventa",
@@ -213,7 +213,21 @@
         "propuesta": "Lotes, casas, torres, dúplex, locales",
         "diferenciales": "Polo gastronómico, amenities, 30% de bosque nativo",
         "ubicacion": "La Punta, San Luis",
-        "galeriaImagenes": [],
+        "galeriaImagenes": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001468/WhatsApp_Image_2026-02-13_at_12.20.02_13_11zon_zzsatm.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001465/WhatsApp_Image_2026-02-13_at_12.20.01_11_11zon_ru7ud5.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001466/WhatsApp_Image_2026-02-13_at_12.20.02_1__12_11zon_rpzsi2.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001463/WhatsApp_Image_2026-02-13_at_12.20.01_1__10_11zon_krcj1t.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001461/WhatsApp_Image_2026-02-13_at_12.19.54_9_11zon_fw7peh.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001459/WhatsApp_Image_2026-02-13_at_12.19.54_4__8_11zon_mknjj8.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001457/WhatsApp_Image_2026-02-13_at_12.19.54_3__7_11zon_g10zcp.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001455/WhatsApp_Image_2026-02-13_at_12.19.54_2__6_11zon_nwdljq.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001453/WhatsApp_Image_2026-02-13_at_12.19.54_1__5_11zon_gcctvk.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001451/WhatsApp_Image_2026-02-13_at_12.19.53_4_11zon_v8jkod.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001449/WhatsApp_Image_2026-02-13_at_12.19.53_1__3_11zon_pz34g8.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001449/WhatsApp_Image_2025-12-29_at_12.07.17_PM_5__2_11zon_rnrhdp.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001448/IMG_2551.JPG_1_11zon_tbv4tp.webp"
+        ],
         "broshure": "/pdf/miralba.pdf",
         "mapa": "https://maps.app.goo.gl/wEgkKTBhsoAAQQHv9"
     },
@@ -309,7 +323,7 @@
     },
     {
         "nombre": "Estación del Valle",
-        "logo": "https://i.postimg.cc/pV5CLydc/logos-estacion-del-valle.png",
+        "logo": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769528021/logos_estacion_del_valle_o92vhr.png",
         "imgPrincipal": "https://i.postimg.cc/ZKFLGZ3Q/fondo-5.jpg",
         "descripcion": "Este desarrollo fue pensado para que puedas construir tu casa soñada o desarrollar un proyecto turístico o comercial. En un entorno con fácil acceso y una proyección real que te invita a ser parte. Es el lugar donde tus planes se cruzan con el crecimiento, y donde ese sueño puede empezar hoy.",
         "estado": "Preventa",
@@ -331,18 +345,20 @@
         "diferenciales": " Bajo costo de entrada, alto potencial de plusvalía, ideal para uso residencial o comercial",
         "ubicacion": "Santa Rosa del Conlara, San Luis",
         "galeriaImagenes": [
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769530458/2BE45CD1-7C05-4AC7-9D5B-553643A719C6_iksy0y_azqi7q.jpg",
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769526885/IMG-20241210-WA0013_s0xtez.jpg",
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769526883/Estaciondelvalle_mdffps.jpg",
-            "https://res.cloudinary.com/dmnksm3th/image/upload/v1769526881/IMG-20241210-WA0012_mnaekg.jpg"
+             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001903/IMG-20241210-WA0013_11zon_nxjpx9.webp",
+             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001901/IMG-20241210-WA0012_11zon_jcmgww.webp",
+             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001899/08-09-FOTO-Ente-Vial-apertura-calles2_11zon_y3om6r.webp",
+             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001896/Captura_de_pantalla_2026-02-13_122852_11zon_rwptah.webp",
+             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001895/Estaciondelvalle_11zon_t2gft5.webp",
+             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771001894/Captura_de_pantalla_2026-02-13_122812_11zon_t97jlt.webp"
         ],
         "broshure": "/pdf/estacion-del-valle.pdf",
         "mapa": "https://maps.app.goo.gl/F3JFkByfctjxqPig9"
     },
     {
         "nombre": "Palmares de Balcarce",
-        "logo": "https://i.postimg.cc/NjKSGXwW/palmares.png",
-        "imgPrincipal": "https://i.postimg.cc/wBP5XB81/fondo-7.jpg",
+        "logo": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769528340/palmares_vchhc8.png",
+        "imgPrincipal": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000747/DSCF6020_rrvdeq.webp",
         "descripcion": "Palmares es ese tipo de lugar que no necesita mucho para cautivarte. Con su flora autóctona, dominada por las palmeras caranday, el paisaje se vuelve protagonista y transmite esa calma que a veces parece difícil de encontrar. Respirar aire puro, escuchar solo lo esencial y convivir con un entorno que sigue siendo natural, es parte de la experiencia de vivir acá. No es solo tierra, es un escenario pensado para quienes eligen una vida más simple, más serena, más conectada.",
         "estado": "Preventa",
         "distancias": "3.000 m de Ruta N°1",
@@ -362,7 +378,16 @@
         "propuesta": " Financiación en cuotas fijas",
         "diferenciales": "Palmeras caranday, entorno natural, sin expensas",
         "ubicacion": "Cortaderas, San Luis",
-        "galeriaImagenes": [],
+        "galeriaImagenes": [
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000745/DSCF6004_xvvtg4.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000743/DJI_0088_uyxest.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000751/5F4E81A6-D71C-41FD-9A90-8E6EEEC854F8_o5gxe3.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000753/DJI_0942_zoxltx.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000749/family_hiking_behind_alternate_eszwfg.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000747/DSCF6020_rrvdeq.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000742/conarsac-blog-excavacion-de-zanjas-1024x640_monqe7.webp",
+            "https://res.cloudinary.com/dmnksm3th/image/upload/v1771000744/DSCF5930_eao2ws.webp"
+        ],
         "broshure": "/pdf/palmares-balcarce.pdf",
         "mapa": "https://maps.app.goo.gl/aKzcJidXi3r62f3g8"
     },
