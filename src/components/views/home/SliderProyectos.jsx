@@ -72,7 +72,7 @@ const SliderProyectos = () => {
         },
         {
             id: 7,
-            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769572674/vivienda-transportable_2_yvd7fv.png",
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
             titulo: ["Vivienda", "Trasnportable"],
             tipo: "RESIDENCIAL",
             ubicacion: "SAN LUIS",
