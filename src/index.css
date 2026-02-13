@@ -138,7 +138,7 @@ body.modal-abierto {
     z-index: -1;
     /* Se va al fondo */
 
-    background: url("./assets/fondos/fondo-main.png") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dmnksm3th/image/upload/v1771006558/20251009_1049_Monta%C3%B1as_Serpenteantes_remix_01k74kjx8aejwa59tsax69wct9_ulsf7y.webp") center/cover no-repeat;
     filter: brightness(50%);
 
     /* Esto evita que parpadee en el celular */
@@ -2869,90 +2869,105 @@ body.modal-abierto {
 
 }
 
-/* galeria imagenes */
-/* --- ESTILOS GENERALES (PC / Tablet) --- */
-.galeria-imagenes {
-    display: grid;
-    /* En PC se ajusta automático */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 250px;
-    gap: 15px;
-    grid-auto-flow: dense;
-    justify-content: center;
+/*Galera de imagenes */
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.galeria-mosaico-fluido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 20px;
-    max-width: 1680px;
+    max-width: 1600px;
     margin: 0 auto;
+    
+    /* TRUCO EXTRA: Esto ayuda a centrar si quedan fotos sueltas muy chicas */
+    /* justify-content: center;  <-- Descomenta si prefieres que queden al medio */
 }
 
-/* El contenedor de la imagen */
-.box {
-    border-radius: 12px;
-    overflow: hidden;
+/* --- ITEM (LA CAJA) --- */
+.mosaico-item {
     position: relative;
-    background-color: #e0e0e0;
+    height: 300px; 
+    border-radius: 8px;
+    overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    grid-column: span 1;
-    grid-row: span 1;
+    background-color: #222;
+    
+    flex-grow: 1; 
 }
 
-.box:hover {
-    transform: scale(1.02);
-    z-index: 2;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+/* --- AQUÍ ESTÁ EL ARREGLO --- */
+
+/* Verticales: Base 200px, pero que nunca pasen de 400px */
+.mosaico-item.vertical {
+    flex-basis: 200px;
+    max-width: 400px; /* <--- LÍMITE NUEVO */
 }
 
-/* --- TAMAÑOS ESPECIALES (Solo PC) --- */
-@media (min-width: 768px) {
-    .box.wide {
-        grid-column: span 2;
-    }
-
-    .box.tall {
-        grid-row: span 2;
-    }
+/* Horizontales: Base 400px, pero que nunca pasen de 700px */
+.mosaico-item.horizontal {
+    flex-basis: 400px; 
+    max-width: 800px; /* <--- LÍMITE NUEVO */
 }
 
-/* --- MÓVIL (Una sola columna) --- */
-@media (max-width: 767px) {
-    .galeria-imagenes {
-        /* CLAVE: 1fr hace que sea 1 sola columna ocupando todo el ancho */
-        grid-template-columns: 1fr;
-
-        /* Le damos buena altura para que la foto se vea grande y linda */
-        grid-auto-rows: 300px;
-    }
-
-    /* Forzamos a que las fotos panorámicas o altas se comporten normal */
-    .box.wide,
-    .box.tall {
-        grid-column: span 1 !important;
-        grid-row: span 1 !important;
-    }
-}
-
-/* Estilos de Imagen y Spinner */
-.box-img {
+/* --- IMAGEN --- */
+.mosaico-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     display: block;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.box-img.visible {
+.mosaico-img.visible {
     opacity: 1;
 }
 
-.conteiner-spinner-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+/* --- EFECTOS HOVER Y OVERLAY (Igual que antes) --- */
+.mosaico-item:hover .mosaico-img {
+    transform: scale(1.1);
 }
 
+.mosaico-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mosaico-overlay span {
+    color: white; font-weight: bold; border: 2px solid white;
+    padding: 5px 15px; border-radius: 20px;
+}
+
+.mosaico-item:hover .mosaico-overlay {
+    opacity: 1;
+}
+
+/* --- SPINNER --- */
+.spinner-center {
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .mosaico-item {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mosaico-item {
+        height: 200px;
+        flex-basis: 150px;
+        /* En celular quizás quieras ser más permisivo con el ancho */
+        max-width: 100%; 
+    }
+}
 
 /* PAGE MODELOS */
 
@@ -5188,6 +5203,7 @@ body.modal-abierto {
     width: 100%;
     display: block;
     transition: transform 0.5s ease;
+    
 }
 
 .gallery-item:hover img {
@@ -5215,6 +5231,7 @@ body.modal-abierto {
 
 .icon-zoom {
     max-width: 50px;
+    max-height: 50px;
 }
 
 
@@ -6676,7 +6693,6 @@ body.modal-abierto {
     .titulo-nosotros-home {
         color: white;
         font-size: 45px;
-
         text-align: start;
         font-family: "1";
         font-weight: bold;
@@ -6751,9 +6767,6 @@ body.modal-abierto {
     .sub-textos-ds {
         font-size: x-large;
     }
-
-    .info-ds {}
-
 
 
     .contenedor-nosotros p {
@@ -6862,9 +6875,6 @@ body.modal-abierto {
 
 
     }
-
-
-    .card-numeros {}
 
     .numero-icono {
         display: flex;

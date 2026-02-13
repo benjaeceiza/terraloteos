@@ -11,21 +11,21 @@ const Categorias = () => {
             id: 1,
             titulo: "VIVIR",
             texto: "Encontrá tu lugar ideal. Descubrí nuestros barrios y modelos de vivienda.",
-            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1770992070/Vivir_a4y5lj.png",
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771006803/Vivir_a4y5lj_11zon_m2sdz1.webp",
             link: "/desarrollos"
         },
         {
             id: 2,
             titulo: "INVERTIR",
             texto: "Hacé crecer tu capital con propiedades que generan valor real en el tiempo.",
-            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1770992071/Invertir_k4fj9c.png",
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771006799/Invertir_k4fj9c_11zon_tidvol.webp",
             link: "/listado-productos"
         },
         {
             id: 3,
             titulo: "SER PARTE",
             texto: "Convertite en socio del desarrollo desde cero y obtené beneficios únicos.",
-            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1770992070/Ser_Parte_nqygcv.jpg",
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771006796/Ser_Parte_nqygcv_11zon_dxqyrl.webp",
             link: "/ser-parte-desarrollo"
         }
     ];

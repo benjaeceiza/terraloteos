@@ -1,65 +1,55 @@
 import { useState } from "react";
+import { optimizarImagen } from "../../../utils/cloudinary"; 
 
 
 const GaleriaImagenes = ({ casa, setSliderVisible, setImagenSeleccionada }) => {
-  // el estado guardará objetos: { loaded: boolean, shape: string }
-  const [imageStates, setImageStates] = useState({});
+  const [imageConfig, setImageConfig] = useState({});
 
-  const handleLoadImage = (index, event) => {
-    const imgElement = event.target;
-    // Calculamos la relación de aspecto usando las dimensiones naturales de la imagen
-    const width = imgElement.naturalWidth;
-    const height = imgElement.naturalHeight;
+  const handleImageLoad = (index, event) => {
+    const img = event.target;
+    // Detectamos si es horizontal o vertical
+    const isHorizontal = img.naturalWidth > img.naturalHeight;
 
-    let shape = "standard"; // Por defecto cuadrado (1x1)
-
-    // Si el alto es notablemente mayor que el ancho (ej. un 20% más), es vertical
-    if (height > width * 1.2) {
-      shape = "tall";
-    }
-    // Si el ancho es notablemente mayor que el alto, es horizontal
-    else if (width > height * 1.2) {
-      shape = "wide";
-    }
-
-    setImageStates((prev) => ({
+    setImageConfig((prev) => ({
       ...prev,
-      [index]: { loaded: true, shape: shape },
+      [index]: { 
+        loaded: true, 
+        // Esta clase definirá cuánto se "estira" la foto
+        tipo: isHorizontal ? "horizontal" : "vertical" 
+      },
     }));
   };
 
   if (!casa?.galeriaImagenes) return null;
 
   return (
-    <section className="galeria-imagenes galeria-imagenes-casa">
+    <section className="galeria-mosaico-fluido">
       {casa.galeriaImagenes.map((imgUrl, index) => {
-        const imgState = imageStates[index] || { loaded: false, shape: "standard" };
+        const config = imageConfig[index] || { loaded: false, tipo: "vertical" };
 
         return (
           <div
-            // aplicamos una clase según la forma detectada
-            className={`box ${imgState.shape}`}
+            className={`mosaico-item ${config.tipo}`}
             key={index}
+            onClick={() => {
+              setImagenSeleccionada(index);
+              setSliderVisible(true);
+            }}
           >
             <img
-              src={imgUrl}
+              // Pedimos calidad media-alta ya que el tamaño es variable
+              src={optimizarImagen(imgUrl, 600)} 
               alt={`imagen-${index}`}
-              // Usamos imgState.loaded para la opacidad
-              className={`box-img ${imgState.loaded ? "visible" : "hidden"}`}
-              // Pasamos el evento 'e' para poder medir la imagen
-              onLoad={(e) => handleLoadImage(index, e)}
-              onClick={() => {
-                setImagenSeleccionada(index); // 1. Guardamos cuál se tocó
-                setSliderVisible(true);       // 2. Abrimos el slider
-              }}
+              className={`mosaico-img ${config.loaded ? "visible" : "hidden"}`}
+              onLoad={(e) => handleImageLoad(index, e)}
               loading="lazy"
             />
+            
+          
 
-            {!imgState.loaded && (
-              <div className="conteiner-spinner-img">
-                <div className="spinner-border text-light" role="status">
-                  <span className="visually-hidden">Loading...</span>
-                </div>
+            {!config.loaded && (
+              <div className="spinner-center">
+                 <div className="spinner-border text-light" role="status"></div>
               </div>
             )}
           </div>

@@ -1,64 +1,55 @@
 import { useState } from "react";
-import { optimizarImagen } from "../../../utils/cloudinary"; // Asegúrate que la ruta sea correcta
+import { optimizarImagen } from "../../../utils/cloudinary"; 
+
 
 const GaleriaImagenes = ({ barrio, setSliderVisible, setImagenSeleccionada }) => {
-  const [imageStates, setImageStates] = useState({});
+  const [imageConfig, setImageConfig] = useState({});
 
-  const handleLoadImage = (index, event) => {
-    const imgElement = event.target;
-    // Cloudinary mantiene el aspect ratio al redimensionar, 
-    // así que este cálculo sigue funcionando perfecto.
-    const width = imgElement.naturalWidth;
-    const height = imgElement.naturalHeight;
+  const handleImageLoad = (index, event) => {
+    const img = event.target;
+    // Detectamos si es horizontal o vertical
+    const isHorizontal = img.naturalWidth > img.naturalHeight;
 
-    let shape = "standard"; 
-
-    // Ajuste de umbrales para detectar formas
-    if (height > width * 1.2) {
-      shape = "tall";
-    } else if (width > height * 1.2) {
-      shape = "wide";
-    }
-
-    setImageStates((prev) => ({
+    setImageConfig((prev) => ({
       ...prev,
-      [index]: { loaded: true, shape: shape },
+      [index]: { 
+        loaded: true, 
+        // Esta clase definirá cuánto se "estira" la foto
+        tipo: isHorizontal ? "horizontal" : "vertical" 
+      },
     }));
   };
 
   if (!barrio?.galeriaImagenes) return null;
 
   return (
-    <section className="galeria-imagenes">
+    <section className="galeria-mosaico-fluido">
       {barrio.galeriaImagenes.map((imgUrl, index) => {
-        const imgState = imageStates[index] || { loaded: false, shape: "standard" };
+        const config = imageConfig[index] || { loaded: false, tipo: "vertical" };
 
         return (
           <div
-            className={`box ${imgState.shape}`}
+            className={`mosaico-item ${config.tipo}`}
             key={index}
+            onClick={() => {
+              setImagenSeleccionada(index);
+              setSliderVisible(true);
+            }}
           >
             <img
-              // ✅ AQUI ESTÁ LA MAGIA:
-              // Pedimos la imagen optimizada a 600px de ancho.
-              // Esto hace que la carga inicial de la grilla sea instantánea.
+              // Pedimos calidad media-alta ya que el tamaño es variable
               src={optimizarImagen(imgUrl, 600)} 
-              
               alt={`imagen-${index}`}
-              className={`box-img ${imgState.loaded ? "visible" : "hidden"}`}
-              onLoad={(e) => handleLoadImage(index, e)}
-              onClick={() => {
-                setImagenSeleccionada(index); 
-                setSliderVisible(true);
-              }}
+              className={`mosaico-img ${config.loaded ? "visible" : "hidden"}`}
+              onLoad={(e) => handleImageLoad(index, e)}
               loading="lazy"
             />
+            
+          
 
-            {!imgState.loaded && (
-              <div className="conteiner-spinner-img">
-                <div className="spinner-border text-light" role="status">
-                  <span className="visually-hidden">Loading...</span>
-                </div>
+            {!config.loaded && (
+              <div className="spinner-center">
+                 <div className="spinner-border text-light" role="status"></div>
               </div>
             )}
           </div>

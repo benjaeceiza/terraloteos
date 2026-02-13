@@ -5,7 +5,7 @@ import Numeros from "./Numeros";
 import SliderProyectos from "./SliderProyectos";
 import SectionContacto from "../../SectionContacto";
 import check from "../../../assets/iconos/check.png";
-import fondo from "../../../assets/fondos/fondo-main.png";
+
 
 const Home = () => {
   return (
