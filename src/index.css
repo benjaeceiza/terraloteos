@@ -2961,14 +2961,41 @@ body.modal-abierto {
 }
 
 @media (max-width: 600px) {
+    
+    .galeria-mosaico-fluido {
+        /* En celular cambiamos a GRID para tener control estricto de la forma */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 Columnas exactas */
+        grid-auto-rows: 200px; /* Altura base de un "cuadradito" */
+        grid-auto-flow: dense; /* Rellena huecos automáticamente */
+        gap: 10px;
+    }
+
+    /* Reseteamos los estilos de Flexbox que usábamos en PC */
     .mosaico-item {
-        height: 200px;
-        flex-basis: 150px;
-        /* En celular quizás quieras ser más permisivo con el ancho */
-        max-width: 100%; 
+        height: auto; 
+        flex-basis: auto;
+        max-width: none;
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    /* --- REGLAS DE FORMA PARA MÓVIL --- */
+
+    /* Vertical: Ocupa 1 columna y 2 filas de alto. 
+       Resultado: Una foto alta y delgada. */
+    .mosaico-item.vertical {
+        grid-column: span 1;
+        grid-row: span 2; 
+    }
+
+    /* Horizontal: Ocupa las 2 columnas de ancho y 1 fila de alto.
+       Resultado: Una foto panorámica que ocupa todo el ancho de la pantalla. */
+    .mosaico-item.horizontal {
+        grid-column: span 2;
+        grid-row: span 1; 
     }
 }
-
 /* PAGE MODELOS */
 
 /* --- CONFIGURACIÓN GLOBAL DE LA PÁGINA --- */
