@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import productos from "../../../data/productos.json";
 import { useLoading } from "../../context/LoadingContext";
 
@@ -7,7 +7,7 @@ import { useLoading } from "../../context/LoadingContext";
 import Encabezado from "./Encabezado";
 import Contenido from "./Contenido";
 import SectionContacto from "../../SectionContacto";
-import cerrar from "../../../assets/iconos/borrar.png";
+
 
 
 

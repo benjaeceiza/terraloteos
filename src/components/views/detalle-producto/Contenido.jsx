@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom";
 import lupa from "../../../assets/iconos/lupa.png"; // Icono lupa genérico para el zoom
 
 const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {

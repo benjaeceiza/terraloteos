@@ -76,7 +76,7 @@ const SliderProyectos = () => {
             titulo: ["Vivienda", "Trasnportable"],
             tipo: "RESIDENCIAL",
             ubicacion: "SAN LUIS",
-            link: "/producto/Vivienda Transportable"
+            link: "/producto/Vivienda transportable"
         }
     ];
 
