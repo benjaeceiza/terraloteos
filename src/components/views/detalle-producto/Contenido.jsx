@@ -47,11 +47,11 @@ const Contenido = ({ detalleProducto = {}, setSliderVisible }) => {
                             <div
                                 key={idx}
                                 className="gallery-item"
-                                onClick={() => setSliderVisible(true)} // Abre el modal
+                                onClick={() => setSliderVisible(true)}
                             >
                                 <img src={img} alt={`Galeria ${idx}`} loading="lazy" />
                                 <a href={img} target="_blank"><div className="gallery-overlay">
-            
+
                                     <img src={lupa} alt="Ver" className="icon-zoom" />
                                 </div></a>
                             </div>
