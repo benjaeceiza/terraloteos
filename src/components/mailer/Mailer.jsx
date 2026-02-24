@@ -40,7 +40,7 @@ const Mailer = () => {
         e.preventDefault();
         setIsSending(true)
         emailjs
-            .sendForm('service_saiuowe', 'template_qftn1lx', form.current, {
+            .sendForm('service_saiuowe', 'template_ix7ocqh', form.current, {
                 publicKey: "wQKiSjnmmbuHFTPUf",
             })
             .then(

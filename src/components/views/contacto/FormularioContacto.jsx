@@ -14,9 +14,9 @@ const FormularioContacto = () => {
         e.preventDefault();
         setIsSending(true);
 
-        emailjs.sendForm('service_saiuowe', 'template_qftn1lx', form.current, {
-            publicKey: "wQKiSjnmmbuHFTPUf",
-        })
+        emailjs.sendForm('service_saiuowe', 'template_ix7ocqh', form.current, {
+                publicKey: "wQKiSjnmmbuHFTPUf",
+            })
             .then(() => {
                 notifySuccess();
                 setIsSending(false);
