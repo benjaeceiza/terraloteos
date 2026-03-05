@@ -1,8 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLoading } from "../../context/LoadingContext";
-import { useState } from "react";
-
 
 // Iconos
 import iconoFacebook from "../../../assets/iconos/facebook.png";
@@ -14,20 +12,32 @@ import iconoIgN from "../../../assets/iconos/instagram-naranja.png";
 import iconoTiktok from "../../../assets/iconos/tiktok.png";
 import iconoTiktokN from "../../../assets/iconos/tiktok-naranja.png";
 
-
+// 1. Micro-componente aislado para que el hover no re-renderice todo el slider
+const IconoRedSocial = ({ link, iconoNormal, iconoHover, alt }) => {
+    const [hover, setHover] = useState(false);
+    return (
+        <li>
+            <Link to={link} target="_blank" rel="noreferrer"
+                onMouseEnter={() => setHover(true)} 
+                onMouseLeave={() => setHover(false)}>
+                <img src={hover ? iconoHover : iconoNormal} alt={alt} />
+            </Link>
+        </li>
+    );
+};
 
 const SliderProyectos = () => {
-    const [isHover, setIsHover] = useState("");
+    // Ya no necesitamos el estado "isHover" acá
     const { hideLoader, showLoader } = useLoading();
 
-    // 1. Configuración de los Slides (Para no repetir código HTML)
+    // 2. Configuración de los Slides
     const slides = [
         {
             id: 1,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527822/IMG_0044_bjxpyn.jpg",
             titulo: ["Torres", "Community"],
             tipo: "RESIDENCIAL",
-            ubicacion: "SAN LUIS",
+            ubicacion: "LA PUNTA, SAN LUIS",
             link: "/producto/Torres Community"
         },
         {
@@ -41,17 +51,17 @@ const SliderProyectos = () => {
         {
             id: 3,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527519/AtilierEstudiantil_8_-_Photo_h3fbrt.jpg",
-            titulo: ["Atilier", "Estudiantil"],
+            titulo: ["Ateliér", "Estudiantil"],
             tipo: "RESIDENCIAL",
-            ubicacion: "SAN LUIS",
-            link: "/producto/Atilier Estudiantil"
+            ubicacion: "MERLO, SAN LUIS",
+            link: "/producto/Atelier Estudiantil"
         },
         {
             id: 4,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527435/mantrax_Photo_-_7_khysau.jpg",
             titulo: ["Mantra", "Cabañas"],
             tipo: "RESIDENCIAL",
-            ubicacion: "SAN LUIS",
+            ubicacion: "MERLO, SAN LUIS",
             link: "/producto/Mantra, Cabañas Premiun"
         },
         {
@@ -67,36 +77,45 @@ const SliderProyectos = () => {
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527114/5_e310gu.jpg",
             titulo: ["El Viejo", "Mercado"],
             tipo: "COMERCIAL",
-            ubicacion: "LA PUNTA",
+            ubicacion: "LA PUNTA, SAN LUIS",
             link: "/producto/El Viejo Mercado"
         },
         {
             id: 7,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
-            titulo: ["Vivienda", "Trasnportable"],
+            titulo: ["Vivienda", "Transportable"],
             tipo: "RESIDENCIAL",
-            ubicacion: "SAN LUIS",
+            ubicacion: "A TODO EL PAÍS",
             link: "/producto/Vivienda transportable"
         }
     ];
 
-    // 2. ARREGLO DEL AUTOPLAY: Forzamos la inicialización con JS
+    // 3. ARREGLO DEL AUTOPLAY y CLEANUP: Forzamos la inicialización con JS
     useEffect(() => {
         const carouselElement = document.getElementById('carouselExampleAutoplaying');
-        // Verificamos si bootstrap está disponible en window (común en proyectos con CDN o import global)
-        if (window.bootstrap) {
-            const carousel = new window.bootstrap.Carousel(carouselElement, {
+        let carouselInstance = null;
+
+        if (window.bootstrap && carouselElement) {
+            carouselInstance = new window.bootstrap.Carousel(carouselElement, {
                 interval: 5000,
                 ride: 'carousel',
                 pause: false // 'hover' para pausar al pasar el mouse, false para que siga
             });
-            carousel.cycle();
+            carouselInstance.cycle();
         }
+
+        // Limpiamos la instancia de Bootstrap cuando salimos de la página
+        return () => {
+            if (carouselInstance) {
+                carouselInstance.dispose();
+            }
+        };
     }, []);
 
     return (
         <section className="slider-container">
-            <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel">
+            {/* OJO ACÁ: Se eliminó el data-bs-ride="carousel" para no hacer doble inicialización */}
+            <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade">
                 
                 <div className="carousel-inner">
                     {slides.map((slide, index) => (
@@ -153,30 +172,30 @@ const SliderProyectos = () => {
                     </div>
 
                     <ul className="footer-socials">
-                        <li>
-                            <Link to="https://facebook.com/loteosterra" target="_blank" rel="noreferrer"
-                               onMouseEnter={() => setIsHover("facebook")} onMouseLeave={() => setIsHover("")}>
-                                <img src={isHover === "facebook" ? iconoFacebookN : iconoFacebook} alt="Facebook" />
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="https://www.instagram.com/terraloteos/" target="_blank" rel="noreferrer"
-                               onMouseEnter={() => setIsHover("instagram")} onMouseLeave={() => setIsHover("")}>
-                                <img src={isHover === "instagram" ? iconoIgN : iconoIg} alt="Instagram" />
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="https://www.tiktok.com/@terraloteosoficial" target="_blank" rel="noreferrer"
-                               onMouseEnter={() => setIsHover("tiktok")} onMouseLeave={() => setIsHover("")}>
-                                <img src={isHover === "tiktok" ? iconoTiktokN : iconoTiktok} alt="TikTok" />
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`https://wa.me/5492657604317`} target="_blank" rel="noreferrer"
-                               onMouseEnter={() => setIsHover("whatsapp")} onMouseLeave={() => setIsHover("")}>
-                                <img src={isHover === "whatsapp" ? iconoWtsN : iconoWts} alt="WhatsApp" />
-                            </Link>
-                        </li>
+                        <IconoRedSocial 
+                            link="https://facebook.com/loteosterra" 
+                            iconoNormal={iconoFacebook} 
+                            iconoHover={iconoFacebookN} 
+                            alt="Facebook" 
+                        />
+                        <IconoRedSocial 
+                            link="https://www.instagram.com/terraloteos/" 
+                            iconoNormal={iconoIg} 
+                            iconoHover={iconoIgN} 
+                            alt="Instagram" 
+                        />
+                        <IconoRedSocial 
+                            link="https://www.tiktok.com/@terraloteosoficial" 
+                            iconoNormal={iconoTiktok} 
+                            iconoHover={iconoTiktokN} 
+                            alt="TikTok" 
+                        />
+                        <IconoRedSocial 
+                            link="https://wa.me/5492657604317" 
+                            iconoNormal={iconoWts} 
+                            iconoHover={iconoWtsN} 
+                            alt="WhatsApp" 
+                        />
                     </ul>
                 </div>
 

@@ -150,7 +150,7 @@
         "link": "/producto/Torres Community"
     },
     {
-        "nombre": "Atilier Estudiantil",
+        "nombre": "Atelier Estudiantil",
         "logo": "https://i.postimg.cc/435YCmVn/atilier.png",
         "cardImages": [
             "https://i.postimg.cc/Kv4dXwXr/Atilier-Estudiantil-9-Photo.jpg",
@@ -203,7 +203,7 @@
         "ubicacion": "San Luis",
         "miniatura": "https://i.postimg.cc/L575d11S/estudiantil.jpg",
         "imgEncabezado": "https://i.postimg.cc/154Lx2hQ/Atilier-Estudiantil-12-Foto.jpg",
-        "link": "/producto/Atilier Estudiantil"
+        "link": "/producto/Atelier Estudiantil"
     },
     {
         "nombre": "Paseo Conlara",
@@ -305,7 +305,7 @@
         "link": "/producto/El Viejo Mercado"
     },
     {
-        "nombre": "Vivienda transportable",
+        "nombre": "Vivienda Transportable",
         "logo": "https://res.cloudinary.com/dmnksm3th/image/upload/v1769528045/Logo_terra_blanco_bnouwn.png",
         "cardImages": [
             "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003039/interior_11zon_ln7twp.webp",
@@ -350,6 +350,6 @@
         "ubicacion": "Todo el país / Región según logística",
         "miniatura": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
         "imgEncabezado": "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
-        "link": "/producto/Vivienda transportable"
+        "link": "/producto/Vivienda Transportable"
     }
 ]
