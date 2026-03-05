@@ -18,7 +18,7 @@ const IconoRedSocial = ({ link, iconoNormal, iconoHover, alt }) => {
     return (
         <li>
             <Link to={link} target="_blank" rel="noreferrer"
-                onMouseEnter={() => setHover(true)} 
+                onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}>
                 <img src={hover ? iconoHover : iconoNormal} alt={alt} />
             </Link>
@@ -34,6 +34,14 @@ const SliderProyectos = () => {
     const slides = [
         {
             id: 1,
+            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
+            titulo: ["Vivienda", "Transportable"],
+            tipo: "RESIDENCIAL",
+            ubicacion: "A TODO EL PAÍS",
+            link: "/producto/Vivienda Transportable"
+        },
+        {
+            id: 2,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527822/IMG_0044_bjxpyn.jpg",
             titulo: ["Torres", "Community"],
             tipo: "RESIDENCIAL",
@@ -41,7 +49,7 @@ const SliderProyectos = () => {
             link: "/producto/Torres Community"
         },
         {
-            id: 2,
+            id: 3,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527600/5_zgdtvv.png",
             titulo: ["Garden", "Village"],
             tipo: "RESIDENCIAL",
@@ -49,15 +57,15 @@ const SliderProyectos = () => {
             link: "/producto/Garden Village"
         },
         {
-            id: 3,
+            id: 4,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527519/AtilierEstudiantil_8_-_Photo_h3fbrt.jpg",
-            titulo: ["Ateliér", "Estudiantil"],
+            titulo: ["Atelier", "Estudiantil"],
             tipo: "RESIDENCIAL",
             ubicacion: "MERLO, SAN LUIS",
             link: "/producto/Atelier Estudiantil"
         },
         {
-            id: 4,
+            id: 5,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527435/mantrax_Photo_-_7_khysau.jpg",
             titulo: ["Mantra", "Cabañas"],
             tipo: "RESIDENCIAL",
@@ -65,7 +73,7 @@ const SliderProyectos = () => {
             link: "/producto/Mantra, Cabañas Premiun"
         },
         {
-            id: 5,
+            id: 6,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527686/00-render_obsm7b.jpg",
             titulo: ["Paseo", "Conlara"],
             tipo: "COMERCIAL",
@@ -73,21 +81,14 @@ const SliderProyectos = () => {
             link: "/producto/Paseo Conlara"
         },
         {
-            id: 6,
+            id: 7,
             img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1769527114/5_e310gu.jpg",
             titulo: ["El Viejo", "Mercado"],
             tipo: "COMERCIAL",
             ubicacion: "LA PUNTA, SAN LUIS",
             link: "/producto/El Viejo Mercado"
         },
-        {
-            id: 7,
-            img: "https://res.cloudinary.com/dmnksm3th/image/upload/v1771003042/Viviendas_Terraloteos_11zon_l8gab9.webp",
-            titulo: ["Vivienda", "Transportable"],
-            tipo: "RESIDENCIAL",
-            ubicacion: "A TODO EL PAÍS",
-            link: "/producto/Vivienda transportable"
-        }
+
     ];
 
     // 3. ARREGLO DEL AUTOPLAY y CLEANUP: Forzamos la inicialización con JS
@@ -116,7 +117,7 @@ const SliderProyectos = () => {
         <section className="slider-container">
             {/* OJO ACÁ: Se eliminó el data-bs-ride="carousel" para no hacer doble inicialización */}
             <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade">
-                
+
                 <div className="carousel-inner">
                     {slides.map((slide, index) => (
                         <div key={slide.id} className={`carousel-item ${index === 0 ? "active" : ""}`} data-bs-interval="5000">
@@ -134,7 +135,7 @@ const SliderProyectos = () => {
                                             {slide.titulo[0]}<br />
                                             <span className="text-highlight">{slide.titulo[1]}</span>
                                         </h2>
-                                        
+
                                         <div className="slide-meta">
                                             <div className="meta-item">
                                                 <span className="meta-label">TIPO DE PROYECTO /</span>
@@ -172,29 +173,29 @@ const SliderProyectos = () => {
                     </div>
 
                     <ul className="footer-socials">
-                        <IconoRedSocial 
-                            link="https://facebook.com/loteosterra" 
-                            iconoNormal={iconoFacebook} 
-                            iconoHover={iconoFacebookN} 
-                            alt="Facebook" 
+                        <IconoRedSocial
+                            link="https://facebook.com/loteosterra"
+                            iconoNormal={iconoFacebook}
+                            iconoHover={iconoFacebookN}
+                            alt="Facebook"
                         />
-                        <IconoRedSocial 
-                            link="https://www.instagram.com/terraloteos/" 
-                            iconoNormal={iconoIg} 
-                            iconoHover={iconoIgN} 
-                            alt="Instagram" 
+                        <IconoRedSocial
+                            link="https://www.instagram.com/terraloteos/"
+                            iconoNormal={iconoIg}
+                            iconoHover={iconoIgN}
+                            alt="Instagram"
                         />
-                        <IconoRedSocial 
-                            link="https://www.tiktok.com/@terraloteosoficial" 
-                            iconoNormal={iconoTiktok} 
-                            iconoHover={iconoTiktokN} 
-                            alt="TikTok" 
+                        <IconoRedSocial
+                            link="https://www.tiktok.com/@terraloteosoficial"
+                            iconoNormal={iconoTiktok}
+                            iconoHover={iconoTiktokN}
+                            alt="TikTok"
                         />
-                        <IconoRedSocial 
-                            link="https://wa.me/5492657604317" 
-                            iconoNormal={iconoWts} 
-                            iconoHover={iconoWtsN} 
-                            alt="WhatsApp" 
+                        <IconoRedSocial
+                            link="https://wa.me/5492657604317"
+                            iconoNormal={iconoWts}
+                            iconoHover={iconoWtsN}
+                            alt="WhatsApp"
                         />
                     </ul>
                 </div>
