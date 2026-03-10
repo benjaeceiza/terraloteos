@@ -27,7 +27,7 @@ const Encabezado = () => {
 
       <div className="hero-content-nosotros">
         <h1 className="titulo-hero-nosotros animate-up">TERRALOTEOS</h1>
-        <div className="linea-decorativa"></div>
+        <div className="linea-decorativa-nosotros animate-up"></div>
         <h2 className="subtitulo-hero-nosotros animate-up delay-1">DESARROLLOS URBANÍSTICOS</h2>
         
       </div>

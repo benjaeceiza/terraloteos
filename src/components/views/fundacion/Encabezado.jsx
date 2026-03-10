@@ -22,8 +22,8 @@ const Encabezado = () => {
             <section className="encabezado-fundacion">
                 <img className="fondo-encabezado-fundacion" src={fondo} alt="" onLoad={hideLoader} />
                 <div className="contenedor-logo-fundacion">
-                    <img className="logo-fundacion" src={logo} alt="" />
-                    <h1>Sembramos <span className="naranja">futuro</span>, construimos <span className="naranja">conciencia</span>.</h1>
+                    <img className="logo-fundacion animate-up" src={logo} alt="" />
+                    <h1 className="animate-up">Sembramos <span className="naranja">futuro</span>, construimos <span className="naranja">conciencia</span>.</h1>
                 </div>
 
                 <div className="scroll-btn-nosotros scroll-fundacion animate-up delay-2 " onClick={handleScroll}>

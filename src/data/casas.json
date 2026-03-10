@@ -1,12 +1,12 @@
 [
     {
         "tipo": "Loft",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft con sala de estar, comedor y cocina, cochera, galería y terraza. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft con sala de estar, comedor y cocina, cochera, galería y terraza. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 1,
         "terreno": 106,
         "entrega": 180,
         "salaEstar": true,
-        "comedor": true,
+    
         "cocina": true,
         "cochera": true,
         "galeria": true,
@@ -30,7 +30,7 @@
     },
     {
         "tipo": "Loft A1",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft A1 con sala de estar, comedor, cocina, cochera - galería, y terraza. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft A1 con sala de estar, comedor, cocina, cochera - galería, y terraza. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 1,
         "terreno": 99,
         "entrega": 180,
@@ -61,7 +61,7 @@
     },
     {
         "tipo": "Loft A2",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft A2 con terraza accesible. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de un Loft A2 con terraza accesible. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 1,
         "terreno": 99,
         "entrega": 180,
@@ -90,7 +90,7 @@
     },
     {
         "tipo": "Tipología A",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 99,
         "entrega": 180,
@@ -119,7 +119,7 @@
     },
     {
         "tipo": "Tipología B",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 99,
         "entrega": 180,
@@ -149,7 +149,7 @@
     },
     {
         "tipo": "Tipología B3",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 119,
         "entrega": 180,
@@ -180,7 +180,7 @@
     },
     {
         "tipo": "Tipología C",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 151,
         "entrega": 180,
@@ -211,7 +211,7 @@
     },
     {
         "tipo": "Tipología D",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 122,
         "entrega": 180,
@@ -241,7 +241,7 @@
     },
     {
         "tipo": "Tipología D1",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios y dos baños. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos dormitorios y dos baños. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 2,
         "terreno": 167,
         "entrega": 180,
@@ -274,7 +274,7 @@
     },
     {
         "tipo": "Tipología E",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de 3 dormitorios, Dos plantas, y dos baños. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de 3 dormitorios, Dos plantas, y dos baños. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 240,
         "entrega": 180,
@@ -301,7 +301,7 @@
     },
     {
         "tipo": "Tipología F",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos plantas con tres dormitorios, tres baños, lavadero y despensa. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de dos plantas con tres dormitorios, tres baños, lavadero y despensa. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 208,
         "entrega": 180,
@@ -330,7 +330,7 @@
     },
     {
         "tipo": "Tipología H",
-        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de tres dormitorios, baño y toilet + lavado. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias (agua y cloaca), instalaciones eléctricas (bocas y artefactos), equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
+        "descripcion": "Los trabajos a ejecutar comprenden la construcción de una vivienda de tres dormitorios, baño y toilet + lavado. Esto incluirá los trabajos necesarios, tales como: instalaciones sanitarias, instalaciones eléctricas, equipamiento, revestimiento, pintura, revoques, carpintería, etc.",
         "habitaciones": 3,
         "terreno": 218,
         "entrega": 180,
